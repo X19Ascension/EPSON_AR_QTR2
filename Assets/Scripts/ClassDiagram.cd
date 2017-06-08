@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FSMBase" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAACAAAACAABAACEAQAAEEAAIAFQAIeAAAAkQ=</HashCode>
+      <FileName>Assets\Scripts\AI\FSM Base.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseTurret" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQgAAAIACAgFAAAAiQAASAQBAAEAAgIAAAAZEgAAEU=</HashCode>
+      <FileName>Assets\Scripts\AI\BaseTurret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeleeEnemy" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABgAAAAAACBQAAAEAAgAAAAAYIAQAEA=</HashCode>
+      <FileName>Assets\Scripts\AI\MeleeEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RangedEnemy" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAABgAAAAAACBQAAAEAAgAAAAAYIAQAEA=</HashCode>
+      <FileName>Assets\Scripts\AI\RangedEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankEnemy" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABgAAAAAACBQAAAEAAgAAAAAYIAQAEA=</HashCode>
+      <FileName>Assets\Scripts\AI\TankEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuildingAbstractBase" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAQBACAAACBgFgAAAqgGAQAAAAEAAAAIBAAABEAIBIQ=</HashCode>
+      <FileName>Assets\Scripts\Building\BuildingAbstractBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataProduction" Collapsed="true">
+    <Position X="11" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABACAAACBABgAAAAACAAAAAAAAAAAIAABAAgAIAIA=</HashCode>
+      <FileName>Assets\Scripts\Building\DataProduction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DestroyedBuilding" Collapsed="true">
+    <Position X="21.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQBACAAACBABgAAAAACAAAAAAAAAAAAACAAgAAIgIA=</HashCode>
+      <FileName>Assets\Scripts\Building\DestroyedBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreditsProduction" Collapsed="true">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABACAhACBABgAAAAACAAAAAAAAAAAIAAAAAAAIAIA=</HashCode>
+      <FileName>Assets\Scripts\Building\CreditsProduction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoodProduction" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABICAAACBABgAAAAACEAAAAAAAAAAIAAAAAAAIAIA=</HashCode>
+      <FileName>Assets\Scripts\Building\FoodProduction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerProduction" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABACAAACBABgAIAAACAAAAAAAAAAAMAAAAAAAIAIA=</HashCode>
+      <FileName>Assets\Scripts\Building\PowerProduction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Residential" Collapsed="true">
+    <Position X="19.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgBACAAACBABgAAAAACAAAAAAQAAAAIAIAAEAAIAIA=</HashCode>
+      <FileName>Assets\Scripts\Building\Residential.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Storage" Collapsed="true">
+    <Position X="18" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABACAgACBABgAIAAACEAAAAAAAAAAIAAAAAgAIAIA=</HashCode>
+      <FileName>Assets\Scripts\Building\Storage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TownHall" Collapsed="true">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABICAhACBABgAIAAACEAAAAAQAAAAEAABAEgAIAIA=</HashCode>
+      <FileName>Assets\Scripts\Building\TownHall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wall" Collapsed="true">
+    <Position X="23.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABACAAACBABgAAAAACAAAAAAAAAAAIAAAAAAAIAIA=</HashCode>
+      <FileName>Assets\Scripts\Building\Wall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,271 @@
+fileFormatVersion: 2
+guid: 850adef794bb2be47b30e2f95c7dfb05
+timeCreated: 1491204179
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: chest
+    100004: head
+    100006: head_2
+    100008: joint1
+    100010: l_elbow
+    100012: l_foot
+    100014: l_foot_2
+    100016: l_hand
+    100018: l_index
+    100020: l_index_2
+    100022: l_index_3
+    100024: l_knee
+    100026: l_leg
+    100028: l_pinky
+    100030: l_pinky_2
+    100032: l_pinky_3
+    100034: l_shoulder
+    100036: l_thumb
+    100038: l_thumb_2
+    100040: l_thumb_3
+    100042: l_wrist
+    100044: pelvis
+    100046: r_elbow
+    100048: r_foot
+    100050: r_foot_2
+    100052: r_hand
+    100054: r_index
+    100056: r_index_2
+    100058: r_index_3
+    100060: r_knee
+    100062: r_leg
+    100064: r_pinky
+    100066: r_pinky_2
+    100068: r_pinky_3
+    100070: r_shoulder
+    100072: r_thumb
+    100074: r_thumb_2
+    100076: r_thumb_3
+    100078: r_wrist
+    100080: spine_2
+    100082: Tank
+    400000: //RootNode
+    400002: chest
+    400004: head
+    400006: head_2
+    400008: joint1
+    400010: l_elbow
+    400012: l_foot
+    400014: l_foot_2
+    400016: l_hand
+    400018: l_index
+    400020: l_index_2
+    400022: l_index_3
+    400024: l_knee
+    400026: l_leg
+    400028: l_pinky
+    400030: l_pinky_2
+    400032: l_pinky_3
+    400034: l_shoulder
+    400036: l_thumb
+    400038: l_thumb_2
+    400040: l_thumb_3
+    400042: l_wrist
+    400044: pelvis
+    400046: r_elbow
+    400048: r_foot
+    400050: r_foot_2
+    400052: r_hand
+    400054: r_index
+    400056: r_index_2
+    400058: r_index_3
+    400060: r_knee
+    400062: r_leg
+    400064: r_pinky
+    400066: r_pinky_2
+    400068: r_pinky_3
+    400070: r_shoulder
+    400072: r_thumb
+    400074: r_thumb_2
+    400076: r_thumb_3
+    400078: r_wrist
+    400080: spine_2
+    400082: Tank
+    4300000: Tank
+    7400000: TankAttack
+    9500000: //RootNode
+    13700000: Tank
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: TankAttack
+      takeName: Take 001
+      firstFrame: 46
+      lastFrame: 78
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joint1
+        weight: 1
+      - path: joint1/pelvis
+        weight: 1
+      - path: joint1/pelvis/chest
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/head
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/head/head_2
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand/l_index
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand/l_index/l_index_2
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand/l_index/l_index_2/l_index_3
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand/l_pinky
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand/l_pinky/l_pinky_2
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand/l_pinky/l_pinky_2/l_pinky_3
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand/l_thumb
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand/l_thumb/l_thumb_2
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/l_shoulder/l_elbow/l_wrist/l_hand/l_thumb/l_thumb_2/l_thumb_3
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand/r_index
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand/r_index/r_index_2
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand/r_index/r_index_2/r_index_3
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand/r_pinky
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand/r_pinky/r_pinky_2
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand/r_pinky/r_pinky_2/r_pinky_3
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand/r_thumb
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand/r_thumb/r_thumb_2
+        weight: 1
+      - path: joint1/pelvis/chest/spine_2/r_shoulder/r_elbow/r_wrist/r_hand/r_thumb/r_thumb_2/r_thumb_3
+        weight: 1
+      - path: joint1/pelvis/l_leg
+        weight: 1
+      - path: joint1/pelvis/l_leg/l_knee
+        weight: 1
+      - path: joint1/pelvis/l_leg/l_knee/l_foot
+        weight: 1
+      - path: joint1/pelvis/l_leg/l_knee/l_foot/l_foot_2
+        weight: 1
+      - path: joint1/pelvis/r_leg
+        weight: 1
+      - path: joint1/pelvis/r_leg/r_knee
+        weight: 1
+      - path: joint1/pelvis/r_leg/r_knee/r_foot
+        weight: 1
+      - path: joint1/pelvis/r_leg/r_knee/r_foot/r_foot_2
+        weight: 1
+      - path: Tank
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 62d628f84e440f844b8e004849398520
+timeCreated: 1491811213
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: centre
+    100002: head1
+    100004: hip_1
+    100006: hip_2
+    100008: joint1
+    100010: l_back_leg
+    100012: l_back_leg_2
+    100014: l_back_leg_3
+    100016: l_front_leg
+    100018: l_front_leg_2
+    100020: l_front_leg_3
+    100022: r_back_leg
+    100024: r_back_leg_2
+    100026: r_back_leg_3
+    100028: r_leg_front
+    100030: r_leg_front_2
+    100032: r_leg_front_3
+    100034: Range
+    100036: //RootNode
+    100038: teeth
+    100040: teeth1
+    100042: teeth2
+    400000: centre
+    400002: head1
+    400004: hip_1
+    400006: hip_2
+    400008: joint1
+    400010: l_back_leg
+    400012: l_back_leg_2
+    400014: l_back_leg_3
+    400016: l_front_leg
+    400018: l_front_leg_2
+    400020: l_front_leg_3
+    400022: r_back_leg
+    400024: r_back_leg_2
+    400026: r_back_leg_3
+    400028: r_leg_front
+    400030: r_leg_front_2
+    400032: r_leg_front_3
+    400034: Range
+    400036: //RootNode
+    400038: teeth
+    400040: teeth1
+    400042: teeth2
+    4300000: Range
+    7400000: RangedWalk
+    9500000: //RootNode
+    13700000: Range
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: RangedWalk
+      takeName: Take 001
+      firstFrame: 61
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joint1
+        weight: 1
+      - path: joint1/centre
+        weight: 1
+      - path: joint1/centre/head1
+        weight: 1
+      - path: joint1/centre/head1/teeth
+        weight: 1
+      - path: joint1/centre/head1/teeth1
+        weight: 1
+      - path: joint1/centre/head1/teeth2
+        weight: 1
+      - path: joint1/centre/hip_1
+        weight: 1
+      - path: joint1/centre/hip_1/l_front_leg
+        weight: 1
+      - path: joint1/centre/hip_1/l_front_leg/l_front_leg_2
+        weight: 1
+      - path: joint1/centre/hip_1/l_front_leg/l_front_leg_2/l_front_leg_3
+        weight: 1
+      - path: joint1/centre/hip_1/r_leg_front
+        weight: 1
+      - path: joint1/centre/hip_1/r_leg_front/r_leg_front_2
+        weight: 1
+      - path: joint1/centre/hip_1/r_leg_front/r_leg_front_2/r_leg_front_3
+        weight: 1
+      - path: joint1/centre/hip_2
+        weight: 1
+      - path: joint1/centre/hip_2/l_back_leg
+        weight: 1
+      - path: joint1/centre/hip_2/l_back_leg/l_back_leg_2
+        weight: 1
+      - path: joint1/centre/hip_2/l_back_leg/l_back_leg_2/l_back_leg_3
+        weight: 1
+      - path: joint1/centre/hip_2/r_back_leg
+        weight: 1
+      - path: joint1/centre/hip_2/r_back_leg/r_back_leg_2
+        weight: 1
+      - path: joint1/centre/hip_2/r_back_leg/r_back_leg_2/r_back_leg_3
+        weight: 1
+      - path: Range
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

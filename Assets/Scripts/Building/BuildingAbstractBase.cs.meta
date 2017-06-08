@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 48617f36a25dd504c9ae20703fe3ee61
+timeCreated: 1491531999
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - DestroyedBuildingTemplate: {fileID: 121022, guid: b0a1592350c2f3841a5b951f5575657f,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

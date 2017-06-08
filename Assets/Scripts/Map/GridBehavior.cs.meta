@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a397406c409c0024fbc98bc4859e34e1
+timeCreated: 1490176379
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Grid: {fileID: 191268, guid: b19a08e39e8083e4d820335644723a7f, type: 2}
+  - Wall3: {fileID: 132584, guid: dbea825cef954804fabc05bcb07d26ee, type: 2}
+  - Wall5: {fileID: 148308, guid: 5f21d7e24f276d14a9f1e287e767e9cc, type: 2}
+  - Wall7: {fileID: 100476, guid: d7ac5793a6a7dcd4e9bc810f835fc994, type: 2}
+  - TownSpawn: {fileID: 159154, guid: ac6139004be78094d8ddc7dc59926fbb, type: 2}
+  - DataGenerator: {instanceID: 0}
+  - EpsonGenerator: {instanceID: 0}
+  - PowerGenerator: {instanceID: 0}
+  - FoodGenerator: {instanceID: 0}
+  - Housing: {instanceID: 0}
+  - Storage: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

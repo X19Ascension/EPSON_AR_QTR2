@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FYPJ1_EpsonAR.Plugins", "FYPJ1_EpsonAR.Plugins.csproj", "{1B128EF3-F604-D9F2-EDE1-64EC22D21E7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FYPJ1_EpsonAR", "FYPJ1_EpsonAR.csproj", "{BC368A44-D5DB-4817-C15D-E7C5954D6985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FYPJ1_EpsonAR.Editor", "FYPJ1_EpsonAR.Editor.csproj", "{BF4A7CCE-F75A-EEF0-C02A-94A61EF7E072}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B128EF3-F604-D9F2-EDE1-64EC22D21E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B128EF3-F604-D9F2-EDE1-64EC22D21E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B128EF3-F604-D9F2-EDE1-64EC22D21E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B128EF3-F604-D9F2-EDE1-64EC22D21E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC368A44-D5DB-4817-C15D-E7C5954D6985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC368A44-D5DB-4817-C15D-E7C5954D6985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC368A44-D5DB-4817-C15D-E7C5954D6985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC368A44-D5DB-4817-C15D-E7C5954D6985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF4A7CCE-F75A-EEF0-C02A-94A61EF7E072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4A7CCE-F75A-EEF0-C02A-94A61EF7E072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4A7CCE-F75A-EEF0-C02A-94A61EF7E072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4A7CCE-F75A-EEF0-C02A-94A61EF7E072}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

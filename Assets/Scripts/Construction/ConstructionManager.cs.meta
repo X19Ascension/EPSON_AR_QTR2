@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b57b50ea680a16940bf8e457fd26babc
+timeCreated: 1491384557
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - theGridBehaviour: {instanceID: 0}
+  - thePopUpPanel: {fileID: 192822, guid: ee9bcb52b38c2b241a129dc85c1e6ac7, type: 2}
+  - WallStandardTurret: {fileID: 192734, guid: f2609a4364a714b4580fa3b2981430fd, type: 2}
+  - WallSniperTurret: {fileID: 114238, guid: e74a65d0fa083924e8000b583ec0a09f, type: 2}
+  - WallHeavyTurret: {fileID: 130620, guid: 5989af6a5bb8ffc4da393465b46300a3, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
