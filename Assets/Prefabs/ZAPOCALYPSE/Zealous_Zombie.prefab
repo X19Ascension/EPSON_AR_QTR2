@@ -32,7 +32,7 @@ GameObject:
   - 114: {fileID: 11423684}
   m_Layer: 0
   m_Name: Zealous_Zombie
-  m_TagString: Enemy
+  m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

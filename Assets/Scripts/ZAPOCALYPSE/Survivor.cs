@@ -28,7 +28,7 @@ public class Survivor : EntityBase
     //EntityBase test;
     public SURVIVOR_STATE survivorState = SURVIVOR_STATE.S_IDLE;
     public SURVIVOR_TYPE entityType = SURVIVOR_TYPE.S_RIFLE;
-
+    [HideInInspector]
     public float attackRate;
 
     // Use this for initialization
@@ -122,7 +122,7 @@ public class Survivor : EntityBase
     GameObject TargetToAttack()
     {
         GameObject[] AllEntities = GameObject.FindGameObjectsWithTag("Entities");
-        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("test");
         // Get available targets
         GameObject[] AvailableTargets = ((AllEntities.Union<GameObject>(AllEnemies))).ToArray<GameObject>();//GameObject.FindGameObjectsWithTag("Survivor");
 
@@ -138,7 +138,7 @@ public class Survivor : EntityBase
 
 
         // Search for closest one
-        float closestDist = float.MaxValue;
+        float closestDist = 999999;
         GameObject closestGo = null;
 
         foreach (GameObject go in TargetsInRange)
