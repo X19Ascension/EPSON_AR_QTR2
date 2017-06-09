@@ -11,12 +11,9 @@ public class GridMap : MonoBehaviour {
     GameObject Grid_Barricade;
     public GameObject Grid_Barricade_Front;
     public GameObject Grid_Barricade_Back;
-<<<<<<< HEAD
     public GameObject Grid_Barricade_Left;
     public GameObject Grid_Barricade_Right;
-=======
     public GameObject HealthBarTemp;
->>>>>>> 46fa943da66c655752c0cb52c2079305128899e0
 
     GameObject Grid_Parent;
     
@@ -36,32 +33,8 @@ public class GridMap : MonoBehaviour {
         Back_Offset = new Vector3(1, 0, 0);
         Left_Offset = new Vector3(0, 0, -1);
         Right_Offset = new Vector3(0, 0, 1);
-
-<<<<<<< HEAD
-        BuildGrid();
-=======
-        for (int x = 0; x < i_GridSize_X; x++)
-        {
-            for (int z = 0; z < i_GridSize_Y; z++) 
-            {
-                if((x == 0 || x == i_GridSize_X -1) || (z == 0 || z == i_GridSize_Y - 1))
-                {
-                    GameObject gridplane = (GameObject)Instantiate(Grid_Barricade, new Vector3(x * 0.25f, 0, z * 0.25f) + Offset, Quaternion.identity);
-                    gridplane.gameObject.name = "Barricade";
-                    gridplane.gameObject.GetComponent<Health>().HPBarPlaneTemplate = HealthBarTemp;
-                    Grid[x, z] = gridplane;
-                }
-                else
-                {
-                    GameObject gridplane = (GameObject)Instantiate(Grid_Empty, new Vector3(x * 0.25f, 0, z * 0.25f) + Offset, Quaternion.identity);
-                    gridplane.gameObject.name = "Empty Grid";
-                    Grid[x, z] = gridplane;
-                }
-                
-            }
-        }
         
->>>>>>> 46fa943da66c655752c0cb52c2079305128899e0
+        BuildGrid();
     }
 
 	// Use this for initialization
@@ -124,7 +97,7 @@ public class GridMap : MonoBehaviour {
 
     public void ClamptoGrid(GameObject go)
     {
-        float radius = .5f;
+        float radius = 5f;
         GameObject PointtoClamp = null;
         List<GameObject> NearestGridList = new List<GameObject>();
         for (int x = 0; x < i_GridSize_X; x++)

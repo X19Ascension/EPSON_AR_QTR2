@@ -14,14 +14,14 @@ public class SpawnUnitTest : MonoBehaviour {
     void Awake()
     {
         Unit_List = new List<GameObject>();
-        GameObject unit = (GameObject)Instantiate(test_unit, new Vector3(Random.Range(0, 0.5f), 0, Random.Range(0, 0.5f)),Quaternion.identity);
+        GameObject unit = (GameObject)Instantiate(test_unit, new Vector3(Random.Range(0, 5.0f), 0, Random.Range(0, 5.0f)),Quaternion.identity);
 
         //initialises the units, all of them
         //Temporary add testunit
         Unit_List.Add(unit);
-        unit = (GameObject)Instantiate(survivorType[0], new Vector3(Random.Range(0, 0.5f), 0, Random.Range(0, 0.5f)), Quaternion.identity);
+        unit = (GameObject)Instantiate(survivorType[0], new Vector3(Random.Range(0, 5.0f), 0, Random.Range(0, 5.0f)), Quaternion.identity);
         Unit_List.Add(unit);
-        unit = (GameObject)Instantiate(survivorType[1], new Vector3(Random.Range(0, 0.5f), 0, Random.Range(0, 0.5f)), Quaternion.identity);
+        unit = (GameObject)Instantiate(survivorType[1], new Vector3(Random.Range(0, 5.0f), 0, Random.Range(0, 5.0f)), Quaternion.identity);
         Unit_List.Add(unit);
     }
 
