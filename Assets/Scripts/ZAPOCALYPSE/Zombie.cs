@@ -26,7 +26,8 @@ public class Zombie : EntityBase {
     public ZOMBIE_TYPE zombieType = ZOMBIE_TYPE.Z_STANDARD;
     public GameObject spawnerGO;                                    //! Spawner Game Object
 
-    public int moveSpd;
+    public float moveSpd;
+    [HideInInspector]
     public float attackRate;
 
     // Use this for initialization
@@ -43,10 +44,9 @@ public class Zombie : EntityBase {
 
         if (HP <= 0)
         {
-            if (this.tag.Contains("Enemy"))
+            if (this.tag.Contains("test"))
             {
                 spawnerGO.GetComponent<WaveSpawner>().killcount++;
-                Debug.Log(spawnerGO.GetComponent<WaveSpawner>().killcount);
                 Destroy(this.gameObject);
 
             }
@@ -55,7 +55,7 @@ public class Zombie : EntityBase {
         }
 
 
-        if (m_TimerDT >= 2)
+        if (m_TimerDT >= 1)
         {
             HP += (int)HPRegen;
             if (HP >= i_maxHP)
@@ -144,7 +144,7 @@ public class Zombie : EntityBase {
 
 
         // Search for closest one
-        float closestDist = float.MaxValue;
+        float closestDist = 999999;
         GameObject closestGo = null;
 
         foreach (GameObject go in TargetsInRange)

@@ -32,7 +32,7 @@ GameObject:
   - 114: {fileID: 11423684}
   m_Layer: 0
   m_Name: TankZombie
-  m_TagString: Enemy
+  m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 186088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -40.019947, y: 21.601, z: 12.053}
-  m_LocalScale: {x: 2.0023901, y: 2.0023904, z: 2.0023904}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 457186}
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c681d3453131e44977340f2a2b3980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 2
+  atkRange: 0.3
   atkSpd: 2.5
   atkDmg: 50
   HP: 2000
@@ -460,7 +460,7 @@ MonoBehaviour:
   zombieState: 0
   zombieType: 0
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-  moveSpd: 2
+  moveSpd: 0.2
   attackRate: 0
 --- !u!135 &13539916
 SphereCollider:

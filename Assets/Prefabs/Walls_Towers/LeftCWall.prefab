@@ -107,7 +107,7 @@ BoxCollider:
   m_GameObject: {fileID: 183736}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.25, z: 0.5}
   m_Center: {x: -0.1, y: 0, z: 0}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 10
-  m_HPBarPlaneTemplate: {fileID: 155094, guid: aef60c449ef0161479f8ec0cf05122b4, type: 2}
+  HPBarPlaneTemplate: {fileID: 0}
   DeathAnimationDone: 0
 --- !u!114 &11459214
 MonoBehaviour:

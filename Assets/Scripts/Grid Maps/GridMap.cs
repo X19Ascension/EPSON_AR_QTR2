@@ -13,6 +13,7 @@ public class GridMap : MonoBehaviour {
     public GameObject Grid_Barricade_Front;
     public GameObject Grid_Barricade_Right;
     public GameObject Grid_Barricade_Back;
+    public GameObject HealthBarTemp;
 
     GameObject Grid_Parent;
     
@@ -37,6 +38,7 @@ public class GridMap : MonoBehaviour {
                 {
                     GameObject gridplane = (GameObject)Instantiate(Grid_Barricade, new Vector3(x * 0.25f, 0, z * 0.25f) + Offset, Quaternion.identity);
                     gridplane.gameObject.name = "Barricade";
+                    gridplane.gameObject.GetComponent<Health>().HPBarPlaneTemplate = HealthBarTemp;
                     Grid[x, z] = gridplane;
                 }
                 else

@@ -2,6 +2,7 @@
 using System.Collections;
 
 using System.Collections.Generic;
+using System.Linq;
 
 public class WaveSpawner : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class WaveSpawner : MonoBehaviour {
     public List<Transform> spawnPoints = new List<Transform>();     //! The number of Spawn Points in the Game
     [Tooltip("The current Wave Number")]
     int waveNo;                                                     //! The Current Wave number.
+
     public GameObject zombieGO;                                     //! Standard Zombie Game Object
     public GameObject fastzombieGO;                                 //! Fast Zombie Game Object
     public GameObject tankzombieGO;                                 //! Tank Zombie Game Object
@@ -16,15 +18,18 @@ public class WaveSpawner : MonoBehaviour {
     public GameObject spawnerGO;                                    //! Spawner Game Object
 
     public int amtToKill4Tank;                                      //! Amount of Standard to kill for Tank to Spawn
-    public int killcount;
-    public float spawnValue = 910.0f;
-    //public float spawnValue = 1.0f;
+    public int killcount;                                           //! Total Kill count player has
+    public float spawnValue = 150.0f;                               //! Spawn Value for each wave.
 
-    public int minutePerWave;
-    public int secondPerWave;
+    public int minutePerWave;                                       //! Wave Time Limit in minutes. 
+    public int secondPerWave;                                       //! Wave Time Limit in seconds.
+
+    private float randomModifier;                                   //! randomModifier
+    private float randomSpawnTimer = 1.5f;
+    
 
     // Difficulty Modifier
-    public enum TEMP_DIFF
+    public enum TEMP_DIFF                                           //! Temporary Difficulty Setting
     {
         EASY = 0,
         NORMAL,
@@ -64,29 +69,46 @@ public class WaveSpawner : MonoBehaviour {
         testTankSpawn += Time.deltaTime;
         //if (waveDuration > 0)
         //{
-            if (testTimeDelta >= 1.5f)
-            {
-                SpawnZombie(GenerateSpawnPos());
-                //testTimeDelta = 0f;
-            }
-            if (testTimeDelta >= 1.5f)
-            {
-                SpawnHorde(GenerateSpawnPos());
-                testTimeDelta = 0f;
-            }
-            if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank)
+        if (CheckAnyAlive() == true)
         {
-            SpawnTankZombie(GenerateSpawnPos());
-            spawnerGO.GetComponent<WaveSpawner>().killcount = 0;
-            Debug.Log(spawnerGO.GetComponent<WaveSpawner>().killcount);
-            //zombieGO.gameObject
-        }
-        //}
-        //else
-        //{
-            // call game manager
-        //}
+            if (spawnValue >= 0)
+            {
+                if (testTimeDelta >= randomSpawnTimer)
+                {
+                    SpawnZombie(GenerateSpawnPos());
+                    randomSpawnTimer = Random.Range(1.5f, 2.2f);
 
+                    testTimeDelta = 0f;
+                }
+                if (testTankSpawn >= 6.0f && spawnerGO.GetComponent<WaveSpawner>().killcount >= 10)
+                {
+                    for (int i = 0; i < 5; i++)
+                        SpawnHorde(GenerateSpawnPos());
+
+                    testTankSpawn = 0f;
+                }
+                if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank)
+                {
+                    SpawnTankZombie(GenerateSpawnPos());
+                    spawnerGO.GetComponent<WaveSpawner>().killcount = 0;
+                    //zombieGO.gameObject
+                }
+            }
+        }
+
+    }
+
+    protected bool CheckAnyAlive()
+    {
+        GameObject[] AllEntities = GameObject.FindGameObjectsWithTag("Entities");
+        GameObject[] AllSurvivors = GameObject.FindGameObjectsWithTag("Survivor");
+        // Get available targets
+        GameObject[] AvailableTargets = ((AllEntities.Union<GameObject>(AllSurvivors))).ToArray<GameObject>();//GameObject.FindGameObjectsWithTag("Survivor");
+
+        if (AvailableTargets[0] != null)
+            return true;
+
+        return false; // If none, it will return the null it was assigned with.
     }
 
     Vector3 GenerateSpawnPos()
@@ -107,10 +129,12 @@ public class WaveSpawner : MonoBehaviour {
     {
         if (diff != TEMP_DIFF.NORMAL)
         {
+            randomModifier = Random.Range(0.7f, 1.3f);
             go.GetComponent<Zombie>().HP = (int)((float)(go.GetComponent<Zombie>().HP) * difficultyMod);
             go.GetComponent<Zombie>().i_maxHP = go.GetComponent<Zombie>().HP;
             if (go.GetComponent<Zombie>().atkDmg > 3)
                 go.GetComponent<Zombie>().atkDmg = (int)((float)(go.GetComponent<Zombie>().atkDmg) * difficultyMod);
+            go.GetComponent<Zombie>().moveSpd *= randomModifier;
         }
 
     }

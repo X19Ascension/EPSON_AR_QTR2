@@ -45,7 +45,7 @@ Transform:
   m_GameObject: {fileID: 106864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.43, y: -2.4, z: -3.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 448344}
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32264fa15bbe2234680be3be8b328c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 20
-  atkSpd: 0.05
-  atkDmg: 4
-  HP: 100
+  atkRange: 40
+  atkSpd: 0.2
+  atkDmg: 3
+  HP: 200
   HPRegen: 2
   i_maxHP: 200
   m_TimerDT: 0

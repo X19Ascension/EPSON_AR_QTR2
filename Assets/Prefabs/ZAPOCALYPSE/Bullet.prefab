@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113460}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 1.8524597, y: 2.828, z: -2.562364}
-  m_LocalScale: {x: 0.19679749, y: 0.19679749, z: 0.19679749}
+  m_LocalPosition: {x: 3.472334, y: -2.6563349, z: -2.2626104}
+  m_LocalScale: {x: 0.02675969, y: 0.02675969, z: 0.02675969}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13bbc67e21765d4bbd1e5dc7b7cd92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileSpeed: 900
-  ProjectileLifetime: 5
+  ProjectileSpeed: 100
+  ProjectileLifetime: 3
   Sender: {fileID: 0}
 --- !u!135 &13525878
 SphereCollider:

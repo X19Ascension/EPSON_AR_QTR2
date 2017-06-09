@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class SpawnUnitTest : MonoBehaviour {
 
+    public List<GameObject> survivorType = new List<GameObject>();     //! The number of Spawn Points in the Game
+
     [SerializeField]
     GridMap The_Grid;
 
@@ -13,8 +15,13 @@ public class SpawnUnitTest : MonoBehaviour {
     {
         Unit_List = new List<GameObject>();
         GameObject unit = (GameObject)Instantiate(test_unit, new Vector3(Random.Range(0, 0.5f), 0, Random.Range(0, 0.5f)),Quaternion.identity);
+
         //initialises the units, all of them
         //Temporary add testunit
+        Unit_List.Add(unit);
+        unit = (GameObject)Instantiate(survivorType[0], new Vector3(Random.Range(0, 0.5f), 0, Random.Range(0, 0.5f)), Quaternion.identity);
+        Unit_List.Add(unit);
+        unit = (GameObject)Instantiate(survivorType[1], new Vector3(Random.Range(0, 0.5f), 0, Random.Range(0, 0.5f)), Quaternion.identity);
         Unit_List.Add(unit);
     }
 
