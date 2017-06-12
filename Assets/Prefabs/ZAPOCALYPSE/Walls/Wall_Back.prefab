@@ -8,9 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 447850}
-  m_Layer: 0
+  - 114: {fileID: 11459892}
+  m_Layer: 10
   m_Name: Wall_Back
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +28,7 @@ GameObject:
   - 23: {fileID: 2366924}
   - 95: {fileID: 9502536}
   - 65: {fileID: 6595506}
-  - 114: {fileID: 11483482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RoadBlock_H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.9506695, y: -3.6413908, z: 3.4761157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -124,12 +124,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11483482
+--- !u!114 &11459892
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115408}
+  m_GameObject: {fileID: 110992}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f21a22d57b03ab04e99ffc0841ed94b2, type: 3}
@@ -138,12 +138,12 @@ MonoBehaviour:
   atkRange: 1
   atkSpd: 1
   atkDmg: 1
-  HP: 99999
-  HPRegen: 99
-  i_maxHP: 99999
+  HP: 999
+  HPRegen: 0
+  i_maxHP: 999
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
-  barrier: {fileID: 115408}
+  barrier: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

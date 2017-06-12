@@ -19,6 +19,7 @@ TagManager:
   - Barrier
   - Entities
   - test
+  - Buttons
   layers:
   - Default
   - TransparentFX

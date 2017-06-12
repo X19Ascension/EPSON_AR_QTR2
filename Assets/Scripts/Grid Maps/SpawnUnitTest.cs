@@ -13,15 +13,16 @@ public class SpawnUnitTest : MonoBehaviour {
     List<GameObject> Unit_List;
     void Awake()
     {
+        float offSet = 1.5f;
         Unit_List = new List<GameObject>();
-        GameObject unit = (GameObject)Instantiate(test_unit, new Vector3(Random.Range(0, 5.0f), 0, Random.Range(0, 5.0f)),Quaternion.identity);
+        GameObject unit = (GameObject)Instantiate(test_unit, new Vector3(Random.Range(-offSet, offSet), 0, Random.Range(-offSet, offSet)),Quaternion.identity);
 
         //initialises the units, all of them
         //Temporary add testunit
         Unit_List.Add(unit);
-        unit = (GameObject)Instantiate(survivorType[0], new Vector3(Random.Range(0, 5.0f), 0, Random.Range(0, 5.0f)), Quaternion.identity);
+        unit = (GameObject)Instantiate(survivorType[0], new Vector3(Random.Range(-offSet, offSet), 0, Random.Range(-offSet, offSet)), Quaternion.identity);
         Unit_List.Add(unit);
-        unit = (GameObject)Instantiate(survivorType[1], new Vector3(Random.Range(0, 5.0f), 0, Random.Range(0, 5.0f)), Quaternion.identity);
+        unit = (GameObject)Instantiate(survivorType[1], new Vector3(Random.Range(-offSet, offSet), 0, Random.Range(-offSet, offSet)), Quaternion.identity);
         Unit_List.Add(unit);
     }
 
@@ -39,4 +40,6 @@ public class SpawnUnitTest : MonoBehaviour {
             The_Grid.ClamptoGrid(Unit_List[i]);
         }
     }
+
+
 }

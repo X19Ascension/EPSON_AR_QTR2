@@ -13,7 +13,7 @@ GameObject:
   - 95: {fileID: 9590696}
   - 65: {fileID: 6558828}
   - 114: {fileID: 11459052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RoadBlock_H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,9 +28,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458252}
-  m_Layer: 0
+  - 114: {fileID: 11484522}
+  m_Layer: 10
   m_Name: Wall_Left
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,6 +145,26 @@ MonoBehaviour:
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   barrier: {fileID: 188328}
+--- !u!114 &11484522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21a22d57b03ab04e99ffc0841ed94b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkRange: 1
+  atkSpd: 1
+  atkDmg: 1
+  HP: 999
+  HPRegen: 0
+  i_maxHP: 999
+  m_TimerDT: 0
+  HPBarPlaneTemplate: {fileID: 0}
+  barrier: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
