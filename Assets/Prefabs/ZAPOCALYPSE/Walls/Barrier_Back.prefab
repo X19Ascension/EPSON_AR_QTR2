@@ -1,34 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &116806
+--- !u!1 &124084
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 487888}
-  - 114: {fileID: 11435988}
+<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
+  - 4: {fileID: 447850}
+  - 114: {fileID: 11459892}
   m_Layer: 10
-  m_Name: Wall_Right
+  m_Name: Wall_Back
+=======
+  - 4: {fileID: 477818}
+  - 33: {fileID: 3375594}
+  - 23: {fileID: 2320148}
+  - 95: {fileID: 9556642}
+  - 65: {fileID: 6565056}
+  - 114: {fileID: 11490774}
+  m_Layer: 0
+  m_Name: Barrier_Back
+>>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
   m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &119878
+<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
+--- !u!1 &115408
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 414022}
-  - 33: {fileID: 3301490}
-  - 23: {fileID: 2340942}
-  - 95: {fileID: 9567392}
-  - 65: {fileID: 6568060}
-  - 114: {fileID: 11452740}
+  - 4: {fileID: 411238}
+  - 33: {fileID: 3352128}
+  - 23: {fileID: 2366924}
+  - 95: {fileID: 9502536}
+  - 65: {fileID: 6595506}
   m_Layer: 10
   m_Name: RoadBlock_H
   m_TagString: Untagged
@@ -36,39 +47,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &414022
+--- !u!4 &411238
+=======
+--- !u!4 &477818
+>>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119878}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 124084}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0075, y: 0.0075, z: 0.0075}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.0075000008, y: 0.0075, z: 0.0075000008}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
-  m_Father: {fileID: 487888}
+<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
+  m_Father: {fileID: 447850}
   m_RootOrder: 0
---- !u!4 &487888
+--- !u!4 &447850
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116806}
+  m_GameObject: {fileID: 110992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.9506695, y: -3.6413908, z: 3.4761157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 414022}
+  - {fileID: 411238}
+=======
+>>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2340942
+--- !u!23 &2320148
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119878}
+  m_GameObject: {fileID: 124084}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -89,32 +106,32 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3301490
+--- !u!33 &3375594
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119878}
+  m_GameObject: {fileID: 124084}
   m_Mesh: {fileID: 4300000, guid: 42ca6c1efc8c2614fbe60b0ffbe76350, type: 3}
---- !u!65 &6568060
+--- !u!65 &6565056
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119878}
+  m_GameObject: {fileID: 124084}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 819.5444, y: 157.07361, z: 150}
   m_Center: {x: 0, y: 75.567795, z: -150}
---- !u!95 &9567392
+--- !u!95 &9556642
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119878}
+  m_GameObject: {fileID: 124084}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 42ca6c1efc8c2614fbe60b0ffbe76350, type: 3}
   m_Controller: {fileID: 0}
@@ -125,12 +142,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11435988
+<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
+--- !u!114 &11459892
+=======
+--- !u!114 &11490774
+>>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116806}
+<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
+  m_GameObject: {fileID: 110992}
+=======
+  m_GameObject: {fileID: 124084}
+>>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f21a22d57b03ab04e99ffc0841ed94b2, type: 3}
@@ -144,27 +169,11 @@ MonoBehaviour:
   i_maxHP: 999
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
   barrier: {fileID: 0}
---- !u!114 &11452740
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21a22d57b03ab04e99ffc0841ed94b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  atkRange: 1
-  atkSpd: 1
-  atkDmg: 1
-  HP: 99999
-  HPRegen: 99
-  i_maxHP: 99999
-  m_TimerDT: 0
-  HPBarPlaneTemplate: {fileID: 0}
-  barrier: {fileID: 119878}
+=======
+  barrier: {fileID: 124084}
+>>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -174,5 +183,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 116806}
+  m_RootGameObject: {fileID: 124084}
   m_IsPrefabParent: 1
