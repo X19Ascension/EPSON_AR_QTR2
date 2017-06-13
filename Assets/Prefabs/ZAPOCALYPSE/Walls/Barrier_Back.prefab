@@ -7,12 +7,6 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
-  - 4: {fileID: 447850}
-  - 114: {fileID: 11459892}
-  m_Layer: 10
-  m_Name: Wall_Back
-=======
   - 4: {fileID: 477818}
   - 33: {fileID: 3375594}
   - 23: {fileID: 2320148}
@@ -21,36 +15,12 @@ GameObject:
   - 114: {fileID: 11490774}
   m_Layer: 0
   m_Name: Barrier_Back
->>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
   m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
---- !u!1 &115408
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 411238}
-  - 33: {fileID: 3352128}
-  - 23: {fileID: 2366924}
-  - 95: {fileID: 9502536}
-  - 65: {fileID: 6595506}
-  m_Layer: 10
-  m_Name: RoadBlock_H
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &411238
-=======
 --- !u!4 &477818
->>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -61,23 +31,6 @@ Transform:
   m_LocalScale: {x: 0.0075000008, y: 0.0075, z: 0.0075000008}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
-<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
-  m_Father: {fileID: 447850}
-  m_RootOrder: 0
---- !u!4 &447850
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110992}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9506695, y: -3.6413908, z: 3.4761157}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 411238}
-=======
->>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2320148
@@ -142,20 +95,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
---- !u!114 &11459892
-=======
 --- !u!114 &11490774
->>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
-  m_GameObject: {fileID: 110992}
-=======
   m_GameObject: {fileID: 124084}
->>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f21a22d57b03ab04e99ffc0841ed94b2, type: 3}
@@ -164,16 +109,12 @@ MonoBehaviour:
   atkRange: 1
   atkSpd: 1
   atkDmg: 1
-  HP: 999
-  HPRegen: 0
-  i_maxHP: 999
+  HP: 99999
+  HPRegen: 99
+  i_maxHP: 99999
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Back.prefab
-  barrier: {fileID: 0}
-=======
   barrier: {fileID: 124084}
->>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Back.prefab
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

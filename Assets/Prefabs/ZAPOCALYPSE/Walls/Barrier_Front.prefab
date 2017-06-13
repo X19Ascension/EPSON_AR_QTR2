@@ -7,17 +7,6 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Front.prefab
-  - 4: {fileID: 401280}
-  - 33: {fileID: 3338916}
-  - 23: {fileID: 2372860}
-  - 95: {fileID: 9534320}
-  - 65: {fileID: 6507276}
-  - 114: {fileID: 11455396}
-  m_Layer: 10
-  m_Name: RoadBlock_H
-  m_TagString: Untagged
-=======
   - 4: {fileID: 418610}
   - 33: {fileID: 3339362}
   - 23: {fileID: 2380284}
@@ -27,32 +16,11 @@ GameObject:
   m_Layer: 0
   m_Name: Barrier_Front
   m_TagString: Barrier
->>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Front.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Front.prefab
---- !u!1 &174840
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 474658}
-  - 114: {fileID: 11470524}
-  m_Layer: 10
-  m_Name: Wall_Front
-  m_TagString: Barrier
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &401280
-=======
 --- !u!4 &418610
->>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Front.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -146,31 +114,7 @@ MonoBehaviour:
   i_maxHP: 99999
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/ZAPOCALYPSE/Walls/Wall_Front.prefab
-  barrier: {fileID: 163340}
---- !u!114 &11470524
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21a22d57b03ab04e99ffc0841ed94b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  atkRange: 1
-  atkSpd: 1
-  atkDmg: 1
-  HP: 999
-  HPRegen: 0
-  i_maxHP: 999
-  m_TimerDT: 0
-  HPBarPlaneTemplate: {fileID: 0}
-  barrier: {fileID: 0}
-=======
   barrier: {fileID: 189598}
->>>>>>> 2e63b23a446755f9a5e5949d22d146de27cc4f03:Assets/Prefabs/ZAPOCALYPSE/Walls/Barrier_Front.prefab
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
