@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/RERETest.unity
+- path: Assets/Scenes/FINAL/LevelSelect.unity
   isLoaded: 1
   isActive: 1
