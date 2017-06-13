@@ -9,12 +9,11 @@ public class SpawnUnitTest : MonoBehaviour {
     [SerializeField]
     GridMap The_Grid;
 
-    public GameObject test_unit;
     List<GameObject> Unit_List;
     void Awake()
     {
         Unit_List = new List<GameObject>();
-        GameObject unit = (GameObject)Instantiate(test_unit, new Vector3(Random.Range(0, 5.0f), 0, Random.Range(0, 5.0f)),Quaternion.identity);
+        GameObject unit = (GameObject)Instantiate(survivorType[0], new Vector3(Random.Range(0, 5.0f), 0, Random.Range(0, 5.0f)),Quaternion.identity);
 
         //initialises the units, all of them
         //Temporary add testunit
@@ -34,7 +33,7 @@ public class SpawnUnitTest : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        for (int i = 0; i <= Unit_List.Count; i++)
+        for (int i = 0; i < Unit_List.Count; i++)
         {
             The_Grid.ClamptoGrid(Unit_List[i]);
         }

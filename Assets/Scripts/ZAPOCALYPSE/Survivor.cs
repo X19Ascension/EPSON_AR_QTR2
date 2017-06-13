@@ -31,6 +31,15 @@ public class Survivor : EntityBase
     [HideInInspector]
     public float attackRate;
 
+    GameObject Directionpoint;
+    GridMap The_Grid;
+
+    void Awake()
+    {
+        Directionpoint = new GameObject();
+        The_Grid = GameObject.Find("Grid Spawner").GetComponent<GridMap>();
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -67,6 +76,10 @@ public class Survivor : EntityBase
     {
         GameObject m_TargetedEnemy = TargetToAttack();
 
+        if (this.HP <= 0)
+        {
+            survivorState = SURVIVOR_STATE.S_DEAD;
+        }
         switch (survivorState)
         {
             case SURVIVOR_STATE.S_IDLE:
@@ -74,16 +87,10 @@ public class Survivor : EntityBase
                 if (m_TargetedEnemy != null)
                     survivorState = SURVIVOR_STATE.S_ATTACK;
 
-                if (this.HP <= 0)
-                    survivorState = SURVIVOR_STATE.S_DEAD;
-
                 break;
 
             case SURVIVOR_STATE.S_ATTACK:
-
-                if (this.HP <= 0)
-                    survivorState = SURVIVOR_STATE.S_DEAD;
-
+                
                 if (m_TargetedEnemy != null)
                 {
                     Vector3 dir = (m_TargetedEnemy.transform.position - this.gameObject.transform.position).normalized;
@@ -97,9 +104,6 @@ public class Survivor : EntityBase
                 break;
 
             case SURVIVOR_STATE.S_HEAL:
-
-                if (this.HP <= 0)
-                    survivorState = SURVIVOR_STATE.S_DEAD;
 
                 if (m_TargetedEnemy == null)
                 {
@@ -116,6 +120,12 @@ public class Survivor : EntityBase
                 Destroy(this.gameObject);
                 break;
         }
+    }
+
+    GameObject TargetstoTrack()
+    {
+
+        return gameObject;
     }
 
     // Used when Attacking.
@@ -275,5 +285,8 @@ public class Survivor : EntityBase
         i_maxHP = maxhealth;
     }
 
-
+    public void SetDirectionPoint(GameObject Direction)
+    {
+        Directionpoint = Direction;
+    }
 }

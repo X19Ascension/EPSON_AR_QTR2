@@ -198,8 +198,8 @@ MonoBehaviour:
   survivorType:
   - {fileID: 106864, guid: 352b8f4ec1f30444889c0261e7f3b222, type: 2}
   - {fileID: 142906, guid: 78a0b5e865544ad44a9dc42c135bc5f6, type: 2}
+  - {fileID: 142906, guid: 78a0b5e865544ad44a9dc42c135bc5f6, type: 2}
   The_Grid: {fileID: 1716241870}
-  test_unit: {fileID: 106864, guid: 352b8f4ec1f30444889c0261e7f3b222, type: 2}
 --- !u!1 &402063342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,7 +3286,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Grid_Empty: {fileID: 191268, guid: 936e64c32e72db74e90a3ddeb4c5d11b, type: 2}
-  Grid_Barricade: {fileID: 0}
   Grid_Barricade_Front: {fileID: 189598, guid: be65ecd9ca00e5642983b64a064ba917, type: 2}
   Grid_Barricade_Back: {fileID: 124084, guid: a6f3048ef2974b24288c4efaf3f26fde, type: 2}
   Grid_Barricade_Left: {fileID: 103948, guid: 9ffbf71de13c2f44487b5808d11c4c36, type: 2}

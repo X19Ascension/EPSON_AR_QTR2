@@ -19,6 +19,7 @@ TagManager:
   - Barrier
   - Entities
   - test
+  - Empty Grid
   layers:
   - Default
   - TransparentFX
