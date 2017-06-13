@@ -13,7 +13,7 @@ GameObject:
   - 95: {fileID: 9501398}
   - 65: {fileID: 6502962}
   - 114: {fileID: 11481214}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrier_Left
   m_TagString: Barrier
   m_Icon: {fileID: 0}

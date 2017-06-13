@@ -176,14 +176,18 @@ public class Survivor : EntityBase
                     direction = (offset + direction).normalized;
                     direction.Normalize();
 
+                    //direction.y += 2;
+
                     bullet = Instantiate(EProjectile, pew, Quaternion.identity) as GameObject;
                     bullet.GetComponent<Rigidbody>().AddForce(direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
                     bullet.GetComponent<Projectile>().Sender = this.gameObject;
-                    bullet.GetComponent<Projectile>().ProjectileLifetime = 0.065f;
+                    bullet.GetComponent<Projectile>().ProjectileLifetime = 0.65f;
                 }
             }
             else
             {
+                //direction.y += 2;
+                //direction.y += 0.05f;
                 bullet = Instantiate(EProjectile, this.gameObject.transform.position, Quaternion.identity) as GameObject;
 
                 bullet.GetComponent<Rigidbody>().AddForce(direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);

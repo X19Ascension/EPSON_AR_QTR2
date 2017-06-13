@@ -565,6 +565,10 @@ MonoBehaviour:
   - {fileID: 142906, guid: 78a0b5e865544ad44a9dc42c135bc5f6, type: 2}
   The_Grid: {fileID: 1716241870}
   test_unit: {fileID: 106864, guid: 352b8f4ec1f30444889c0261e7f3b222, type: 2}
+--- !u!4 &352290463 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 427132, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
+  m_PrefabInternal: {fileID: 1269815648}
 --- !u!1 &376787655
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +814,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 414479766}
+--- !u!4 &421443771 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 462292, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
+  m_PrefabInternal: {fileID: 1269815648}
 --- !u!1 &481181965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1042,39 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 561643750}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &611078525 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
+  m_PrefabInternal: {fileID: 1269815648}
+--- !u!114 &611078527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611078525}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013fc27f88cedbd47ba5936729686beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1280304413}
+  - {fileID: 1604483313}
+  - {fileID: 421443771}
+  - {fileID: 352290463}
+  zombieGO: {fileID: 186088, guid: d13d7d530f98d5d4f9358130b8c8755e, type: 2}
+  fastzombieGO: {fileID: 186088, guid: de77a0bee3f7ab84ba49e21983a2adaf, type: 2}
+  tankzombieGO: {fileID: 186088, guid: 90cc04b892150fe4888df9c52392e505, type: 2}
+  rangezombieGO: {fileID: 0}
+  spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
+  amtToKill4Tank: 30
+  killcount: 17
+  spawnValue: 900
+  minutePerWave: 9999
+  secondPerWave: 0
+  limitAmount: 100
+  maxAmount: 100
+  diff: 2
 --- !u!1 &614376503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2531,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16
+      value: 46.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3898,33 +3939,17 @@ Prefab:
       propertyPath: spawnerGO
       value: 
       objectReference: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-    - target: {fileID: 494122, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 494122, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 494122, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 11493760, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-      propertyPath: diff
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11493760, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-      propertyPath: limitAmount
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 11493760, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-      propertyPath: killcount
-      value: 0
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1280304413 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 476522, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
+  m_PrefabInternal: {fileID: 1269815648}
 --- !u!1 &1368814124
 GameObject:
   m_ObjectHideFlags: 0
@@ -4329,6 +4354,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1575411715}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1604483313 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 477346, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
+  m_PrefabInternal: {fileID: 1269815648}
 --- !u!1 &1651381329
 GameObject:
   m_ObjectHideFlags: 0

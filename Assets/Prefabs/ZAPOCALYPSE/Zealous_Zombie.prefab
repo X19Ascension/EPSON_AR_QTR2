@@ -450,17 +450,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atkRange: 1
-  atkSpd: 0.1
+  atkSpd: 0.2
   atkDmg: 1
-  HP: 30
-  HPRegen: 5
-  i_maxHP: 30
+  HP: 70
+  HPRegen: 2
+  i_maxHP: 50
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   zombieState: 0
   zombieType: 0
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-  moveSpd: 8
+  moveSpd: 2
   attackRate: 0.1
 --- !u!135 &13539916
 SphereCollider:
