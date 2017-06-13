@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 494122}
   - 114: {fileID: 11493760}
+  - 114: {fileID: 11455514}
   m_Layer: 0
   m_Name: SpawnerPrefab
   m_TagString: Untagged
@@ -144,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 111530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.54470015, y: 0.5447004, z: 0.30335248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 476522}
@@ -285,6 +286,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186156}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11455514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111530}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013fc27f88cedbd47ba5936729686beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 476522}
+  - {fileID: 477346}
+  - {fileID: 462292}
+  - {fileID: 427132}
+  zombieGO: {fileID: 186088, guid: d13d7d530f98d5d4f9358130b8c8755e, type: 2}
+  fastzombieGO: {fileID: 186088, guid: de77a0bee3f7ab84ba49e21983a2adaf, type: 2}
+  tankzombieGO: {fileID: 186088, guid: 90cc04b892150fe4888df9c52392e505, type: 2}
+  rangezombieGO: {fileID: 0}
+  spawnerGO: {fileID: 111530}
+  amtToKill4Tank: 30
+  killcount: 17
+  spawnValue: 900
+  minutePerWave: 9999
+  secondPerWave: 0
+  limitAmount: 100
+  maxAmount: 100
+  diff: 2
 --- !u!114 &11493760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,13 +337,13 @@ MonoBehaviour:
   rangezombieGO: {fileID: 0}
   spawnerGO: {fileID: 111530}
   amtToKill4Tank: 30
-  killcount: 0
-  spawnValue: 900
+  killcount: 10
+  spawnValue: 60
   minutePerWave: 9999
   secondPerWave: 0
   limitAmount: 100
-  maxAmount: 7
-  diff: 2
+  maxAmount: 30
+  diff: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

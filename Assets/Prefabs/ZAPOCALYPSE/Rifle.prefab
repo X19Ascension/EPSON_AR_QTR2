@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atkRange: 100
-  atkSpd: 0.05
+  atkSpd: 0.2
   atkDmg: 10
   HP: 200
   HPRegen: 2

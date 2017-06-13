@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: AXkKMxj/////AAAAGcefOHg360gXiKCKAqPf+reGSUAn/mdo6yfUfJzp3GoqyWE00gzDZqHAoY6luw4RFd/383lmgkud9tOzqsRMfWTmqh3ppvGiYPK0IN9vgBA/RMOsiJzxnNk5A6TDG9GsiaA9OdjDZC3PEs3mJGiqTFeSlAfKRDaaTaE/aIbtmljsLdlNIweYcfHbTYJqr15Ekz4tBPUPM65RIihT28YuvxOxXexYnuV15vOGN+MEfwhwBj47w40CVCwZ19uROuUZ0FDBssI06Vx1cctilLRva8BWhARVvUPZGnRdj5JKlBHkSEvbt6tO1/RxFWxne/9VBocPzVfuuKUHkt9wdEGsxqIGQu1024MR4sRggxQXuUh8
+    vuforiaLicenseKey: AY5AkGX/////AAAAGT2zlCDgeUe5gXD//XLIox0WKNpTZDuU7W7aByLF+muOR2wbnpWin4xhfzcGm7PpCJxlIUJqvWgTsrsvEKCvevoq9KjMYVwjbxXuTJe5ANnmpIUmRQzQWLyLTvVNvYUFa79ynqDDwStlsqdO5qNOSK48IfpnQ0/MIHfVbe1Lzn2mOMVV4wJyxleRqx75k8hO4BL62LilqW80rW2Ag9ZunlDTXpU5cbSPiEC5+ZiJkc5thSYrDEQuiKJdda6Obt3Vy8ThG+lFAr5h8FzUfiyKlHSNpKDchdb4bOy5k9hdvN3twmO2FIFG62DGGhyPXj0RLnjwr+e1zXUA4HXE0x++7BzDzUUUrGe/dGEm1HoN8lsk
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 3
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousImageTargets: 6
+    maxSimultaneousObjectTargets: 6
     useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
     cameraOffset: 0.06
     distortionRenderingMode: 2
     distortionRenderingLayer: 31
-    eyewearType: 0
+    eyewearType: 1
     stereoFramework: 0
     seeThroughConfiguration: 0
     viewerName: Generic Cardboard
