@@ -2028,7 +2028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &153878
 GameObject:
   m_ObjectHideFlags: 1
@@ -3822,7 +3822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &193032
 GameObject:
   m_ObjectHideFlags: 1
@@ -12086,7 +12086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
-  m_HPBarPlaneTemplate: {fileID: 155094, guid: aef60c449ef0161479f8ec0cf05122b4, type: 2}
+  HPBarPlaneTemplate: {fileID: 155094, guid: aef60c449ef0161479f8ec0cf05122b4, type: 2}
   DeathAnimationDone: 0
 --- !u!114 &11463568
 MonoBehaviour:

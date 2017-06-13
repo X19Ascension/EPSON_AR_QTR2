@@ -46,6 +46,7 @@ public class Zombie : EntityBase {
         {
             if (this.tag.Contains("test"))
             {
+                spawnerGO.GetComponent<WaveSpawner>().maxAmount--;
                 spawnerGO.GetComponent<WaveSpawner>().killcount++;
                 Destroy(this.gameObject);
 

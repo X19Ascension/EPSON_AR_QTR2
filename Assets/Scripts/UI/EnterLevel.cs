@@ -55,6 +55,13 @@ public class EnterLevel : MonoBehaviour {
                             //SceneManager.LoadScene("RuinsScene");
                             b_InputReceived = true;
                             break;
+
+                        case PersistentData.LEVEL_TYPE.CITY:
+                            //PersistentData.m_Instance.InitialLoad = false;
+                            //PersistentData.m_Instance.LevelToLoad = PersistentData.LEVEL_TYPE.CITY;
+                            SceneManager.LoadScene("RERETest");
+                            WaitCanvas.gameObject.SetActive(true);
+                            break;
                     }
                 }
             }

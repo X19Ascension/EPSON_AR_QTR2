@@ -14,6 +14,7 @@ public class PersistentData : MonoBehaviour {
         GRASS,
         DESERT,
         RUINS,
+        CITY,
     }
 
     // ------------------------------------------------------ //
@@ -175,6 +176,9 @@ public class PersistentData : MonoBehaviour {
             case LEVEL_TYPE.RUINS:
                 SaveFileName = "/RUINS_PersistentData.dat";
                 break;
+            case LEVEL_TYPE.CITY:
+                SaveFileName = "/CITY_PersistentData.dat";
+                break;
         }
 
         BinaryFormatter bf = new BinaryFormatter();
@@ -205,6 +209,10 @@ public class PersistentData : MonoBehaviour {
 
             case LEVEL_TYPE.RUINS:
                 SaveFileName = "/RUINS_PersistentData.dat";
+                TutorialOver = true;
+                break;
+            case LEVEL_TYPE.CITY:
+                SaveFileName = "/CITY_PersistentData.dat";
                 TutorialOver = true;
                 break;
         }

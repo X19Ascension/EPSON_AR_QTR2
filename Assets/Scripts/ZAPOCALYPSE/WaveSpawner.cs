@@ -26,7 +26,10 @@ public class WaveSpawner : MonoBehaviour {
 
     private float randomModifier;                                   //! randomModifier
     private float randomSpawnTimer = 1.5f;
-    
+
+    public int limitAmount;
+    [HideInInspector]
+    public int maxAmount;
 
     // Difficulty Modifier
     public enum TEMP_DIFF                                           //! Temporary Difficulty Setting
@@ -46,6 +49,7 @@ public class WaveSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        spawnerGO.GetComponent<WaveSpawner>().maxAmount = 0;
         switch (diff)
         {
             case TEMP_DIFF.EASY:
@@ -69,7 +73,7 @@ public class WaveSpawner : MonoBehaviour {
         testTankSpawn += Time.deltaTime;
         //if (waveDuration > 0)
         //{
-        if (CheckAnyAlive() == true)
+        if (CheckAnyAlive() == true && spawnerGO.GetComponent<WaveSpawner>().maxAmount < limitAmount)
         {
             if (spawnValue >= 0)
             {
@@ -105,7 +109,7 @@ public class WaveSpawner : MonoBehaviour {
         // Get available targets
         GameObject[] AvailableTargets = ((AllEntities.Union<GameObject>(AllSurvivors))).ToArray<GameObject>();//GameObject.FindGameObjectsWithTag("Survivor");
 
-        if (AvailableTargets[0] != null)
+        if (AvailableTargets != null)
             return true;
 
         return false; // If none, it will return the null it was assigned with.
@@ -146,6 +150,8 @@ public class WaveSpawner : MonoBehaviour {
         go.transform.parent = this.transform.parent;
         spawnValue -= 1;
         Debug.Log("Zombie Spawn");
+        spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
+        //Debug.Log(spawnerGO.GetComponent<WaveSpawner>().maxAmount);
     }
 
     void SpawnHorde(Vector3 spawnPos)
@@ -158,9 +164,11 @@ public class WaveSpawner : MonoBehaviour {
             GameObject go = Instantiate(zombieGO, spawnPos, Quaternion.identity) as GameObject;
             TweakStats(go);
             go.transform.parent = this.transform.parent;
+            spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
         }
         spawnValue -= 1;
         Debug.Log("Horde Spawn");
+        
         //testTimeDelta = 0f;
     }
 
@@ -171,5 +179,6 @@ public class WaveSpawner : MonoBehaviour {
         go.transform.parent = this.transform.parent;
 
         Debug.Log("Tank Zombie Spawn");
+        spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
     }
 }

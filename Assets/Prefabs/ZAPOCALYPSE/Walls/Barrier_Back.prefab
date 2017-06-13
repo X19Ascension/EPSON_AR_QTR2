@@ -13,7 +13,8 @@ GameObject:
   - 95: {fileID: 9556642}
   - 65: {fileID: 6565056}
   - 114: {fileID: 11490774}
-  m_Layer: 0
+  - 208: {fileID: 20824026}
+  m_Layer: 10
   m_Name: Barrier_Back
   m_TagString: Barrier
   m_Icon: {fileID: 0}
@@ -115,6 +116,21 @@ MonoBehaviour:
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   barrier: {fileID: 124084}
+--- !u!208 &20824026
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124084}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 409.77203, y: 78.537, z: 227.70201}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 75.568, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
