@@ -117,6 +117,11 @@ MonoBehaviour:
   ZoomedOutPercent: 50
   ZoomedInPercent: 150
   ZoomRate: 0.25
+  theState: 0
+  ZoomOutSprite: {fileID: 0}
+  ZoomInSprite: {fileID: 0}
+  ZoomOutHighlightedSprite: {fileID: 0}
+  ZoomInHighlightedSprite: {fileID: 0}
 --- !u!114 &11464102
 MonoBehaviour:
   m_ObjectHideFlags: 1

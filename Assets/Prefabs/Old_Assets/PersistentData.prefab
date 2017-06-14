@@ -40,17 +40,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462357a3c965aaf4388e0e538c00d450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EpsonAmount: 0
+  InitialLoad: 0
+  LoadFailed: 0
+  LevelToLoad: 0
+  PreviousScene: 
+  CreditsAmount: 0
   DataAmount: 0
   FoodAmount: 0
   PowerAmount: 0
   PopulationAmount: 0
-  EpsonCap: 0
+  CreditsCap: 0
   DataCap: 0
   FoodCap: 0
   PowerCap: 0
   PopulationCap: 0
-  ExpansionLevel: 1
+  MilestoneIndex: 0
+  MilestoneProgress: 0
+  TutorialOver: 0
   BuildingGridPos: []
   BuildingName: []
 --- !u!1001 &100100000

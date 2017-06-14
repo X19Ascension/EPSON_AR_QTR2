@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building: {fileID: 190982, guid: 30233556bf2bfd947a8a3087d63fc2b7, type: 2}
+  OGImage: {fileID: 0}
 --- !u!114 &11408622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -492,6 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building: {fileID: 100000, guid: 2d3dc3b2afd64ee4ea23341a9c9125bf, type: 3}
+  OGImage: {fileID: 0}
 --- !u!114 &11416490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -578,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11445042}
-  Epson: {fileID: 11485560}
+  Credits: {fileID: 0}
   Food: {fileID: 11416490}
   Population: {fileID: 11486546}
   Power: {fileID: 11422272}
@@ -1164,7 +1166,10 @@ MonoBehaviour:
   BuildGenerator: {fileID: 11437694}
   BuildHousing: {fileID: 11416912}
   BuildStorage: {fileID: 11409264}
-  BuildTower: {fileID: 11408622}
+  BuildWall: {fileID: 0}
+  BuildStandard: {fileID: 0}
+  BuildSniper: {fileID: 0}
+  BuildHeavy: {fileID: 0}
 --- !u!222 &22208030
 CanvasRenderer:
   m_ObjectHideFlags: 1

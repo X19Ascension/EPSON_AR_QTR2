@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11455040}
-  Epson: {fileID: 11470550}
+  Credits: {fileID: 0}
 --- !u!114 &11465334
 MonoBehaviour:
   m_ObjectHideFlags: 1
