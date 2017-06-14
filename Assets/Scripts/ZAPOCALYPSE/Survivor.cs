@@ -173,6 +173,7 @@ public class Survivor : EntityBase
         {
             Vector3 pew = this.gameObject.transform.position;
             GameObject bullet = null;
+
             if (entityType == SURVIVOR_TYPE.S_SHOTGUN)
             {
                 for (int i = 0; i < shellcount; i++)
@@ -191,11 +192,21 @@ public class Survivor : EntityBase
                     bullet = Instantiate(EProjectile, pew, Quaternion.identity) as GameObject;
                     bullet.GetComponent<Rigidbody>().AddForce(direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
                     bullet.GetComponent<Projectile>().Sender = this.gameObject;
-                    bullet.GetComponent<Projectile>().ProjectileLifetime = 0.65f;
+                    bullet.GetComponent<Projectile>().ProjectileLifetime = 0.065f;
                 }
             }
             else
             {
+                float spreadpew = 0.01f;
+
+                float RandomX = Random.Range(-spreadpew, spreadpew);
+                float RandomZ = Random.Range(-spreadpew, spreadpew);
+
+                Vector3 offset = new Vector3(RandomX, 0, RandomZ);
+                direction = (offset + direction).normalized;
+                direction.Normalize();
+
+
                 //direction.y += 2;
                 //direction.y += 0.05f;
                 bullet = Instantiate(EProjectile, this.gameObject.transform.position, Quaternion.identity) as GameObject;

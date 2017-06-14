@@ -91,7 +91,7 @@ public class PlacementManager : MonoBehaviour {
 
                     //theGrid.ClamptoGrid(m_ObjectPreview);
 
-                    if (hit.collider.gameObject.name == "Empty Grid")
+                    if (hit.collider.gameObject.tag == "Empty Grid")
                     {
                         if (Input.GetMouseButtonDown(0) == true)
                         {
