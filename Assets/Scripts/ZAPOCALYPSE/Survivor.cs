@@ -13,6 +13,8 @@ public class Survivor : EntityBase
         S_HEAL,
         S_DEAD,
     }
+    
+
 
     public enum SURVIVOR_TYPE
     {
@@ -33,6 +35,9 @@ public class Survivor : EntityBase
 
     GameObject Directionpoint;
     GridMap The_Grid;
+
+    [SerializeField]
+    float f_enmity;
 
     void Awake()
     {
@@ -70,6 +75,8 @@ public class Survivor : EntityBase
         }
 
         RunFSM();
+
+        f_enmity = this.HP / this.i_maxHP;
     }
 
     public override void RunFSM()
@@ -121,12 +128,7 @@ public class Survivor : EntityBase
                 break;
         }
     }
-
-    GameObject TargetstoTrack()
-    {
-
-        return gameObject;
-    }
+    
 
     // Used when Attacking.
     GameObject TargetToAttack()
@@ -227,6 +229,21 @@ public class Survivor : EntityBase
         }
     }
 
+    void ShoveEnemy(GameObject target)
+    {
+
+    }
+
+    public bool Enemynear()
+    {
+        float distance = Vector3.Distance(TargetToAttack().transform.position , this.transform.position);
+        if(distance < 0.9f)
+        {
+            return true;
+        }
+        return false;
+    }
+
     // For survivor use
     protected GameObject GetClosestDestination()
     {
@@ -258,6 +275,11 @@ public class Survivor : EntityBase
         }
 
         return closestGo; // If none, it will return the null it was assigned with.
+    }
+
+    public float GetEnmity()
+    {
+        return f_enmity;
     }
 
     public override float GetAttackSpeed()
