@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/NCTest 1.unity
+=======
+- path: Assets/Scenes/RERETest.unity
+>>>>>>> c2fee1ecf083eb30b8624501b47dff1bf1f69f94
   isLoaded: 1
   isActive: 1

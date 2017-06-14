@@ -15,7 +15,7 @@ GameObject:
   - 65: {fileID: 6538550}
   m_Layer: 0
   m_Name: Tank_Zombie
-  m_TagString: Untagged
+  m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
