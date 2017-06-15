@@ -5,17 +5,7 @@ using System.Linq;
 
 public class Survivor : EntityBase
 {
-
-    public enum SURVIVOR_STATE
-    {
-        S_IDLE,
-        S_ATTACK,
-        S_HEAL,
-        S_DEAD,
-    }
     
-
-
     public enum SURVIVOR_TYPE
     {
         S_RIFLE,
@@ -28,15 +18,15 @@ public class Survivor : EntityBase
     public GameObject EProjectile;
 
     //EntityBase test;
-    public SURVIVOR_STATE survivorState = SURVIVOR_STATE.S_IDLE;
     public SURVIVOR_TYPE entityType = SURVIVOR_TYPE.S_RIFLE;
     [HideInInspector]
     public float attackRate;
 
+    [SerializeField]
     GameObject Directionpoint;
     GridMap The_Grid;
 
-    [SerializeField]
+    
     float f_enmity;
 
     void Awake()
@@ -56,14 +46,7 @@ public class Survivor : EntityBase
     void Update()
     {
         m_TimerDT += Time.deltaTime;
-
-        if (HP <= 0)
-        {
-            if (this.tag.Contains("Survivor"))
-                Destroy(this.gameObject);
-            else
-                this.gameObject.SetActive(false);
-        }
+        
 
         if (m_TimerDT >= 2)
         {
@@ -74,61 +57,61 @@ public class Survivor : EntityBase
             m_TimerDT = 0;
         }
 
-        RunFSM();
+        //RunFSM();
 
         f_enmity = this.HP / this.i_maxHP;
     }
 
     public override void RunFSM()
     {
-        GameObject m_TargetedEnemy = TargetToAttack();
+        //GameObject m_TargetedEnemy = TargetToAttack();
 
-        if (this.HP <= 0)
-        {
-            survivorState = SURVIVOR_STATE.S_DEAD;
-        }
-        switch (survivorState)
-        {
-            case SURVIVOR_STATE.S_IDLE:
+        //if (this.HP <= 0)
+        //{
+        //    survivorState = SURVIVOR_STATE.S_DEAD;
+        //}
+        //switch (survivorState)
+        //{
+        //    case SURVIVOR_STATE.S_IDLE:
 
-                if (m_TargetedEnemy != null)
-                    survivorState = SURVIVOR_STATE.S_ATTACK;
+        //        if (m_TargetedEnemy != null)
+        //            survivorState = SURVIVOR_STATE.S_ATTACK;
 
-                break;
+        //        break;
 
-            case SURVIVOR_STATE.S_ATTACK:
-                
-                if (m_TargetedEnemy != null)
-                {
-                    Vector3 dir = (m_TargetedEnemy.transform.position - this.gameObject.transform.position).normalized;
-                    Quaternion lookRotation = Quaternion.LookRotation(dir);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 3.0f);
-                    AttackEnemy(m_TargetedEnemy, dir, 20);
-                }
-                else
-                    survivorState = SURVIVOR_STATE.S_IDLE;
+        //    case SURVIVOR_STATE.S_ATTACK:
 
-                break;
+        //        if (m_TargetedEnemy != null)
+        //        {
+        //            Vector3 dir = (m_TargetedEnemy.transform.position - this.gameObject.transform.position).normalized;
+        //            Quaternion lookRotation = Quaternion.LookRotation(dir);
+        //            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 3.0f);
+        //            AttackEnemy(m_TargetedEnemy, dir, 20);
+        //        }
+        //        else
+        //            survivorState = SURVIVOR_STATE.S_IDLE;
 
-            case SURVIVOR_STATE.S_HEAL:
+        //        break;
 
-                if (m_TargetedEnemy == null)
-                {
-                }
-                else if (GetClosestDestination() == null)
-                    survivorState = SURVIVOR_STATE.S_IDLE;
-                else
-                    survivorState = SURVIVOR_STATE.S_ATTACK;
+        //    case SURVIVOR_STATE.S_HEAL:
+
+        //        if (m_TargetedEnemy == null)
+        //        {
+        //        }
+        //        else if (GetClosestDestination() == null)
+        //            survivorState = SURVIVOR_STATE.S_IDLE;
+        //        else
+        //            survivorState = SURVIVOR_STATE.S_ATTACK;
 
 
-                break;
+        //        break;
 
-            case SURVIVOR_STATE.S_DEAD:
-                Destroy(this.gameObject);
-                break;
-        }
+        //    case SURVIVOR_STATE.S_DEAD:
+        //        Destroy(this.gameObject);
+        //        break;
+        //}
     }
-    
+
 
     // Used when Attacking.
     GameObject TargetToAttack()
@@ -236,8 +219,17 @@ public class Survivor : EntityBase
 
     public bool Enemynear()
     {
-        float distance = Vector3.Distance(TargetToAttack().transform.position , this.transform.position);
-        if(distance < 0.9f)
+        float closetdistance = 900;
+        GameObject[] EnemyList = GameObject.FindGameObjectsWithTag("test");
+        foreach(GameObject go in EnemyList)
+        {
+            float dist = Vector3.Distance(go.transform.position,this.gameObject.transform.position);
+            if(dist < closetdistance)
+            {
+                closetdistance = dist;
+            }
+        }
+        if(closetdistance < 50)
         {
             return true;
         }
@@ -245,43 +237,42 @@ public class Survivor : EntityBase
     }
 
     // For survivor use
-    protected GameObject GetClosestDestination()
-    {
-        GameObject[] AllEntities = GameObject.FindGameObjectsWithTag("Entities");
-        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        // Get available targets
-        GameObject[] AvailableTargets = ((AllEntities.Union<GameObject>(AllEnemies))).ToArray<GameObject>();//GameObject.FindGameObjectsWithTag("Survivor");
-        List<GameObject> TargetsInRange = new List<GameObject>();
+    //protected GameObject GetClosestDestination()
+    //{
+    //    GameObject[] AllEntities = GameObject.FindGameObjectsWithTag("Entities");
+    //    GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+    //    // Get available targets
+    //    GameObject[] AvailableTargets = ((AllEntities.Union<GameObject>(AllEnemies))).ToArray<GameObject>();//GameObject.FindGameObjectsWithTag("Survivor");
+    //    List<GameObject> TargetsInRange = new List<GameObject>();
 
-        foreach (GameObject go in AvailableTargets)
-        {
-            if ((go.transform.position - this.gameObject.transform.position).sqrMagnitude < atkRange * atkRange && go.GetComponent<EntityBase>().HP > 0)
-            {
-                TargetsInRange.Add(go);
-            }
-        }
+    //    foreach (GameObject go in AvailableTargets)
+    //    {
+    //        if ((go.transform.position - this.gameObject.transform.position).sqrMagnitude < atkRange * atkRange && go.GetComponent<EntityBase>().HP > 0)
+    //        {
+    //            TargetsInRange.Add(go);
+    //        }
+    //    }
 
-        float closestDist = float.MaxValue;
-        GameObject closestGo = null;
+    //    float closestDist = float.MaxValue;
+    //    GameObject closestGo = null;
 
-        foreach (GameObject go in TargetsInRange)
-        {
-            float dist = (go.transform.position - this.gameObject.transform.position).sqrMagnitude;
-            if (dist < closestDist * closestDist)
-            {
-                closestDist = dist;
-                closestGo = go;
-            }
-        }
+    //    foreach (GameObject go in TargetsInRange)
+    //    {
+    //        float dist = (go.transform.position - this.gameObject.transform.position).sqrMagnitude;
+    //        if (dist < closestDist * closestDist)
+    //        {
+    //            closestDist = dist;
+    //            closestGo = go;
+    //        }
+    //    }
 
-        return closestGo; // If none, it will return the null it was assigned with.
-    }
+    //    return closestGo; // If none, it will return the null it was assigned with.
+    //}
 
     public float GetEnmity()
     {
         return f_enmity;
     }
-
     public override float GetAttackSpeed()
     {
         return atkSpd;
@@ -310,9 +301,12 @@ public class Survivor : EntityBase
     {
         i_maxHP = maxhealth;
     }
-
     public void SetDirectionPoint(GameObject Direction)
     {
         Directionpoint = Direction;
+    }
+    public GameObject GetDirection()
+    {
+        return Directionpoint;
     }
 }

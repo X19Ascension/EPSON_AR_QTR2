@@ -25,11 +25,13 @@ public class GridMap : MonoBehaviour {
 
     //Object to hold all Squares to hold a Grid like system
     private GameObject[,] Grid;
+    public GameObject[,] Target_Grid;
     //Exceptions of the grid above, to hold other items i.e Barricades
     List<GameObject> Grid_Exceptions;
     //Offsets for the barricades
     Vector3 Offset, Front_Offset, Back_Offset, Left_Offset, Right_Offset;
-   
+
+    string[] S_Directions;
   
 
     void Awake()
@@ -43,23 +45,28 @@ public class GridMap : MonoBehaviour {
         Directions.gameObject.name = "Directions";
 
         Grid = new GameObject[i_GridSize_X, i_GridSize_Y];
+        Target_Grid = new GameObject[3, 3];
 
         Offset = new Vector3((i_GridSize_X - 1) * -.5f, 0, (i_GridSize_Y - 1) * -.5f);
         Front_Offset = new Vector3(-1, 0, 0);
         Back_Offset = new Vector3(1, 0, 0);
         Left_Offset = new Vector3(0, 0, -1);
         Right_Offset = new Vector3(0, 0, 1);
-        
+
+
+        S_Directions = new string[] { "North East", "West", "South West", "South", "South East", "East", "North East", "North" };
+
         BuildGrid();
 
         BuildTargetingPoints();
+
+        BuildTargetingGrid();
     }
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
-	
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -120,10 +127,27 @@ public class GridMap : MonoBehaviour {
             point_test.transform.parent = Directions.transform;
             Directions.transform.rotation = Quaternion.Euler(0, i * 45, 0);
             point_test.transform.position = new Vector3(30, 0, 0);
-           // point_test.transform.rotation = Quaternion.identity;
-            point_test.gameObject.name = "Direction Point No." + i.ToString() ;
-            
+            point_test.transform.localRotation = Quaternion.Euler(0, 0, 0) ;
+            point_test.gameObject.tag = "DirectionPoint";
+            point_test.gameObject.name = S_Directions[i];
 
+        }
+    }
+
+    void BuildTargetingGrid()
+    {
+        for (int x = 0; x < 3; x++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                GameObject gridplane = (GameObject)Instantiate(Grid_Empty, new Vector3(x , 0, z ) + (Offset += new Vector3(100,0,100)), Quaternion.identity);
+                gridplane.gameObject.name = "Target";
+                gridplane.gameObject.tag = "Targeting Grid";
+                gridplane.transform.localScale += new Vector3(100,0,100);
+                gridplane.transform.parent = Grid_Encapsulate.transform;
+                Target_Grid[x, z] = gridplane;
+
+            }
         }
     }
 
@@ -173,18 +197,8 @@ public class GridMap : MonoBehaviour {
         {
             for (int z = 0; z < i_GridSize_Y; z++)
             {
-                if (x == 1 && ((z == 1) || (z == (i_GridSize_Y - 2))))
-                {
-                    if(z == 1)
-                    {
-                        go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("Direction Point No.4"));
-                    }
-                    else
-                    {
-
-                    }
-                }
-                else if((x == 1 || x == (i_GridSize_X - 2)) && z == 1)
+               
+              if((x == 1 || x == (i_GridSize_X - 2)) && z == 1)
                 {
 
                 }
@@ -197,6 +211,80 @@ public class GridMap : MonoBehaviour {
     public void SetTargetRange(GameObject go)
     {
         //Exception List, kinda
-
+        for (int x = 0; x < i_GridSize_X; x++) 
+        {
+            for (int z = 0; z < i_GridSize_Y; z++) 
+            {
+                if (go.transform.position == Grid[x, z].transform.position)
+                {
+                    if (x == 1)
+                    {
+                        if ((z == 1) || (z == (i_GridSize_Y - 2)))
+                        {
+                            if (z == 1)
+                            {
+                                go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("South East"));
+                            }
+                            else
+                            {
+                                go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("South West"));
+                            }
+                        }
+                        else
+                        {
+                            go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("South"));
+                        }
+                    }
+                    else if (x == i_GridSize_X - 2)
+                    {
+                        if (z == 1 || z == i_GridSize_Y - 2)
+                        {
+                            if (z == 1)
+                            {
+                                go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("North East"));
+                            }
+                            else
+                            {
+                                go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("North West"));
+                            }
+                        }
+                        else
+                        {
+                            go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("North"));
+                        }
+                    }
+                    else if (z == 1 || z == i_GridSize_Y - 2)
+                    {
+                        if(z == 1)
+                        {
+                            go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("East"));
+                        }
+                        else
+                        {
+                            go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("West"));
+                        }
+                    }
+                    else
+                    {
+                        if (x < i_GridSize_X / 2 && z < i_GridSize_Y / 2)
+                        {
+                            go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("North"));
+                        }
+                        if (x > i_GridSize_X / 2 && z > i_GridSize_Y / 2)
+                        {
+                            go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("South"));
+                        }
+                        if (x < i_GridSize_X / 2 && z > i_GridSize_Y / 2)
+                        {
+                            go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("West"));
+                        }
+                        if (x > i_GridSize_X / 2 && z < i_GridSize_Y / 2)
+                        {
+                            go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("East"));
+                        }
+                    }
+                }
+            }
+        }
     }
 }

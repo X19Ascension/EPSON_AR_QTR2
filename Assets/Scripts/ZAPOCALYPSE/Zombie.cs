@@ -29,6 +29,36 @@ public class Zombie : EntityBase {
     public float moveSpd;
     [HideInInspector]
     public float attackRate;
+    int[] Threattype = new int[]{ 3, 2, 5, 2 };
+    int Threat;
+
+    void Awake()
+    {
+        switch (zombieType)
+        {
+            case ZOMBIE_TYPE.Z_STANDARD:
+                {
+                    Threat = Threattype[0];
+                    break;
+                }
+            case ZOMBIE_TYPE.Z_ZEALOUS:
+                {
+                    Threat = Threattype[1];
+                    break;
+                }
+            case ZOMBIE_TYPE.Z_TANKY:
+                {
+                    Threat = Threattype[2];
+                    break;
+                }
+            case ZOMBIE_TYPE.Z_RANGED:
+                {
+                    Threat = Threattype[3];
+                    break;
+                }
+        }
+
+    }
 
     // Use this for initialization
     void Start()
@@ -230,6 +260,10 @@ public class Zombie : EntityBase {
         i_maxHP = maxhealth;
     }
 
+    public int GetThreat()
+    {
+        return Threat;
+    }
 
     void OnCollisionEnter(Collision col)
     {

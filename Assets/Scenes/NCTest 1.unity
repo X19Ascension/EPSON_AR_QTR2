@@ -197,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   survivorType:
   - {fileID: 106864, guid: 352b8f4ec1f30444889c0261e7f3b222, type: 2}
-  - {fileID: 142906, guid: 78a0b5e865544ad44a9dc42c135bc5f6, type: 2}
+  - {fileID: 129594, guid: 9206ef78b8b31a94e84c9c24e94dfc1f, type: 2}
   - {fileID: 142906, guid: 78a0b5e865544ad44a9dc42c135bc5f6, type: 2}
   The_Grid: {fileID: 1716241870}
 --- !u!1 &402063342
@@ -319,7 +319,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 481181965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.844675, y: 0.5788498, z: 2.0142817}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
