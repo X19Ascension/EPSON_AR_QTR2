@@ -31,7 +31,7 @@ GameObject:
   - 23: {fileID: 2322794}
   - 114: {fileID: 11423684}
   m_Layer: 0
-  m_Name: Zombie
+  m_Name: oldZombie
   m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

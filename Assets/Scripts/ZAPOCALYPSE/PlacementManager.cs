@@ -48,10 +48,36 @@ public class PlacementManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
         switch (placementState)
         {
             case PLACEMENT_STATE.NOT_PLACING:
-                if (buttonClicked)
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    survivorType = Survivor.SURVIVOR_TYPE.S_RIFLE;
+                    buttonClicked = true;
+                }
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    survivorType = Survivor.SURVIVOR_TYPE.S_SHOTGUN;
+                    buttonClicked = true;
+                }
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    survivorType = Survivor.SURVIVOR_TYPE.S_MELEE;
+                    buttonClicked = true;
+                }
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    survivorType = Survivor.SURVIVOR_TYPE.S_MEDIC;
+                    buttonClicked = true;
+                }
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                    survivorType = Survivor.SURVIVOR_TYPE.S_MECHANIC;
+                    buttonClicked = true;
+                }
+                if (buttonClicked && onField < 3)
                 {
                     helpTip.SetActive(true);
                     placementState = PLACEMENT_STATE.SELECTING_POSITION;
@@ -93,7 +119,7 @@ public class PlacementManager : MonoBehaviour {
 
                     if (hit.collider.gameObject.tag == "Empty Grid")
                     {
-                        if (Input.GetMouseButtonDown(0) == true)
+                        if (Input.GetMouseButtonDown(0))
                         {
                             // Create Preview Building if one does not exist
                             if ((/*m_ObjectPreview == null &&*/ m_ObjectToPlace.tag.Contains("Survivor")))

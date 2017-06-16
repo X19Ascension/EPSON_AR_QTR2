@@ -30,6 +30,7 @@ public class Survivor : EntityBase
     public SURVIVOR_TYPE entityType = SURVIVOR_TYPE.S_RIFLE;
     [HideInInspector]
     public float attackRate;
+    public float reloadRate;
 
     GameObject Directionpoint;
     GridMap The_Grid;
@@ -147,12 +148,17 @@ public class Survivor : EntityBase
         }
 
 
+
         // Search for closest one
         float closestDist = 999999;
         GameObject closestGo = null;
 
         foreach (GameObject go in TargetsInRange)
         {
+            // Check for priority
+            if (go.transform.FindChild("TargetPlaceHolder(Clone)"))
+                return go;
+
             float dist = (go.transform.position - this.gameObject.transform.position).sqrMagnitude;
             if (dist < closestDist * closestDist)
             {
@@ -192,7 +198,7 @@ public class Survivor : EntityBase
                     bullet = Instantiate(EProjectile, pew, Quaternion.identity) as GameObject;
                     bullet.GetComponent<Rigidbody>().AddForce(direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
                     bullet.GetComponent<Projectile>().Sender = this.gameObject;
-                    bullet.GetComponent<Projectile>().ProjectileLifetime = 0.065f;
+                    bullet.GetComponent<Projectile>().ProjectileLifetime = 0.085f;
                 }
             }
             else
@@ -242,7 +248,8 @@ public class Survivor : EntityBase
     protected GameObject GetClosestDestination()
     {
         GameObject[] AllEntities = GameObject.FindGameObjectsWithTag("Entities");
-        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        //GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("test");
         // Get available targets
         GameObject[] AvailableTargets = ((AllEntities.Union<GameObject>(AllEnemies))).ToArray<GameObject>();//GameObject.FindGameObjectsWithTag("Survivor");
         List<GameObject> TargetsInRange = new List<GameObject>();
@@ -255,7 +262,7 @@ public class Survivor : EntityBase
             }
         }
 
-        float closestDist = float.MaxValue;
+        float closestDist = 999;
         GameObject closestGo = null;
 
         foreach (GameObject go in TargetsInRange)

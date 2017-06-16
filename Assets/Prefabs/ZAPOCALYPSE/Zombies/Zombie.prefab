@@ -47,7 +47,11 @@ GameObject:
   - 95: {fileID: 9523480}
   - 65: {fileID: 6582634}
   - 114: {fileID: 11464486}
-  - 195: {fileID: 19514976}
+  - 114: {fileID: 11464300}
+  - 114: {fileID: 11417256}
+  - 208: {fileID: 20815980}
+  - 114: {fileID: 11470000}
+  - 195: {fileID: 19573258}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: test
@@ -88,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3409898, y: -5.5635085, z: 5.401551}
+  m_LocalPosition: {x: -2.3922043, y: 0, z: -0.98381805}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -224,6 +228,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11417256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8589674f39857e44bbac304f64885d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  picPriority: {fileID: 119838, guid: fefd0ce2652c3f74f9a3f3a98d3ece95, type: 2}
+--- !u!114 &11464300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813c8e92e0d162746bc98f73ea3814c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
 --- !u!114 &11464486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c681d3453131e44977340f2a2b3980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 1
+  atkRange: 1.5
   atkSpd: 0.2
   atkDmg: 1
   HP: 70
@@ -248,7 +276,18 @@ MonoBehaviour:
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   moveSpd: 2
   attackRate: 0.1
---- !u!195 &19514976
+--- !u!114 &11470000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197804}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911feb003f67c4fb79a75b51b493d03d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!195 &19573258
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -264,10 +303,25 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 601.79065
-  m_BaseOffset: 300.89532
+  m_Height: 1
+  m_BaseOffset: 1.6
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!208 &20815980
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197804}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 53.261, y: 150.44801, z: 50.000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 150.44801, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
