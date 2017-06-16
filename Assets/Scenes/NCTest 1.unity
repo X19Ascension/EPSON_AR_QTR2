@@ -198,7 +198,7 @@ MonoBehaviour:
   survivorType:
   - {fileID: 106864, guid: 352b8f4ec1f30444889c0261e7f3b222, type: 2}
   - {fileID: 129594, guid: 9206ef78b8b31a94e84c9c24e94dfc1f, type: 2}
-  - {fileID: 142906, guid: 78a0b5e865544ad44a9dc42c135bc5f6, type: 2}
+  - {fileID: 188060, guid: 12e8e3bc0a5e3464ea0e9bfc58020c48, type: 2}
   The_Grid: {fileID: 1716241870}
 --- !u!1 &402063342
 GameObject:

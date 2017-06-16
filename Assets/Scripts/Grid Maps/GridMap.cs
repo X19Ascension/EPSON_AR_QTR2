@@ -18,6 +18,8 @@ public class GridMap : MonoBehaviour {
     GameObject Directions;
     //Empty GameObject for organizing purposes in Scene
     GameObject Grid_Encapsulate;
+    //Empty GameObject for Organizing purposes in scene
+    GameObject TargetGrid_Encapsulate;
 
     //Grid Size that can be changed to meet desres
     public int i_GridSize_X = 6;
@@ -40,6 +42,9 @@ public class GridMap : MonoBehaviour {
 
         Grid_Encapsulate = new GameObject();
         Grid_Encapsulate.gameObject.name = "The Grid";
+
+        TargetGrid_Encapsulate = new GameObject();
+        TargetGrid_Encapsulate.gameObject.name = "Targeting Grid";
 
         Directions = new GameObject();
         Directions.gameObject.name = "Directions";
@@ -136,15 +141,16 @@ public class GridMap : MonoBehaviour {
 
     void BuildTargetingGrid()
     {
+        Vector3 Tempoffset = new Vector3(-25,0,-25);
         for (int x = 0; x < 3; x++)
         {
             for (int z = 0; z < 3; z++)
             {
-                GameObject gridplane = (GameObject)Instantiate(Grid_Empty, new Vector3(x , 0, z ) + (Offset += new Vector3(100,0,100)), Quaternion.identity);
-                gridplane.gameObject.name = "Target";
+                GameObject gridplane = (GameObject)Instantiate(Grid_Empty, Tempoffset + new Vector3(x * 25, 0, z * 25 ), Quaternion.identity);
+                gridplane.gameObject.name = (x + 1).ToString() + " , " + (z + 1).ToString();
                 gridplane.gameObject.tag = "Targeting Grid";
-                gridplane.transform.localScale += new Vector3(100,0,100);
-                gridplane.transform.parent = Grid_Encapsulate.transform;
+                gridplane.transform.localScale += new Vector3(25,0,25);
+                gridplane.transform.parent = TargetGrid_Encapsulate.transform;
                 Target_Grid[x, z] = gridplane;
 
             }
@@ -160,17 +166,18 @@ public class GridMap : MonoBehaviour {
         {
             for (int z = 0; z < i_GridSize_Y; z++)
             {
-                if (Grid[x, z].gameObject.tag == "Empty Grid")
+                if (x == 0 || z == 0 || x == i_GridSize_X - 1 || z == i_GridSize_Y - 1)
                 {
-                        if (Vector3.Distance(Grid[x, z].transform.position, go.transform.position) <= radius) 
-                        {
-                            NearestGridList.Add(Grid[x, z]);
-                        }
+                    Grid_Exceptions.Add(Grid[x, z]);
+                }
+                else if (Vector3.Distance(Grid[x, z].transform.position, go.transform.position) <= radius)
+                {
+                    NearestGridList.Add(Grid[x, z]);
                 }
             }
 
         }
-                //Run through List to check which position is the nearest
+        //Run through List to check which position is the nearest
         for (int i = 0; i < NearestGridList.Count; i++)
         {
             float tempdistance;
@@ -191,19 +198,6 @@ public class GridMap : MonoBehaviour {
                 go.transform.position = PointtoClamp.transform.position;
                 Grid_Exceptions.Add(NearestGridList[i]);
             }
-        }
-
-        for (int x = 0; x < i_GridSize_X; x++)
-        {
-            for (int z = 0; z < i_GridSize_Y; z++)
-            {
-               
-              if((x == 1 || x == (i_GridSize_X - 2)) && z == 1)
-                {
-
-                }
-            }
-
         }
 
     }

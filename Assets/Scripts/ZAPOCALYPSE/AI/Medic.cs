@@ -42,7 +42,7 @@ public class Medic : Survivor
         {
             case (Medic_State.S_IDLE):
                 {
-                    if(this.Enemynear())
+                    if(this.Enemynear(0.5f))
                     {
                         medicstate = Medic_State.S_PANIC;
                     }
@@ -57,7 +57,7 @@ public class Medic : Survivor
             case (Medic_State.S_PANIC):
                 {
                     ShoveZombie();
-                    if(!this.Enemynear())
+                    if(!this.Enemynear(0.5f))
                     {
                         medicstate = Medic_State.S_IDLE;
                     }

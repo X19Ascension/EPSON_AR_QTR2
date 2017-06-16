@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Rifle : Survivor
-{ 
-    public enum Rifle_State
+public class Shotgun : Survivor
+{
+    public enum Shotgun_State
     {
         S_IDLE = 1,
         S_PANIC,
@@ -13,17 +13,18 @@ public class Rifle : Survivor
     }
 
     public GameObject target;
-    public Rifle_State riflestate;
+    public Shotgun_State shotgunstate;
 
     void Awake()
     {
         target = null;
-        riflestate = Rifle_State.S_IDLE;
+        shotgunstate = Shotgun_State.S_IDLE;
     }
 
+	// Use this for initialization
 	void Start ()
     {
-        this.atkRange = 50.0f;
+        this.atkRange = 15.0f;
 	}
 	
 	// Update is called once per frame
@@ -32,43 +33,41 @@ public class Rifle : Survivor
         RunFSM();
 	}
 
-
     public override void RunFSM()
     {
-        if(this.HP <= 0 )
+        if(this.HP <= 0)
         {
-            riflestate = Rifle_State.S_DEAD;
+            shotgunstate = Shotgun_State.S_DEAD;
         }
-        switch (riflestate)
+        switch (shotgunstate)
         {
-            case Rifle_State.S_IDLE:
+            case Shotgun_State.S_IDLE:
                 {
-                    if(this.Enemynear(atkRange))
+                    if (this.Enemynear(this.atkRange))
                     {
                         target = SelectTarget();
-                        riflestate = Rifle_State.S_ATTACK;
+                        shotgunstate = Shotgun_State.S_ATTACK;
                     }
                     break;
-                    
                 }
-            case Rifle_State.S_PANIC:
+            case Shotgun_State.S_PANIC:
                 {
                     break;
                 }
-            case Rifle_State.S_ATTACK:
+            case Shotgun_State.S_ATTACK:
                 {
-                    if(target!=null)
+                    if (target != null)
                     {
                         Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
-                        Attackenemy(V3_Direction);
+                        Attackenemy(V3_Direction, 10, true) ;
                     }
                     else
                     {
-                        riflestate = Rifle_State.S_IDLE;
+                        shotgunstate = Shotgun_State.S_IDLE;
                     }
                     break;
                 }
-            case Rifle_State.S_DEAD:
+            case Shotgun_State.S_DEAD:
                 {
                     Destroy(this.gameObject);
                     break;
@@ -82,11 +81,11 @@ public class Rifle : Survivor
         GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("test");
         List<GameObject> Targetables = new List<GameObject>();
         List<GameObject> TargetList = new List<GameObject>();
-        if(AllEnemies != null)
+        if (AllEnemies != null)
         {
             foreach (GameObject go in AllEnemies)
             {
-                if (go == null) 
+                if (go == null)
                 {
                     continue;
                 }
@@ -111,19 +110,33 @@ public class Rifle : Survivor
         return null;
     }
 
-    void Attackenemy(Vector3 Direction)
+    void Attackenemy(Vector3 Direction, int shellCount, bool spread = false)
     {
         attackRate -= Time.deltaTime;
         if (attackRate <= 0)
         {
             Vector3 pew = this.gameObject.transform.position;
             GameObject bullet = null;
+            //direction.y += 2;
+            //direction.y += 0.05f;
+            for (int i = 0; i < shellCount; i++)
+            {
+                float spreadpew = 0.1f;
+
+                float RandomX = Random.Range(-spreadpew, spreadpew);
+                float RandomZ = Random.Range(-spreadpew, spreadpew);
+
+                Vector3 offset = new Vector3(RandomX, 0, RandomZ);
+                Direction = (offset + Direction).normalized;
+                Direction.Normalize();
+
                 //direction.y += 2;
-                //direction.y += 0.05f;
-            bullet = Instantiate(EProjectile, this.gameObject.transform.position, Quaternion.identity) as GameObject;
-            
-            bullet.GetComponent<Rigidbody>().AddForce(Direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
-            bullet.GetComponent<Projectile>().Sender = this.gameObject;
+
+                bullet = Instantiate(EProjectile, pew, Quaternion.identity) as GameObject;
+                bullet.GetComponent<Rigidbody>().AddForce(Direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
+                bullet.GetComponent<Projectile>().Sender = this.gameObject;
+                bullet.GetComponent<Projectile>().ProjectileLifetime = 0.65f;
+            }
             bullet.transform.parent = this.transform.parent;
             attackRate = atkSpd;
         }
