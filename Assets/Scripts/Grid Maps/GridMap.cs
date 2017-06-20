@@ -59,7 +59,7 @@ public class GridMap : MonoBehaviour {
         Right_Offset = new Vector3(0, 0, 1);
 
 
-        S_Directions = new string[] { "North East", "West", "South West", "South", "South East", "East", "North East", "North" };
+        S_Directions = new string[] { "North West", "West", "South West", "South", "South East", "East", "North East", "North" };
 
         BuildGrid();
 
@@ -237,7 +237,7 @@ public class GridMap : MonoBehaviour {
                             {
                                 go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("North East"));
                             }
-                            else
+                            else if (z == i_GridSize_Y - 2) 
                             {
                                 go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("North West"));
                             }

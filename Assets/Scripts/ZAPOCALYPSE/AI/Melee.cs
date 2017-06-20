@@ -43,7 +43,7 @@ public class Melee : Survivor
                 {
                     if (this.Enemynear(this.atkRange))
                     {
-                        target = SelectTarget();
+                        target = SelectTarget(this.atkRange);
                         meleestate = Melee_State.S_ATTACK;
                     }
                     break;
@@ -70,39 +70,7 @@ public class Melee : Survivor
 
     }
 
-    GameObject SelectTarget()
-    {
-        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("test");
-        List<GameObject> Targetables = new List<GameObject>();
-        List<GameObject> TargetList = new List<GameObject>();
-        if (AllEnemies != null)
-        {
-            foreach (GameObject go in AllEnemies)
-            {
-                if (go == null)
-                {
-                    continue;
-                }
-                else if (Vector3.Angle(go.transform.position - this.transform.position, this.GetDirection().transform.position - this.transform.position)
-                    <= 45 && Vector3.Distance(go.transform.position, this.transform.position) <= atkRange)
-                {
-                    Targetables.Add(go);
-                }
-            }
-
-            foreach (GameObject go in Targetables)
-            {
-                for (int i = 0; i < go.GetComponent<Zombie>().GetThreat(); i++)
-                {
-                    TargetList.Add(go);
-                }
-            }
-            int targetindex = Random.Range(0, TargetList.Count);
-
-            return TargetList[targetindex];
-        }
-        return null;
-    }
+   
 
     void Attackenemy(Vector3 Direction)
     {
