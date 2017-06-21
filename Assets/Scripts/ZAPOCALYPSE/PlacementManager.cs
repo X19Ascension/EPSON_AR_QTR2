@@ -131,7 +131,7 @@ public class PlacementManager : MonoBehaviour {
                             helpTip.SetActive(false);
                             buttonClicked = false;
                             placementState = PLACEMENT_STATE.NOT_PLACING;
-                            theGrid.ClamptoGrid(m_ObjectToPlace);
+                            //theGrid.ClamptoGrid(m_ObjectToPlace);
                             m_ObjectToPlace = null;
                             m_ObjectPreview = null;
                         }

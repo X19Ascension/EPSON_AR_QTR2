@@ -11,6 +11,7 @@ public class Survivor : EntityBase
         S_IDLE,
         S_ATTACK,
         S_HEAL,
+        S_RELOAD,
         S_DEAD,
     }
 
@@ -23,28 +24,44 @@ public class Survivor : EntityBase
         S_MECHANIC,
     }
 
-    public GameObject EProjectile;
+    public GameObject EProjectile;                                          //! Projectile used to shoot at Zombies
 
     //EntityBase test;
-    public SURVIVOR_STATE survivorState = SURVIVOR_STATE.S_IDLE;
-    public SURVIVOR_TYPE entityType = SURVIVOR_TYPE.S_RIFLE;
+    public SURVIVOR_STATE survivorState = SURVIVOR_STATE.S_IDLE;            //! States of Survivor
+    public SURVIVOR_TYPE entityType = SURVIVOR_TYPE.S_RIFLE;                //! Type of Survivor
     [HideInInspector]
-    public float attackRate;
-    public float reloadRate;
+    public float attackRate;                                                //! Attack Rate of Survivor
+    public float reloadRate;                                                //! Reload Rate of Survivor
+    private float reloadDt;
+    private float idleDt = 5.0f;
 
-    GameObject Directionpoint;
-    GridMap The_Grid;
+    public int maxAmmo;                                                     //! Max Ammo Survivor Have
+    private int currAmmo;                                                   //! Current Ammo Survivor Has
+
+    [HideInInspector]
+    public float experiencePt;                                              //! Experience Pt of Survivor to Level
+    [HideInInspector]
+    public float timeActive;                                              //! Experience Pt of Survivor to Level
+    public int level;                                              //! Experience Pt of Survivor to Level
+
+    public bool onFieldAnot;                                                //! To Check if Survivor is on Field
+
+    GameObject Directionpoint;                                              //! To determine direction survivor shoot at when he at which grid.
+    GridMap The_Grid;                                                       //! The Grid
+    WaveSpawner The_Spawner;                                                //! The Grid
 
     void Awake()
     {
         Directionpoint = new GameObject();
         The_Grid = GameObject.Find("Grid Spawner").GetComponent<GridMap>();
+        The_Spawner = GameObject.Find("SpawnerPrefab").GetComponent<WaveSpawner>();
     }
 
     // Use this for initialization
     void Start()
     {
         //i_maxHP = HP;
+        currAmmo = maxAmmo;
         attackRate = GetAttackSpeed();
     }
 
@@ -52,6 +69,7 @@ public class Survivor : EntityBase
     void Update()
     {
         m_TimerDT += Time.deltaTime;
+        timeActive += Time.deltaTime;
 
         if (HP <= 0)
         {
@@ -70,6 +88,14 @@ public class Survivor : EntityBase
             m_TimerDT = 0;
         }
 
+
+        //if (The_Spawner.waveEnded)
+        //{
+        //    gameObject.GetComponent<UnitGrowth>().CalculateEXPGain();
+        //    //The_Spawner.waveNo++;
+        //    The_Spawner.waveEnded = false;
+        //}
+
         RunFSM();
     }
 
@@ -86,7 +112,15 @@ public class Survivor : EntityBase
             case SURVIVOR_STATE.S_IDLE:
 
                 if (m_TargetedEnemy != null)
+                {
                     survivorState = SURVIVOR_STATE.S_ATTACK;
+                    idleDt = 5.0f;
+                }
+
+                if (currAmmo < maxAmmo && idleDt <= 0)
+                    survivorState = SURVIVOR_STATE.S_RELOAD;
+                else
+                    idleDt -= Time.deltaTime;
 
                 break;
 
@@ -97,10 +131,28 @@ public class Survivor : EntityBase
                     Vector3 dir = (m_TargetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                     Quaternion lookRotation = Quaternion.LookRotation(dir);
                     transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 3.0f);
-                    AttackEnemy(m_TargetedEnemy, dir, 20);
+                    if (currAmmo > 0)
+                        AttackEnemy(m_TargetedEnemy, dir, 20);
+                    else
+                        survivorState = SURVIVOR_STATE.S_RELOAD;
                 }
                 else
                     survivorState = SURVIVOR_STATE.S_IDLE;
+
+                break;
+
+            case SURVIVOR_STATE.S_RELOAD:
+                
+
+                if (reloadDt >= reloadRate)
+                {
+                    currAmmo = maxAmmo;
+                    reloadDt = 0.0f;
+                    idleDt = 5.0f;
+                    survivorState = SURVIVOR_STATE.S_IDLE;
+                }
+                else
+                    reloadDt += Time.deltaTime;
 
                 break;
 
@@ -227,6 +279,8 @@ public class Survivor : EntityBase
             //Physics.IgnoreCollision(bullet.GetComponent<Collider>(), GetComponent<Collider>());
 
             attackRate = this.GetAttackSpeed();
+
+            currAmmo--;
         }
     }
 
@@ -241,6 +295,7 @@ public class Survivor : EntityBase
             target.GetComponent<EntityBase>().SetHealth(health);
 
             attackRate = this.GetAttackSpeed();
+            currAmmo--;
         }
     }
 

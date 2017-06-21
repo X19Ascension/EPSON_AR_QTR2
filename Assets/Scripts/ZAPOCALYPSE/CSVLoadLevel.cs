@@ -9,8 +9,8 @@ public class CSVLoadLevel : MonoBehaviour
 
     public TextAsset csvFile; // Reference of CSV file
     public int[,] loadedMap;
-    public int newxsize;
-    public int newysize;
+    public int xwaveno;
+    public int yspawnpt;
     private char lineSeperator = '\n'; // It defines line seperate character
     private char fieldSeperator = ','; // It defines field seperate chracter
     //public LevelGenerate LevelLoad;
@@ -32,15 +32,15 @@ public class CSVLoadLevel : MonoBehaviour
             {
                 i++;
             }
-            newxsize = i;
+            xwaveno = i;
             i = 0;
             j++;
         }
         //newxsize = i;
-        newysize = j;
+        yspawnpt = j;
         //Debug.Log(newxsize + " " + newysize);
 
-        loadedMap = new int[newxsize, newysize];
+        loadedMap = new int[xwaveno, yspawnpt];
         readData();
 
         //LevelLoad.generateLoadMap(loadedMap, newxsize, newysize);
