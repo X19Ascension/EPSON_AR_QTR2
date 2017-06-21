@@ -16,7 +16,7 @@ public class Zombie : EntityBase {
 
     void Awake()
     {
-       
+        atkRange = 999;
     }
 
     // Use this for initialization
@@ -89,21 +89,8 @@ public class Zombie : EntityBase {
 
         return closestGo;
     }
-
-    void AttackEnemy(GameObject target)
-    {
-        attackRate -= Time.deltaTime;
-
-        if (attackRate < 0)
-        {
-            int health = target.GetComponent<EntityBase>().GetHealth() - this.GetAttackDamage();
-            target.GetComponent<EntityBase>().SetHealth(health);
-
-            attackRate = this.GetAttackSpeed();
-        }
-    }
-
-    void TakeDamage(int damage)
+    
+    protected void TakeDamage(int damage)
     {
         int health = this.GetHealth() - damage;
         this.SetHealth(health);
@@ -148,6 +135,12 @@ public class Zombie : EntityBase {
         i_maxHP = maxhealth;
     }
 
+
+    public void SetThreat(int threat)
+    {
+        Threat = threat;
+    }
+
     public int GetThreat()
     {
         return Threat;
@@ -166,6 +159,12 @@ public class Zombie : EntityBase {
                 }
             }
         
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, atkRange);
     }
 
 }

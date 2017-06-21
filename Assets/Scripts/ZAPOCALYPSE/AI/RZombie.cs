@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RZombie : Zombie
 {
-
+    public GameObject Projectile;
     public enum RZombieSTATE
     {
         S_IDLE = 1,
@@ -37,7 +37,7 @@ public class RZombie : Zombie
 	// Update is called once per frame
 	void Update ()
     {
-	    
+        RunFSM();
 	}
 
     public override void RunFSM()
@@ -73,7 +73,9 @@ public class RZombie : Zombie
                 {
                     if (go_targetedEnemy != null)
                     {
-                        AttackEnemy(go_targetedEnemy);
+                        Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
+
+                        AttackEnemy(dir);
                     }
                     else
                         Zombiestate = RZombieSTATE.S_CHASE;
@@ -88,8 +90,19 @@ public class RZombie : Zombie
 
     }
 
-    void AttackEnemy(GameObject target)
+    void AttackEnemy(Vector3 Direction)
     {
+        attackRate -= Time.deltaTime;
+        if(attackRate <=0)
+        {
+            Vector3 v3_bullet = this.gameObject.transform.position;
+            GameObject go_bullet = null;
 
+            go_bullet = Instantiate(Projectile, this.gameObject.transform.position, Quaternion.identity) as GameObject;
+            go_bullet.GetComponent<Rigidbody>().AddForce(Direction * go_bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
+            go_bullet.transform.parent = this.transform.parent;
+            attackRate = atkSpd;
+        }
     }
+
 }

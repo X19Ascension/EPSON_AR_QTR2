@@ -2832,7 +2832,12 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11493760, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
+      propertyPath: zombieGO
+      value: 
+      objectReference: {fileID: 186088, guid: d13d7d530f98d5d4f9358130b8c8755e, type: 2}
+    m_RemovedComponents:
+    - {fileID: 11455514, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1368814124

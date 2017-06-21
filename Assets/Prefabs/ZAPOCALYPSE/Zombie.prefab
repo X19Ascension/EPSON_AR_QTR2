@@ -29,7 +29,7 @@ GameObject:
   - 33: {fileID: 3316722}
   - 135: {fileID: 13539916}
   - 23: {fileID: 2322794}
-  - 114: {fileID: 11423684}
+  - 114: {fileID: 11477280}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: test
@@ -438,7 +438,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11423684
+--- !u!114 &11477280
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -446,22 +446,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 186088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63c681d3453131e44977340f2a2b3980, type: 3}
+  m_Script: {fileID: 11500000, guid: 97fff60a7995d584ebb91b013ad4cfd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   atkRange: 1
-  atkSpd: 0.2
+  atkSpd: 1
   atkDmg: 1
   HP: 70
   HPRegen: 2
-  i_maxHP: 50
+  i_maxHP: 70
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
-  zombieState: 0
-  zombieType: 0
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   moveSpd: 2
-  attackRate: 0.1
+  attackRate: 0
+  Zombiestate: 0
+  SpawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
 --- !u!135 &13539916
 SphereCollider:
   m_ObjectHideFlags: 1

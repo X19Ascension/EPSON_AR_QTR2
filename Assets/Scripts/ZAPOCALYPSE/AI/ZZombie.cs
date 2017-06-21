@@ -101,25 +101,4 @@ public class ZZombie : Zombie {
             f_attackRate = this.GetAttackSpeed();
         }
     }
-
-    void TakeDamage(int damage)
-    {
-        int health = this.GetHealth() - damage;
-        this.SetHealth(health);
-    }
-
-    void OnCollisionEnter(Collision col)
-    {
-        //if (col.gameObject.tag.Contains("FriendlyFire"))
-        //Debug.Log(col.gameObject.tag);
-        if (col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor" && col.gameObject.tag == "Bullet")
-        {
-            //if (col.gameObject.GetComponent<Projectile>().Sender.GetComponent<FSMBase>().GetTarget() == this.gameObject)
-            {
-                TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
-                Destroy(col.gameObject);
-            }
-        }
-
-    }
 }

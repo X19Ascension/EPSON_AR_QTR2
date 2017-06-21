@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class NZomebie : Zombie {
 
@@ -22,7 +23,8 @@ public class NZomebie : Zombie {
         Zombiestate = NZombie_STATE.S_IDLE;
         f_movespeed = 2f;
         f_attackRate = 0.2f;
-        i_Threatvalue = 3;
+        SetThreat(3);
+        atkRange = 999;
     }
 
 	// Use this for initialization
@@ -36,7 +38,6 @@ public class NZomebie : Zombie {
 	// Update is called once per frame
 	void Update ()
     {
-        
         RunFSM();
 	}
 
@@ -60,17 +61,14 @@ public class NZomebie : Zombie {
                 }
             case NZombie_STATE.S_CHASE:
                 {
-                    if(go_targetedEnemy != null && TargetToAttack() != null)
+                    float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
+                    if (go_targetedEnemy != null)
                     {
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
                         this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
                     }
-                    else if(TargetToAttack() == null)
-                    {
-                        Zombiestate = NZombie_STATE.S_IDLE;
-                    }
-                    else
+                    if (Distance < 0.2f)
                     {
                         Zombiestate = NZombie_STATE.S_ATTACK;
                     }
@@ -106,27 +104,5 @@ public class NZomebie : Zombie {
 
             f_attackRate = this.GetAttackSpeed();
         }
-    }
-
-    void TakeDamage(int damage)
-    {
-        int health = this.GetHealth() - damage;
-        this.SetHealth(health);
-    }
-
-
-    void OnCollisionEnter(Collision col)
-    {
-        //if (col.gameObject.tag.Contains("FriendlyFire"))
-        //Debug.Log(col.gameObject.tag);
-        if (col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor" && col.gameObject.tag == "Bullet")
-        {
-            //if (col.gameObject.GetComponent<Projectile>().Sender.GetComponent<FSMBase>().GetTarget() == this.gameObject)
-            {
-                TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
-                Destroy(col.gameObject);
-            }
-        }
-
     }
 }

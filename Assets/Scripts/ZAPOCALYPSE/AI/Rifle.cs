@@ -57,7 +57,7 @@ public class Rifle : Survivor
                 }
             case Rifle_State.S_ATTACK:
                 {
-                    if(target!=null)
+                    if (target != null) 
                     {
                         Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
                         Attackenemy(V3_Direction);
@@ -95,5 +95,11 @@ public class Rifle : Survivor
             bullet.transform.parent = this.transform.parent;
             attackRate = atkSpd;
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, atkRange);
     }
 }
