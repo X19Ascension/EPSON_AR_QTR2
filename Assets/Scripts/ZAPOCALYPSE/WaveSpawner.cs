@@ -34,6 +34,8 @@ public class WaveSpawner : MonoBehaviour {
 
     public CSVLoadLevel CSVReader;
 
+    private int currSpawnPt;
+
     // Difficulty Modifier
     public enum TEMP_DIFF                                           //! Temporary Difficulty Setting
     {
@@ -92,24 +94,29 @@ public class WaveSpawner : MonoBehaviour {
                 {
                     if (testTimeDelta >= randomSpawnTimer)
                     {
-                        SpawnZombie(GenerateSpawnPos());
+                        SpawnZombie(LoadSpawnPoint());
+                        currSpawnPt++;
+                        if (currSpawnPt > 15)
+                            currSpawnPt = 0;
+
+                        //SpawnZombie(GenerateSpawnPos());
                         randomSpawnTimer = Random.Range(1.5f, 2.2f);
 
                         testTimeDelta = 0f;
                     }
-                    if (testTankSpawn >= 6.0f && spawnerGO.GetComponent<WaveSpawner>().killcount >= 10)
-                    {
-                        for (int i = 0; i < 5; i++)
-                            SpawnHorde(GenerateSpawnPos());
+                    //if (testTankSpawn >= 6.0f && spawnerGO.GetComponent<WaveSpawner>().killcount >= 10)
+                    //{
+                    //    for (int i = 0; i < 5; i++)
+                    //        SpawnHorde(GenerateSpawnPos());
 
-                        testTankSpawn = 0f;
-                    }
-                    if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank)
-                    {
-                        SpawnTankZombie(GenerateSpawnPos());
-                        spawnerGO.GetComponent<WaveSpawner>().killcount = 0;
-                        //zombieGO.gameObject
-                    }
+                    //    testTankSpawn = 0f;
+                    //}
+                    //if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank)
+                    //{
+                    //    SpawnTankZombie(GenerateSpawnPos());
+                    //    spawnerGO.GetComponent<WaveSpawner>().killcount = 0;
+                    //    //zombieGO.gameObject
+                    //}
                 }
                 
             }
@@ -120,6 +127,8 @@ public class WaveSpawner : MonoBehaviour {
             waveEnded = true;
             Debug.Log("Wave " + waveNo + " Ended");
 
+            LevelManagement pewpew = GameObject.Find("testupgrade").GetComponent<LevelManagement>();
+            pewpew.ChangeLevel(LevelManagement.LEVEL.UPGRADE);
             // Handle These Elsewhere
             //waveDuration = waveDurationSave;
             //waveEnded = false;
@@ -207,40 +216,34 @@ public class WaveSpawner : MonoBehaviour {
         spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
     }
 
-    public void LoadSpawnPoint()
+    public void SetWaveDuration()
     {
-        //for (int i = 0; i < 11; i++)
+        waveDuration = waveDurationSave;
+    }
+
+    public Vector3 LoadSpawnPoint()
+    {
+        //if (waveEnded)
         //{
-        //    for (int j = 0; j < 11; j++)
-        //    {
-        //        //GridList[i].Add(new Vector3(i * 0.25f, 0, j * 0.25f) + Offset);
-        //    }
-        //}
-
-        if (waveEnded)
+        for (int j = 0; j < (5 - 1); j++)
         {
-            for (int i = 0; i < (17 - 1); i++)
+            for (int k = 0; k < (17 - 1); k++)
             {
-                for (int j = 0; j < (17 - 1); j++)
-                {
-                    if (CSVReader.loadedMap[i, j] == 0)
+                    if (j == waveNo && k == currSpawnPt)
                     {
-
-                    }
-                    if (CSVReader.loadedMap[i, j] == 1)
-                    {
-
-                    }
-                    if (CSVReader.loadedMap[i, j] == 2)
-                    {
-
-                    }
-                    if (CSVReader.loadedMap[i, j] == 3)
-                    {
-
+                    //Debug.Log(CSVReader.loadedMap[j, i]);
+                    if (CSVReader.loadedMap[k, j] >= 0)
+                        {
+                            //Debug.Log(CSVReader.loadedMap[i, j]);
+                            Vector3 temp;
+                            temp = spawnPoints[CSVReader.loadedMap[k, j]].transform.position;
+                            return temp;
+                        }
                     }
                 }
             }
-        }
+        //}
+
+        return new Vector3(0, 0, 0);
     }
 }

@@ -1053,7 +1053,7 @@ public class GridBehavior : MonoBehaviour
                 {
                     return 10;
                 }
-
+                 
                 if (CSVReader.loadedMap[x,y].Equals(1))
                 {
                     return -1;

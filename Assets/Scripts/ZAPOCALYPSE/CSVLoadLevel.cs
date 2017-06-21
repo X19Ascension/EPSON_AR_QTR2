@@ -38,7 +38,7 @@ public class CSVLoadLevel : MonoBehaviour
         }
         //newxsize = i;
         yspawnpt = j;
-        //Debug.Log(newxsize + " " + newysize);
+        Debug.Log(xwaveno + " " + yspawnpt);
 
         loadedMap = new int[xwaveno, yspawnpt];
         readData();

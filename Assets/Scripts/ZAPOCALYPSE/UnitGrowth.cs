@@ -21,7 +21,7 @@ public class UnitGrowth : MonoBehaviour {
 
     private int healthScale;
     private int statLevel = 0;
-    bool Updated;
+    public bool Updated;
 
     WaveSpawner The_Spawner;                //! The Grid
 
@@ -84,8 +84,8 @@ public class UnitGrowth : MonoBehaviour {
         else
         {
             surv.GetComponent<Survivor>().experiencePt = totalEXP;
+            Updated = true;
         }
-        Updated = true;
     }
 
     private void EXPToLVL()
