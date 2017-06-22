@@ -693,7 +693,7 @@ RectTransform:
   m_Father: {fileID: 1218911785}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1107,7 +1107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &365715005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2793,7 +2793,7 @@ RectTransform:
   m_Father: {fileID: 1266359516}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6487,7 +6487,7 @@ RectTransform:
   m_Father: {fileID: 1827148653}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7049,7 +7049,7 @@ RectTransform:
   m_Father: {fileID: 850282891}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7510,6 +7510,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1700509713}
   - 114: {fileID: 1700509714}
+  - 114: {fileID: 1700509715}
   m_Layer: 5
   m_Name: Engineer
   m_TagString: Untagged
@@ -7588,6 +7589,21 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1700509715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1700509712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2c58bde04f5a84f85b70db51ea8a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSlider: {fileID: 1700509714}
+  Unit: {fileID: 0}
+  EXPText: {fileID: 528717792}
+  LVLText: {fileID: 878947020}
 --- !u!1 &1716241868
 GameObject:
   m_ObjectHideFlags: 0
@@ -7957,6 +7973,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1804890824}
   - 114: {fileID: 1804890825}
+  - 114: {fileID: 1804890826}
   m_Layer: 5
   m_Name: Medic
   m_TagString: Untagged
@@ -8035,6 +8052,21 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1804890826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1804890823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2c58bde04f5a84f85b70db51ea8a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSlider: {fileID: 1804890825}
+  Unit: {fileID: 0}
+  EXPText: {fileID: 571333113}
+  LVLText: {fileID: 1113888800}
 --- !u!1 &1827148652
 GameObject:
   m_ObjectHideFlags: 0
@@ -8176,7 +8208,7 @@ RectTransform:
   m_Father: {fileID: 543844727}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8685,6 +8717,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 2009308000}
   - 114: {fileID: 2009308001}
+  - 114: {fileID: 2009308002}
   m_Layer: 5
   m_Name: Melee
   m_TagString: Untagged
@@ -8763,6 +8796,21 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2009308002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009307999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2c58bde04f5a84f85b70db51ea8a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSlider: {fileID: 2009308001}
+  Unit: {fileID: 0}
+  EXPText: {fileID: 1160101841}
+  LVLText: {fileID: 1466078414}
 --- !u!1 &2010008175
 GameObject:
   m_ObjectHideFlags: 0
