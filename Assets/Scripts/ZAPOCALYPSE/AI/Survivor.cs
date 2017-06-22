@@ -21,6 +21,12 @@ public class Survivor : EntityBase
     public SURVIVOR_TYPE entityType = SURVIVOR_TYPE.S_RIFLE;
     [HideInInspector]
     public float attackRate;
+    public float reloadRate;                                                //! Reload Rate of Survivor
+    private float reloadDt;
+    private float idleDt = 5.0f;
+
+    public int maxAmmo;                                                     //! Max Ammo Survivor Have
+    private int currAmmo;                                                   //! Current Ammo Survivor Has
 
     [SerializeField]
     GameObject Directionpoint;
@@ -28,6 +34,12 @@ public class Survivor : EntityBase
 
     protected float PanicRange;
     float f_enmity;
+
+    [HideInInspector]
+    public float experiencePt;                                              //! Experience Pt of Survivor to Level
+    [HideInInspector]
+    public float timeActive;                                              //! Experience Pt of Survivor to Level
+    public int level;                                              //! Experience Pt of Survivor to Level
 
     void Awake()
     {
