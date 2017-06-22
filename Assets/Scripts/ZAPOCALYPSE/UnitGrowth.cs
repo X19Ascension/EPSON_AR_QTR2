@@ -97,6 +97,15 @@ public class UnitGrowth : MonoBehaviour {
             EXPToLevel = 99999;
     }
 
+    public float EXPToLVL(Survivor pew)
+    {
+        if (pew.level < 20)
+            return ((pew.level * 15) + (2) * 50);
+        //EXPToLevel = 0.1f;
+        else
+            return 99999.0f;
+    }
+
     private void UpdateStats()
     {
         statLevel++;
