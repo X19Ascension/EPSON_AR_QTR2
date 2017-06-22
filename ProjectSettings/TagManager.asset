@@ -22,6 +22,8 @@ TagManager:
   - Empty Grid
   - Buttons
   - Priority
+  - DirectionPoint
+  - Targeting Grid
   layers:
   - Default
   - TransparentFX

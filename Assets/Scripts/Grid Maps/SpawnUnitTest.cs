@@ -37,6 +37,7 @@ public class SpawnUnitTest : MonoBehaviour {
         for (int i = 0; i < Unit_List.Count; i++)
         {
             The_Grid.ClamptoGrid(Unit_List[i]);
+            The_Grid.SetTargetRange(Unit_List[i]);
         }
     }
 }
