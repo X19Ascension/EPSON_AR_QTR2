@@ -51,9 +51,8 @@ public class Melee : Survivor
             case Melee_State.S_ATTACK:
                 {
                     if (target != null)
-                    {
-                        Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
-                        Attackenemy(V3_Direction);
+                    { 
+                        Attackenemy(target);
                     }
                     else
                     {
@@ -72,20 +71,14 @@ public class Melee : Survivor
 
    
 
-    void Attackenemy(Vector3 Direction)
+    void Attackenemy(GameObject target)
     {
         attackRate -= Time.deltaTime;
         if (attackRate <= 0)
         {
-            Vector3 pew = this.gameObject.transform.position;
-            GameObject bullet = null;
-            //direction.y += 2;
-            //direction.y += 0.05f;
-            bullet = Instantiate(EProjectile, this.gameObject.transform.position, Quaternion.identity) as GameObject;
-
-            bullet.GetComponent<Rigidbody>().AddForce(Direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
-            bullet.GetComponent<Projectile>().Sender = this.gameObject;
-            bullet.transform.parent = this.transform.parent;
+            int tempHP = target.GetComponent<Zombie>().HP;
+            tempHP -= atkDmg;
+            target.GetComponent<Zombie>().SetHealth(tempHP);
             attackRate = atkSpd;
         }
     }

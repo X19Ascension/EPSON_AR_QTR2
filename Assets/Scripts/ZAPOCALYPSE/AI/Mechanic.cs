@@ -44,10 +44,29 @@ public class Mechanic : Survivor {
         {
             case MechanicSTATE.S_IDLE:
                 {
+                    if(Enemynear(PanicRange))
+                    {
+                        target = GetNearestTarget();
+                        Mechastate = MechanicSTATE.S_PANIC;
+                    }
+                    else if(SearchRepairTarget() == null)
+                    {
+                        
+                    }
+                    else
+                    {
+                        Mechastate = MechanicSTATE.S_SEARCH;
+                    }
                     break;
                 }
             case MechanicSTATE.S_PANIC:
                 {
+                    if (target != null)
+                        ShoveEnemy(target);
+                    else
+                    {
+                        Mechastate = MechanicSTATE.S_IDLE;
+                    }
                     break;
                 }
             case MechanicSTATE.S_SEARCH:
@@ -65,16 +84,24 @@ public class Mechanic : Survivor {
                 }
             case MechanicSTATE.S_REPAIR:
                 {
+                    if(target == null)
+                    {
+                        Mechastate = MechanicSTATE.S_IDLE;
+                    }
+                    else
+                        RepairTarget(target);
+
                     break;
                 }
             case MechanicSTATE.S_DEAD:
                 {
+                    Destroy(this);
                     break;
                 }
         }
 
     }
-
+    
     GameObject SearchRepairTarget()
     {
         GameObject[] AllBarriers = GameObject.FindGameObjectsWithTag("Barrier");
@@ -97,6 +124,11 @@ public class Mechanic : Survivor {
 
     void RepairTarget(GameObject Target)
     {
-
+        target.GetComponent<Barrier>().HP += this.atkDmg;
+        if(target.GetComponent<Barrier>().HP > target.GetComponent<Barrier>().GetMaxHealth())
+        {
+            target.GetComponent<Barrier>().HP = target.GetComponent<Barrier>().GetMaxHealth();
+            Mechastate = MechanicSTATE.S_IDLE;
+        }
     }
 }

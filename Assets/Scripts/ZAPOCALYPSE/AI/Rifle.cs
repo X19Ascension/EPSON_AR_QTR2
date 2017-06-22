@@ -43,6 +43,7 @@ public class Rifle : Survivor
         {
             case Rifle_State.S_IDLE:
                 {
+                    //if(this.Enemynear(0.5f))
                     if(this.Enemynear(atkRange))
                     {
                         target = SelectTarget(this.atkRange);

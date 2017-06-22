@@ -26,13 +26,14 @@ public class Survivor : EntityBase
     GameObject Directionpoint;
     GridMap The_Grid;
 
-    
+    protected float PanicRange;
     float f_enmity;
 
     void Awake()
     {
         Directionpoint = new GameObject();
         The_Grid = GameObject.Find("Grid Spawner").GetComponent<GridMap>();
+        PanicRange = 0.5f;
     }
 
     // Use this for initialization
@@ -82,9 +83,12 @@ public class Survivor : EntityBase
         }
     }
 
-    void ShoveEnemy(GameObject target)
+    protected void ShoveEnemy(GameObject target)
     {
-
+        var magnitude = 10;
+        var force = transform.position - target.transform.position;
+        force.Normalize();
+        target.gameObject.transform.position -= (force);
     }
 
     public GameObject SelectTarget(float Radius)
@@ -140,11 +144,33 @@ public class Survivor : EntityBase
                 closetdistance = dist;
             }
         }
-        if(closetdistance < 50)
+        if(closetdistance < distance)
         {
             return true;
         }
         return false;
+    }
+
+    protected GameObject GetNearestTarget()
+    {
+        float closetdistance = 900;
+        GameObject temp = null;
+        GameObject[] EnemyList = GameObject.FindGameObjectsWithTag("test");
+        if(EnemyList.Length != 0)
+        {
+            foreach (GameObject go in EnemyList)
+            {
+                float dist = Vector3.Distance(go.transform.position, this.gameObject.transform.position);
+                if (dist < closetdistance)
+                {
+                    closetdistance = dist;
+                    temp = go;
+                }
+            }
+            return temp;
+        }
+        return null;
+      
     }
 
     public float GetEnmity()
