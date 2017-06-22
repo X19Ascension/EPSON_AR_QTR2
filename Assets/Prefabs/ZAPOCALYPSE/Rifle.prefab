@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2301530}
   - 114: {fileID: 11405174}
   - 114: {fileID: 11481902}
+  - 114: {fileID: 11414672}
   m_Layer: 10
   m_Name: Rifle
   m_TagString: Survivor
@@ -144,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkRange: 100
   atkSpd: 0.2
-  atkDmg: 10
+  atkDmg: 5
   HP: 200
   HPRegen: 2
   i_maxHP: 200
@@ -154,6 +155,27 @@ MonoBehaviour:
   survivorState: 0
   entityType: 0
   attackRate: 0
+  reloadRate: 1
+  maxAmmo: 50
+  experiencePt: 0
+  timeActive: 0
+  level: 1
+  onFieldAnot: 0
+--- !u!114 &11414672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fa88128e562c64b91617e88e89135b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDMG: 15
+  maxSpd: 0.05
+  maxReload: 0.5
+  surv: {fileID: 106864}
 --- !u!114 &11481902
 MonoBehaviour:
   m_ObjectHideFlags: 1

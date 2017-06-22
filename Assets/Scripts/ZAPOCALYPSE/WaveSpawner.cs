@@ -9,7 +9,8 @@ public class WaveSpawner : MonoBehaviour {
     [Tooltip("Spawn Points")]
     public List<Transform> spawnPoints = new List<Transform>();     //! The number of Spawn Points in the Game
     [Tooltip("The current Wave Number")]
-    int waveNo;                                                     //! The Current Wave number.
+    public int waveNo;                                              //! The Current Wave number.
+    public int maxWaveNo;                                           //! The Max No. Wave number.
 
     public GameObject zombieGO;                                     //! Standard Zombie Game Object
     public GameObject fastzombieGO;                                 //! Fast Zombie Game Object
@@ -31,6 +32,10 @@ public class WaveSpawner : MonoBehaviour {
     [HideInInspector]
     public int maxAmount;
 
+    public CSVLoadLevel CSVReader;
+
+    private int currSpawnPt;
+
     // Difficulty Modifier
     public enum TEMP_DIFF                                           //! Temporary Difficulty Setting
     {
@@ -45,59 +50,88 @@ public class WaveSpawner : MonoBehaviour {
     private float testTimeDelta;
     private float testTankSpawn;
     private float waveDuration;
+    private float waveDurationSave;
 
+    public bool waveEnded;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         spawnerGO.GetComponent<WaveSpawner>().maxAmount = 0;
         switch (diff)
         {
             case TEMP_DIFF.EASY:
                 difficultyMod = 0.75f;
+                maxWaveNo = 12;
                 break;
             case TEMP_DIFF.NORMAL:
                 difficultyMod = 1.0f;
+                maxWaveNo = 15;
                 break;
             case TEMP_DIFF.HARD:
                 difficultyMod = 1.25f;
+                maxWaveNo = 17;
                 break;
         }
 
         waveDuration = minutePerWave * 60 + secondPerWave;
+        waveDurationSave = waveDuration;
+        waveEnded = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
         testTimeDelta += Time.deltaTime;
         waveDuration -= Time.deltaTime;
+        //Debug.Log(waveDuration);
+
         testTankSpawn += Time.deltaTime;
-        //if (waveDuration > 0)
-        //{
-        if (CheckAnyAlive() == true && spawnerGO.GetComponent<WaveSpawner>().maxAmount < limitAmount)
+
+        if (waveDuration > 0)
         {
-            if (spawnValue >= 0)
+            if (CheckAnyAlive() == true && spawnerGO.GetComponent<WaveSpawner>().maxAmount < limitAmount)
             {
-                if (testTimeDelta >= randomSpawnTimer)
+                if (spawnValue >= 0)
                 {
-                    SpawnZombie(GenerateSpawnPos());
-                    randomSpawnTimer = Random.Range(1.5f, 2.2f);
+                    if (testTimeDelta >= randomSpawnTimer)
+                    {
+                        SpawnZombie(LoadSpawnPoint());
+                        currSpawnPt++;
+                        if (currSpawnPt > 15)
+                            currSpawnPt = 0;
 
-                    testTimeDelta = 0f;
-                }
-                if (testTankSpawn >= 6.0f && spawnerGO.GetComponent<WaveSpawner>().killcount >= 10)
-                {
-                    for (int i = 0; i < 5; i++)
-                        SpawnHorde(GenerateSpawnPos());
+                        //SpawnZombie(GenerateSpawnPos());
+                        randomSpawnTimer = Random.Range(1.5f, 2.2f);
 
-                    testTankSpawn = 0f;
+                        testTimeDelta = 0f;
+                    }
+                    //if (testTankSpawn >= 6.0f && spawnerGO.GetComponent<WaveSpawner>().killcount >= 10)
+                    //{
+                    //    for (int i = 0; i < 5; i++)
+                    //        SpawnHorde(GenerateSpawnPos());
+
+                    //    testTankSpawn = 0f;
+                    //}
+                    //if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank)
+                    //{
+                    //    SpawnTankZombie(GenerateSpawnPos());
+                    //    spawnerGO.GetComponent<WaveSpawner>().killcount = 0;
+                    //    //zombieGO.gameObject
+                    //}
                 }
-                if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank)
-                {
-                    SpawnTankZombie(GenerateSpawnPos());
-                    spawnerGO.GetComponent<WaveSpawner>().killcount = 0;
-                    //zombieGO.gameObject
-                }
+                
             }
+        }
+        else if (waveNo <= maxWaveNo && waveEnded == false)
+        {
+            waveNo++;
+            waveEnded = true;
+            Debug.Log("Wave " + waveNo + " Ended");
+
+            LevelManagement pewpew = GameObject.Find("testupgrade").GetComponent<LevelManagement>();
+            pewpew.ChangeLevel(LevelManagement.LEVEL.UPGRADE);
+            // Handle These Elsewhere
+            //waveDuration = waveDurationSave;
+            //waveEnded = false;
         }
 
     }
@@ -180,5 +214,36 @@ public class WaveSpawner : MonoBehaviour {
 
         Debug.Log("Tank Zombie Spawn");
         spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
+    }
+
+    public void SetWaveDuration()
+    {
+        waveDuration = waveDurationSave;
+    }
+
+    public Vector3 LoadSpawnPoint()
+    {
+        //if (waveEnded)
+        //{
+        for (int j = 0; j < (5 - 1); j++)
+        {
+            for (int k = 0; k < (17 - 1); k++)
+            {
+                    if (j == waveNo && k == currSpawnPt)
+                    {
+                    //Debug.Log(CSVReader.loadedMap[j, i]);
+                    if (CSVReader.loadedMap[k, j] >= 0)
+                        {
+                            //Debug.Log(CSVReader.loadedMap[i, j]);
+                            Vector3 temp;
+                            temp = spawnPoints[CSVReader.loadedMap[k, j]].transform.position;
+                            return temp;
+                        }
+                    }
+                }
+            }
+        //}
+
+        return new Vector3(0, 0, 0);
     }
 }

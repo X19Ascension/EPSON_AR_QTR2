@@ -59,8 +59,13 @@ public class Zombie : EntityBase {
         if (m_TimerDT >= 1)
         {
             HP += (int)HPRegen;
+            //this.gameObject.GetComponent<HealthBar>().RescaleHealthBarHeal((int)HPRegen);
+
             if (HP >= i_maxHP)
+            {
                 HP = i_maxHP;
+                //this.gameObject.GetComponent<HealthBar>().RescaleHealthBar(i_maxHP);
+            }
 
             m_TimerDT = 0;
         }
@@ -178,6 +183,7 @@ public class Zombie : EntityBase {
     {
         int health = this.GetHealth() - damage;
         this.SetHealth(health);
+        this.gameObject.GetComponent<HealthBar>().RescaleHealthBarDamage(damage);
     }
 
     // For enemy use
@@ -240,111 +246,10 @@ public class Zombie : EntityBase {
                 //if (col.gameObject.GetComponent<Projectile>().Sender.GetComponent<FSMBase>().GetTarget() == this.gameObject)
                 {
                     TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
+                    
                     Destroy(col.gameObject);
                 }
             }
         
     }
-
-    //   public enum ZOMBIE_STATE
-    //   {
-    //       Z_IDLE,
-    //       Z_CHASE,
-    //       Z_ATTACK,
-    //       Z_DEAD,
-    //   }
-
-    //   public enum ZOMBIE_TYPE
-    //   {
-    //       Z_STANDARD,
-    //       Z_ZEALOUS,
-    //       Z_TANKY,
-    //       Z_RANGED,
-    //   }
-
-    //   public int HP;
-    //   public int dmg;
-    //   public int atkSpd;
-    //   public int moveSpd;
-    //   public int atkRng;
-
-    //   public GameObject HPBarPlaneTemplate;
-    //   public GameObject barrier;
-    //   private int i_MaxHP;
-    //   private GameObject m_HPBar;
-
-    //   ZOMBIE_STATE zombieState = ZOMBIE_STATE.Z_IDLE;
-    //   ZOMBIE_TYPE zombieType = ZOMBIE_TYPE.Z_STANDARD;
-
-
-    //   // Use this for initialization
-    //   void Start () {
-    //       i_MaxHP = HP;
-    //}
-
-    //// Update is called once per frame
-    //void Update () {
-    //       if (HP < i_MaxHP)
-    //       {
-    //           m_HPBar.SetActive(true);
-
-    //           if (HP <= 0)
-    //           {
-    //               if (this.tag.Contains("Enemy"))
-    //                   Destroy(this.gameObject);
-    //               else
-    //                   this.gameObject.SetActive(false);
-    //           }
-    //       }
-
-    //       UpdateFSM();
-
-    //   }
-
-    //   public void TakeDamage(int dmg)
-    //   {
-    //       HP -= dmg;
-    //   }
-
-
-
-    //   // Used when Attacking.
-    //   GameObject TargetToAttack()
-    //   {
-    //       GameObject[] AllEntities = GameObject.FindGameObjectsWithTag("Entities");
-    //       GameObject[] AllSurvivors = GameObject.FindGameObjectsWithTag("Survivor");
-    //       GameObject[] AllBarriers = GameObject.FindGameObjectsWithTag("Barrier");
-    //       // Get available targets
-    //       GameObject[] AvailableTargets = ((AllEntities.Union<GameObject>(AllSurvivors)).Union<GameObject>(AllBarriers)).ToArray<GameObject>();//GameObject.FindGameObjectsWithTag("Survivor");
-
-    //       List<GameObject> TargetsInRange = new List<GameObject>();
-
-    //       foreach (GameObject go in AvailableTargets)
-    //       {
-    //           if ((go.transform.position - this.gameObject.transform.position).sqrMagnitude < atkRng * atkRng && go.GetComponent<EntityBase>().HP > 0)
-    //           {
-    //               TargetsInRange.Add(go);
-    //           }
-    //       }
-
-
-    //       // Search for closest one
-    //       float closestDist = float.MaxValue;
-    //       GameObject closestGo = null;
-
-    //       foreach (GameObject go in TargetsInRange)
-    //       {
-    //           float dist = (go.transform.position - this.gameObject.transform.position).sqrMagnitude;
-    //           if (dist < closestDist * closestDist)
-    //           {
-    //               closestDist = dist;
-    //               closestGo = go;
-    //           }
-    //           else
-    //               return null;
-    //       }
-
-    //       //m_TargetedEnemy = closestGo;
-    //       return closestGo;
-    //   }   
 }
