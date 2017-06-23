@@ -30,6 +30,7 @@ public class Rifle : Survivor
 	void Update ()
     {
         RunFSM();
+        RunDeathDoor();
 	}
 
 
@@ -37,7 +38,7 @@ public class Rifle : Survivor
     {
         if(this.HP <= 0 )
         {
-            riflestate = Rifle_State.S_DEAD;
+           // riflestate = Rifle_State.S_DEAD;
         }
         switch (riflestate)
         {
@@ -78,7 +79,42 @@ public class Rifle : Survivor
 
     }
 
-   
+   void RunDeathDoor()
+    {
+        switch (Ustate)
+        {
+            case UnitState.S_HEALTHY:
+                {
+                    if(this.HP == 0)
+                    {
+                        DeathDoorStats();
+                        Ustate = UnitState.S_DEATHDOOR;
+                    }
+                    break;
+                }
+            case UnitState.S_DEATHDOOR:
+                {
+                    if(this.HP > (this.i_maxHP * 0.4))
+                    {
+                        ReturnStats();
+                        Ustate = UnitState.S_HEALTHY;
+                    }
+                    else
+                    {
+                        if(DeathDoor())
+                        {
+                            riflestate = Rifle_State.S_DEAD;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    break;
+                }
+        }
+
+    }
 
     void Attackenemy(Vector3 Direction)
     {

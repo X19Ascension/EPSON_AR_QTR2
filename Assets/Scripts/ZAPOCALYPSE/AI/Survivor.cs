@@ -15,6 +15,13 @@ public class Survivor : EntityBase
         S_MECHANIC,
     }
 
+    protected enum UnitState
+    {
+        S_HEALTHY = 1,
+        S_DEATHDOOR,
+    }
+
+
     public GameObject EProjectile;
 
     //EntityBase test;
@@ -28,6 +35,19 @@ public class Survivor : EntityBase
 
     protected float PanicRange;
     float f_enmity;
+    float f_DeathDoorrefresher;
+    float f_DeathDoortimer;
+    float f_DeathChance;
+    bool b_deathdoorfail;
+
+    protected UnitState Ustate;
+
+    #region Statistics
+    float f_DeathdoorAttackSpeed;
+    int i_DeathdoorAttackDamage;
+    float f_OriginalAttackSpeed;
+    int i_OriginalAttackDamage;
+    #endregion
 
     void Awake()
     {
@@ -40,7 +60,15 @@ public class Survivor : EntityBase
     void Start()
     {
         //i_maxHP = HP;
+        f_DeathDoorrefresher = 60f;
+        f_DeathDoortimer = f_DeathDoorrefresher;
         attackRate = GetAttackSpeed();
+
+
+        i_OriginalAttackDamage = GetAttackDamage();
+        f_OriginalAttackSpeed = GetAttackSpeed();
+        f_DeathdoorAttackSpeed = GetAttackSpeed() * 1.66f;
+        i_DeathdoorAttackDamage = GetAttackDamage() * 3  /  5 ;
     }
 
     // Update is called once per frame
@@ -91,6 +119,7 @@ public class Survivor : EntityBase
         target.gameObject.transform.position -= (force);
     }
 
+    #region Targeting
     public GameObject SelectTarget(float Radius)
     {
         GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("test");
@@ -170,9 +199,51 @@ public class Survivor : EntityBase
             return temp;
         }
         return null;
-      
+
+    }
+    #endregion
+
+    #region Death's Door Mechanic
+    protected bool DeathDoor()
+    {
+        f_DeathDoortimer -= Time.deltaTime;
+        if(f_DeathDoortimer <= 0)
+        {
+            int chancetodie = Random.Range(1, 400);
+            chancetodie = chancetodie / 4;
+            if(chancetodie < f_DeathChance)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
+    void AttackonDeathDoor(GameObject target)
+    {
+        float tempattack = target.GetComponent<Zombie>().GetAttackDamage();
+        tempattack = tempattack * 0.25f ;
+        f_DeathChance += tempattack;
+        if(f_DeathChance > 100)
+        {
+            f_DeathChance = 100;
+        }
+    }
+
+    protected void DeathDoorStats()
+    {
+        this.atkDmg = i_DeathdoorAttackDamage;
+        this.atkSpd = f_DeathdoorAttackSpeed;
+    }
+
+    protected void ReturnStats()
+    {
+        this.atkDmg = i_OriginalAttackDamage;
+        this.atkSpd = f_OriginalAttackSpeed;
+    }
+    #endregion
+
+    #region Getters
     public float GetEnmity()
     {
         return f_enmity;
@@ -213,8 +284,7 @@ public class Survivor : EntityBase
     {
         return Directionpoint;
     }
+    #endregion
 
 
-
-    
 }
