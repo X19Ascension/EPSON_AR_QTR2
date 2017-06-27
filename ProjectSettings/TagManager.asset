@@ -21,6 +21,7 @@ TagManager:
   - test
   - Empty Grid
   - Buttons
+  - Priority
   - DirectionPoint
   - Targeting Grid
   layers:
