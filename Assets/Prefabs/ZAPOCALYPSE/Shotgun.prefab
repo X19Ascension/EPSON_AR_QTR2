@@ -147,6 +147,7 @@ MonoBehaviour:
   maxSpd: 1
   maxReload: 1
   surv: {fileID: 142906}
+  Updated: 0
 --- !u!114 &11440718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,27 +156,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 142906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32264fa15bbe2234680be3be8b328c77, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b2c73d957177d745b51d3fbe85629bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 30
-  atkSpd: 1.5
-  atkDmg: 10
-  HP: 80
-  HPRegen: 2
-  i_maxHP: 80
+  atkRange: 1
+  atkSpd: 1
+  atkDmg: 1
+  HP: 0
+  HPRegen: 0
+  i_maxHP: 0
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
-  EProjectile: {fileID: 113460, guid: f98c3ad46a6453045a2ce7101ab5aead, type: 2}
-  survivorState: 0
-  entityType: 2
+  EProjectile: {fileID: 0}
+  entityType: 0
   attackRate: 0
-  reloadRate: 3
-  maxAmmo: 10
+  reloadRate: 0
+  maxAmmo: 0
+  Directionpoint: {fileID: 0}
   experiencePt: 0
   timeActive: 0
-  level: 4
-  onFieldAnot: 0
+  level: 0
+  target: {fileID: 0}
+  shotgunstate: 0
 --- !u!114 &11465662
 MonoBehaviour:
   m_ObjectHideFlags: 1

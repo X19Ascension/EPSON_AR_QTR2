@@ -8,22 +8,27 @@ public class Rifle : Survivor
     {
         S_IDLE = 1,
         S_PANIC,
+        S_SEARCH,
+        S_SWITCHSEARCH,
         S_ATTACK,
         S_DEAD,
     }
 
     public GameObject target;
+    public Vector3 V3_targetpos;
+    int i_targetSurroundings;
     public Rifle_State riflestate;
 
     void Awake()
     {
         target = null;
         riflestate = Rifle_State.S_IDLE;
+        Ustate = UnitState.S_HEALTHY;
     }
 
 	void Start ()
     {
-        this.atkRange = 50.0f;
+        this.atkRange = 25.0f;
 	}
 	
 	// Update is called once per frame
@@ -31,6 +36,7 @@ public class Rifle : Survivor
     {
         RunFSM();
         RunDeathDoor();
+        Regenerate();
 	}
 
 
@@ -47,14 +53,31 @@ public class Rifle : Survivor
                     //if(this.Enemynear(0.5f))
                     if(this.Enemynear(atkRange))
                     {
-                        target = SelectTarget(this.atkRange);
-                        riflestate = Rifle_State.S_ATTACK;
+                        riflestate = Rifle_State.S_SEARCH;
                     }
                     break;
                     
                 }
             case Rifle_State.S_PANIC:
                 {
+                    if (target != null)
+                        ShoveEnemy(target);
+                    else
+                    {
+                        riflestate = Rifle_State.S_IDLE;
+                    }
+                    break;
+                }
+            case Rifle_State.S_SEARCH:
+                {
+                    target = SelectTarget(this.atkRange);
+                    riflestate = Rifle_State.S_ATTACK;
+                    break;
+                }
+            case Rifle_State.S_SWITCHSEARCH:
+                {
+                    target = SwitchTarget(V3_targetpos);
+                    riflestate = Rifle_State.S_ATTACK;
                     break;
                 }
             case Rifle_State.S_ATTACK:
@@ -63,10 +86,17 @@ public class Rifle : Survivor
                     {
                         Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
                         Attackenemy(V3_Direction);
+                        V3_targetpos = target.transform.position;
+                        i_targetSurroundings = target.GetComponent<Zombie>().CheckSurroundings();
                     }
                     else
                     {
-                        riflestate = Rifle_State.S_IDLE;
+                        if(i_targetSurroundings != 0)
+                        {
+                            riflestate = Rifle_State.S_SWITCHSEARCH;
+                        }
+                        else
+                            riflestate = Rifle_State.S_IDLE;
                     }
                     break;
                 }

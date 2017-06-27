@@ -30,6 +30,7 @@ GameObject:
   - 135: {fileID: 13539916}
   - 23: {fileID: 2322794}
   - 114: {fileID: 11423684}
+  - 114: {fileID: 11434944}
   m_Layer: 0
   m_Name: Zealous_Zombie
   m_TagString: test
@@ -462,6 +463,30 @@ MonoBehaviour:
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   moveSpd: 2
   attackRate: 0.1
+--- !u!114 &11434944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef3406301274b343912d74de7db35b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkRange: 1
+  atkSpd: 1
+  atkDmg: 1
+  HP: 50
+  HPRegen: 3
+  i_maxHP: 50
+  m_TimerDT: 0
+  HPBarPlaneTemplate: {fileID: 0}
+  spawnerGO: {fileID: 0}
+  moveSpd: 0
+  attackRate: 0
+  Zombiestate: 0
+  SpawnerGO: {fileID: 0}
 --- !u!135 &13539916
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -46,6 +46,7 @@ public class Survivor : EntityBase
     float f_DeathChance;
     bool b_deathdoorfail;
 
+    [SerializeField]
     protected UnitState Ustate;
 
     #region Statistics
@@ -86,8 +87,20 @@ public class Survivor : EntityBase
     // Update is called once per frame
     void Update()
     {
-        m_TimerDT += Time.deltaTime;
+        //RunFSM();
+        Regenerate();
+        f_enmity = this.HP / this.i_maxHP;
+    }
+
+    public override void RunFSM()
+    {
         
+    }
+    
+    protected void Regenerate()
+    {
+        m_TimerDT += Time.deltaTime;
+
 
         if (m_TimerDT >= 2)
         {
@@ -97,30 +110,6 @@ public class Survivor : EntityBase
 
             m_TimerDT = 0;
         }
-
-        //RunFSM();
-
-        f_enmity = this.HP / this.i_maxHP;
-    }
-
-    public override void RunFSM()
-    {
-        
-    }
-    
-
-    // Melee
-    void AttackEnemy(GameObject target)
-    {
-        attackRate -= Time.deltaTime;
-
-        if (attackRate < 0)
-        {
-            int health = target.GetComponent<EntityBase>().GetHealth() - this.GetAttackDamage();
-            target.GetComponent<EntityBase>().SetHealth(health);
-
-            attackRate = this.GetAttackSpeed();
-        }
     }
 
     protected void ShoveEnemy(GameObject target)
@@ -128,7 +117,7 @@ public class Survivor : EntityBase
         var magnitude = 10;
         var force = transform.position - target.transform.position;
         force.Normalize();
-        target.gameObject.transform.position -= (force);
+        target.gameObject.transform.position -= (force * magnitude);
     }
 
     #region Targeting
@@ -172,6 +161,38 @@ public class Survivor : EntityBase
         return null;
     }
 
+    protected GameObject SwitchTarget(Vector3 position)
+    {
+        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("Test");
+        List<GameObject> Withinrange = new List<GameObject>();
+        foreach(GameObject go in AllEnemies)
+        {
+            if (go == null)
+            {
+                continue;
+            }
+            else if (Vector3.Distance(go.transform.position, this.transform.position) <= 3)
+            {
+                Withinrange.Add(go);
+            }
+            else
+                continue;
+        }
+        if (Withinrange.Count != 0)
+        {
+            float range = 3f;
+            GameObject temp = null;
+            foreach(GameObject go in Withinrange)
+            {
+                if (range > (Vector3.Distance(go.transform.position, this.transform.position)))
+                {
+                    temp = go;
+                }
+            }
+            return temp;
+        }
+        return null;
+    }
 
     public bool Enemynear(float distance)
     {

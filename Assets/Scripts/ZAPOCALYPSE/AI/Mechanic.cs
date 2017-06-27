@@ -25,14 +25,16 @@ public class Mechanic : Survivor {
 	// Use this for initialization
 	void Start ()
     {
-	    
-	}
+        Ustate = UnitState.S_HEALTHY;
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-	    
-	}
+        Regenerate();
+        RunFSM();
+        RunDeathDoor();
+    }
 
     public override void RunFSM()
     {
@@ -101,7 +103,44 @@ public class Mechanic : Survivor {
         }
 
     }
-    
+
+    void RunDeathDoor()
+    {
+        switch (Ustate)
+        {
+            case UnitState.S_HEALTHY:
+                {
+                    if (this.HP == 0)
+                    {
+                        DeathDoorStats();
+                        Ustate = UnitState.S_DEATHDOOR;
+                    }
+                    break;
+                }
+            case UnitState.S_DEATHDOOR:
+                {
+                    if (this.HP > (this.i_maxHP * 0.4))
+                    {
+                        ReturnStats();
+                        Ustate = UnitState.S_HEALTHY;
+                    }
+                    else
+                    {
+                        if (DeathDoor())
+                        {
+                            Mechastate = MechanicSTATE.S_DEAD;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    break;
+                }
+        }
+
+    }
+
     GameObject SearchRepairTarget()
     {
         GameObject[] AllBarriers = GameObject.FindGameObjectsWithTag("Barrier");
