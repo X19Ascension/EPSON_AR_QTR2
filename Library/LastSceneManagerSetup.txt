@@ -1,8 +1,1 @@
-sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/PlaceHolderMenu.unity
-=======
-- path: Assets/Scenes/NCTest 1.unity
->>>>>>> b77a5a0becc8d69ff42905ddef4a222cbfaa3624
-  isLoaded: 1
-  isActive: 1
+sceneSetups: []
