@@ -7,6 +7,7 @@ public class Melee : Survivor
     public enum Melee_State
     {
         S_IDLE = 1,
+        S_SEARCH,
         S_ATTACK,
         S_DEAD,
     }
@@ -18,6 +19,7 @@ public class Melee : Survivor
     {
         target = null;
         meleestate = Melee_State.S_IDLE;
+        Ustate = UnitState.S_HEALTHY;
     }
     // Use this for initialization
     void Start ()
@@ -28,7 +30,9 @@ public class Melee : Survivor
     // Update is called once per frame
     void Update()
     {
+        Regenerate();
         RunFSM();
+        RunDeathDoor();
     }
 
     public override void RunFSM()
@@ -43,9 +47,14 @@ public class Melee : Survivor
                 {
                     if (this.Enemynear(this.atkRange))
                     {
-                        target = SelectTarget(this.atkRange);
-                        meleestate = Melee_State.S_ATTACK;
+                        meleestate = Melee_State.S_SEARCH;
                     }
+                    break;
+                }
+            case Melee_State.S_SEARCH:
+                {
+                    target = SelectTarget(this.atkRange);
+                    meleestate = Melee_State.S_ATTACK;
                     break;
                 }
             case Melee_State.S_ATTACK:
@@ -69,7 +78,41 @@ public class Melee : Survivor
 
     }
 
-   
+   void RunDeathDoor()
+    {
+        switch (Ustate)
+        {
+            case UnitState.S_HEALTHY:
+                {
+                    if (this.HP == 0)
+                    {
+                        DeathDoorStats();
+                        Ustate = UnitState.S_DEATHDOOR;
+                    }
+                    break;
+                }
+            case UnitState.S_DEATHDOOR:
+                {
+                    if (this.HP > (this.i_maxHP * 0.4))
+                    {
+                        ReturnStats();
+                        Ustate = UnitState.S_HEALTHY;
+                    }
+                    else
+                    {
+                        if (DeathDoor())
+                        {
+                            meleestate = Melee_State.S_DEAD;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    break;
+                }
+        }
+    }
 
     void Attackenemy(GameObject target)
     {

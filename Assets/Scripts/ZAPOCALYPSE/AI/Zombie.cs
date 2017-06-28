@@ -11,7 +11,6 @@ public class Zombie : EntityBase {
     public float moveSpd;
     [HideInInspector]
     public float attackRate;
-    int[] Threattype = new int[]{ 3, 2, 5, 2 };
     int Threat;
 
     void Awake()
@@ -165,6 +164,24 @@ public class Zombie : EntityBase {
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, atkRange);
+    }
+
+    public int CheckSurroundings()
+    {
+        GameObject[] Zombies = GameObject.FindGameObjectsWithTag("test");
+        List<GameObject> Surrounded = new List<GameObject>();
+        foreach(GameObject go in Zombies)
+        {
+            if (Vector3.Distance(go.transform.position, this.transform.position) < 5f)
+            {
+                Surrounded.Add(go);
+            }
+        }
+        if(Surrounded.Count < 1)
+        {
+            return Surrounded.Count;
+        }
+        return 0;
     }
 
 }

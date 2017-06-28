@@ -15,6 +15,13 @@ public class Survivor : EntityBase
         S_MECHANIC,
     }
 
+    protected enum UnitState
+    {
+        S_HEALTHY = 1,
+        S_DEATHDOOR,
+    }
+
+
     public GameObject EProjectile;
 
     //EntityBase test;
@@ -34,6 +41,20 @@ public class Survivor : EntityBase
 
     protected float PanicRange;
     float f_enmity;
+    float f_DeathDoorrefresher;
+    float f_DeathDoortimer;
+    float f_DeathChance;
+    bool b_deathdoorfail;
+
+    [SerializeField]
+    protected UnitState Ustate;
+
+    #region Statistics
+    float f_DeathdoorAttackSpeed;
+    int i_DeathdoorAttackDamage;
+    float f_OriginalAttackSpeed;
+    int i_OriginalAttackDamage;
+    #endregion
 
     [HideInInspector]
     public float experiencePt;                                              //! Experience Pt of Survivor to Level
@@ -52,14 +73,34 @@ public class Survivor : EntityBase
     void Start()
     {
         //i_maxHP = HP;
+        f_DeathDoorrefresher = 60f;
+        f_DeathDoortimer = f_DeathDoorrefresher;
         attackRate = GetAttackSpeed();
+
+
+        i_OriginalAttackDamage = GetAttackDamage();
+        f_OriginalAttackSpeed = GetAttackSpeed();
+        f_DeathdoorAttackSpeed = GetAttackSpeed() * 1.66f;
+        i_DeathdoorAttackDamage = GetAttackDamage() * 3  /  5 ;
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_TimerDT += Time.deltaTime;
+        //RunFSM();
+        Regenerate();
+        f_enmity = this.HP / this.i_maxHP;
+    }
+
+    public override void RunFSM()
+    {
         
+    }
+    
+    protected void Regenerate()
+    {
+        m_TimerDT += Time.deltaTime;
+
 
         if (m_TimerDT >= 2)
         {
@@ -69,30 +110,6 @@ public class Survivor : EntityBase
 
             m_TimerDT = 0;
         }
-
-        //RunFSM();
-
-        f_enmity = this.HP / this.i_maxHP;
-    }
-
-    public override void RunFSM()
-    {
-        
-    }
-    
-
-    // Melee
-    void AttackEnemy(GameObject target)
-    {
-        attackRate -= Time.deltaTime;
-
-        if (attackRate < 0)
-        {
-            int health = target.GetComponent<EntityBase>().GetHealth() - this.GetAttackDamage();
-            target.GetComponent<EntityBase>().SetHealth(health);
-
-            attackRate = this.GetAttackSpeed();
-        }
     }
 
     protected void ShoveEnemy(GameObject target)
@@ -100,9 +117,10 @@ public class Survivor : EntityBase
         var magnitude = 10;
         var force = transform.position - target.transform.position;
         force.Normalize();
-        target.gameObject.transform.position -= (force);
+        target.gameObject.transform.position -= (force * magnitude);
     }
 
+    #region Targeting
     public GameObject SelectTarget(float Radius)
     {
         GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("test");
@@ -143,6 +161,38 @@ public class Survivor : EntityBase
         return null;
     }
 
+    protected GameObject SwitchTarget(Vector3 position)
+    {
+        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("Test");
+        List<GameObject> Withinrange = new List<GameObject>();
+        foreach(GameObject go in AllEnemies)
+        {
+            if (go == null)
+            {
+                continue;
+            }
+            else if (Vector3.Distance(go.transform.position, this.transform.position) <= 3)
+            {
+                Withinrange.Add(go);
+            }
+            else
+                continue;
+        }
+        if (Withinrange.Count != 0)
+        {
+            float range = 3f;
+            GameObject temp = null;
+            foreach(GameObject go in Withinrange)
+            {
+                if (range > (Vector3.Distance(go.transform.position, this.transform.position)))
+                {
+                    temp = go;
+                }
+            }
+            return temp;
+        }
+        return null;
+    }
 
     public bool Enemynear(float distance)
     {
@@ -182,9 +232,51 @@ public class Survivor : EntityBase
             return temp;
         }
         return null;
-      
+
+    }
+    #endregion
+
+    #region Death's Door Mechanic
+    protected bool DeathDoor()
+    {
+        f_DeathDoortimer -= Time.deltaTime;
+        if(f_DeathDoortimer <= 0)
+        {
+            int chancetodie = Random.Range(1, 400);
+            chancetodie = chancetodie / 4;
+            if(chancetodie < f_DeathChance)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
+    void AttackonDeathDoor(GameObject target)
+    {
+        float tempattack = target.GetComponent<Zombie>().GetAttackDamage();
+        tempattack = tempattack * 0.25f ;
+        f_DeathChance += tempattack;
+        if(f_DeathChance > 100)
+        {
+            f_DeathChance = 100;
+        }
+    }
+
+    protected void DeathDoorStats()
+    {
+        this.atkDmg = i_DeathdoorAttackDamage;
+        this.atkSpd = f_DeathdoorAttackSpeed;
+    }
+
+    protected void ReturnStats()
+    {
+        this.atkDmg = i_OriginalAttackDamage;
+        this.atkSpd = f_OriginalAttackSpeed;
+    }
+    #endregion
+
+    #region Getters
     public float GetEnmity()
     {
         return f_enmity;
@@ -225,8 +317,7 @@ public class Survivor : EntityBase
     {
         return Directionpoint;
     }
+    #endregion
 
 
-
-    
 }

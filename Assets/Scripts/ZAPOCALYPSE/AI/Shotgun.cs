@@ -8,6 +8,8 @@ public class Shotgun : Survivor
     {
         S_IDLE = 1,
         S_PANIC,
+        S_SEARCH,
+        S_SWITCHSEARCH,
         S_ATTACK,
         S_DEAD,
     }
