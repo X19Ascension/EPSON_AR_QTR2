@@ -10,16 +10,19 @@ public class Wait : MonoBehaviour {
 	IEnumerator Start () {
         yield return new WaitForSeconds(timer);
 
+        SceneManager.LoadScene("RERETEST");
+
         if (SceneManager.GetActiveScene().name.Contains("Main"))
             SceneManager.LoadScene("LevelSelect");//go to game scene
 	    else if (SceneManager.GetActiveScene().name.Contains("Select"))
         {
-            switch (PersistentData.m_Instance.LevelToLoad)
-            {
-                case PersistentData.LEVEL_TYPE.GRASS: SceneManager.LoadScene("GrassScene"); break;
-                case PersistentData.LEVEL_TYPE.DESERT: SceneManager.LoadScene("DessertScene"); break;
-                case PersistentData.LEVEL_TYPE.RUINS: SceneManager.LoadScene("RuinsScene"); break;
-            }
+            SceneManager.LoadScene("RERETEST");
+            //switch (PersistentData.m_Instance.LevelToLoad)
+            //{
+            //    case PersistentData.LEVEL_TYPE.GRASS: SceneManager.LoadScene("GrassScene"); break;
+            //    case PersistentData.LEVEL_TYPE.DESERT: SceneManager.LoadScene("DessertScene"); break;
+            //    case PersistentData.LEVEL_TYPE.RUINS: SceneManager.LoadScene("RuinsScene"); break;
+            //}
         }
         else if (SceneManager.GetActiveScene().name.Contains("Resource"))
         {

@@ -48,6 +48,7 @@ public class NZomebie : Zombie {
         if (this.HP <= 0) 
         {
             Zombiestate = NZombie_STATE.S_DEAD;
+
         }
         switch (Zombiestate)
         {
@@ -68,7 +69,7 @@ public class NZomebie : Zombie {
                         dir.y = 0;
                         this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
                     }
-                    if (Distance < 0.2f)
+                    if (Distance < 2.0f)
                     {
                         Zombiestate = NZombie_STATE.S_ATTACK;
                     }
@@ -86,6 +87,8 @@ public class NZomebie : Zombie {
                 }
             case NZombie_STATE.S_DEAD:
                 {
+                    spawnerGO.GetComponent<WaveSpawner>().maxAmount--;
+                    spawnerGO.GetComponent<WaveSpawner>().killcount++;
                     Destroy(this.gameObject);
                     break;
                 }

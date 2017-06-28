@@ -59,8 +59,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5603375, y: -0.9807124, z: 13.6102085}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -0.001, y: 0.24, z: -0.024}
+  m_LocalScale: {x: 0.3534778, y: 0.3534778, z: 0.3534778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 423334}
@@ -147,6 +147,7 @@ MonoBehaviour:
   maxSpd: 1
   maxReload: 1
   surv: {fileID: 142906}
+  Updated: 0
 --- !u!114 &11440718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,27 +156,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 142906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32264fa15bbe2234680be3be8b328c77, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b2c73d957177d745b51d3fbe85629bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 30
+  atkRange: 10
   atkSpd: 1.5
   atkDmg: 10
-  HP: 80
+  HP: 100
   HPRegen: 2
-  i_maxHP: 80
+  i_maxHP: 100
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
-  EProjectile: {fileID: 113460, guid: f98c3ad46a6453045a2ce7101ab5aead, type: 2}
-  survivorState: 0
+  EProjectile: {fileID: 0}
   entityType: 2
   attackRate: 0
-  reloadRate: 3
+  reloadRate: 1.6
   maxAmmo: 10
+  Directionpoint: {fileID: 0}
   experiencePt: 0
   timeActive: 0
-  level: 4
-  onFieldAnot: 0
+  level: 1
+  target: {fileID: 0}
+  shotgunstate: 0
 --- !u!114 &11465662
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -109,4 +109,11 @@ public class Shotgun : Survivor
             attackRate = atkSpd;
         }
     }
+
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, atkRange);
+    }
 }

@@ -38,8 +38,8 @@ public class SceneChange : MonoBehaviour {
     {
         Debug.Log(SceneManager.GetActiveScene().name);
 
-        PersistentData.m_Instance.PreviousScene = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("Pause Screen");
+        //PersistentData.m_Instance.PreviousScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("PlaceHolderPause");
     }
 
     public void ChangeGamePause()
@@ -80,5 +80,16 @@ public class SceneChange : MonoBehaviour {
     {
         Debug.Log(PersistentData.m_Instance.PreviousScene);
         SceneManager.LoadScene(PersistentData.m_Instance.PreviousScene);
+    }
+
+    public void ChangePlayGame()
+    {
+        //PersistentData.m_Instance.PreviousScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("RQTEST 1");
+    }
+
+    public void LoadGame()
+    {
+
     }
 }

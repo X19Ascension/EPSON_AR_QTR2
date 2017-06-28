@@ -94,9 +94,10 @@ public class WaveSpawner : MonoBehaviour {
                 {
                     if (testTimeDelta >= randomSpawnTimer)
                     {
+                        Debug.Log("Hello Spawn spawn xD");
                         SpawnZombie(LoadSpawnPoint());
                         currSpawnPt++;
-                        if (currSpawnPt > 15)
+                        if (currSpawnPt > 10)
                             currSpawnPt = 0;
 
                         //SpawnZombie(GenerateSpawnPos());

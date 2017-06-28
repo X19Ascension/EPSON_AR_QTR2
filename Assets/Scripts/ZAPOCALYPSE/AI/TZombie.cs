@@ -56,7 +56,7 @@ public class TZombie : Zombie
                 }
             case TZombieSTATE.S_CHASE:
                 {
-                    if (go_targetedEnemy != null && TargetToAttack() != null)
+                    if (go_targetedEnemy != null)
                     {
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
