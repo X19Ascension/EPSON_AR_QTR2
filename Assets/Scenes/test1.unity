@@ -157,7 +157,7 @@ GameObject:
   - 4: {fileID: 722111467}
   - 114: {fileID: 722111466}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,8 +174,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cc1c3ef0244974e9f3a7bd64e2bc3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  experience: 1200
+  enemies: []
+  survivors: []
+  HP_Rifle: 59
+  EXP_Rifle: 657
+  LVL_Rifle: 4534525
+  durationUp_Rifle: 6456
+  range_Rifle: 345
+  HP_Shotgun: 2.5434653e+10
+  EXP_Shotgun: 4575
+  LVL_Shotgun: 456
+  durationUp_Shotgun: 5345
+  range_Shotgun: 6
+  HP_Melee: 5576
+  EXP_Melee: 453452
+  LVL_Melee: 234
+  durationUp_Melee: 0
+  range_Melee: 5
+  HP_Engineer: 64
+  EXP_Engineer: 345656
+  LVL_Engineer: 4634
+  durationUp_Engineer: 4356
+  range_Engineer: 23452
+  health: 234542
+  experience: 647456
 --- !u!4 &722111467
 Transform:
   m_ObjectHideFlags: 0

@@ -319,5 +319,4 @@ public class Survivor : EntityBase
     }
     #endregion
 
-
 }
