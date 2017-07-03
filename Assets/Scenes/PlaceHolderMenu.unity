@@ -112,8 +112,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cc1c3ef0244974e9f3a7bd64e2bc3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
-  experience: 1
+  enemies: []
+  survivors: []
+  HP_Rifle: 324
+  EXP_Rifle: 645
+  LVL_Rifle: 234
+  durationUp_Rifle: 4353
+  range_Rifle: 2352
+  HP_Shotgun: 4235
+  EXP_Shotgun: 2342
+  LVL_Shotgun: 123
+  durationUp_Shotgun: 412
+  range_Shotgun: 3434
+  HP_Melee: 422
+  EXP_Melee: 123
+  LVL_Melee: 2312423
+  durationUp_Melee: 4341212
+  range_Melee: 123
+  HP_Engineer: 2425
+  EXP_Engineer: 231
+  LVL_Engineer: 525
+  durationUp_Engineer: 6857
+  range_Engineer: 9074
+  health: 57
+  experience: 563
 --- !u!4 &125222699
 Transform:
   m_ObjectHideFlags: 0
@@ -202,7 +224,7 @@ GameObject:
   - 114: {fileID: 616674374}
   - 114: {fileID: 616674377}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Start Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,7 +357,7 @@ GameObject:
   - 114: {fileID: 917746845}
   - 114: {fileID: 917746844}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Load Save
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

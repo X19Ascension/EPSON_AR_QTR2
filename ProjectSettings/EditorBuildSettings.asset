@@ -43,3 +43,9 @@ EditorBuildSettings:
     path: Assets/Scenes/test2.unity
   - enabled: 1
     path: Assets/Scenes/NCTest 1.unity
+  - enabled: 1
+    path: Assets/Scenes/NCTest 1 - Copy.unity
+  - enabled: 1
+    path: Assets/Scenes/PlaceHolderMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/RQTest 1.unity

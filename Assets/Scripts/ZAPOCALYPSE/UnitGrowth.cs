@@ -51,16 +51,17 @@ public class UnitGrowth : MonoBehaviour {
         if (The_Spawner.waveEnded && !Updated)
         {
             surv.gameObject.GetComponent<UnitGrowth>().CalculateEXPGain();
+            surv.SetActive(false);
         }
     }
 
     public void CalculateEXPGain()
     {
         //Debug.Log((int)diff.GetComponent<WaveSpawner>().diff);
-        float EXPGain = (surv.GetComponent<Survivor>().timeActive * 25) + surv.GetComponent<Survivor>().level * (int)diff.GetComponent<WaveSpawner>().diff;
+        float EXPGain = (surv.GetComponent<Survivor>().timeActive * 0.2f) + surv.GetComponent<Survivor>().level * (int)diff.GetComponent<WaveSpawner>().diff;
 
         float totalEXP = surv.GetComponent<Survivor>().experiencePt + EXPGain;
-
+        Debug.Log("Surv Time Active: " + surv.GetComponent<Survivor>().timeActive);
         Debug.Log("EXP To Level: " + EXPToLevel);
         Debug.Log("Total EXP Earned: " + totalEXP);
 
@@ -77,6 +78,8 @@ public class UnitGrowth : MonoBehaviour {
                 surv.GetComponent<Survivor>().experiencePt = totalEXP;
                 EXPToLVL();
 
+                surv.GetComponent<Survivor>().timeActive = 0;
+
                 if ((surv.GetComponent<Survivor>().level % 5) == 0)
                     UpdateStats();
             }
@@ -86,6 +89,7 @@ public class UnitGrowth : MonoBehaviour {
             surv.GetComponent<Survivor>().experiencePt = totalEXP;
             Updated = true;
         }
+
     }
 
     private void EXPToLVL()

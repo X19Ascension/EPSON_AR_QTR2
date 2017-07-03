@@ -21,6 +21,7 @@ public class Shotgun : Survivor
     {
         target = null;
         shotgunstate = Shotgun_State.S_IDLE;
+
     }
 
 	// Use this for initialization
@@ -32,7 +33,9 @@ public class Shotgun : Survivor
 	// Update is called once per frame
 	void Update ()
     {
+        timeActive += Time.deltaTime;
         RunFSM();
+        Regenerate();
 	}
 
     public override void RunFSM()

@@ -31,6 +31,7 @@ GameObject:
   - 23: {fileID: 2392504}
   - 114: {fileID: 11421820}
   - 114: {fileID: 11404446}
+  - 114: {fileID: 11404072}
   m_Layer: 10
   m_Name: Shotgun_REMASTERED
   m_TagString: Survivor
@@ -45,7 +46,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5603375, y: -0.9807124, z: 13.6102085}
+  m_LocalPosition: {x: 0.005, y: 0.493, z: -0.005}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -131,6 +132,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188060}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11404072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fa88128e562c64b91617e88e89135b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDMG: 40
+  maxSpd: 1
+  maxReload: 1
+  surv: {fileID: 188060}
+  Updated: 0
 --- !u!114 &11404446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,18 +159,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b2c73d957177d745b51d3fbe85629bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 50
+  atkRange: 10
   atkSpd: 1.2
-  atkDmg: 50
-  HP: 900
+  atkDmg: 10
+  HP: 80
   HPRegen: 90
-  i_maxHP: 900
+  i_maxHP: 80
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   EProjectile: {fileID: 113460, guid: f98c3ad46a6453045a2ce7101ab5aead, type: 2}
   entityType: 2
   attackRate: 0
+  reloadRate: 3
+  maxAmmo: 10
   Directionpoint: {fileID: 0}
+  Ustate: 0
+  experiencePt: 0
+  timeActive: 0
+  level: 1
   target: {fileID: 0}
   shotgunstate: 0
 --- !u!114 &11421820

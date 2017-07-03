@@ -30,7 +30,7 @@ public class SceneChange : MonoBehaviour {
 
     public void ChangeScene(string name)
     {
-        PersistentData.m_Instance.PreviousScene = SceneManager.GetActiveScene().name;
+        //PersistentData.m_Instance.PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(name);
     }
 

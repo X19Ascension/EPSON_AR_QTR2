@@ -34,6 +34,7 @@ public class Rifle : Survivor
 	// Update is called once per frame
 	void Update ()
     {
+        timeActive += Time.deltaTime;
         RunFSM();
         RunDeathDoor();
         Regenerate();

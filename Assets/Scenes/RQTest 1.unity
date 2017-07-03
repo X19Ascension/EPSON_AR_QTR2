@@ -7414,7 +7414,7 @@ Prefab:
       objectReference: {fileID: 186088, guid: d13d7d530f98d5d4f9358130b8c8755e, type: 2}
     - target: {fileID: 11493760, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
       propertyPath: minutePerWave
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11455514, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
