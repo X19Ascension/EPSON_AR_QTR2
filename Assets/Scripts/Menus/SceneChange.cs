@@ -85,7 +85,7 @@ public class SceneChange : MonoBehaviour {
     public void ChangePlayGame()
     {
         //PersistentData.m_Instance.PreviousScene = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("NCTEST 1 - COPY");
+        SceneManager.LoadScene("NCTEST 1");
     }
 
     public void LoadGame()
