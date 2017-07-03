@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 9137e24b73e48fb4ba92b38bd2a8c77d
+timeCreated: 1499070537
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base_Joint
+    100002: Head
+    100004: Hero_Gunner
+    100006: Hero_Gunner__Control
+    100008: //RootNode
+    100010: Hero_Gunner_ChianGun_Barrel
+    100012: Hero_Gunner_ChianGun_Control
+    100014: Hero_Gunner_ChianGun_Main
+    100016: Hero_Gunner_LeftArm
+    100018: Hero_Gunner_LeftArm_Control
+    100020: Hero_Gunner_RightArm
+    100022: Hero_Gunner_RightArm_Control
+    100024: Neck
+    100026: Silder
+    100028: Silder_Marker
+    400000: Base_Joint
+    400002: Head
+    400004: Hero_Gunner
+    400006: Hero_Gunner__Control
+    400008: //RootNode
+    400010: Hero_Gunner_ChianGun_Barrel
+    400012: Hero_Gunner_ChianGun_Control
+    400014: Hero_Gunner_ChianGun_Main
+    400016: Hero_Gunner_LeftArm
+    400018: Hero_Gunner_LeftArm_Control
+    400020: Hero_Gunner_RightArm
+    400022: Hero_Gunner_RightArm_Control
+    400024: Neck
+    400026: Silder
+    400028: Silder_Marker
+    2300000: Hero_Gunner_ChianGun_Barrel
+    2300002: Hero_Gunner_ChianGun_Main
+    3300000: Hero_Gunner_ChianGun_Barrel
+    3300002: Hero_Gunner_ChianGun_Main
+    4300000: Hero_Gunner
+    4300002: Hero_Gunner_RightArm
+    4300004: Hero_Gunner_LeftArm
+    4300006: Hero_Gunner_ChianGun_Main
+    4300008: Hero_Gunner_ChianGun_Barrel
+    7400000: Take 001
+    7400002: Take 0010
+    9500000: //RootNode
+    13700000: Hero_Gunner
+    13700002: Hero_Gunner_LeftArm
+    13700004: Hero_Gunner_RightArm
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base_Joint
+        weight: 1
+      - path: Base_Joint/Neck
+        weight: 1
+      - path: Base_Joint/Neck/Head
+        weight: 1
+      - path: Hero_Gunner__Control
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner/Hero_Gunner_LeftArm_Control
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner/Hero_Gunner_LeftArm_Control/Hero_Gunner_LeftArm
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner/Hero_Gunner_RightArm_Control
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner/Hero_Gunner_RightArm_Control/Hero_Gunner_RightArm
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control/Hero_Gunner_ChianGun_Main
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control/Hero_Gunner_ChianGun_Main/Hero_Gunner_ChianGun_Barrel
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control/Silder
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control/Silder/Silder_Marker
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take 0010
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base_Joint
+        weight: 1
+      - path: Base_Joint/Neck
+        weight: 1
+      - path: Base_Joint/Neck/Head
+        weight: 1
+      - path: Hero_Gunner__Control
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner/Hero_Gunner_LeftArm_Control
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner/Hero_Gunner_LeftArm_Control/Hero_Gunner_LeftArm
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner/Hero_Gunner_RightArm_Control
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner/Hero_Gunner_RightArm_Control/Hero_Gunner_RightArm
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control/Hero_Gunner_ChianGun_Main
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control/Hero_Gunner_ChianGun_Main/Hero_Gunner_ChianGun_Barrel
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control/Silder
+        weight: 1
+      - path: Hero_Gunner__Control/Hero_Gunner_ChianGun_Control/Silder/Silder_Marker
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

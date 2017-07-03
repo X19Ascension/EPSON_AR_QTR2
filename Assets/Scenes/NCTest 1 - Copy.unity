@@ -1508,6 +1508,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 250487802}
+--- !u!1001 &253040055
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.29318428
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7989473
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.5999837
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5a909113a8556a04c902f6d582d63c10, type: 3}
+  m_IsPrefabParent: 0
 --- !u!4 &253214468 stripped
 Transform:
   m_PrefabParentObject: {fileID: 494122, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
@@ -4694,7 +4740,7 @@ RectTransform:
   - {fileID: 127940927}
   - {fileID: 1979358553}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -8286,7 +8332,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Marker_1Material
+  m_Name: Marker_4Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -8299,7 +8345,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: fb8f7d2eb45c40dc918f7407c085c2ce, type: 3}
+          m_Texture: {fileID: 2800000, guid: abde89f8fd9c410c8cbd6369ecdfdf01, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}
@@ -8466,7 +8512,7 @@ Prefab:
       objectReference: {fileID: 186088, guid: d13d7d530f98d5d4f9358130b8c8755e, type: 2}
     - target: {fileID: 11493760, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
       propertyPath: minutePerWave
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11455514, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
@@ -10001,7 +10047,7 @@ RectTransform:
   - {fileID: 1392359056}
   - {fileID: 1913623916}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -10228,7 +10274,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Marker_3Material
+  m_Name: ShotgunMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -10241,7 +10287,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 2cfb6b27106d47bebf3c010002eaf1ad, type: 3}
+          m_Texture: {fileID: 2800000, guid: 64df205699844b648ef685d8bfa2e65c, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}
@@ -10416,7 +10462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadfb90286c81fd42a6785e4e7cd3024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: Marker_3
+  mTrackableName: Shotgun
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/LIVING_IN_THE_DATABASE.xml
@@ -12429,7 +12475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadfb90286c81fd42a6785e4e7cd3024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: Marker_1
+  mTrackableName: Marker_4
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/LIVING_IN_THE_DATABASE.xml
@@ -12466,7 +12512,7 @@ Transform:
   - {fileID: 436913343}
   - {fileID: 1811547787}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1979358552
 GameObject:
   m_ObjectHideFlags: 0
