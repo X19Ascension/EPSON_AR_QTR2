@@ -14,6 +14,8 @@ public class Rifle : Survivor
         S_DEAD,
     }
 
+    private Animator Anim;
+
     public GameObject target;
     public Vector3 V3_targetpos;
     int i_targetSurroundings;
@@ -29,7 +31,8 @@ public class Rifle : Survivor
 	void Start ()
     {
         this.atkRange = 25.0f;
-	}
+        Anim = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -62,7 +65,10 @@ public class Rifle : Survivor
             case Rifle_State.S_PANIC:
                 {
                     if (target != null)
+                    {
+                        Anim.SetTrigger("Shove");
                         ShoveEnemy(target);
+                    }
                     else
                     {
                         riflestate = Rifle_State.S_IDLE;
@@ -85,6 +91,7 @@ public class Rifle : Survivor
                 {
                     if (target != null) 
                     {
+                        Anim.SetTrigger("Attack");
                         Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
                         Attackenemy(V3_Direction);
                         V3_targetpos = target.transform.position;
@@ -103,7 +110,7 @@ public class Rifle : Survivor
                 }
             case Rifle_State.S_DEAD:
                 {
-                    Destroy(this.gameObject);
+                    Anim.SetTrigger("Die");
                     break;
                 }
         }

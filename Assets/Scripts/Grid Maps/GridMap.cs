@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class GridMap : MonoBehaviour {
     
     //Objects for MOdels, etc
+    public GameObject Original;
     [SerializeField]
     GameObject Grid_Empty;
     public GameObject Grid_Barricade_Front;
@@ -86,11 +87,13 @@ public class GridMap : MonoBehaviour {
         {
             for (int z = 0; z < i_GridSize_Y; z++)
             {
-                GameObject gridplane = (GameObject)Instantiate(Grid_Empty, new Vector3(x, 0, z) + Offset, Quaternion.identity);
+                GameObject gridplane = new GameObject();
+                gridplane = (GameObject)Instantiate(Grid_Empty, new Vector3(x, 0, z) + Offset, Quaternion.identity);
                 gridplane.gameObject.name = "X: " + (x + 1).ToString() + "Z: " + (z + 1).ToString();
                 gridplane.gameObject.tag = "Empty Grid";
                 gridplane.transform.parent = Grid_Encapsulate.transform;
                 Grid[x, z] = gridplane;
+                gridplane.transform.parent = Original.transform;
                 if((x == 0 || x == i_GridSize_X - 1) || (z == 0 || z == i_GridSize_Y - 1))
                 {
                     Grid_Exceptions.Add(gridplane);
@@ -101,24 +104,28 @@ public class GridMap : MonoBehaviour {
         Vector3 Front_Midpoint = Grid[0, 0].transform.position + ((Grid[0, i_GridSize_Y - 1].transform.position - Grid[0, 0].transform.position) / 2);
         GameObject Front_3 = (GameObject)Instantiate(Grid_Barricade_Front);
         Front_3.transform.position = Front_Midpoint + Front_Offset;
+        Front_3.transform.parent = Original.transform;
         Front_3.gameObject.name = "Barrier_Front";
         Front_3.gameObject.tag = "Barrier";
 
         Vector3 Back_Midpoint = Grid[i_GridSize_X - 1, 0].transform.position + ((Grid[i_GridSize_X - 1,i_GridSize_Y - 1].transform.position - Grid[i_GridSize_X - 1, 0].transform.position) / 2);
         GameObject Back_3 = (GameObject)Instantiate(Grid_Barricade_Back);
         Back_3.transform.position = Back_Midpoint + Back_Offset;
+        Back_3.transform.parent = Original.transform;
         Back_3.gameObject.name = "Barrier_Back";
         Back_3.gameObject.tag = "Barrier";
 
         Vector3 Left_Midpoint = Grid[0, 0].transform.position + ((Grid[i_GridSize_X - 1,0].transform.position - Grid[0, 0].transform.position) / 2);
         GameObject Left_3 = (GameObject)Instantiate(Grid_Barricade_Left);
         Left_3.transform.position = Left_Midpoint + Left_Offset;
+        Left_3.transform.parent = Original.transform;
         Left_3.gameObject.name = "Barrier_Left";
         Left_3.gameObject.tag = "Barrier";
 
         Vector3 Right_Midpoint = Grid[0, i_GridSize_Y - 1].transform.position + ((Grid[i_GridSize_X - 1, i_GridSize_Y - 1].transform.position - Grid[0, i_GridSize_Y - 1].transform.position) / 2);
         GameObject Right_3 = (GameObject)Instantiate(Grid_Barricade_Right);
         Right_3.transform.position = Right_Midpoint + Right_Offset;
+        Right_3.transform.parent = Original.transform;
         Right_3.gameObject.name = "Barrier_Right";
         Right_3.gameObject.tag = "Barrier";
     }
@@ -135,6 +142,7 @@ public class GridMap : MonoBehaviour {
             point_test.transform.localRotation = Quaternion.Euler(0, 0, 0) ;
             point_test.gameObject.tag = "DirectionPoint";
             point_test.gameObject.name = S_Directions[i];
+            point_test.transform.parent = Original.transform;
 
         }
     }
@@ -196,6 +204,7 @@ public class GridMap : MonoBehaviour {
             if (tempdistance == radius)
             {
                 go.transform.position = PointtoClamp.transform.position;
+                go.gameObject.transform.parent = Original.transform;
                 Grid_Exceptions.Add(NearestGridList[i]);
             }
         }

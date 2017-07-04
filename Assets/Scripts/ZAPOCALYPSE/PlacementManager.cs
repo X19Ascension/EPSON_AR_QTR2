@@ -115,7 +115,8 @@ public class PlacementManager : MonoBehaviour {
                         m_ObjectPreview = Instantiate(m_ObjectToPlace, hit.collider.gameObject.transform.position + new Vector3(0, 0.1f, 0), hit.collider.gameObject.transform.rotation * Quaternion.Euler(new Vector3(0, -90, 0))) as GameObject;
                     }
 
-                    //theGrid.ClamptoGrid(m_ObjectPreview);
+                    theGrid.ClamptoGrid(m_ObjectPreview);
+                    theGrid.SetTargetRange(m_ObjectToPlace);
 
                     if (hit.collider.gameObject.tag == "Empty Grid")
                     {
@@ -131,7 +132,8 @@ public class PlacementManager : MonoBehaviour {
                             helpTip.SetActive(false);
                             buttonClicked = false;
                             placementState = PLACEMENT_STATE.NOT_PLACING;
-                            //theGrid.ClamptoGrid(m_ObjectToPlace);
+                            theGrid.ClamptoGrid(m_ObjectToPlace);
+                            theGrid.SetTargetRange(m_ObjectToPlace);
                             m_ObjectToPlace = null;
                             m_ObjectPreview = null;
                         }

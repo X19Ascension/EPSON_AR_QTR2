@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 3f3c2612f3759d642819bf23dd350b7e
+timeCreated: 1499152404
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base_Joint
+    100002: Head
+    100004: Neck
+    100006: Zombie_Normal
+    100008: //RootNode
+    100010: Zombie_Normal_Control3
+    100012: Zombie_Normal_LeftArm
+    100014: Zombie_Normal_LeftArm_Control
+    100016: Zombie_Normal_RightArm
+    100018: Zombie_Normal_RightArm_Control
+    400000: Base_Joint
+    400002: Head
+    400004: Neck
+    400006: Zombie_Normal
+    400008: //RootNode
+    400010: Zombie_Normal_Control3
+    400012: Zombie_Normal_LeftArm
+    400014: Zombie_Normal_LeftArm_Control
+    400016: Zombie_Normal_RightArm
+    400018: Zombie_Normal_RightArm_Control
+    2300000: Zombie_Normal
+    2300002: Zombie_Normal_LeftArm
+    2300004: Zombie_Normal_RightArm
+    3300000: Zombie_Normal
+    3300002: Zombie_Normal_LeftArm
+    3300004: Zombie_Normal_RightArm
+    4300000: Zombie_Normal
+    4300002: Zombie_Normal_RightArm
+    4300004: Zombie_Normal_LeftArm
+    7400000: Chase
+    7400002: Attack
+    7400004: Die
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Chase
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base_Joint
+        weight: 1
+      - path: Base_Joint/Neck
+        weight: 1
+      - path: Base_Joint/Neck/Head
+        weight: 1
+      - path: Zombie_Normal_Control3
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_LeftArm_Control
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_LeftArm_Control/Zombie_Normal_LeftArm
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_RightArm_Control
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_RightArm_Control/Zombie_Normal_RightArm
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 48
+      lastFrame: 81
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base_Joint
+        weight: 1
+      - path: Base_Joint/Neck
+        weight: 1
+      - path: Base_Joint/Neck/Head
+        weight: 1
+      - path: Zombie_Normal_Control3
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_LeftArm_Control
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_LeftArm_Control/Zombie_Normal_LeftArm
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_RightArm_Control
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_RightArm_Control/Zombie_Normal_RightArm
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Die
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base_Joint
+        weight: 1
+      - path: Base_Joint/Neck
+        weight: 1
+      - path: Base_Joint/Neck/Head
+        weight: 1
+      - path: Zombie_Normal_Control3
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_LeftArm_Control
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_LeftArm_Control/Zombie_Normal_LeftArm
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_RightArm_Control
+        weight: 1
+      - path: Zombie_Normal_Control3/Zombie_Normal_RightArm_Control/Zombie_Normal_RightArm
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

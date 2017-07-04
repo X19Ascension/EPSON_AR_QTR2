@@ -120,6 +120,11 @@ public class Survivor : EntityBase
         target.gameObject.transform.position -= (force * magnitude);
     }
 
+    protected void DestroyGO()
+    {
+        Destroy(gameObject, 3);
+    }
+
     #region Targeting
     public GameObject SelectTarget(float Radius)
     {

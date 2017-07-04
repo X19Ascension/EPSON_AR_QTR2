@@ -33,7 +33,7 @@ public class ZZombie : Zombie {
 	// Update is called once per frame
 	void Update ()
     {
-	
+        RunFSM();
 	}
 
     public override void RunFSM()

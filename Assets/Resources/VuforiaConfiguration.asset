@@ -44,11 +44,14 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
+    - FPJ_EPSONAR
     - LIVING_IN_THE_DATABASE
     - test
     - FYPJ1_EpsonAR_Device_Database
     - FYPJ1_EpsonAR_Device_Database_OT
     dataSetsToActivate:
+    - FYPJ1_EpsonAR_Device_Database
+    - FPJ_EPSONAR
     - LIVING_IN_THE_DATABASE
     - test
     - FYPJ1_EpsonAR_Device_Database_OT
@@ -57,13 +60,13 @@ MonoBehaviour:
     matteShader: {fileID: 4800000, guid: f84e93cca971cda47a225f4c6a4156c9, type: 3}
     videoBackgroundEnabled: 1
   smartTerrainTracker:
-    autoInitTracker: 1
-    autoStartTracker: 1
-    autoInitBuilder: 1
-    sceneUnitsToMillimeter: 300
-  deviceTracker:
     autoInitTracker: 0
     autoStartTracker: 0
+    autoInitBuilder: 0
+    sceneUnitsToMillimeter: 300
+  deviceTracker:
+    autoInitTracker: 1
+    autoStartTracker: 1
     posePrediction: 0
     modelCorrectionMode: 0
     modelTransformEnabled: 0

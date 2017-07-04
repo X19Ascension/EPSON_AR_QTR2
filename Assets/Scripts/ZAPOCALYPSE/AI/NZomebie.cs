@@ -13,10 +13,11 @@ public class NZomebie : Zombie {
     }
 
     public NZombie_STATE Zombiestate;
-    public GameObject SpawnerGO;
+     GameObject SpawnerGO;
     float f_movespeed;
     float f_attackRate;
     int i_Threatvalue;
+    private Animator anim;
 
     void Awake()
     {
@@ -30,9 +31,12 @@ public class NZomebie : Zombie {
 	// Use this for initialization
 	void Start ()
     {
+        anim = GetComponent<Animator>();
         atkSpd = 0.2f;
         f_attackRate = atkSpd;
         this.moveSpd = 1.5f;
+        this.gameObject.transform.parent = GameObject.Find("TerrainSpawn").transform;
+        SpawnerGO = GameObject.Find("SpawnerPrefab");
 	}
 	
 	// Update is called once per frame
@@ -62,6 +66,7 @@ public class NZomebie : Zombie {
                 }
             case NZombie_STATE.S_CHASE:
                 {
+                    anim.SetBool("Chase", true);
                     float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
                     if (go_targetedEnemy != null)
                     {
@@ -71,7 +76,8 @@ public class NZomebie : Zombie {
                     }
                     if (Distance < 2.0f)
                     {
-                        Zombiestate = NZombie_STATE.S_ATTACK;
+                        Zombiestate = NZombie_STATE.S_ATTACK; 
+                        anim.SetBool("Chase", false);
                     }
                     break;
                 }
@@ -79,6 +85,7 @@ public class NZomebie : Zombie {
                 {
                     if (go_targetedEnemy != null)
                     {
+                        anim.SetTrigger("Attack");
                         AttackEnemy(go_targetedEnemy);
                     }
                     else
@@ -89,7 +96,8 @@ public class NZomebie : Zombie {
                 {
                     spawnerGO.GetComponent<WaveSpawner>().maxAmount--;
                     spawnerGO.GetComponent<WaveSpawner>().killcount++;
-                    Destroy(this.gameObject);
+                    anim.SetTrigger("Die");
+                    
                     break;
                 }
         }
@@ -107,5 +115,10 @@ public class NZomebie : Zombie {
 
             f_attackRate = this.GetAttackSpeed();
         }
+    }
+
+    void DestroyThis()
+    {
+        Destroy(this.gameObject, 3);
     }
 }
