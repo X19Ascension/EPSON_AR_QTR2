@@ -105,19 +105,19 @@ public class WaveSpawner : MonoBehaviour {
 
                         testTimeDelta = 0f;
                     }
-                    //if (testTankSpawn >= 6.0f && spawnerGO.GetComponent<WaveSpawner>().killcount >= 10)
-                    //{
-                    //    for (int i = 0; i < 5; i++)
-                    //        SpawnHorde(GenerateSpawnPos());
+                    if (testTankSpawn >= 6.0f && spawnerGO.GetComponent<WaveSpawner>().killcount >= 10)
+                    {
+                        for (int i = 0; i < 5; i++)
+                            SpawnHorde(GenerateSpawnPos());
 
-                    //    testTankSpawn = 0f;
-                    //}
-                    //if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank)
-                    //{
-                    //    SpawnTankZombie(GenerateSpawnPos());
-                    //    spawnerGO.GetComponent<WaveSpawner>().killcount = 0;
-                    //    //zombieGO.gameObject
-                    //}
+                        testTankSpawn = 0f;
+                    }
+                    if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank)
+                    {
+                        SpawnTankZombie(GenerateSpawnPos());
+                        spawnerGO.GetComponent<WaveSpawner>().killcount = 0;
+                        //zombieGO.gameObject
+                    }
                 }
                 
             }

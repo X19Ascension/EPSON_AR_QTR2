@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &145030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 472296}
+  - 114: {fileID: 11409174}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &472296
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 198.95444, y: 190.82805, z: 55.43512}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11409174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cc1c3ef0244974e9f3a7bd64e2bc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
+  survivors: []
+  HP_Rifle: 80
+  EXP_Rifle: 0
+  LVL_Rifle: 1
+  durationUp_Rifle: 0
+  range_Rifle: 25
+  HP_Shotgun: 60
+  EXP_Shotgun: 0
+  LVL_Shotgun: 1
+  durationUp_Shotgun: 0
+  range_Shotgun: 10
+  HP_Melee: 50
+  EXP_Melee: 0
+  LVL_Melee: 1
+  durationUp_Melee: 0
+  range_Melee: 3
+  HP_Engineer: 50
+  EXP_Engineer: 0
+  LVL_Engineer: 1
+  durationUp_Engineer: 0
+  range_Engineer: 3
+  health: 2121
+  experience: 1111
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 145030}
+  m_IsPrefabParent: 1

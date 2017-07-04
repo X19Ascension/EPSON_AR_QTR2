@@ -15,27 +15,27 @@ public class GameControl: MonoBehaviour {
     public GameObject[] enemies;
     public GameObject[] survivors;
 
-    public float HP_Rifle;              //! HP of the Rifler
+    public int HP_Rifle;              //! HP of the Rifler
     public float EXP_Rifle;             //! EXP of the Rifler
-    public float LVL_Rifle;             //! Level of the rifler <- probaby the only essential one in stats as stats will be recalculated.
+    public int LVL_Rifle;             //! Level of the rifler <- probaby the only essential one in stats as stats will be recalculated.
     public float durationUp_Rifle;      //! Duration of the rifler active
     public float range_Rifle;           //! Range of the Rifler
 
-    public float HP_Shotgun;            //! HP of the Shotgunner
+    public int HP_Shotgun;            //! HP of the Shotgunner
     public float EXP_Shotgun;           //! EXP of the Shotgunner
-    public float LVL_Shotgun;           //! Level of the Shotgunner
+    public int LVL_Shotgun;           //! Level of the Shotgunner
     public float durationUp_Shotgun;    //! Duration of the shotgunner active
     public float range_Shotgun;         //! Range of the Shotgunner
 
-    public float HP_Melee;              //! HP Of the Melee
+    public int HP_Melee;              //! HP Of the Melee
     public float EXP_Melee;             //! EXP of the Melee
-    public float LVL_Melee;             //! Level of the Melee
+    public int LVL_Melee;             //! Level of the Melee
     public float durationUp_Melee;      //! Duration of the melee active
     public float range_Melee;           //! Range of the Melee
 
-    public float HP_Engineer;           //! HP of the Engineer
+    public int HP_Engineer;           //! HP of the Engineer
     public float EXP_Engineer;          //! EXP of the Engineer
-    public float LVL_Engineer;          //! Level of the Engineer
+    public int LVL_Engineer;          //! Level of the Engineer
     public float durationUp_Engineer;   //! Duration of the Engineer active
     public float range_Engineer;        //! Range of the Engineer
 
@@ -204,16 +204,16 @@ class PlayerTestData
     public float durationUp_Melee;      //! Duration of the melee active
     public float range_Melee;           //! Range of the Melee
 
-    //public float HP_Medic;
-    //public float EXP_Medic;
-    //public float LVL_Medic;
-    //public float durationUp_Rifle;    //! Duration of the rifler active
-
     public int HP_Engineer;           //! HP of the Engineer
     public float EXP_Engineer;          //! EXP of the Engineer
     public int LVL_Engineer;          //! Level of the Engineer
     public float durationUp_Engineer;   //! Duration of the Engineer active
     public float range_Engineer;        //! Range of the Engineer
+
+    //public float HP_Medic;
+    //public float EXP_Medic;
+    //public float LVL_Medic;
+    //public float durationUp_Rifle;    //! Duration of the rifler active
 
     //! Storing a List of Enemies so that the HP, position and other important data values are being recorded.
     //public List<GameObject> Scene_Enemies = new List<GameObject>();

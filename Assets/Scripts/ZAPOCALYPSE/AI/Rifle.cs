@@ -19,6 +19,8 @@ public class Rifle : Survivor
     int i_targetSurroundings;
     public Rifle_State riflestate;
 
+    private GameControl gameControl;
+
     void Awake()
     {
         target = null;
@@ -28,8 +30,16 @@ public class Rifle : Survivor
 
 	void Start ()
     {
-        this.atkRange = 25.0f;
-	}
+        gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
+
+        //Debug.Log(gameControl.range_Rifle);
+        this.atkRange = gameControl.range_Rifle;//25.0f;
+        this.timeActive = gameControl.durationUp_Rifle;
+        this.experiencePt = gameControl.EXP_Rifle;
+        this.HP = gameControl.HP_Rifle;
+        this.level = gameControl.LVL_Rifle;
+        
+    }
 	
 	// Update is called once per frame
 	void Update ()

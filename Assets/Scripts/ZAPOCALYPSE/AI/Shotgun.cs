@@ -17,6 +17,8 @@ public class Shotgun : Survivor
     public GameObject target;
     public Shotgun_State shotgunstate;
 
+    private GameControl gameControl;
+
     void Awake()
     {
         target = null;
@@ -27,8 +29,15 @@ public class Shotgun : Survivor
 	// Use this for initialization
 	void Start ()
     {
+        gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         this.atkRange = 15.0f;
-	}
+
+        this.atkRange = gameControl.range_Shotgun;//25.0f;
+        this.timeActive = gameControl.durationUp_Shotgun;
+        this.experiencePt = gameControl.EXP_Shotgun;
+        this.HP = gameControl.HP_Shotgun;
+        this.level = gameControl.LVL_Shotgun;
+    }
 	
 	// Update is called once per frame
 	void Update ()

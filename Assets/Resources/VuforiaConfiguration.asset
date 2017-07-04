@@ -24,7 +24,7 @@ MonoBehaviour:
     cameraOffset: 0.06
     distortionRenderingMode: 2
     distortionRenderingLayer: 31
-    eyewearType: 0
+    eyewearType: 1
     stereoFramework: 0
     seeThroughConfiguration: 0
     viewerName: Generic Cardboard
@@ -44,9 +44,9 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
+    - FYPJ1_EpsonAR_Device_Database
     - LIVING_IN_THE_DATABASE
     - test
-    - FYPJ1_EpsonAR_Device_Database
     - FYPJ1_EpsonAR_Device_Database_OT
     dataSetsToActivate:
     - LIVING_IN_THE_DATABASE
