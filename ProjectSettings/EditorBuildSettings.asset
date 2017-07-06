@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FINAL/Main Title.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FINAL/Loading Screen.unity
   - enabled: 0
     path: Assets/Scenes/GameScene.unity
   - enabled: 0
     path: Assets/Scenes/FINAL/ResourceCollectionScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FINAL/Pause Screen.unity
   - enabled: 0
     path: Assets/Scenes/OLD/Pause Screen Warning.unity
@@ -26,26 +26,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FINAL/GrassScene.unity
   - enabled: 0
-    path: Assets/Scenes/FINAL/DessertScene.unity
-  - enabled: 0
     path: Assets/Scenes/FINAL/RuinsScene.unity
   - enabled: 1
-    path: Assets/Scenes/FINAL/LevelSelect.unity
-  - enabled: 0
-    path: Assets/Scenes/QTR-1/TroyTest.unity
-  - enabled: 1
-    path: Assets/Scenes/RERETest.unity
+    path: Assets/Scenes/PlaceHolderMenu.unity
   - enabled: 1
     path: Assets/Scenes/PlaceHolderPause.unity
   - enabled: 1
-    path: Assets/Scenes/test1.unity
+    path: Assets/Scenes/RERETest.unity
   - enabled: 1
-    path: Assets/Scenes/test2.unity
-  - enabled: 1
-    path: Assets/Scenes/NCTest 1.unity
+    path: Assets/Scenes/FINAL/DessertScene.unity
   - enabled: 1
     path: Assets/Scenes/NCTest 1 - Copy.unity
-  - enabled: 1
-    path: Assets/Scenes/PlaceHolderMenu.unity
   - enabled: 1
     path: Assets/Scenes/RQTest 1.unity

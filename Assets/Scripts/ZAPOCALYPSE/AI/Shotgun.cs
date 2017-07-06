@@ -59,7 +59,7 @@ public class Shotgun : Survivor
                 {
                     if (this.Enemynear(this.atkRange))
                     {
-                        target = SelectTarget(this.atkRange);
+                        target = SelectTarget(this.atkRange,this.transform.position);
                         shotgunstate = Shotgun_State.S_ATTACK;
                     }
                     break;

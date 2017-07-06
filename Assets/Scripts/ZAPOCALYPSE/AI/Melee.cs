@@ -12,11 +12,14 @@ public class Melee : Survivor
         S_DEAD,
     }
 
+    private Animator Anim;
+
     public GameObject target;
     public Melee_State meleestate;
 
     void Awake()
     {
+        Anim = GetComponent<Animator>();
         target = null;
         meleestate = Melee_State.S_IDLE;
         Ustate = UnitState.S_HEALTHY;
@@ -53,7 +56,7 @@ public class Melee : Survivor
                 }
             case Melee_State.S_SEARCH:
                 {
-                    target = SelectTarget(this.atkRange);
+                    target = SelectTarget(this.atkRange,this.transform.position);
                     meleestate = Melee_State.S_ATTACK;
                     break;
                 }
@@ -62,6 +65,7 @@ public class Melee : Survivor
                     if (target != null)
                     { 
                         Attackenemy(target);
+                        Anim.SetTrigger("Attack");
                     }
                     else
                     {
@@ -71,7 +75,7 @@ public class Melee : Survivor
                 }
             case Melee_State.S_DEAD:
                 {
-                    Destroy(this.gameObject);
+                    Anim.SetTrigger("Die");
                     break;
                 }
         }
@@ -125,4 +129,6 @@ public class Melee : Survivor
             attackRate = atkSpd;
         }
     }
+
+   
 }

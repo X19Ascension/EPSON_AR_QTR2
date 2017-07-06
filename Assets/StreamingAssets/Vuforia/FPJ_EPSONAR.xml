@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Marker_S" size="1.000000 1.000000" />
+    <ImageTarget name="Marker_M" size="1.000000 1.000000" />
+    <ImageTarget name="Marker_G" size="1.000000 1.000000" />
+    <ImageTarget name="Marker_E" size="1.000000 1.000000" />
+    <ImageTarget name="Marker_C" size="1.000000 1.000000" />
+    <ImageTarget name="Vuforia_Town2" size="15.000000 9.375000" />
+    <ImageTarget name="Terrain" size="1.000000 0.700000" />
+  </Tracking>
+</QCARConfig>

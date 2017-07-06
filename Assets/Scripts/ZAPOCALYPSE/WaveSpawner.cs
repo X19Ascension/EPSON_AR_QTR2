@@ -54,6 +54,8 @@ public class WaveSpawner : MonoBehaviour {
 
     public bool waveEnded;
 
+    public GameObject OriginPoint;
+
     // Use this for initialization
     void Start () {
         spawnerGO.GetComponent<WaveSpawner>().maxAmount = 0;
@@ -80,6 +82,7 @@ public class WaveSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        SetOriginPoint();
         testTimeDelta += Time.deltaTime;
         waveDuration -= Time.deltaTime;
         //Debug.Log(waveDuration);
@@ -95,6 +98,8 @@ public class WaveSpawner : MonoBehaviour {
                     if (testTimeDelta >= randomSpawnTimer)
                     {
                         Debug.Log("Hello Spawn spawn xD");
+                        SpawnZombie(LoadSpawnPoint());
+                        SpawnZombie(LoadSpawnPoint());
                         SpawnZombie(LoadSpawnPoint());
                         currSpawnPt++;
                         if (currSpawnPt > 10)
@@ -155,6 +160,7 @@ public class WaveSpawner : MonoBehaviour {
         int randSpawn = Random.Range(0, 4);
         Vector3 temp;
         temp = spawnPoints[randSpawn].transform.position;
+        
 
         if (randSpawn == 0 || randSpawn == 1)
             temp.x = Random.Range(-30, 30);
@@ -182,7 +188,8 @@ public class WaveSpawner : MonoBehaviour {
     {
         GameObject go = Instantiate(zombieGO, spawnPos, Quaternion.identity) as GameObject;
         TweakStats(go);
-        go.transform.parent = this.transform.parent;
+        go.gameObject.transform.parent = OriginPoint.transform;
+        //go.transform.parent = this.transform.parent;
         spawnValue -= 1;
         Debug.Log("Zombie Spawn");
         spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
@@ -246,5 +253,13 @@ public class WaveSpawner : MonoBehaviour {
         //}
 
         return new Vector3(0, 0, 0);
+    }
+
+    void SetOriginPoint()
+    {
+        for (int i = 0; i < OriginPoint.transform.childCount; i++) 
+        {
+            OriginPoint.transform.GetChild(i).gameObject.transform.parent = OriginPoint.transform;
+        }
     }
 }

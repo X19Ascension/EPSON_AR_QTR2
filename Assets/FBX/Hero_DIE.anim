@@ -1,0 +1,5721 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hero_DIE
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.00006300172, y: -0.0011535484, z: 0.00017039567, w: 1.0000073}
+        inSlope: {x: 0.0025200716, y: -0.04614199, z: 0.006815834, w: 0.00029110914}
+        outSlope: {x: 0.0025200716, y: -0.04614199, z: 0.006815834, w: 0.00029110914}
+        tangentMode: 0
+      - time: 0.125
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: -0.008064231, y: 0.1476544, z: -0.021810675, w: -0.00093054597}
+        outSlope: {x: -0.008064231, y: 0.1476544, z: -0.021810675, w: -0.00093054597}
+        tangentMode: 0
+      - time: 0.29166675
+        value: {x: -0.0077401763, y: 0.10593208, z: -0.0146434745, w: 0.9942354}
+        inSlope: {x: -0.084048115, y: 0.49916953, z: -0.058540296, w: -0.050372504}
+        outSlope: {x: -0.084048115, y: 0.49916953, z: -0.058540296, w: -0.050372504}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: -0.019151188, y: 0.09959027, z: -0.009214509, w: 0.9948016}
+        inSlope: {x: -0.20854017, y: -0.7627093, z: 0.2520892, w: 0.06330587}
+        outSlope: {x: -0.20854017, y: -0.7627093, z: 0.2520892, w: 0.06330587}
+        tangentMode: 0
+      - time: 0.4583335
+        value: {x: -0.037668232, y: 0.0006601554, z: 0.021495303, w: 0.9990589}
+        inSlope: {x: -0.16303745, y: -1.1934557, z: 0.35016006, w: -0.0068930145}
+        outSlope: {x: -0.16303745, y: -1.1934557, z: 0.35016006, w: -0.0068930145}
+        tangentMode: 0
+      - time: 0.54166675
+        value: {x: -0.044272516, y: -0.0638338, z: 0.03959718, w: 0.9961914}
+        inSlope: {x: 0.033257492, y: -0.14718947, z: 0.016552638, w: -0.006717669}
+        outSlope: {x: 0.033257492, y: -0.14718947, z: 0.016552638, w: -0.006717669}
+        tangentMode: 0
+      - time: 0.7083335
+        value: {x: -0.004865645, y: -0.0064691305, z: 0.0044039995, w: 0.99995756}
+        inSlope: {x: 0.19477904, y: 0.2647692, z: -0.1757468, w: 0.005789987}
+        outSlope: {x: 0.19477904, y: 0.2647692, z: -0.1757468, w: 0.005789987}
+        tangentMode: 0
+      - time: 0.875
+        value: {x: -0.047173575, y: 0, z: -0, w: 0.9988867}
+        inSlope: {x: -0.7074169, y: 0, z: 0, w: -0.03630065}
+        outSlope: {x: -0.7074169, y: 0, z: 0, w: -0.03630065}
+        tangentMode: 0
+      - time: 1.125
+        value: {x: -0.32436243, y: 0, z: -0, w: 0.9459329}
+        inSlope: {x: -1.3040423, y: 0, z: 0, w: -0.4480086}
+        outSlope: {x: -1.3040423, y: 0, z: 0, w: -0.4480086}
+        tangentMode: 0
+      - time: 1.375
+        value: {x: -0.60950154, y: 0, z: -0, w: 0.79278487}
+        inSlope: {x: -0.8292807, y: 0, z: 0, w: -0.63372517}
+        outSlope: {x: -0.8292807, y: 0, z: 0, w: -0.63372517}
+        tangentMode: 0
+      - time: 1.5416667
+        value: {x: -0.6969791, y: 0, z: -0, w: 0.71709144}
+        inSlope: {x: -0.18811333, y: 0, z: 0, w: -0.1809286}
+        outSlope: {x: -0.18811333, y: 0, z: 0, w: -0.1809286}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: -0.70100653, y: 0, z: -0, w: 0.71315485}
+        inSlope: {x: 0.66973114, y: 0, z: 0, w: 0.6037078}
+        outSlope: {x: 0.66973114, y: 0, z: 0, w: 0.6037078}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.000583641, y: -0.00067074236, z: -0.0008408668, w: 1.0000223}
+        inSlope: {x: -0.022046665, y: 0.025051823, z: 0.031549804, w: -0.00088119466}
+        outSlope: {x: -0.022046665, y: 0.025051823, z: 0.031549804, w: -0.00088119466}
+        tangentMode: 0
+      - time: 0.041666746
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.20833337
+        value: {x: 0, y: -0, z: -0.014176169, w: 0.9998995}
+        inSlope: {x: 0, y: 0, z: -0.2628767, w: -0.003981117}
+        outSlope: {x: 0, y: 0, z: -0.2628767, w: -0.003981117}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: 0, y: -0, z: -0.036078088, w: 0.999349}
+        inSlope: {x: 0, y: 0, z: 0.17002481, w: 0.005644083}
+        outSlope: {x: 0, y: 0, z: 0.17002481, w: 0.005644083}
+        tangentMode: 0
+      - time: 0.54166675
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0.050262406, w: 0.00010514239}
+        outSlope: {x: 0, y: 0, z: 0.050262406, w: 0.00010514239}
+        tangentMode: 0
+      - time: 1.125
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.75
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: -0.07307477, w: -0.00022244411}
+        outSlope: {x: 0, y: 0, z: -0.07307477, w: -0.00022244411}
+        tangentMode: 0
+      - time: 1.0416667
+        value: {x: 0, y: -0, z: -0.18092819, w: 0.9834963}
+        inSlope: {x: 0, y: 0, z: -0.9270614, w: -0.17306581}
+        outSlope: {x: 0, y: 0, z: -0.9270614, w: -0.17306581}
+        tangentMode: 0
+      - time: 1.2916667
+        value: {x: 0, y: -0, z: -0.4508358, w: 0.8926069}
+        inSlope: {x: 0, y: 0, z: -1.0256994, w: -0.5165131}
+        outSlope: {x: 0, y: 0, z: -1.0256994, w: -0.5165131}
+        tangentMode: 0
+      - time: 1.5416667
+        value: {x: 0, y: -0, z: -0.6186415, w: 0.78567344}
+        inSlope: {x: 0, y: 0, z: -0.19848308, w: -0.15467519}
+        outSlope: {x: 0, y: 0, z: -0.19848308, w: -0.15467519}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 0, y: -0, z: -0.62291825, w: 0.78228694}
+        inSlope: {x: 0, y: 0, z: -0.102641866, w: -0.08127578}
+        outSlope: {x: 0, y: 0, z: -0.102641866, w: -0.08127578}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.75
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: -0.023335222, y: -0.068240345, z: -0.00013270295, w: -0.00021672208}
+        outSlope: {x: -0.023335222, y: -0.068240345, z: -0.00013270295, w: -0.00021672208}
+        tangentMode: 0
+      - time: 1.0833335
+        value: {x: -0.09070447, y: -0.27139184, z: -0.025699941, w: 0.9578407}
+        inSlope: {x: -0.40653878, y: -1.2803972, z: -0.24856584, w: -0.40980273}
+        outSlope: {x: -0.40653878, y: -1.2803972, z: -0.24856584, w: -0.40980273}
+        tangentMode: 0
+      - time: 1.2916667
+        value: {x: -0.16187362, y: -0.52416533, z: -0.102249965, w: 0.8298148}
+        inSlope: {x: -0.2331182, y: -1.018444, z: -0.43516827, w: -0.73937273}
+        outSlope: {x: -0.2331182, y: -1.018444, z: -0.43516827, w: -0.73937273}
+        tangentMode: 0
+      - time: 1.5416667
+        value: {x: -0.18731557, y: -0.6775937, z: -0.1848189, w: 0.68674713}
+        inSlope: {x: -0.014117333, y: -0.1655635, z: -0.1100578, w: -0.19455707}
+        outSlope: {x: -0.014117333, y: -0.1655635, z: -0.1100578, w: -0.19455707}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: -0.18758914, y: -0.68112534, z: -0.187206, w: 0.6825193}
+        inSlope: {x: 0.068351015, y: 0.59775746, z: 0.37165508, w: 0.6522967}
+        outSlope: {x: 0.068351015, y: 0.59775746, z: 0.37165508, w: 0.6522967}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -0.0042005214, w: 1.000012}
+        inSlope: {x: 0, y: 0, z: 0.004800592, w: -0.000013732912}
+        outSlope: {x: 0, y: 0, z: 0.004800592, w: -0.000013732912}
+        tangentMode: 0
+      - time: 0.125
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0.06857995, w: -0.0001959797}
+        outSlope: {x: 0, y: 0, z: 0.06857995, w: -0.0001959797}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: 0, y: 0, z: 0.04921724, w: 0.9987881}
+        inSlope: {x: 0, y: 0, z: -0.23187709, w: 0.010507108}
+        outSlope: {x: 0, y: 0, z: -0.23187709, w: 0.010507108}
+        tangentMode: 0
+      - time: 0.54166675
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: -0.06857995, w: 0.0001959797}
+        outSlope: {x: 0, y: 0, z: -0.06857995, w: 0.0001959797}
+        tangentMode: 0
+      - time: 0.9583335
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.7083335
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.8333335
+        value: {x: 0, y: 0, z: 0.02855002, w: 0.99959236}
+        inSlope: {x: 0, y: 0, z: 0.62287843, w: -0.020952756}
+        outSlope: {x: 0, y: 0, z: 0.62287843, w: -0.020952756}
+        tangentMode: 0
+      - time: 1
+        value: {x: 0, y: 0, z: 0.1815814, w: 0.9833759}
+        inSlope: {x: 0, y: 0, z: 1.0493923, w: -0.19552383}
+        outSlope: {x: 0, y: 0, z: 1.0493923, w: -0.19552383}
+        tangentMode: 0
+      - time: 1.2083335
+        value: {x: 0, y: 0, z: 0.44677183, w: 0.89464796}
+        inSlope: {x: 0, y: 0, z: 1.3518338, w: -0.6752437}
+        outSlope: {x: 0, y: 0, z: 1.3518338, w: -0.6752437}
+        tangentMode: 0
+      - time: 1.4166667
+        value: {x: 0, y: 0, z: 0.6805092, w: 0.7327395}
+        inSlope: {x: 0, y: 0, z: 0.77452326, w: -0.71368587}
+        outSlope: {x: 0, y: 0, z: 0.77452326, w: -0.71368587}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 0, y: 0, z: 0.7481994, w: 0.66347396}
+        inSlope: {x: 0, y: 0, z: 0.109617025, w: -0.1227634}
+        outSlope: {x: 0, y: 0, z: 0.109617025, w: -0.1227634}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.7083335
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.8333335
+        value: {x: -0.024550272, y: 0.018889153, z: -0.018175155, w: 0.9993549}
+        inSlope: {x: -0.5505726, y: 0.4472823, z: -0.40073186, w: -0.03531942}
+        outSlope: {x: -0.5505726, y: 0.4472823, z: -0.40073186, w: -0.03531942}
+        tangentMode: 0
+      - time: 1.0416667
+        value: {x: -0.2061345, y: 0.22100095, z: -0.13264523, w: 0.9439663}
+        inSlope: {x: -0.88435805, y: 1.408572, z: -0.40497282, w: -0.5816935}
+        outSlope: {x: -0.88435805, y: 1.408572, z: -0.40497282, w: -0.5816935}
+        tangentMode: 0
+      - time: 1.2083335
+        value: {x: -0.30141655, y: 0.4686712, z: -0.13497505, w: 0.819315}
+        inSlope: {x: -0.19412534, y: 1.3654693, z: 0.4004563, w: -0.7817838}
+        outSlope: {x: -0.19412534, y: 1.3654693, z: 0.4004563, w: -0.7817838}
+        tangentMode: 0
+      - time: 1.4583335
+        value: {x: -0.26219705, y: 0.66904867, z: 0.028529745, w: 0.6948473}
+        inSlope: {x: 0.24080673, y: 0.25903064, z: 0.5486119, w: -0.17703372}
+        outSlope: {x: 0.24080673, y: 0.25903064, z: 0.5486119, w: -0.17703372}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: -0.24508919, y: 0.6825637, z: 0.06597398, w: 0.68533605}
+        inSlope: {x: 0.050872467, y: 0.030548515, z: 0.108703375, w: -0.02221723}
+        outSlope: {x: 0.050872467, y: 0.030548515, z: 0.108703375, w: -0.02221723}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: -0.6330486, z: 0, w: 0.77411205}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 0, y: -0.6330486, z: -0, w: 0.77411205}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Base_Joint
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.000058282967, y: 0.0076152515, z: 0.0005613223, w: 1.0000861}
+        inSlope: {x: 0.00060184393, y: 0.033461493, z: -0.0075052734, w: -0.0022435188}
+        outSlope: {x: 0.00060184393, y: 0.033461493, z: -0.0075052734, w: -0.0022435188}
+        tangentMode: 0
+      - time: 0.08333337
+        value: {x: 0, y: 0.010128285, z: -0, w: 0.99994874}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.16666675
+        value: {x: 0.0029857825, y: 0.03168843, z: -0.003933203, w: 0.9994856}
+        inSlope: {x: 0.11147622, y: 0.8756299, z: -0.16141525, w: -0.042496942}
+        outSlope: {x: 0.11147622, y: 0.8756299, z: -0.16141525, w: -0.042496942}
+        tangentMode: 0
+      - time: 0.25
+        value: {x: 0.0151539035, y: 0.14427671, z: -0.025186075, w: 0.98910075}
+        inSlope: {x: 0.11039405, y: 1.3453715, z: -0.2748642, w: -0.19793618}
+        outSlope: {x: 0.11039405, y: 1.3453715, z: -0.2748642, w: -0.19793618}
+        tangentMode: 0
+      - time: 0.3333335
+        value: {x: 0.01930536, y: 0.21647897, z: -0.04500837, w: 0.9750582}
+        inSlope: {x: 0.010288848, y: -0.23617873, z: -0.1969629, w: 0.03546857}
+        outSlope: {x: 0.010288848, y: -0.23617873, z: -0.1969629, w: 0.03546857}
+        tangentMode: 0
+      - time: 0.41666675
+        value: {x: 0.019797083, y: 0.07665308, z: -0.06008079, w: 0.9950491}
+        inSlope: {x: 0.010238844, y: -2.614254, z: -0.13411829, w: 0.16778937}
+        outSlope: {x: 0.010238844, y: -2.614254, z: -0.13411829, w: 0.16778937}
+        tangentMode: 0
+      - time: 0.4583335
+        value: {x: 0.020199833, y: -0.0423245, z: -0.06394674, w: 0.9968508}
+        inSlope: {x: 0.006428961, y: -2.6193318, z: -0.048824795, w: -0.08902405}
+        outSlope: {x: 0.006428961, y: -2.6193318, z: -0.048824795, w: -0.08902405}
+        tangentMode: 0
+      - time: 0.5
+        value: {x: 0.02033283, y: -0.14162442, z: -0.06414953, w: 0.9876305}
+        inSlope: {x: 0.0015120792, y: -1.6869171, z: 0.005919163, w: -0.19175747}
+        outSlope: {x: 0.0015120792, y: -1.6869171, z: 0.005919163, w: -0.19175747}
+        tangentMode: 0
+      - time: 0.5833335
+        value: {x: 0.017411003, y: -0.1690984, z: -0.057244763, w: 0.98378134}
+        inSlope: {x: -0.11069462, y: 0.59073585, z: 0.2564793, w: 0.110382065}
+        outSlope: {x: -0.11069462, y: 0.59073585, z: 0.2564793, w: 0.110382065}
+        tangentMode: 0
+      - time: 0.7083335
+        value: {x: 0.0011068054, y: -0.03456379, z: -0.007006912, w: 0.9993773}
+        inSlope: {x: -0.059138943, y: 1.1498613, z: 0.27965966, w: 0.046943612}
+        outSlope: {x: -0.059138943, y: 1.1498613, z: 0.27965966, w: 0.046943612}
+        tangentMode: 0
+      - time: 0.875
+        value: {x: 0, y: 0.13902476, z: -0, w: 0.9902889}
+        inSlope: {x: 0, y: 1.1162968, z: 0, w: -0.15789777}
+        outSlope: {x: 0, y: 1.1162968, z: 0, w: -0.15789777}
+        tangentMode: 0
+      - time: 1.1666667
+        value: {x: 0, y: 0.46832, z: -0, w: 0.8835589}
+        inSlope: {x: 0, y: 1.0087315, z: 0, w: -0.53342956}
+        outSlope: {x: 0, y: 1.0087315, z: 0, w: -0.53342956}
+        tangentMode: 0
+      - time: 1.5416667
+        value: {x: 0, y: 0.695769, z: -0, w: 0.71826565}
+        inSlope: {x: 0, y: 0.12517953, z: 0, w: -0.12040592}
+        outSlope: {x: 0, y: 0.12517953, z: 0, w: -0.12040592}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 0, y: 0.69843155, z: -0, w: 0.7156769}
+        inSlope: {x: 0, y: 0.06390083, z: 0, w: -0.062129855}
+        outSlope: {x: 0, y: 0.06390083, z: 0, w: -0.062129855}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Base_Joint/Neck
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.125
+        value: {x: -0, y: 0, z: 0}
+        inSlope: {x: -0, y: -0, z: -0}
+        outSlope: {x: -0, y: -0, z: -0.000002162505}
+        tangentMode: 0
+      - time: 0.16666663
+        value: {x: -0, y: 0, z: -0.037687957}
+        inSlope: {x: -0, y: -0, z: -1.6582706}
+        outSlope: {x: -0, y: -0, z: -1.6582775}
+        tangentMode: 0
+      - time: 0.20833337
+        value: {x: -0, y: 0, z: -0.13818955}
+        inSlope: {x: -0, y: -0, z: -2.9396675}
+        outSlope: {x: -0, y: -0, z: -2.9397418}
+        tangentMode: 0
+      - time: 0.29166675
+        value: {x: -0, y: 0, z: -0.45225665}
+        inSlope: {x: -0, y: -0, z: -4.1456647}
+        outSlope: {x: -0, y: -0, z: -4.1458535}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: -0, y: 0, z: -0.8242911}
+        inSlope: {x: -0, y: -0, z: -5.101911}
+        outSlope: {x: -0, y: -0, z: -5.1019096}
+        tangentMode: 0
+      - time: 0.5
+        value: {x: -0, y: 0, z: -1.525827}
+        inSlope: {x: -0, y: -0, z: -5.1988325}
+        outSlope: {x: -0, y: -0, z: -5.1988378}
+        tangentMode: 0
+      - time: 0.625
+        value: {x: -0, y: 0, z: -2.101377}
+        inSlope: {x: -0, y: -0, z: -4.1952744}
+        outSlope: {x: -0, y: -0, z: -4.195235}
+        tangentMode: 0
+      - time: 0.75
+        value: {x: -0, y: 0, z: -2.422802}
+        inSlope: {x: -0, y: -0, z: -0.13176063}
+        outSlope: {x: -0, y: 0.00000010328953, z: -0.13176347}
+        tangentMode: 0
+      - time: 0.79166675
+        value: {x: -0, y: 0.00219565, z: -2.4246318}
+        inSlope: {x: -0, y: 0.101755925, z: -0.08481554}
+        outSlope: {x: -0, y: 0.10176206, z: -0.08482228}
+        tangentMode: 0
+      - time: 0.91666675
+        value: {x: -0, y: 0.03149613, z: -2.449048}
+        inSlope: {x: -0, y: 0.3470608, z: -0.28924337}
+        outSlope: {x: -0, y: 0.3470774, z: -0.28919625}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: -0, y: 0.3028471, z: -2.6751678}
+        inSlope: {x: -0, y: 0.0000036720821, z: -0.000001084593}
+        outSlope: {x: -0, y: -0.0000020862465, z: 0.000015249597}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -53.99939, y: 180.5787, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: -53.99939, y: 180.5787, z: 0}
+        inSlope: {x: -1.5225976e-13, y: 6.09039e-13, z: -0}
+        outSlope: {x: -1.5225976e-13, y: 6.09039e-13, z: -0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 53.99939, y: 0.28475952, z: -4.0700684}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: 53.99939, y: 0.28475952, z: -4.0700684}
+        inSlope: {x: 1.5225887e-13, y: 1.7842838e-15, z: -2.854854e-14}
+        outSlope: {x: 3.552707e-13, y: 4.1633283e-15, z: -6.661325e-14}
+        tangentMode: 0
+      - time: 0.75
+        value: {x: 53.99939, y: 0.28475952, z: -4.0700684}
+        inSlope: {x: 1.5225887e-13, y: 1.7842838e-15, z: -2.854854e-14}
+        outSlope: {x: -0.0005444997, y: -0.0000700887, z: -0.000024147048}
+        tangentMode: 0
+      - time: 0.79166675
+        value: {x: 53.840984, y: -0.9435184, z: -4.1937456}
+        inSlope: {x: -7.509162, y: -53.805935, z: -5.1943784}
+        outSlope: {x: -7.508969, y: -53.809204, z: -5.1946645}
+        tangentMode: 0
+      - time: 0.83333325
+        value: {x: 53.37368, y: -4.1990924, z: -4.502937}
+        inSlope: {x: -14.780463, y: -94.73892, z: -8.533954}
+        outSlope: {x: -14.779301, y: -94.73509, z: -8.533594}
+        tangentMode: 0
+      - time: 0.95833325
+        value: {x: 50.236965, y: -19.691208, z: -5.616029}
+        inSlope: {x: -34.88697, y: -124.81414, z: -5.1946645}
+        outSlope: {x: -34.885384, y: -124.80816, z: -5.1943784}
+        tangentMode: 0
+      - time: 1.0833333
+        value: {x: 44.538948, y: -34.675095, z: -5.562745}
+        inSlope: {x: -56.1876, y: -132.01515, z: 3.9677587}
+        outSlope: {x: -56.185184, y: -132.00958, z: 3.9676535}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: 19.777843, y: -88.46837, z: -2.545092}
+        inSlope: {x: -0.00024542425, y: -0.0015501878, z: 0.000044005104}
+        outSlope: {x: -0.00024542425, y: -0.0015501878, z: 0.000044005104}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -14.681025, y: -122.19849, z: -21.439697}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: -14.681025, y: -122.19849, z: -21.439697}
+        inSlope: {x: -3.806494e-14, y: 1.9286233e-12, z: -2.2838963e-13}
+        outSlope: {x: -8.881767e-14, y: -9.135532e-13, z: -5.32906e-13}
+        tangentMode: 0
+      - time: 0.75
+        value: {x: -14.681025, y: -122.19849, z: -21.439697}
+        inSlope: {x: -3.806494e-14, y: 1.9286233e-12, z: -2.2838963e-13}
+        outSlope: {x: -0.000097453936, y: 0.0007246804, z: 0.00015693043}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: -45.18074, y: -169.00276, z: -20.635496}
+        inSlope: {x: -0.00015631005, y: -0.0012720447, z: 0.00015693133}
+        outSlope: {x: 0.000090847774, y: -0.0008689526, z: -0.0002177338}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 53.999516, y: 180.57846, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: 53.99951, y: 180.57846, z: 0}
+        inSlope: {x: 3.045195e-13, y: 6.09039e-13, z: -0}
+        outSlope: {x: 3.045195e-13, y: 6.09039e-13, z: -0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -53.99951, y: 0.28475952, z: -4.0700073}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: -53.99951, y: 0.28475952, z: -4.0700073}
+        inSlope: {x: -3.0451775e-13, y: 1.7842838e-15, z: -8.881767e-14}
+        outSlope: {x: -7.105414e-13, y: 4.1633283e-15, z: -3.806472e-14}
+        tangentMode: 0
+      - time: 0.75
+        value: {x: -53.99951, y: 0.28475952, z: -4.0700073}
+        inSlope: {x: -3.0451775e-13, y: 1.7842838e-15, z: -8.881767e-14}
+        outSlope: {x: 0.00007844184, y: -0.00009145206, z: -0.0000015256243}
+        tangentMode: 0
+      - time: 0.79166675
+        value: {x: -53.9847, y: -1.2329069, z: -4.2852154}
+        inSlope: {x: 1.0664477, y: -66.02858, z: -9.038637}
+        outSlope: {x: 1.0668547, y: -66.03257, z: -9.039201}
+        tangentMode: 0
+      - time: 0.83333325
+        value: {x: -53.880997, y: -5.217651, z: -4.823231}
+        inSlope: {x: 4.622602, y: -115.01541, z: -14.849879}
+        outSlope: {x: 4.6216855, y: -115.01079, z: -14.8492775}
+        tangentMode: 0
+      - time: 0.91666675
+        value: {x: -53.0514, y: -17.17914, z: -6.22208}
+        inSlope: {x: 17.421024, y: -151.60709, z: -14.849253}
+        outSlope: {x: 17.422832, y: -151.61371, z: -14.849754}
+        tangentMode: 0
+      - time: 0.95833325
+        value: {x: -52.147736, y: -23.451153, z: -6.7600965}
+        inSlope: {x: 27.02239, y: -139.22789, z: -9.03913}
+        outSlope: {x: 27.020714, y: -139.22116, z: -9.038637}
+        tangentMode: 0
+      - time: 1.0833333
+        value: {x: -45.246803, y: -38.96071, z: -6.72729}
+        inSlope: {x: 90.79712, y: -131.87065, z: 5.5608997}
+        outSlope: {x: 90.793564, y: -131.86543, z: 5.560617}
+        tangentMode: 0
+      - time: 1.4166667
+        value: {x: -3.1500626, y: -82.56481, z: -3.3856168}
+        inSlope: {x: 107.98149, y: -94.65601, z: 9.320026}
+        outSlope: {x: 107.98609, y: -94.65962, z: 9.320492}
+        tangentMode: 0
+      - time: 1.4583333
+        value: {x: 0.9863281, y: -86.146034, z: -3.0266495}
+        inSlope: {x: 88.12351, y: -75.64884, z: 7.6757517}
+        outSlope: {x: 88.11927, y: -75.64636, z: 7.675379}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: 7.00333, y: -91.206345, z: -2.4979868}
+        inSlope: {x: 0.00055370235, y: 0.0003941375, z: 0.000050762257}
+        outSlope: {x: 0.00055370235, y: 0.0003941375, z: 0.000050762257}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 14.227337, y: -122.19824, z: -21.439697}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.375
+        value: {x: 14.227337, y: -122.19824, z: -21.439697}
+        inSlope: {x: -2.0301298e-13, y: -9.135585e-13, z: -2.2838963e-13}
+        outSlope: {x: 2.0301182e-13, y: -2.131624e-12, z: -5.32906e-13}
+        tangentMode: 0
+      - time: 0.75
+        value: {x: 14.227337, y: -122.19824, z: -21.439697}
+        inSlope: {x: -2.0301298e-13, y: -9.135585e-13, z: -2.2838963e-13}
+        outSlope: {x: -0.000009925223, y: 0.0010471764, z: 0.000010939127}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: 71.86886, y: -163.37538, z: -23.352213}
+        inSlope: {x: 0.00065274467, y: 0.0014133948, z: 0.000010939189}
+        outSlope: {x: 0.00065274467, y: 0.0014133948, z: 0.000010939189}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 1.5673645, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: -0, y: 1.5673645, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Base_Joint
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 34.376003, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: -0, y: 34.376003, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Base_Joint/Neck
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.01, y: 0.01, z: 0.01}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: 0.01, y: 0.01, z: 0.01}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833333
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.01, y: 0.01, z: 0.01}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 0.01, y: 0.01, z: 0.01}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Base_Joint
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.01, y: 0.01, z: 0.01}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5833335
+        value: {x: 0.01, y: 0.01, z: 0.01}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Base_Joint/Neck
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 24
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 2778723997
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1497497116
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1806367854
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 112009217
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2325325371
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4216826500
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2778723997
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2647386765
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1497497116
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1806367854
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 112009217
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2325325371
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4216826500
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2497675683
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2647386765
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2923610369
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2497675683
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2923610369
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2778723997
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2647386765
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1497497116
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1806367854
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 112009217
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2325325371
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4216826500
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2923610369
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2497675683
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0.041666668
+    m_StartTime: 0
+    m_StopTime: 1.5833335
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.00006300172
+        inSlope: 0.0025200716
+        outSlope: 0.0025200716
+        tangentMode: 0
+      - time: 0.125
+        value: 0
+        inSlope: -0.008064231
+        outSlope: -0.008064231
+        tangentMode: 0
+      - time: 0.29166675
+        value: -0.0077401763
+        inSlope: -0.084048115
+        outSlope: -0.084048115
+        tangentMode: 0
+      - time: 0.375
+        value: -0.019151188
+        inSlope: -0.20854017
+        outSlope: -0.20854017
+        tangentMode: 0
+      - time: 0.4583335
+        value: -0.037668232
+        inSlope: -0.16303745
+        outSlope: -0.16303745
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0.044272516
+        inSlope: 0.033257492
+        outSlope: 0.033257492
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0.004865645
+        inSlope: 0.19477904
+        outSlope: 0.19477904
+        tangentMode: 0
+      - time: 0.875
+        value: -0.047173575
+        inSlope: -0.7074169
+        outSlope: -0.7074169
+        tangentMode: 0
+      - time: 1.125
+        value: -0.32436243
+        inSlope: -1.3040423
+        outSlope: -1.3040423
+        tangentMode: 0
+      - time: 1.375
+        value: -0.60950154
+        inSlope: -0.8292807
+        outSlope: -0.8292807
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0.6969791
+        inSlope: -0.18811333
+        outSlope: -0.18811333
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0.70100653
+        inSlope: 0.66973114
+        outSlope: 0.66973114
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.0011535484
+        inSlope: -0.04614199
+        outSlope: -0.04614199
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: 0.1476544
+        outSlope: 0.1476544
+        tangentMode: 0
+      - time: 0.29166675
+        value: 0.10593208
+        inSlope: 0.49916953
+        outSlope: 0.49916953
+        tangentMode: 0
+      - time: 0.375
+        value: 0.09959027
+        inSlope: -0.7627093
+        outSlope: -0.7627093
+        tangentMode: 0
+      - time: 0.4583335
+        value: 0.0006601554
+        inSlope: -1.1934557
+        outSlope: -1.1934557
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0.0638338
+        inSlope: -0.14718947
+        outSlope: -0.14718947
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0.0064691305
+        inSlope: 0.2647692
+        outSlope: 0.2647692
+        tangentMode: 0
+      - time: 0.875
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.125
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.00017039567
+        inSlope: 0.006815834
+        outSlope: 0.006815834
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: -0.021810675
+        outSlope: -0.021810675
+        tangentMode: 0
+      - time: 0.29166675
+        value: -0.0146434745
+        inSlope: -0.058540296
+        outSlope: -0.058540296
+        tangentMode: 0
+      - time: 0.375
+        value: -0.009214509
+        inSlope: 0.2520892
+        outSlope: 0.2520892
+        tangentMode: 0
+      - time: 0.4583335
+        value: 0.021495303
+        inSlope: 0.35016006
+        outSlope: 0.35016006
+        tangentMode: 0
+      - time: 0.54166675
+        value: 0.03959718
+        inSlope: 0.016552638
+        outSlope: 0.016552638
+        tangentMode: 0
+      - time: 0.7083335
+        value: 0.0044039995
+        inSlope: -0.1757468
+        outSlope: -0.1757468
+        tangentMode: 0
+      - time: 0.875
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.0000073
+        inSlope: 0.00029110914
+        outSlope: 0.00029110914
+        tangentMode: 0
+      - time: 0.125
+        value: 1
+        inSlope: -0.00093054597
+        outSlope: -0.00093054597
+        tangentMode: 0
+      - time: 0.29166675
+        value: 0.9942354
+        inSlope: -0.050372504
+        outSlope: -0.050372504
+        tangentMode: 0
+      - time: 0.375
+        value: 0.9948016
+        inSlope: 0.06330587
+        outSlope: 0.06330587
+        tangentMode: 0
+      - time: 0.4583335
+        value: 0.9990589
+        inSlope: -0.0068930145
+        outSlope: -0.0068930145
+        tangentMode: 0
+      - time: 0.54166675
+        value: 0.9961914
+        inSlope: -0.006717669
+        outSlope: -0.006717669
+        tangentMode: 0
+      - time: 0.7083335
+        value: 0.99995756
+        inSlope: 0.005789987
+        outSlope: 0.005789987
+        tangentMode: 0
+      - time: 0.875
+        value: 0.9988867
+        inSlope: -0.03630065
+        outSlope: -0.03630065
+        tangentMode: 0
+      - time: 1.125
+        value: 0.9459329
+        inSlope: -0.4480086
+        outSlope: -0.4480086
+        tangentMode: 0
+      - time: 1.375
+        value: 0.79278487
+        inSlope: -0.63372517
+        outSlope: -0.63372517
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0.71709144
+        inSlope: -0.1809286
+        outSlope: -0.1809286
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.71315485
+        inSlope: 0.6037078
+        outSlope: 0.6037078
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.000583641
+        inSlope: -0.022046665
+        outSlope: -0.022046665
+        tangentMode: 0
+      - time: 0.041666746
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.20833337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.54166675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.125
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.00067074236
+        inSlope: 0.025051823
+        outSlope: 0.025051823
+        tangentMode: 0
+      - time: 0.041666746
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.20833337
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.0008408668
+        inSlope: 0.031549804
+        outSlope: 0.031549804
+        tangentMode: 0
+      - time: 0.041666746
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.20833337
+        value: -0.014176169
+        inSlope: -0.2628767
+        outSlope: -0.2628767
+        tangentMode: 0
+      - time: 0.375
+        value: -0.036078088
+        inSlope: 0.17002481
+        outSlope: 0.17002481
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: 0.050262406
+        outSlope: 0.050262406
+        tangentMode: 0
+      - time: 1.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.0000223
+        inSlope: -0.00088119466
+        outSlope: -0.00088119466
+        tangentMode: 0
+      - time: 0.041666746
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.20833337
+        value: 0.9998995
+        inSlope: -0.003981117
+        outSlope: -0.003981117
+        tangentMode: 0
+      - time: 0.375
+        value: 0.999349
+        inSlope: 0.005644083
+        outSlope: 0.005644083
+        tangentMode: 0
+      - time: 0.54166675
+        value: 1
+        inSlope: 0.00010514239
+        outSlope: 0.00010514239
+        tangentMode: 0
+      - time: 1.125
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0416667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.2916667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0416667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.2916667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: -0.07307477
+        outSlope: -0.07307477
+        tangentMode: 0
+      - time: 1.0416667
+        value: -0.18092819
+        inSlope: -0.9270614
+        outSlope: -0.9270614
+        tangentMode: 0
+      - time: 1.2916667
+        value: -0.4508358
+        inSlope: -1.0256994
+        outSlope: -1.0256994
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0.6186415
+        inSlope: -0.19848308
+        outSlope: -0.19848308
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0.62291825
+        inSlope: -0.102641866
+        outSlope: -0.102641866
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: 1
+        inSlope: -0.00022244411
+        outSlope: -0.00022244411
+        tangentMode: 0
+      - time: 1.0416667
+        value: 0.9834963
+        inSlope: -0.17306581
+        outSlope: -0.17306581
+        tangentMode: 0
+      - time: 1.2916667
+        value: 0.8926069
+        inSlope: -0.5165131
+        outSlope: -0.5165131
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0.78567344
+        inSlope: -0.15467519
+        outSlope: -0.15467519
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.78228694
+        inSlope: -0.08127578
+        outSlope: -0.08127578
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: 0
+        inSlope: -0.023335222
+        outSlope: -0.023335222
+        tangentMode: 0
+      - time: 1.0833335
+        value: -0.09070447
+        inSlope: -0.40653878
+        outSlope: -0.40653878
+        tangentMode: 0
+      - time: 1.2916667
+        value: -0.16187362
+        inSlope: -0.2331182
+        outSlope: -0.2331182
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0.18731557
+        inSlope: -0.014117333
+        outSlope: -0.014117333
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0.18758914
+        inSlope: 0.068351015
+        outSlope: 0.068351015
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: -0.068240345
+        outSlope: -0.068240345
+        tangentMode: 0
+      - time: 1.0833335
+        value: -0.27139184
+        inSlope: -1.2803972
+        outSlope: -1.2803972
+        tangentMode: 0
+      - time: 1.2916667
+        value: -0.52416533
+        inSlope: -1.018444
+        outSlope: -1.018444
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0.6775937
+        inSlope: -0.1655635
+        outSlope: -0.1655635
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0.68112534
+        inSlope: 0.59775746
+        outSlope: 0.59775746
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: -0.00013270295
+        outSlope: -0.00013270295
+        tangentMode: 0
+      - time: 1.0833335
+        value: -0.025699941
+        inSlope: -0.24856584
+        outSlope: -0.24856584
+        tangentMode: 0
+      - time: 1.2916667
+        value: -0.102249965
+        inSlope: -0.43516827
+        outSlope: -0.43516827
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0.1848189
+        inSlope: -0.1100578
+        outSlope: -0.1100578
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0.187206
+        inSlope: 0.37165508
+        outSlope: 0.37165508
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: 1
+        inSlope: -0.00021672208
+        outSlope: -0.00021672208
+        tangentMode: 0
+      - time: 1.0833335
+        value: 0.9578407
+        inSlope: -0.40980273
+        outSlope: -0.40980273
+        tangentMode: 0
+      - time: 1.2916667
+        value: 0.8298148
+        inSlope: -0.73937273
+        outSlope: -0.73937273
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0.68674713
+        inSlope: -0.19455707
+        outSlope: -0.19455707
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.6825193
+        inSlope: 0.6522967
+        outSlope: 0.6522967
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.125
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.54166675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.9583335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.9583335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.0042005214
+        inSlope: 0.004800592
+        outSlope: 0.004800592
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: 0.06857995
+        outSlope: 0.06857995
+        tangentMode: 0
+      - time: 0.375
+        value: 0.04921724
+        inSlope: -0.23187709
+        outSlope: -0.23187709
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: -0.06857995
+        outSlope: -0.06857995
+        tangentMode: 0
+      - time: 0.9583335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.000012
+        inSlope: -0.000013732912
+        outSlope: -0.000013732912
+        tangentMode: 0
+      - time: 0.125
+        value: 1
+        inSlope: -0.0001959797
+        outSlope: -0.0001959797
+        tangentMode: 0
+      - time: 0.375
+        value: 0.9987881
+        inSlope: 0.010507108
+        outSlope: 0.010507108
+        tangentMode: 0
+      - time: 0.54166675
+        value: 1
+        inSlope: 0.0001959797
+        outSlope: 0.0001959797
+        tangentMode: 0
+      - time: 0.9583335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.2083335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.4166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.2083335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.4166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 0.02855002
+        inSlope: 0.62287843
+        outSlope: 0.62287843
+        tangentMode: 0
+      - time: 1
+        value: 0.1815814
+        inSlope: 1.0493923
+        outSlope: 1.0493923
+        tangentMode: 0
+      - time: 1.2083335
+        value: 0.44677183
+        inSlope: 1.3518338
+        outSlope: 1.3518338
+        tangentMode: 0
+      - time: 1.4166667
+        value: 0.6805092
+        inSlope: 0.77452326
+        outSlope: 0.77452326
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.7481994
+        inSlope: 0.109617025
+        outSlope: 0.109617025
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 0.99959236
+        inSlope: -0.020952756
+        outSlope: -0.020952756
+        tangentMode: 0
+      - time: 1
+        value: 0.9833759
+        inSlope: -0.19552383
+        outSlope: -0.19552383
+        tangentMode: 0
+      - time: 1.2083335
+        value: 0.89464796
+        inSlope: -0.6752437
+        outSlope: -0.6752437
+        tangentMode: 0
+      - time: 1.4166667
+        value: 0.7327395
+        inSlope: -0.71368587
+        outSlope: -0.71368587
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.66347396
+        inSlope: -0.1227634
+        outSlope: -0.1227634
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: -0.024550272
+        inSlope: -0.5505726
+        outSlope: -0.5505726
+        tangentMode: 0
+      - time: 1.0416667
+        value: -0.2061345
+        inSlope: -0.88435805
+        outSlope: -0.88435805
+        tangentMode: 0
+      - time: 1.2083335
+        value: -0.30141655
+        inSlope: -0.19412534
+        outSlope: -0.19412534
+        tangentMode: 0
+      - time: 1.4583335
+        value: -0.26219705
+        inSlope: 0.24080673
+        outSlope: 0.24080673
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0.24508919
+        inSlope: 0.050872467
+        outSlope: 0.050872467
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 0.018889153
+        inSlope: 0.4472823
+        outSlope: 0.4472823
+        tangentMode: 0
+      - time: 1.0416667
+        value: 0.22100095
+        inSlope: 1.408572
+        outSlope: 1.408572
+        tangentMode: 0
+      - time: 1.2083335
+        value: 0.4686712
+        inSlope: 1.3654693
+        outSlope: 1.3654693
+        tangentMode: 0
+      - time: 1.4583335
+        value: 0.66904867
+        inSlope: 0.25903064
+        outSlope: 0.25903064
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.6825637
+        inSlope: 0.030548515
+        outSlope: 0.030548515
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: -0.018175155
+        inSlope: -0.40073186
+        outSlope: -0.40073186
+        tangentMode: 0
+      - time: 1.0416667
+        value: -0.13264523
+        inSlope: -0.40497282
+        outSlope: -0.40497282
+        tangentMode: 0
+      - time: 1.2083335
+        value: -0.13497505
+        inSlope: 0.4004563
+        outSlope: 0.4004563
+        tangentMode: 0
+      - time: 1.4583335
+        value: 0.028529745
+        inSlope: 0.5486119
+        outSlope: 0.5486119
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.06597398
+        inSlope: 0.108703375
+        outSlope: 0.108703375
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 0.9993549
+        inSlope: -0.03531942
+        outSlope: -0.03531942
+        tangentMode: 0
+      - time: 1.0416667
+        value: 0.9439663
+        inSlope: -0.5816935
+        outSlope: -0.5816935
+        tangentMode: 0
+      - time: 1.2083335
+        value: 0.819315
+        inSlope: -0.7817838
+        outSlope: -0.7817838
+        tangentMode: 0
+      - time: 1.4583335
+        value: 0.6948473
+        inSlope: -0.17703372
+        outSlope: -0.17703372
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.68533605
+        inSlope: -0.02221723
+        outSlope: -0.02221723
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.6330486
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0.6330486
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.77411205
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.77411205
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.000058282967
+        inSlope: 0.00060184393
+        outSlope: 0.00060184393
+        tangentMode: 0
+      - time: 0.08333337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.16666675
+        value: 0.0029857825
+        inSlope: 0.11147622
+        outSlope: 0.11147622
+        tangentMode: 0
+      - time: 0.25
+        value: 0.0151539035
+        inSlope: 0.11039405
+        outSlope: 0.11039405
+        tangentMode: 0
+      - time: 0.3333335
+        value: 0.01930536
+        inSlope: 0.010288848
+        outSlope: 0.010288848
+        tangentMode: 0
+      - time: 0.41666675
+        value: 0.019797083
+        inSlope: 0.010238844
+        outSlope: 0.010238844
+        tangentMode: 0
+      - time: 0.4583335
+        value: 0.020199833
+        inSlope: 0.006428961
+        outSlope: 0.006428961
+        tangentMode: 0
+      - time: 0.5
+        value: 0.02033283
+        inSlope: 0.0015120792
+        outSlope: 0.0015120792
+        tangentMode: 0
+      - time: 0.5833335
+        value: 0.017411003
+        inSlope: -0.11069462
+        outSlope: -0.11069462
+        tangentMode: 0
+      - time: 0.7083335
+        value: 0.0011068054
+        inSlope: -0.059138943
+        outSlope: -0.059138943
+        tangentMode: 0
+      - time: 0.875
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.1666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.0076152515
+        inSlope: 0.033461493
+        outSlope: 0.033461493
+        tangentMode: 0
+      - time: 0.08333337
+        value: 0.010128285
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.16666675
+        value: 0.03168843
+        inSlope: 0.8756299
+        outSlope: 0.8756299
+        tangentMode: 0
+      - time: 0.25
+        value: 0.14427671
+        inSlope: 1.3453715
+        outSlope: 1.3453715
+        tangentMode: 0
+      - time: 0.3333335
+        value: 0.21647897
+        inSlope: -0.23617873
+        outSlope: -0.23617873
+        tangentMode: 0
+      - time: 0.41666675
+        value: 0.07665308
+        inSlope: -2.614254
+        outSlope: -2.614254
+        tangentMode: 0
+      - time: 0.4583335
+        value: -0.0423245
+        inSlope: -2.6193318
+        outSlope: -2.6193318
+        tangentMode: 0
+      - time: 0.5
+        value: -0.14162442
+        inSlope: -1.6869171
+        outSlope: -1.6869171
+        tangentMode: 0
+      - time: 0.5833335
+        value: -0.1690984
+        inSlope: 0.59073585
+        outSlope: 0.59073585
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0.03456379
+        inSlope: 1.1498613
+        outSlope: 1.1498613
+        tangentMode: 0
+      - time: 0.875
+        value: 0.13902476
+        inSlope: 1.1162968
+        outSlope: 1.1162968
+        tangentMode: 0
+      - time: 1.1666667
+        value: 0.46832
+        inSlope: 1.0087315
+        outSlope: 1.0087315
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0.695769
+        inSlope: 0.12517953
+        outSlope: 0.12517953
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.69843155
+        inSlope: 0.06390083
+        outSlope: 0.06390083
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.0005613223
+        inSlope: -0.0075052734
+        outSlope: -0.0075052734
+        tangentMode: 0
+      - time: 0.08333337
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.16666675
+        value: -0.003933203
+        inSlope: -0.16141525
+        outSlope: -0.16141525
+        tangentMode: 0
+      - time: 0.25
+        value: -0.025186075
+        inSlope: -0.2748642
+        outSlope: -0.2748642
+        tangentMode: 0
+      - time: 0.3333335
+        value: -0.04500837
+        inSlope: -0.1969629
+        outSlope: -0.1969629
+        tangentMode: 0
+      - time: 0.41666675
+        value: -0.06008079
+        inSlope: -0.13411829
+        outSlope: -0.13411829
+        tangentMode: 0
+      - time: 0.4583335
+        value: -0.06394674
+        inSlope: -0.048824795
+        outSlope: -0.048824795
+        tangentMode: 0
+      - time: 0.5
+        value: -0.06414953
+        inSlope: 0.005919163
+        outSlope: 0.005919163
+        tangentMode: 0
+      - time: 0.5833335
+        value: -0.057244763
+        inSlope: 0.2564793
+        outSlope: 0.2564793
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0.007006912
+        inSlope: 0.27965966
+        outSlope: 0.27965966
+        tangentMode: 0
+      - time: 0.875
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.1666667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.0000861
+        inSlope: -0.0022435188
+        outSlope: -0.0022435188
+        tangentMode: 0
+      - time: 0.08333337
+        value: 0.99994874
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.16666675
+        value: 0.9994856
+        inSlope: -0.042496942
+        outSlope: -0.042496942
+        tangentMode: 0
+      - time: 0.25
+        value: 0.98910075
+        inSlope: -0.19793618
+        outSlope: -0.19793618
+        tangentMode: 0
+      - time: 0.3333335
+        value: 0.9750582
+        inSlope: 0.03546857
+        outSlope: 0.03546857
+        tangentMode: 0
+      - time: 0.41666675
+        value: 0.9950491
+        inSlope: 0.16778937
+        outSlope: 0.16778937
+        tangentMode: 0
+      - time: 0.4583335
+        value: 0.9968508
+        inSlope: -0.08902405
+        outSlope: -0.08902405
+        tangentMode: 0
+      - time: 0.5
+        value: 0.9876305
+        inSlope: -0.19175747
+        outSlope: -0.19175747
+        tangentMode: 0
+      - time: 0.5833335
+        value: 0.98378134
+        inSlope: 0.110382065
+        outSlope: 0.110382065
+        tangentMode: 0
+      - time: 0.7083335
+        value: 0.9993773
+        inSlope: 0.046943612
+        outSlope: 0.046943612
+        tangentMode: 0
+      - time: 0.875
+        value: 0.9902889
+        inSlope: -0.15789777
+        outSlope: -0.15789777
+        tangentMode: 0
+      - time: 1.1666667
+        value: 0.8835589
+        inSlope: -0.53342956
+        outSlope: -0.53342956
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0.71826565
+        inSlope: -0.12040592
+        outSlope: -0.12040592
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.7156769
+        inSlope: -0.062129855
+        outSlope: -0.062129855
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.16666663
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.20833337
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.29166675
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.5
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.625
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.79166675
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.91666675
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 1.5833333
+        value: -0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.125
+        value: 0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.16666663
+        value: 0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.20833337
+        value: 0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.29166675
+        value: 0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.375
+        value: 0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.5
+        value: 0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.625
+        value: 0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      - time: 0.75
+        value: 0
+        inSlope: -0
+        outSlope: 0.00000010328953
+        tangentMode: 0
+      - time: 0.79166675
+        value: 0.00219565
+        inSlope: 0.101755925
+        outSlope: 0.10176206
+        tangentMode: 0
+      - time: 0.91666675
+        value: 0.03149613
+        inSlope: 0.3470608
+        outSlope: 0.3470774
+        tangentMode: 0
+      - time: 1.5833333
+        value: 0.3028471
+        inSlope: 0.0000036720821
+        outSlope: -0.0000020862465
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.125
+        value: 0
+        inSlope: -0
+        outSlope: -0.000002162505
+        tangentMode: 0
+      - time: 0.16666663
+        value: -0.037687957
+        inSlope: -1.6582706
+        outSlope: -1.6582775
+        tangentMode: 0
+      - time: 0.20833337
+        value: -0.13818955
+        inSlope: -2.9396675
+        outSlope: -2.9397418
+        tangentMode: 0
+      - time: 0.29166675
+        value: -0.45225665
+        inSlope: -4.1456647
+        outSlope: -4.1458535
+        tangentMode: 0
+      - time: 0.375
+        value: -0.8242911
+        inSlope: -5.101911
+        outSlope: -5.1019096
+        tangentMode: 0
+      - time: 0.5
+        value: -1.525827
+        inSlope: -5.1988325
+        outSlope: -5.1988378
+        tangentMode: 0
+      - time: 0.625
+        value: -2.101377
+        inSlope: -4.1952744
+        outSlope: -4.195235
+        tangentMode: 0
+      - time: 0.75
+        value: -2.422802
+        inSlope: -0.13176063
+        outSlope: -0.13176347
+        tangentMode: 0
+      - time: 0.79166675
+        value: -2.4246318
+        inSlope: -0.08481554
+        outSlope: -0.08482228
+        tangentMode: 0
+      - time: 0.91666675
+        value: -2.449048
+        inSlope: -0.28924337
+        outSlope: -0.28919625
+        tangentMode: 0
+      - time: 1.5833333
+        value: -2.6751678
+        inSlope: -0.000001084593
+        outSlope: 0.000015249597
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -53.99939
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: -53.99939
+        inSlope: -1.5225976e-13
+        outSlope: -1.5225976e-13
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 180.5787
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 180.5787
+        inSlope: 6.09039e-13
+        outSlope: 6.09039e-13
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 53.99939
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 53.99939
+        inSlope: 1.5225887e-13
+        outSlope: 3.552707e-13
+        tangentMode: 0
+      - time: 0.75
+        value: 53.99939
+        inSlope: 1.5225887e-13
+        outSlope: -0.0005444997
+        tangentMode: 0
+      - time: 0.79166675
+        value: 53.840984
+        inSlope: -7.509162
+        outSlope: -7.508969
+        tangentMode: 0
+      - time: 0.83333325
+        value: 53.37368
+        inSlope: -14.780463
+        outSlope: -14.779301
+        tangentMode: 0
+      - time: 0.95833325
+        value: 50.236965
+        inSlope: -34.88697
+        outSlope: -34.885384
+        tangentMode: 0
+      - time: 1.0833333
+        value: 44.538948
+        inSlope: -56.1876
+        outSlope: -56.185184
+        tangentMode: 0
+      - time: 1.5833333
+        value: 19.777843
+        inSlope: -0.00024542425
+        outSlope: -0.00024542425
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.28475952
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0.28475952
+        inSlope: 1.7842838e-15
+        outSlope: 4.1633283e-15
+        tangentMode: 0
+      - time: 0.75
+        value: 0.28475952
+        inSlope: 1.7842838e-15
+        outSlope: -0.0000700887
+        tangentMode: 0
+      - time: 0.79166675
+        value: -0.9435184
+        inSlope: -53.805935
+        outSlope: -53.809204
+        tangentMode: 0
+      - time: 0.83333325
+        value: -4.1990924
+        inSlope: -94.73892
+        outSlope: -94.73509
+        tangentMode: 0
+      - time: 0.95833325
+        value: -19.691208
+        inSlope: -124.81414
+        outSlope: -124.80816
+        tangentMode: 0
+      - time: 1.0833333
+        value: -34.675095
+        inSlope: -132.01515
+        outSlope: -132.00958
+        tangentMode: 0
+      - time: 1.5833333
+        value: -88.46837
+        inSlope: -0.0015501878
+        outSlope: -0.0015501878
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -4.0700684
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -4.0700684
+        inSlope: -2.854854e-14
+        outSlope: -6.661325e-14
+        tangentMode: 0
+      - time: 0.75
+        value: -4.0700684
+        inSlope: -2.854854e-14
+        outSlope: -0.000024147048
+        tangentMode: 0
+      - time: 0.79166675
+        value: -4.1937456
+        inSlope: -5.1943784
+        outSlope: -5.1946645
+        tangentMode: 0
+      - time: 0.83333325
+        value: -4.502937
+        inSlope: -8.533954
+        outSlope: -8.533594
+        tangentMode: 0
+      - time: 0.95833325
+        value: -5.616029
+        inSlope: -5.1946645
+        outSlope: -5.1943784
+        tangentMode: 0
+      - time: 1.0833333
+        value: -5.562745
+        inSlope: 3.9677587
+        outSlope: 3.9676535
+        tangentMode: 0
+      - time: 1.5833333
+        value: -2.545092
+        inSlope: 0.000044005104
+        outSlope: 0.000044005104
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -14.681025
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -14.681025
+        inSlope: -3.806494e-14
+        outSlope: -8.881767e-14
+        tangentMode: 0
+      - time: 0.75
+        value: -14.681025
+        inSlope: -3.806494e-14
+        outSlope: -0.000097453936
+        tangentMode: 0
+      - time: 1.5833333
+        value: -45.18074
+        inSlope: -0.00015631005
+        outSlope: 0.000090847774
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -122.19849
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -122.19849
+        inSlope: 1.9286233e-12
+        outSlope: -9.135532e-13
+        tangentMode: 0
+      - time: 0.75
+        value: -122.19849
+        inSlope: 1.9286233e-12
+        outSlope: 0.0007246804
+        tangentMode: 0
+      - time: 1.5833333
+        value: -169.00276
+        inSlope: -0.0012720447
+        outSlope: -0.0008689526
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -21.439697
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -21.439697
+        inSlope: -2.2838963e-13
+        outSlope: -5.32906e-13
+        tangentMode: 0
+      - time: 0.75
+        value: -21.439697
+        inSlope: -2.2838963e-13
+        outSlope: 0.00015693043
+        tangentMode: 0
+      - time: 1.5833333
+        value: -20.635496
+        inSlope: 0.00015693133
+        outSlope: -0.0002177338
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 53.999516
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 53.99951
+        inSlope: 3.045195e-13
+        outSlope: 3.045195e-13
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 180.57846
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 180.57846
+        inSlope: 6.09039e-13
+        outSlope: 6.09039e-13
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 0
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -53.99951
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -53.99951
+        inSlope: -3.0451775e-13
+        outSlope: -7.105414e-13
+        tangentMode: 0
+      - time: 0.75
+        value: -53.99951
+        inSlope: -3.0451775e-13
+        outSlope: 0.00007844184
+        tangentMode: 0
+      - time: 0.79166675
+        value: -53.9847
+        inSlope: 1.0664477
+        outSlope: 1.0668547
+        tangentMode: 0
+      - time: 0.83333325
+        value: -53.880997
+        inSlope: 4.622602
+        outSlope: 4.6216855
+        tangentMode: 0
+      - time: 0.91666675
+        value: -53.0514
+        inSlope: 17.421024
+        outSlope: 17.422832
+        tangentMode: 0
+      - time: 0.95833325
+        value: -52.147736
+        inSlope: 27.02239
+        outSlope: 27.020714
+        tangentMode: 0
+      - time: 1.0833333
+        value: -45.246803
+        inSlope: 90.79712
+        outSlope: 90.793564
+        tangentMode: 0
+      - time: 1.4166667
+        value: -3.1500626
+        inSlope: 107.98149
+        outSlope: 107.98609
+        tangentMode: 0
+      - time: 1.4583333
+        value: 0.9863281
+        inSlope: 88.12351
+        outSlope: 88.11927
+        tangentMode: 0
+      - time: 1.5833333
+        value: 7.00333
+        inSlope: 0.00055370235
+        outSlope: 0.00055370235
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.28475952
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0.28475952
+        inSlope: 1.7842838e-15
+        outSlope: 4.1633283e-15
+        tangentMode: 0
+      - time: 0.75
+        value: 0.28475952
+        inSlope: 1.7842838e-15
+        outSlope: -0.00009145206
+        tangentMode: 0
+      - time: 0.79166675
+        value: -1.2329069
+        inSlope: -66.02858
+        outSlope: -66.03257
+        tangentMode: 0
+      - time: 0.83333325
+        value: -5.217651
+        inSlope: -115.01541
+        outSlope: -115.01079
+        tangentMode: 0
+      - time: 0.91666675
+        value: -17.17914
+        inSlope: -151.60709
+        outSlope: -151.61371
+        tangentMode: 0
+      - time: 0.95833325
+        value: -23.451153
+        inSlope: -139.22789
+        outSlope: -139.22116
+        tangentMode: 0
+      - time: 1.0833333
+        value: -38.96071
+        inSlope: -131.87065
+        outSlope: -131.86543
+        tangentMode: 0
+      - time: 1.4166667
+        value: -82.56481
+        inSlope: -94.65601
+        outSlope: -94.65962
+        tangentMode: 0
+      - time: 1.4583333
+        value: -86.146034
+        inSlope: -75.64884
+        outSlope: -75.64636
+        tangentMode: 0
+      - time: 1.5833333
+        value: -91.206345
+        inSlope: 0.0003941375
+        outSlope: 0.0003941375
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -4.0700073
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -4.0700073
+        inSlope: -8.881767e-14
+        outSlope: -3.806472e-14
+        tangentMode: 0
+      - time: 0.75
+        value: -4.0700073
+        inSlope: -8.881767e-14
+        outSlope: -0.0000015256243
+        tangentMode: 0
+      - time: 0.79166675
+        value: -4.2852154
+        inSlope: -9.038637
+        outSlope: -9.039201
+        tangentMode: 0
+      - time: 0.83333325
+        value: -4.823231
+        inSlope: -14.849879
+        outSlope: -14.8492775
+        tangentMode: 0
+      - time: 0.91666675
+        value: -6.22208
+        inSlope: -14.849253
+        outSlope: -14.849754
+        tangentMode: 0
+      - time: 0.95833325
+        value: -6.7600965
+        inSlope: -9.03913
+        outSlope: -9.038637
+        tangentMode: 0
+      - time: 1.0833333
+        value: -6.72729
+        inSlope: 5.5608997
+        outSlope: 5.560617
+        tangentMode: 0
+      - time: 1.4166667
+        value: -3.3856168
+        inSlope: 9.320026
+        outSlope: 9.320492
+        tangentMode: 0
+      - time: 1.4583333
+        value: -3.0266495
+        inSlope: 7.6757517
+        outSlope: 7.675379
+        tangentMode: 0
+      - time: 1.5833333
+        value: -2.4979868
+        inSlope: 0.000050762257
+        outSlope: 0.000050762257
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 14.227337
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 14.227337
+        inSlope: -2.0301298e-13
+        outSlope: 2.0301182e-13
+        tangentMode: 0
+      - time: 0.75
+        value: 14.227337
+        inSlope: -2.0301298e-13
+        outSlope: -0.000009925223
+        tangentMode: 0
+      - time: 1.5833333
+        value: 71.86886
+        inSlope: 0.00065274467
+        outSlope: 0.00065274467
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -122.19824
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -122.19824
+        inSlope: -9.135585e-13
+        outSlope: -2.131624e-12
+        tangentMode: 0
+      - time: 0.75
+        value: -122.19824
+        inSlope: -9.135585e-13
+        outSlope: 0.0010471764
+        tangentMode: 0
+      - time: 1.5833333
+        value: -163.37538
+        inSlope: 0.0014133948
+        outSlope: 0.0014133948
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -21.439697
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -21.439697
+        inSlope: -2.2838963e-13
+        outSlope: -5.32906e-13
+        tangentMode: 0
+      - time: 0.75
+        value: -21.439697
+        inSlope: -2.2838963e-13
+        outSlope: 0.000010939127
+        tangentMode: 0
+      - time: 1.5833333
+        value: -23.352213
+        inSlope: 0.000010939189
+        outSlope: 0.000010939189
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.5673645
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 1.5673645
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 34.376003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 34.376003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833333
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.0072419276
+        inSlope: 0.29238027
+        outSlope: 0.29238027
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: -0.9082031
+        outSlope: -0.90307575
+        tangentMode: 0
+      - time: 0.29166675
+        value: 359.29587
+        inSlope: -7.744808
+        outSlope: -7.8607254
+        tangentMode: 0
+      - time: 0.375
+        value: 357.92154
+        inSlope: -27.058254
+        outSlope: -27.058176
+        tangentMode: 0
+      - time: 0.4583335
+        value: 355.6819
+        inSlope: -14.172337
+        outSlope: -14.172377
+        tangentMode: 0
+      - time: 0.54166675
+        value: 355.2302
+        inSlope: 4.6637006
+        outSlope: 4.6719337
+        tangentMode: 0
+      - time: 0.7083335
+        value: 359.4457
+        inSlope: 22.347828
+        outSlope: 22.34786
+        tangentMode: 0
+      - time: 0.875
+        value: 354.5923
+        inSlope: -81.1407
+        outSlope: -81.095215
+        tangentMode: 0
+      - time: 1.125
+        value: 322.1461
+        inSlope: -157.32532
+        outSlope: -157.32532
+        tangentMode: 0
+      - time: 1.375
+        value: 284.89307
+        inSlope: -119.26941
+        outSlope: -119.4455
+        tangentMode: 0
+      - time: 1.5416667
+        value: 271.62967
+        inSlope: -28.830858
+        outSlope: -29.939884
+        tangentMode: 0
+      - time: 1.5833335
+        value: 270.98434
+        inSlope: 103.28667
+        outSlope: 103.28667
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.x
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 359.8678
+        inSlope: -5.288086
+        outSlope: -5.288086
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: 16.921143
+        outSlope: 16.92141
+        tangentMode: 0
+      - time: 0.29166675
+        value: 12.174247
+        inSlope: 57.675053
+        outSlope: 57.676388
+        tangentMode: 0
+      - time: 0.375
+        value: 11.456781
+        inSlope: -88.1311
+        outSlope: -88.13085
+        tangentMode: 0
+      - time: 0.4583335
+        value: 359.98273
+        inSlope: -139.06248
+        outSlope: -139.06068
+        tangentMode: 0
+      - time: 0.54166675
+        value: 352.46442
+        inSlope: -16.804703
+        outSlope: -16.799187
+        tangentMode: 0
+      - time: 0.7083335
+        value: 359.2562
+        inSlope: 30.31401
+        outSlope: 30.314054
+        tangentMode: 0
+      - time: 0.875
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.125
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.y
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.019517409
+        inSlope: 0.7796291
+        outSlope: 0.7796291
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: -2.5048828
+        outSlope: -2.507079
+        tangentMode: 0
+      - time: 0.29166675
+        value: 358.23727
+        inSlope: -8.254574
+        outSlope: -8.150764
+        tangentMode: 0
+      - time: 0.375
+        value: 358.73007
+        inSlope: 28.53262
+        outSlope: 28.532537
+        tangentMode: 0
+      - time: 0.4583335
+        value: 2.465771
+        inSlope: 45.88499
+        outSlope: 45.88512
+        tangentMode: 0
+      - time: 0.54166675
+        value: 4.8667502
+        inSlope: 2.3080409
+        outSlope: 2.2889059
+        tangentMode: 0
+      - time: 0.7083335
+        value: 0.5082771
+        inSlope: -20.099602
+        outSlope: -20.09963
+        tangentMode: 0
+      - time: 0.875
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.z
+    path: Hero_CloseCombat_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.066814125
+        inSlope: -2.52216
+        outSlope: -2.52216
+        tangentMode: 0
+      - time: 0.041666746
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.20833337
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 359.9231
+        inSlope: 2.874018
+        outSlope: 2.874018
+        tangentMode: 0
+      - time: 0.041666746
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.20833337
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 359.9036
+        inSlope: 3.6188896
+        outSlope: 3.6188896
+        tangentMode: 0
+      - time: 0.041666746
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.20833337
+        value: 358.37546
+        inSlope: -30.125069
+        outSlope: -30.125069
+        tangentMode: 0
+      - time: 0.375
+        value: 355.86487
+        inSlope: 19.494144
+        outSlope: 19.494131
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: 5.7595797
+        outSlope: 5.759348
+        tangentMode: 0
+      - time: 1.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0416667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.2916667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0416667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.2916667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: -8.374023
+        outSlope: -8.374091
+        tangentMode: 0
+      - time: 1.0416667
+        value: 339.15234
+        inSlope: -107.7928
+        outSlope: -107.8689
+        tangentMode: 0
+      - time: 1.2916667
+        value: 306.40536
+        inSlope: -131.18372
+        outSlope: -131.18372
+        tangentMode: 0
+      - time: 1.5416667
+        value: 283.566
+        inSlope: -28.827759
+        outSlope: -28.834661
+        tangentMode: 0
+      - time: 1.5833335
+        value: 282.9409
+        inSlope: -15.002901
+        outSlope: -15.002901
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: -2.6738281
+        outSlope: -2.674071
+        tangentMode: 0
+      - time: 1.0833335
+        value: 349.18082
+        inSlope: -51.649178
+        outSlope: -52.378
+        tangentMode: 0
+      - time: 1.2916667
+        value: 337.9236
+        inSlope: -49.64987
+        outSlope: -49.463745
+        tangentMode: 0
+      - time: 1.5416667
+        value: 329.4865
+        inSlope: -10.317627
+        outSlope: -10.324931
+        tangentMode: 0
+      - time: 1.5833335
+        value: 329.26367
+        inSlope: 35.608818
+        outSlope: 35.608818
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: -7.819824
+        outSlope: -7.8200645
+        tangentMode: 0
+      - time: 1.0833335
+        value: 328.3612
+        inSlope: -155.43532
+        outSlope: -155.31729
+        tangentMode: 0
+      - time: 1.2916667
+        value: 295.44162
+        inSlope: -148.23639
+        outSlope: -148.49597
+        tangentMode: 0
+      - time: 1.5416667
+        value: 270.7688
+        inSlope: -30.392944
+        outSlope: -30.284855
+        tangentMode: 0
+      - time: 1.5833335
+        value: 270.11713
+        inSlope: 105.80913
+        outSlope: 105.80913
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.75
+        value: -0
+        inSlope: 0.0075683594
+        outSlope: 0.0050811744
+        tangentMode: 0
+      - time: 1.0833335
+        value: 0.00000043461225
+        inSlope: 7.9415975
+        outSlope: 4.939229
+        tangentMode: 0
+      - time: 1.2916667
+        value: 0.0000018426427
+        inSlope: 5.080493
+        outSlope: 6.0686426
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0
+        inSlope: 0.39349365
+        outSlope: 0.17138639
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0.000001986609
+        inSlope: -3.085098
+        outSlope: -3.085098
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_LeftArm_Control/Hero_CloseCombat_Sword1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.9583335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.9583335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 359.51865
+        inSlope: 0.5500488
+        outSlope: 0.5500488
+        tangentMode: 0
+      - time: 0.125
+        value: -0
+        inSlope: 7.8588867
+        outSlope: 7.8587036
+        tangentMode: 0
+      - time: 0.375
+        value: 5.642159
+        inSlope: -26.596899
+        outSlope: -26.598034
+        tangentMode: 0
+      - time: 0.54166675
+        value: -0
+        inSlope: -7.8585167
+        outSlope: -7.8582993
+        tangentMode: 0
+      - time: 0.9583335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.2083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.4166667
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.2083335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.4166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 3.2720356
+        inSlope: 71.409256
+        outSlope: 71.3999
+        tangentMode: 0
+      - time: 1
+        value: 20.923767
+        inSlope: 122.18951
+        outSlope: 122.11207
+        tangentMode: 0
+      - time: 1.2083335
+        value: 53.07351
+        inSlope: 172.52928
+        outSlope: 172.52904
+        tangentMode: 0
+      - time: 1.4166667
+        value: 85.76689
+        inSlope: 120.438545
+        outSlope: 120.52243
+        tangentMode: 0
+      - time: 1.5833335
+        value: 96.869286
+        inSlope: 18.85816
+        outSlope: 18.85816
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 357.2268
+        inSlope: -60.27539
+        outSlope: -59.56174
+        tangentMode: 0
+      - time: 1.0416667
+        value: 340.69855
+        inSlope: -39.35656
+        outSlope: -42.258892
+        tangentMode: 0
+      - time: 1.2083335
+        value: 338.44513
+        inSlope: 9.750361
+        outSlope: 9.963135
+        tangentMode: 0
+      - time: 1.4583335
+        value: 336.26236
+        inSlope: -21.01062
+        outSlope: -20.505615
+        tangentMode: 0
+      - time: 1.5833335
+        value: 334.786
+        inSlope: -4.538086
+        outSlope: -4.538086
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.x
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 2.2174218
+        inSlope: 54.821793
+        outSlope: 55.59722
+        tangentMode: 0
+      - time: 1.0416667
+        value: 30.001694
+        inSlope: 211.7097
+        outSlope: 211.18404
+        tangentMode: 0
+      - time: 1.2083335
+        value: 65.952866
+        inSlope: 188.8288
+        outSlope: 187.97772
+        tangentMode: 0
+      - time: 1.4583335
+        value: 92.05009
+        inSlope: 26.720123
+        outSlope: 27.149231
+        tangentMode: 0
+      - time: 1.5833335
+        value: 93.29012
+        inSlope: 2.1849976
+        outSlope: 2.1849976
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.y
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.375
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.7083335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.8333335
+        value: 357.86246
+        inSlope: -49.758545
+        outSlope: -50.602608
+        tangentMode: 0
+      - time: 1.0416667
+        value: 338.78445
+        inSlope: -116.87348
+        outSlope: -115.88648
+        tangentMode: 0
+      - time: 1.2083335
+        value: 327.20877
+        inSlope: -6.5000577
+        outSlope: -5.984253
+        tangentMode: 0
+      - time: 1.4583335
+        value: 340.12564
+        inSlope: 59.29651
+        outSlope: 59.36792
+        tangentMode: 0
+      - time: 1.5833335
+        value: 344.34402
+        inSlope: 12.608643
+        outSlope: 12.608643
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.z
+    path: Hero_CloseCombat_Control/Hero_CloseCombat_RightArm_Control/Hero_CloseCombat_Sword
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.x
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 281.4492
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 281.4492
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.y
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.z
+    path: Base_Joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 359.99283
+        inSlope: 0.07360836
+        outSlope: 0.07360836
+        tangentMode: 0
+      - time: 0.08333337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.16666675
+        value: 0.3562541
+        inSlope: 14.173198
+        outSlope: 14.173218
+        tangentMode: 0
+      - time: 0.25
+        value: 2.134475
+        inSlope: 21.538193
+        outSlope: 21.538132
+        tangentMode: 0
+      - time: 0.3333335
+        value: 3.2753448
+        inSlope: 4.798819
+        outSlope: 4.798833
+        tangentMode: 0
+      - time: 0.41666675
+        value: 2.7861824
+        inSlope: -16.726288
+        outSlope: -15.961182
+        tangentMode: 0
+      - time: 0.4583335
+        value: 1.9977018
+        inSlope: -19.370378
+        outSlope: -19.37049
+        tangentMode: 0
+      - time: 0.5
+        value: 1.2601712
+        inSlope: -12.717359
+        outSlope: -12.713123
+        tangentMode: 0
+      - time: 0.5833335
+        value: 0.8535808
+        inSlope: -3.9326968
+        outSlope: -4.1976085
+        tangentMode: 0
+      - time: 0.7083335
+        value: 0.09899922
+        inSlope: -6.27393
+        outSlope: -6.7763767
+        tangentMode: 0
+      - time: 0.875
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.1666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.x
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.8725475
+        inSlope: 3.8357244
+        outSlope: 3.8357244
+        tangentMode: 0
+      - time: 0.08333337
+        value: 1.1606357
+        inSlope: -0.00023174274
+        outSlope: -0.00023174274
+        tangentMode: 0
+      - time: 0.16666675
+        value: 3.6305118
+        inSlope: 100.297325
+        outSlope: 100.29747
+        tangentMode: 0
+      - time: 0.25
+        value: 16.549444
+        inSlope: 154.72534
+        outSlope: 154.72545
+        tangentMode: 0
+      - time: 0.3333335
+        value: 24.904636
+        inSlope: -28.214622
+        outSlope: -28.214703
+        tangentMode: 0
+      - time: 0.41666675
+        value: 8.646979
+        inSlope: -299.97177
+        outSlope: -300.33536
+        tangentMode: 0
+      - time: 0.4583335
+        value: 355.00787
+        inSlope: -299.6581
+        outSlope: -299.65982
+        tangentMode: 0
+      - time: 0.5
+        value: 343.59515
+        inSlope: -193.90063
+        outSlope: -193.65344
+        tangentMode: 0
+      - time: 0.5833335
+        value: 340.44315
+        inSlope: 69.39721
+        outSlope: 69.37866
+        tangentMode: 0
+      - time: 0.7083335
+        value: 356.0377
+        inSlope: 131.73413
+        outSlope: 131.61359
+        tangentMode: 0
+      - time: 0.875
+        value: 15.982835
+        inSlope: 129.03123
+        outSlope: 128.69223
+        tangentMode: 0
+      - time: 1.1666667
+        value: 55.850597
+        inSlope: 130.21295
+        outSlope: 129.86563
+        tangentMode: 0
+      - time: 1.5416667
+        value: 88.17705
+        inSlope: 19.89856
+        outSlope: 19.903893
+        tangentMode: 0
+      - time: 1.5833335
+        value: 88.60259
+        inSlope: 10.213421
+        outSlope: 10.213421
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.y
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.06426269
+        inSlope: -0.8594158
+        outSlope: -0.8594158
+        tangentMode: 0
+      - time: 0.08333337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.16666675
+        value: 359.56033
+        inSlope: -17.438591
+        outSlope: -17.438616
+        tangentMode: 0
+      - time: 0.25
+        value: 357.39316
+        inSlope: -25.656397
+        outSlope: -25.656322
+        tangentMode: 0
+      - time: 0.3333335
+        value: 355.43768
+        inSlope: -22.695513
+        outSlope: -22.695578
+        tangentMode: 0
+      - time: 0.41666675
+        value: 353.30008
+        inSlope: -21.51235
+        outSlope: -22.146198
+        tangentMode: 0
+      - time: 0.4583335
+        value: 352.57205
+        inSlope: -9.942608
+        outSlope: -9.942665
+        tangentMode: 0
+      - time: 0.5
+        value: 352.3857
+        inSlope: -0.802005
+        outSlope: -0.5042715
+        tangentMode: 0
+      - time: 0.5833335
+        value: 353.19247
+        inSlope: 31.577942
+        outSlope: 31.541748
+        tangentMode: 0
+      - time: 0.7083335
+        value: 359.19315
+        inSlope: 32.07202
+        outSlope: 31.936737
+        tangentMode: 0
+      - time: 0.875
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.1666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5416667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.5833335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAngles.z
+    path: Base_Joint/Neck
+    classID: 4
+    script: {fileID: 0}
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events:
+  - time: 1.5833334
+    functionName: DestroyGO
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
