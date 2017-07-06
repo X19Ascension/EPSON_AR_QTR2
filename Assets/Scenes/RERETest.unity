@@ -3234,6 +3234,7 @@ MonoBehaviour:
   reloadRate: 0
   maxAmmo: 0
   Directionpoint: {fileID: 0}
+  Ustate: 0
   experiencePt: 0
   timeActive: 0
   level: 0
@@ -6246,7 +6247,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11493760, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
       propertyPath: minutePerWave
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}

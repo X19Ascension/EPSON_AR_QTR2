@@ -58,7 +58,8 @@ public class LevelManagement : MonoBehaviour {
         upgradeGO.SetActive(false);
         The_Spawner.SetWaveDuration();
         The_Spawner.waveEnded = false;
-        
+        //The_Spawner.waveNo--;
+
         foreach (GameObject surv in The_Survivors)
         {
             surv.SetActive(true);

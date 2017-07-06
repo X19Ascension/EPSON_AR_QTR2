@@ -85,70 +85,12 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &125222697
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 125222699}
-  - 114: {fileID: 125222698}
-  m_Layer: 0
-  m_Name: GameControl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &125222698
+--- !u!114 &125222698 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 125222697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 11409174, guid: 26b3c149a11b22a498631fddd7eb52c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1698437801}
   m_Script: {fileID: 11500000, guid: e3cc1c3ef0244974e9f3a7bd64e2bc3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies: []
-  survivors: []
-  HP_Rifle: 324
-  EXP_Rifle: 645
-  LVL_Rifle: 234
-  durationUp_Rifle: 4353
-  range_Rifle: 2352
-  HP_Shotgun: 4235
-  EXP_Shotgun: 2342
-  LVL_Shotgun: 123
-  durationUp_Shotgun: 412
-  range_Shotgun: 3434
-  HP_Melee: 422
-  EXP_Melee: 123
-  LVL_Melee: 2312423
-  durationUp_Melee: 4341212
-  range_Melee: 123
-  HP_Engineer: 2425
-  EXP_Engineer: 231
-  LVL_Engineer: 525
-  durationUp_Engineer: 6857
-  range_Engineer: 9074
-  health: 57
-  experience: 563
---- !u!4 &125222699
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 125222697}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 198.95444, y: 190.82805, z: 55.43512}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
 --- !u!1 &182585674
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +726,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1001 &1698437801
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 472296, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 198.95444
+      objectReference: {fileID: 0}
+    - target: {fileID: 472296, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 190.82805
+      objectReference: {fileID: 0}
+    - target: {fileID: 472296, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 55.43512
+      objectReference: {fileID: 0}
+    - target: {fileID: 472296, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472296, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472296, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472296, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 472296, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1787898243
 GameObject:
   m_ObjectHideFlags: 0
