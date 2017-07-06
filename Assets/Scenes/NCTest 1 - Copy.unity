@@ -8450,7 +8450,7 @@ Prefab:
     - target: {fileID: 11493760, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
       propertyPath: zombieGO
       value: 
-      objectReference: {fileID: 186088, guid: d13d7d530f98d5d4f9358130b8c8755e, type: 2}
+      objectReference: {fileID: 197804, guid: 20618d1c22c881d4294775e7be37e071, type: 2}
     - target: {fileID: 11493760, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
       propertyPath: minutePerWave
       value: 5
