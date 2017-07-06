@@ -31,6 +31,7 @@ public class Rifle : Survivor
 	void Start ()
     {
         this.atkRange = 25.0f;
+        this.atkRange = atkRange * this.transform.localScale.x;
         Anim = GetComponent<Animator>();
     }
 	

@@ -50,8 +50,8 @@ MonoBehaviour:
     - FYPJ1_EpsonAR_Device_Database
     - FYPJ1_EpsonAR_Device_Database_OT
     dataSetsToActivate:
-    - FYPJ1_EpsonAR_Device_Database
     - FPJ_EPSONAR
+    - FYPJ1_EpsonAR_Device_Database
     - LIVING_IN_THE_DATABASE
     - test
     - FYPJ1_EpsonAR_Device_Database_OT
