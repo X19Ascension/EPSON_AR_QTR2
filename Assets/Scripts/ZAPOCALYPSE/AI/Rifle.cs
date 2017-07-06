@@ -46,7 +46,8 @@ public class Rifle : Survivor
 
     public override void RunFSM()
     {
-        if(this.HP <= 0 )
+        //target = SelectTarget(this.atkRange);
+        if (this.HP <= 0 )
         {
            // riflestate = Rifle_State.S_DEAD;
         }
@@ -77,8 +78,12 @@ public class Rifle : Survivor
                 }
             case Rifle_State.S_SEARCH:
                 {
-                    target = SelectTarget(this.atkRange);
-                    riflestate = Rifle_State.S_ATTACK;
+                    target = SelectTarget(this.atkRange, this.transform.position) ;
+                    if(target !=null)
+                    {
+                        riflestate = Rifle_State.S_ATTACK;
+                    }
+                    else riflestate = Rifle_State.S_SEARCH;
                     break;
                 }
             case Rifle_State.S_SWITCHSEARCH:

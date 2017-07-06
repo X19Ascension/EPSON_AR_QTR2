@@ -61,7 +61,7 @@ GameObject:
   - 114: {fileID: 11426302}
   m_Layer: 0
   m_Name: Rifle_Final
-  m_TagString: Untagged
+  m_TagString: Survivor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,7 +328,7 @@ Transform:
   m_GameObject: {fileID: 124242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 480118}
@@ -612,15 +612,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b980002697e62748ba8b136b6886011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 40
-  atkSpd: 3
+  atkRange: 30
+  atkSpd: 1
   atkDmg: 60
   HP: 500
   HPRegen: 50
   i_maxHP: 500
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
-  EProjectile: {fileID: 0}
+  EProjectile: {fileID: 113460, guid: f98c3ad46a6453045a2ce7101ab5aead, type: 2}
   entityType: 0
   attackRate: 0
   reloadRate: 0

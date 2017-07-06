@@ -35,6 +35,8 @@ public class NZomebie : Zombie {
         atkSpd = 0.2f;
         f_attackRate = atkSpd;
         this.moveSpd = 1.5f;
+
+        this.moveSpd = Random.Range(1.0f, 2.5f);
         this.gameObject.transform.parent = GameObject.Find("TerrainSpawn").transform;
         SpawnerGO = GameObject.Find("SpawnerPrefab");
 	}
@@ -52,6 +54,7 @@ public class NZomebie : Zombie {
         if (this.HP <= 0) 
         {
             Zombiestate = NZombie_STATE.S_DEAD;
+            Destroy(this.gameObject);
 
         }
         switch (Zombiestate)
@@ -73,6 +76,11 @@ public class NZomebie : Zombie {
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
                         this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
+
+                        Quaternion lookRotation = Quaternion.LookRotation(dir);
+
+                        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
+
                     }
                     if (Distance < 2.0f)
                     {
@@ -85,6 +93,12 @@ public class NZomebie : Zombie {
                 {
                     if (go_targetedEnemy != null)
                     {
+                        Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
+                        dir.y = 0;
+                        Quaternion lookRotation = Quaternion.LookRotation(dir);
+
+                        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
+
                         anim.SetTrigger("Attack");
                         AttackEnemy(go_targetedEnemy);
                     }
@@ -97,7 +111,11 @@ public class NZomebie : Zombie {
                     spawnerGO.GetComponent<WaveSpawner>().maxAmount--;
                     spawnerGO.GetComponent<WaveSpawner>().killcount++;
                     anim.SetTrigger("Die");
-                    
+                    if(this.anim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
+                    {
+                        Destroy(this.gameObject);
+                    }
+                    Destroy(this.gameObject, 1f);
                     break;
                 }
         }

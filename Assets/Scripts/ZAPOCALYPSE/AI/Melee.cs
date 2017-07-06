@@ -56,7 +56,7 @@ public class Melee : Survivor
                 }
             case Melee_State.S_SEARCH:
                 {
-                    target = SelectTarget(this.atkRange);
+                    target = SelectTarget(this.atkRange,this.transform.position);
                     meleestate = Melee_State.S_ATTACK;
                     break;
                 }

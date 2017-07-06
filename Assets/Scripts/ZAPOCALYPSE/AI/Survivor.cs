@@ -126,7 +126,7 @@ public class Survivor : EntityBase
     }
 
     #region Targeting
-    public GameObject SelectTarget(float Radius)
+    public GameObject SelectTarget(float Radius,Vector3 pos)
     {
         GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("test");
         List<GameObject> Targetables = new List<GameObject>();
@@ -139,8 +139,9 @@ public class Survivor : EntityBase
                 {
                     continue;
                 }
-                else if (Vector3.Angle(go.transform.position - this.transform.position, this.GetDirection().transform.position - this.transform.position)
-                    <= 45 && Vector3.Distance(go.transform.position, this.transform.position) <= Radius)
+                //Vector3.Angle(go.transform.position - pos, this.GetDirection().transform.position - pos) <= 45 &&
+                   
+                else if ( Vector3.Distance(go.transform.position, pos) <= Radius)
                 {
                     Targetables.Add(go);
                 }
@@ -152,10 +153,7 @@ public class Survivor : EntityBase
             {
                 foreach (GameObject go in Targetables)
                 {
-                    for (int i = 0; i < go.GetComponent<Zombie>().GetThreat(); i++)
-                    {
                         TargetList.Add(go);
-                    }
                 }
                 int targetindex = Random.Range(0, TargetList.Count);
 

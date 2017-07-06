@@ -14,12 +14,12 @@ public class SpawnUnitTest : MonoBehaviour {
     {
         float test = 1.5f;
         Unit_List = new List<GameObject>();
-        GameObject unit = (GameObject)Instantiate(survivorType[0], new Vector3(Random.Range(-test, test), 0, Random.Range(-test, test)),Quaternion.identity);
+        GameObject unit = (GameObject)Instantiate(survivorType[0], new Vector3(1.5f, 0, 1.5f),Quaternion.identity);
 
         //initialises the units, all of them
         //Temporary add testunit
         Unit_List.Add(unit);
-        unit = (GameObject)Instantiate(survivorType[0], new Vector3(Random.Range(-test, test), 0, Random.Range(-test, test)), Quaternion.identity);
+        unit = (GameObject)Instantiate(survivorType[0], new Vector3(-0.5f, 0, 1.5f), Quaternion.identity);
         Unit_List.Add(unit);
         unit = (GameObject)Instantiate(survivorType[1], new Vector3(0.5f, 0, 1.5f), Quaternion.identity); 
         Unit_List.Add(unit);

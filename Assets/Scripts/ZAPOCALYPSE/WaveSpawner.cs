@@ -99,6 +99,8 @@ public class WaveSpawner : MonoBehaviour {
                     {
                         Debug.Log("Hello Spawn spawn xD");
                         SpawnZombie(LoadSpawnPoint());
+                        SpawnZombie(LoadSpawnPoint());
+                        SpawnZombie(LoadSpawnPoint());
                         currSpawnPt++;
                         if (currSpawnPt > 10)
                             currSpawnPt = 0;
