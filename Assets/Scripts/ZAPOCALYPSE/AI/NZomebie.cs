@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class NZomebie : Zombie {
+    public GameObject blood;
 
     public enum NZombie_STATE
     {
@@ -110,11 +111,13 @@ public class NZomebie : Zombie {
                 {
                     spawnerGO.GetComponent<WaveSpawner>().maxAmount--;
                     spawnerGO.GetComponent<WaveSpawner>().killcount++;
+                    SpawnBlood();
                     anim.SetTrigger("Die");
                     if(this.anim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
                     {
                         Destroy(this.gameObject);
                     }
+                    
                     Destroy(this.gameObject, 1f);
                     break;
                 }
@@ -138,5 +141,11 @@ public class NZomebie : Zombie {
     void DestroyThis()
     {
         Destroy(this.gameObject, 3);
+    }
+
+    void SpawnBlood()
+    {
+        Vector3 bloodpos = new Vector3(this.gameObject.transform.position.x, 0, this.gameObject.transform.position.z);
+        Instantiate(blood, bloodpos, Quaternion.identity);
     }
 }

@@ -435,9 +435,10 @@ MonoBehaviour:
   i_maxHP: 30
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
-  spawnerGO: {fileID: 0}
+  spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   moveSpd: 0.5
   attackRate: 0
+  blood: {fileID: 100000, guid: acd09612e3d274e4b8c330089f81dfe8, type: 3}
   Zombiestate: 0
 --- !u!136 &13644158
 CapsuleCollider:
@@ -459,7 +460,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192902}
   m_Enabled: 1
-  m_Radius: 1.13
+  m_Radius: 1.17
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -469,7 +470,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.02
-  m_BaseOffset: 1
+  m_BaseOffset: 0.1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!208 &20881666
@@ -485,7 +486,7 @@ NavMeshObstacle:
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1, z: 0.3}
+  m_Center: {x: 0, y: 1.86, z: 0.3}
   m_TimeToStationary: 0.5
 --- !u!1001 &100100000
 Prefab:

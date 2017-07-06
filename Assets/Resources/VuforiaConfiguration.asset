@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: AY5AkGX/////AAAAGT2zlCDgeUe5gXD//XLIox0WKNpTZDuU7W7aByLF+muOR2wbnpWin4xhfzcGm7PpCJxlIUJqvWgTsrsvEKCvevoq9KjMYVwjbxXuTJe5ANnmpIUmRQzQWLyLTvVNvYUFa79ynqDDwStlsqdO5qNOSK48IfpnQ0/MIHfVbe1Lzn2mOMVV4wJyxleRqx75k8hO4BL62LilqW80rW2Ag9ZunlDTXpU5cbSPiEC5+ZiJkc5thSYrDEQuiKJdda6Obt3Vy8ThG+lFAr5h8FzUfiyKlHSNpKDchdb4bOy5k9hdvN3twmO2FIFG62DGGhyPXj0RLnjwr+e1zXUA4HXE0x++7BzDzUUUrGe/dGEm1HoN8lsk
+    vuforiaLicenseKey: 
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 10
-    maxSimultaneousObjectTargets: 10
+    maxSimultaneousImageTargets: 1
+    maxSimultaneousObjectTargets: 1
     useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 0
@@ -24,11 +24,11 @@ MonoBehaviour:
     cameraOffset: 0.06
     distortionRenderingMode: 2
     distortionRenderingLayer: 31
-    eyewearType: 1
+    eyewearType: 0
     stereoFramework: 0
     seeThroughConfiguration: 0
-    viewerName: Generic Cardboard
-    viewerManufacturer: Vuforia
+    viewerName: 
+    viewerManufacturer: 
     useCustomViewer: 0
     customViewer:
       Version: 0
@@ -43,21 +43,8 @@ MonoBehaviour:
       FieldOfView: {x: 0, y: 0, z: 0, w: 0}
       ContainsMagnet: 0
   databaseLoad:
-    dataSetsToLoad:
-<<<<<<< HEAD
-    - FYPJ1_EpsonAR_Device_Database
-=======
-    - FPJ_EPSONAR
->>>>>>> 78bc234e79b746125081a2ae3107151bfe5d33a0
-    - LIVING_IN_THE_DATABASE
-    - test
-    - FYPJ1_EpsonAR_Device_Database_OT
-    dataSetsToActivate:
-    - FYPJ1_EpsonAR_Device_Database
-    - FPJ_EPSONAR
-    - LIVING_IN_THE_DATABASE
-    - test
-    - FYPJ1_EpsonAR_Device_Database_OT
+    dataSetsToLoad: []
+    dataSetsToActivate: []
   videoBackground:
     clippingMode: 0
     matteShader: {fileID: 4800000, guid: f84e93cca971cda47a225f4c6a4156c9, type: 3}
@@ -66,10 +53,10 @@ MonoBehaviour:
     autoInitTracker: 0
     autoStartTracker: 0
     autoInitBuilder: 0
-    sceneUnitsToMillimeter: 300
+    sceneUnitsToMillimeter: 0
   deviceTracker:
-    autoInitTracker: 1
-    autoStartTracker: 1
+    autoInitTracker: 0
+    autoStartTracker: 0
     posePrediction: 0
     modelCorrectionMode: 0
     modelTransformEnabled: 0

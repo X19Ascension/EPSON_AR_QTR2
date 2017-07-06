@@ -107,7 +107,7 @@ public class Rifle : Survivor
                 {
                     if (target != null) 
                     {
-                        Anim.SetTrigger("Attack");
+                        //Anim.SetTrigger("Attack");
                         Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
                         Attackenemy(V3_Direction);
                         V3_targetpos = target.transform.position;

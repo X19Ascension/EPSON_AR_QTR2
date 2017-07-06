@@ -5,12 +5,15 @@ using System.Collections;
 public class Wait : MonoBehaviour {
 
     public float timer = 3.0f;
+    private GameControl gameControl;
 
-	// Use this for initialization
-	IEnumerator Start () {
+    // Use this for initialization
+    IEnumerator Start () {
         yield return new WaitForSeconds(timer);
 
-        SceneManager.LoadScene("RERETEST");
+        gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
+        gameControl.Load();
+        SceneManager.LoadScene("NCTest 1 - Copy - Copy");
 
         if (SceneManager.GetActiveScene().name.Contains("Main"))
             SceneManager.LoadScene("LevelSelect");//go to game scene

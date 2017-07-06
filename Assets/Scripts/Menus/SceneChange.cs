@@ -92,4 +92,9 @@ public class SceneChange : MonoBehaviour {
     {
 
     }
+
+    public void testLoad()
+    {
+        SceneManager.LoadScene("NCTEST 1 - Copy - Copy");
+    }
 }
