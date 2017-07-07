@@ -17,33 +17,33 @@ public class GameControl: MonoBehaviour {
     //[SerializeField]
     //public GameObject[] survivors;
 
-    public int HP_Rifle;              //! HP of the Rifler
-    public float EXP_Rifle;             //! EXP of the Rifler
-    public int LVL_Rifle;             //! Level of the rifler <- probaby the only essential one in stats as stats will be recalculated.
-    public float durationUp_Rifle;      //! Duration of the rifler active
-    public float range_Rifle;           //! Range of the Rifler
+    public int waveNo;                      //! Current Wave Number
 
-    public int HP_Shotgun;            //! HP of the Shotgunner
-    public float EXP_Shotgun;           //! EXP of the Shotgunner
-    public int LVL_Shotgun;           //! Level of the Shotgunner
-    public float durationUp_Shotgun;    //! Duration of the shotgunner active
-    public float range_Shotgun;         //! Range of the Shotgunner
+    public int HP_Rifle;                    //! HP of the Rifler
+    public float EXP_Rifle;                 //! EXP of the Rifler
+    public int LVL_Rifle;                   //! Level of the rifler <- probaby the only essential one in stats as stats will be recalculated.
+    public float durationUp_Rifle;          //! Duration of the rifler active
+    public float range_Rifle;               //! Range of the Rifler
 
-    public int HP_Melee;              //! HP Of the Melee
-    public float EXP_Melee;             //! EXP of the Melee
-    public int LVL_Melee;             //! Level of the Melee
-    public float durationUp_Melee;      //! Duration of the melee active
-    public float range_Melee;           //! Range of the Melee
+    public int HP_Shotgun;                  //! HP of the Shotgunner
+    public float EXP_Shotgun;               //! EXP of the Shotgunner
+    public int LVL_Shotgun;                 //! Level of the Shotgunner
+    public float durationUp_Shotgun;        //! Duration of the shotgunner active
+    public float range_Shotgun;             //! Range of the Shotgunner
 
-    public int HP_Engineer;           //! HP of the Engineer
-    public float EXP_Engineer;          //! EXP of the Engineer
-    public int LVL_Engineer;          //! Level of the Engineer
-    public float durationUp_Engineer;   //! Duration of the Engineer active
-    public float range_Engineer;        //! Range of the Engineer
+    public int HP_Melee;                    //! HP Of the Melee
+    public float EXP_Melee;                 //! EXP of the Melee
+    public int LVL_Melee;                   //! Level of the Melee
+    public float durationUp_Melee;          //! Duration of the melee active
+    public float range_Melee;               //! Range of the Melee
 
-    public static GameControl m_instance;
+    public int HP_Engineer;                 //! HP of the Engineer
+    public float EXP_Engineer;              //! EXP of the Engineer
+    public int LVL_Engineer;                //! Level of the Engineer
+    public float durationUp_Engineer;       //! Duration of the Engineer active
+    public float range_Engineer;            //! Range of the Engineer
 
-    public int waveNo;
+    public static GameControl m_instance;   //! Game Instance, so it acts like a Singleton
 
     public float health;
     public float experience;
@@ -228,6 +228,8 @@ class PlayerTestData
     // Learning abit on player data.
     public float health;
     public float experience;
+
+    public int waveNo;
 
     public int HP_Rifle;              //! HP of the Rifler
     public float EXP_Rifle;             //! EXP of the Rifler

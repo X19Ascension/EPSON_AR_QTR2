@@ -4,6 +4,8 @@ using System.Linq;
 
 public class NZomebie : Zombie {
     public GameObject blood;
+    public GameObject blood1;
+    public GameObject blood2;
 
     public enum NZombie_STATE
     {
@@ -146,6 +148,9 @@ public class NZomebie : Zombie {
     void SpawnBlood()
     {
         Vector3 bloodpos = new Vector3(this.gameObject.transform.position.x, 0, this.gameObject.transform.position.z);
+
+        Random.Range(0, 2);
+
         Instantiate(blood, bloodpos, Quaternion.identity);
     }
 }

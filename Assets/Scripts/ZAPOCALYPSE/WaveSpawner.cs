@@ -102,7 +102,7 @@ public class WaveSpawner : MonoBehaviour {
                         SpawnZombie(LoadSpawnPoint());
                         SpawnZombie(LoadSpawnPoint());
                         currSpawnPt++;
-                        if (currSpawnPt > 10)
+                        if (currSpawnPt > 14)
                             currSpawnPt = 0;
 
                         //SpawnZombie(GenerateSpawnPos());
@@ -233,7 +233,7 @@ public class WaveSpawner : MonoBehaviour {
     {
         //if (waveEnded)
         //{
-        for (int j = 0; j < (5 - 1); j++)
+        for (int j = 0; j < (15 - 1); j++)
         {
             for (int k = 0; k < (17 - 1); k++)
             {
@@ -242,7 +242,7 @@ public class WaveSpawner : MonoBehaviour {
                     //Debug.Log(CSVReader.loadedMap[j, i]);
                     if (CSVReader.loadedMap[k, j] >= 0)
                         {
-                            //Debug.Log(CSVReader.loadedMap[i, j]);
+                            Debug.Log(CSVReader.loadedMap[k, j]);
                             Vector3 temp;
                             temp = spawnPoints[CSVReader.loadedMap[k, j]].transform.position;
                             return temp;
