@@ -2,24 +2,36 @@
 using System.Collections;
 
 public class Barrier : EntityBase {
-
+    Mesh mesh;
+    public Mesh barrier_state_damaged;
+    public Mesh barrier_state_destroyed;
     public GameObject barrier;
     // Use this for initialization
     void Start () {
         i_maxHP = HP;
-	}
+        //mesh = GetComponent<MeshFilter>().sharedMesh;
+    }
 	
 	// Update is called once per frame
 	void Update () {
         if (HP < i_maxHP)
         {
             //i_maxHP.SetActive(true);
+            if (HP <= 250)
+            {
+                GetComponent<MeshFilter>().sharedMesh = barrier_state_damaged;
+            }
 
             if (HP <= 0)
             {
+                //GetComponent<Collider>().collider = false;
+                GetComponent<BoxCollider>().enabled = false;
+                GetComponent<NavMeshObstacle>().enabled = false;
+
+                GetComponent<MeshFilter>().sharedMesh = barrier_state_destroyed;
                 //barrier.SetActive(false);
                 //if (this.tag.Contains("Barrier"))
-                    Destroy(this.gameObject);
+                //Destroy(this.gameObject);
                 //else
                 //    this.gameObject.SetActive(false);
             }

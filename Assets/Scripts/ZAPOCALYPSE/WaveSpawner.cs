@@ -56,8 +56,11 @@ public class WaveSpawner : MonoBehaviour {
 
     public GameObject OriginPoint;
 
+    private GameControl gameControl;
+
     // Use this for initialization
     void Start () {
+        gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         spawnerGO.GetComponent<WaveSpawner>().maxAmount = 0;
         switch (diff)
         {
@@ -78,6 +81,10 @@ public class WaveSpawner : MonoBehaviour {
         waveDuration = minutePerWave * 60 + secondPerWave;
         waveDurationSave = waveDuration;
         waveEnded = false;
+        if (gameControl == null)
+            waveNo = 1;
+        else
+            waveNo = gameControl.waveNo;
     }
 	
 	// Update is called once per frame

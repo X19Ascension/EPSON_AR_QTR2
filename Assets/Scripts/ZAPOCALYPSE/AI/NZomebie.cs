@@ -72,7 +72,12 @@ public class NZomebie : Zombie {
                 }
             case NZombie_STATE.S_CHASE:
                 {
+                    if (go_targetedEnemy == null)
+                    {
+                        Zombiestate = NZombie_STATE.S_IDLE;
+                    }
                     anim.SetBool("Chase", true);
+
                     float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
                     if (go_targetedEnemy != null)
                     {

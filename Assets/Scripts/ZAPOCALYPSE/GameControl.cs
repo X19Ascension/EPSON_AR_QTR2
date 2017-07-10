@@ -125,7 +125,7 @@ public class GameControl: MonoBehaviour {
         bf.Serialize(file, data);
         file.Close();
     }
-    public void Save(List<GameObject> survivors)
+    public void Save(List<GameObject> survivors, int demWave)
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/playerDataInfo.dat");
@@ -134,7 +134,7 @@ public class GameControl: MonoBehaviour {
         data.health = health;
         data.experience = experience;
         //data.Scene_Enemies = enemies;
-
+        data.waveNo = demWave;
         foreach (GameObject pew in survivors)
         {
             switch (pew.GetComponent<Survivor>().entityType)
@@ -174,7 +174,7 @@ public class GameControl: MonoBehaviour {
         }
 
         //data.Scene_Enemies = enemies;
-        Debug.Log(data.HP_Rifle);
+        Debug.Log(data.waveNo);
 
         bf.Serialize(file, data);
         file.Close();
@@ -215,6 +215,8 @@ public class GameControl: MonoBehaviour {
             LVL_Engineer = data.LVL_Engineer;
             durationUp_Engineer = data.durationUp_Engineer;
             range_Engineer = data.range_Engineer;
+
+            waveNo = data.waveNo;
 
             SceneChange pew = new SceneChange();
             pew.ChangePlayGame();

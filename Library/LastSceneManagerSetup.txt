@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/NCTest 1 - Copy - Copy.unity
+- path: Assets/Scenes/PlaceHolderMenu.unity
   isLoaded: 1
   isActive: 1
