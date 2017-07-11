@@ -249,7 +249,7 @@ public class WaveSpawner : MonoBehaviour {
                     //Debug.Log(CSVReader.loadedMap[j, i]);
                     if (CSVReader.loadedMap[k, j] >= 0)
                         {
-                            Debug.Log(CSVReader.loadedMap[k, j]);
+                            //Debug.Log(CSVReader.loadedMap[k, j]);
                             Vector3 temp;
                             temp = spawnPoints[CSVReader.loadedMap[k, j]].transform.position;
                             return temp;

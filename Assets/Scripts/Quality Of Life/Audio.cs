@@ -18,6 +18,7 @@ public class Audio : MonoBehaviour {
     public AudioClip BG5;
     public AudioClip LoadingScreen;
     public AudioClip MenuScreen;
+    public AudioClip shotGun;
 
     public AudioSource source;
     private float volLowRange = 5f;//.5f
@@ -175,7 +176,9 @@ public class Audio : MonoBehaviour {
             case "BG5":
                 source.PlayOneShot(BG5, vol);
                 break;
-
+            case "shotGun":
+                source.PlayOneShot(shotGun, vol);
+                break;
         }
     }
 }

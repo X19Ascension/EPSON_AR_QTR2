@@ -15,7 +15,6 @@ public class Rifle : Survivor
     }
 
     private Animator Anim;
-
     public GameObject target;
     public Vector3 V3_targetpos;
     int i_targetSurroundings;
@@ -107,11 +106,13 @@ public class Rifle : Survivor
                 {
                     if (target != null) 
                     {
-                        //Anim.SetTrigger("Attack");
-                        Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
+                        Audio pew = new Audio();
+                           //Anim.SetTrigger("Attack");
+                           Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
                         Attackenemy(V3_Direction);
                         V3_targetpos = target.transform.position;
                         i_targetSurroundings = target.GetComponent<Zombie>().CheckSurroundings();
+                        pew.PlaySound("shotGun");
                     }
                     else
                     {
