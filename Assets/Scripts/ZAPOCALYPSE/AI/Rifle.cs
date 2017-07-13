@@ -22,8 +22,14 @@ public class Rifle : Survivor
 
     private GameControl gameControl;
 
+    public AudioClip shootSound;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
     void Awake()
     {
+        source = GetComponent<AudioSource>();
         target = null;
         riflestate = Rifle_State.S_IDLE;
         Ustate = UnitState.S_HEALTHY;
@@ -106,13 +112,11 @@ public class Rifle : Survivor
                 {
                     if (target != null) 
                     {
-                        Audio pew = new Audio();
                            //Anim.SetTrigger("Attack");
                            Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
                         Attackenemy(V3_Direction);
                         V3_targetpos = target.transform.position;
                         i_targetSurroundings = target.GetComponent<Zombie>().CheckSurroundings();
-                        pew.PlaySound("shotGun");
                     }
                     else
                     {
@@ -176,6 +180,7 @@ public class Rifle : Survivor
         attackRate -= Time.deltaTime;
         if (attackRate <= 0)
         {
+            source.PlayOneShot(shootSound, 20F);
             Vector3 pew = this.gameObject.transform.position;
             GameObject bullet = null;
                 //direction.y += 2;
@@ -186,6 +191,8 @@ public class Rifle : Survivor
             bullet.GetComponent<Projectile>().Sender = this.gameObject;
             bullet.transform.parent = this.transform.parent;
             attackRate = atkSpd;
+            //source.Play();
+            
         }
     }
 

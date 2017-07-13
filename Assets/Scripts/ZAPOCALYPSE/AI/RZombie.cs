@@ -61,7 +61,7 @@ public class RZombie : Zombie
             case RZombieSTATE.S_CHASE:
                 {
                     float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
-                    if (go_targetedEnemy != null && !(Distance < atkRange))
+                    if (go_targetedEnemy != null && (Distance < atkRange))
                     {
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;

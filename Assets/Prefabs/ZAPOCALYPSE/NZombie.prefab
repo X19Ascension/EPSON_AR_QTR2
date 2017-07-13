@@ -136,6 +136,7 @@ GameObject:
   - 114: {fileID: 11467084}
   - 195: {fileID: 19580036}
   - 136: {fileID: 13644158}
+  - 82: {fileID: 8250110}
   m_Layer: 0
   m_Name: NZombie
   m_TagString: test
@@ -398,6 +399,80 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196728}
   m_Mesh: {fileID: 4300002, guid: 3f3c2612f3759d642819bf23dd350b7e, type: 3}
+--- !u!82 &8250110
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192902}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &9515748
 Animator:
   serializedVersion: 3
@@ -441,6 +516,14 @@ MonoBehaviour:
   blood1: {fileID: 100000, guid: b9316e5d08d20de45ab2b355a09d4b70, type: 3}
   blood2: {fileID: 100000, guid: 8b7c4112eb31911469d6e518e66a84ec, type: 3}
   Zombiestate: 0
+  zombieSound:
+  - {fileID: 8300000, guid: ad2dbe88d03e03546b64b505ab774958, type: 3}
+  - {fileID: 8300000, guid: 832fa8fed9bb8c340ae890e3012c010d, type: 3}
+  - {fileID: 8300000, guid: 97572fd83cf812d4c870c282d73edc7d, type: 3}
+  - {fileID: 8300000, guid: 4e4768e02dc7fbb48a3f4ba86c7bf2a7, type: 3}
+  - {fileID: 8300000, guid: 6b6e4741594d5174ca6199c2f73aef46, type: 3}
+  - {fileID: 8300000, guid: 524da22e4149c6f438cfca3f82691b6d, type: 3}
+  - {fileID: 8300000, guid: 02edd99630b42c843b1b767aea1a9515, type: 3}
 --- !u!136 &13644158
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -19,11 +19,16 @@ public class NZomebie : Zombie {
      GameObject SpawnerGO;
     float f_movespeed;
     float f_attackRate;
+    float pew;
     int i_Threatvalue;
     private Animator anim;
 
+    public AudioClip[] zombieSound;
+    private AudioSource source;
+
     void Awake()
     {
+        source = GetComponent<AudioSource>();
         Zombiestate = NZombie_STATE.S_IDLE;
         f_movespeed = 2f;
         f_attackRate = 0.2f;
@@ -57,7 +62,7 @@ public class NZomebie : Zombie {
         if (this.HP <= 0) 
         {
             Zombiestate = NZombie_STATE.S_DEAD;
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
 
         }
         switch (Zombiestate)
@@ -81,6 +86,8 @@ public class NZomebie : Zombie {
                     float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
                     if (go_targetedEnemy != null)
                     {
+                        if (!source.isPlaying)
+                            source.PlayOneShot(zombieSound[Random.Range(0, 2)], 1F);
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
                         this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
@@ -119,13 +126,18 @@ public class NZomebie : Zombie {
                     spawnerGO.GetComponent<WaveSpawner>().maxAmount--;
                     spawnerGO.GetComponent<WaveSpawner>().killcount++;
                     SpawnBlood();
-                    anim.SetTrigger("Die");
-                    if(this.anim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
+                    if (!source.isPlaying)
+                    {
+                        anim.SetTrigger("Die");
+                        source.PlayOneShot(zombieSound[6], 1F);
+                        
+                        pew += Time.deltaTime;
+                    }
+                    if (pew > 0.025f)
                     {
                         Destroy(this.gameObject);
                     }
-                    
-                    Destroy(this.gameObject, 1f);
+
                     break;
                 }
         }
@@ -138,6 +150,8 @@ public class NZomebie : Zombie {
 
         if (f_attackRate < 0)
         {
+            if (!source.isPlaying)
+                source.PlayOneShot(zombieSound[Random.Range(3, 5)], 1F);
             int health = target.GetComponent<EntityBase>().GetHealth() - this.GetAttackDamage();
             target.GetComponent<EntityBase>().SetHealth(health);
 
@@ -152,6 +166,7 @@ public class NZomebie : Zombie {
 
     void SpawnBlood()
     {
+
         Vector3 bloodpos = new Vector3(this.gameObject.transform.position.x, 0, this.gameObject.transform.position.z);
 
         Random.Range(0, 2);

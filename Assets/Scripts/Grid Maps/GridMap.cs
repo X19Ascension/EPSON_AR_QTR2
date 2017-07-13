@@ -83,24 +83,24 @@ public class GridMap : MonoBehaviour {
 
     public void BuildGrid()
     {
-        for (int x = 0; x < i_GridSize_X; x++)
-        {
-            for (int z = 0; z < i_GridSize_Y; z++)
-            {
-                GameObject gridplane = new GameObject();
-                gridplane = (GameObject)Instantiate(Grid_Empty, new Vector3(x, 0, z) + Offset, Quaternion.identity);
-                gridplane.gameObject.name = "X: " + (x + 1).ToString() + "Z: " + (z + 1).ToString();
-                gridplane.gameObject.tag = "Empty Grid";
-                gridplane.transform.parent = Grid_Encapsulate.transform;
-                Grid[x, z] = gridplane;
-                gridplane.transform.parent = Original.transform;
-                if((x == 0 || x == i_GridSize_X - 1) || (z == 0 || z == i_GridSize_Y - 1))
-                {
-                    Grid_Exceptions.Add(gridplane);
-                }
+        //for (int x = 0; x < i_GridSize_X; x++)
+        //{
+        //    for (int z = 0; z < i_GridSize_Y; z++)
+        //    {
+        //        GameObject gridplane = new GameObject();
+        //        gridplane = (GameObject)Instantiate(Grid_Empty, new Vector3(x, 0, z) + Offset, Quaternion.identity);
+        //        gridplane.gameObject.name = "X: " + (x + 1).ToString() + "Z: " + (z + 1).ToString();
+        //        gridplane.gameObject.tag = "Empty Grid";
+        //        gridplane.transform.parent = Grid_Encapsulate.transform;
+        //        Grid[x, z] = gridplane;
+        //        gridplane.transform.parent = Original.transform;
+        //        if((x == 0 || x == i_GridSize_X - 1) || (z == 0 || z == i_GridSize_Y - 1))
+        //        {
+        //            Grid_Exceptions.Add(gridplane);
+        //        }
 
-            }
-        }
+        //    }
+        //}
         Vector3 Front_Midpoint = Grid[0, 0].transform.position + ((Grid[0, i_GridSize_Y - 1].transform.position - Grid[0, 0].transform.position) / 2);
         GameObject Front_3 = (GameObject)Instantiate(Grid_Barricade_Front);
         Front_3.transform.position = Front_Midpoint + Front_Offset;
