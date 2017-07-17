@@ -24,6 +24,7 @@ TagManager:
   - Priority
   - DirectionPoint
   - Targeting Grid
+  - Town Objects
   layers:
   - Default
   - TransparentFX

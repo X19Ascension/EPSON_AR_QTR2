@@ -45,7 +45,7 @@ public class NZomebie : Zombie {
         this.moveSpd = 1.5f;
 
         this.moveSpd = Random.Range(1.0f, 2.5f);
-        this.gameObject.transform.parent = GameObject.Find("TerrainSpawn").transform;
+       // this.gameObject.transform.parent = GameObject.Find("TerrainSpawn").transform;
         SpawnerGO = GameObject.Find("SpawnerPrefab");
 	}
 	

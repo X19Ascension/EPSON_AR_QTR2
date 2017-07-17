@@ -46,7 +46,8 @@ public class Rifle : Survivor
         this.HP = gameControl.HP_Rifle;
         this.level = gameControl.LVL_Rifle;
         
-        this.atkRange = 25.0f;
+        //this.atkRange = 25.0f;
+        this.atkRange = atkRange * this.transform.localScale.x * 0.2f;
         Anim = GetComponent<Animator>();
     }
 	
