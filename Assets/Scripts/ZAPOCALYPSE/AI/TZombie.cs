@@ -16,13 +16,19 @@ public class TZombie : Zombie
     float f_movespeed;
     float f_attackRate;
     int i_Threatvalue;
+    private Animator anim;
+
+    public AudioClip[] zombieSound;
+    private AudioSource source;
 
     void Awake()
     {
+        source = GetComponent<AudioSource>();
         Zombiestate = TZombieSTATE.S_IDLE;
         f_movespeed = 0.8f;
         f_attackRate = 0.9f;
         i_Threatvalue = 5;
+        atkRange = 999;
     }
 	// Use this for initialization
 	void Start ()
@@ -61,6 +67,9 @@ public class TZombie : Zombie
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
                         this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
+
+                        //if (!source.isPlaying)
+                            source.PlayOneShot(zombieSound[0], 1F);
                     }
                     else if (TargetToAttack() == null)
                     {
@@ -84,6 +93,8 @@ public class TZombie : Zombie
                 }
             case TZombieSTATE.S_DEAD:
                 {
+                    if (!source.isPlaying)
+                        source.PlayOneShot(zombieSound[3], 1F);
                     Destroy(this.gameObject);
                     break;
                 }
@@ -97,6 +108,8 @@ public class TZombie : Zombie
 
         if (f_attackRate < 0)
         {
+            if (!source.isPlaying)
+                source.PlayOneShot(zombieSound[1], 1F);
             int health = target.GetComponent<EntityBase>().GetHealth() - this.GetAttackDamage();
             target.GetComponent<EntityBase>().SetHealth(health);
 

@@ -40,8 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cc1c3ef0244974e9f3a7bd64e2bc3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: []
-  survivors: []
+  waveNo: 1
   HP_Rifle: 80
   EXP_Rifle: 0
   LVL_Rifle: 1

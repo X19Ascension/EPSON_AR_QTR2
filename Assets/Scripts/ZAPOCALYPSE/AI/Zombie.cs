@@ -149,15 +149,31 @@ public class Zombie : EntityBase {
     {
         //if (col.gameObject.tag.Contains("FriendlyFire"))
         //Debug.Log(col.gameObject.tag);
-            if (col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor" && col.gameObject.tag == "Bullet")
+        if (col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor" && col.gameObject.tag == "Bullet")
+        {
+            //if (col.gameObject.GetComponent<Projectile>().Sender.GetComponent<FSMBase>().GetTarget() == this.gameObject)
             {
-                //if (col.gameObject.GetComponent<Projectile>().Sender.GetComponent<FSMBase>().GetTarget() == this.gameObject)
+                if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)")
+                {
+                    //Debug.Log((col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 0.65f));
+                    //Debug.Log((col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 3.0f));
+                    int damage = (int)(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage() * (col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 3.0f));
+                    if (col.gameObject.GetComponent<Projectile>().ProjectileLifetime > Random.Range(0, 20))
+                    {
+                        damage *= 2;
+                        Debug.Log("Crit boi");
+                    }
+
+                    TakeDamage(damage);
+                    Destroy(col.gameObject);
+                }
+                else
                 {
                     TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
                     Destroy(col.gameObject);
                 }
             }
-        
+        }
     }
 
     void OnDrawGizmos()

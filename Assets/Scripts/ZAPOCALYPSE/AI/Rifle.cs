@@ -181,7 +181,7 @@ public class Rifle : Survivor
         attackRate -= Time.deltaTime;
         if (attackRate <= 0)
         {
-            source.PlayOneShot(shootSound, 20F);
+            source.PlayOneShot(shootSound, 0.2F);
             Vector3 pew = this.gameObject.transform.position;
             GameObject bullet = null;
                 //direction.y += 2;

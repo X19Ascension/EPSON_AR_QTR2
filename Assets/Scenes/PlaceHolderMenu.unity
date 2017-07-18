@@ -767,7 +767,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11409174, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}
       propertyPath: waveNo
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26b3c149a11b22a498631fddd7eb52c7, type: 2}

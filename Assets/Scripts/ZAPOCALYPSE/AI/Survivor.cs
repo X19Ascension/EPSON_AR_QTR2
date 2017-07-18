@@ -141,7 +141,7 @@ public class Survivor : EntityBase
                 }
                 //Vector3.Angle(go.transform.position - pos, this.GetDirection().transform.position - pos) <= 45 &&
                    
-                else if ( Vector3.Distance(go.transform.position, pos) <= Radius)
+                else if ( Vector3.Distance(go.transform.position, pos) <= Radius && go.GetComponent<EntityBase>().GetHealth() > 0)
                 {
                     Targetables.Add(go);
                 }
@@ -166,7 +166,7 @@ public class Survivor : EntityBase
 
     protected GameObject SwitchTarget(Vector3 position)
     {
-        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("Test");
+        GameObject[] AllEnemies = GameObject.FindGameObjectsWithTag("test");
         List<GameObject> Withinrange = new List<GameObject>();
         foreach(GameObject go in AllEnemies)
         {

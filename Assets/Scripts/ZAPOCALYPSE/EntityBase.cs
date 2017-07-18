@@ -4,10 +4,6 @@
 //! starts here.
 
 using UnityEngine;
-using System.Collections;
-
-using System.Collections.Generic;
-using System.Linq;
 
 public abstract class EntityBase : MonoBehaviour 
 {
