@@ -7,7 +7,7 @@ public class DestinationLog : MonoBehaviour
     private List<string> EventLog = new List<string>();
     private string guiText = "";
 
-    public int maxlines = 10;
+    public int maxlines = 15;
 
 	// Use this for initialization
 	void Start () 
