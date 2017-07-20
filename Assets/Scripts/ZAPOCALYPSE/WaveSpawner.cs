@@ -133,11 +133,14 @@ public class WaveSpawner : MonoBehaviour {
                         for (int i = 0; i < currSpawnPt; i++)
                         {
                             SpawnZombie(LoadSpawnPoint());
-                            if (currSpawnPt > 8 && (chanceToSpawnArmored > Random.Range(0, 100)))
+                            if (currSpawnPt > 8 && (chanceToSpawnArmored > Random.Range(0, 1)))
                                 SpawnArmoredZombie(LoadSpawnPoint());
                         }
-                        if (currSpawnPt > 5 && (chanceToSpawnGroup > Random.Range(0, 100)))
+                        if (currSpawnPt > 5 && (chanceToSpawnGroup > Random.Range(0, 1)))
                             SpawnHorde(LoadSpawnPoint());
+
+                        if (currSpawnPt > 11 && (chanceToSpawnRanged > Random.Range(0, 1)))
+                            SpawnRangedZombie(LoadSpawnPoint());
 
                         //SpawnZombie(GenerateSpawnPos());
                         randomSpawnTimer = Random.Range(2.5f, 3.2f);

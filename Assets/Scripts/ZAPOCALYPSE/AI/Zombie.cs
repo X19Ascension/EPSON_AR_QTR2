@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Zombie : EntityBase {
-    
+    public ScoringSystem scoring;
+
     //EntityBase test;
     public GameObject spawnerGO;                                    //! Spawner Game Object
 
@@ -153,7 +154,7 @@ public class Zombie : EntityBase {
         {
             //if (col.gameObject.GetComponent<Projectile>().Sender.GetComponent<FSMBase>().GetTarget() == this.gameObject)
             {
-                if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)")
+                if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)" && col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final")
                 {
                     //Debug.Log((col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 0.65f));
                     //Debug.Log((col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 3.0f));
@@ -166,9 +167,12 @@ public class Zombie : EntityBase {
 
                     TakeDamage(damage);
                     Destroy(col.gameObject);
+
                 }
+                //if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)")
                 else
                 {
+                    scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
                     TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
                     Destroy(col.gameObject);
                 }

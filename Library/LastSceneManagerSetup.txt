@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/NCTest 1 - Copy - Copy.unity
-=======
-- path: Assets/Scenes/FinalTest.unity
->>>>>>> 13ce2f0bdf0f818d31d3484c7fe10c5524fd33f7
   isLoaded: 1
   isActive: 1
