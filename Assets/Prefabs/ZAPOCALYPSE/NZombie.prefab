@@ -509,6 +509,7 @@ MonoBehaviour:
   i_maxHP: 30
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
+  test: {fileID: 165278, guid: 4fc44455616fdda4994d0ecc4928d0de, type: 2}
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   moveSpd: 0.5
   attackRate: 0

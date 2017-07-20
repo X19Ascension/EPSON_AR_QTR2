@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Zombie : EntityBase {
-    public ScoringSystem scoring;
+    private ScoringSystem scoring;
+    public GameObject test;
 
     //EntityBase test;
     public GameObject spawnerGO;                                    //! Spawner Game Object
@@ -24,12 +25,14 @@ public class Zombie : EntityBase {
     {
         i_maxHP = HP;
         attackRate = GetAttackSpeed();
+        scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
+        //scoring = test.GetComponent<ScoringSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
         if (HP <= 0)
         {
             if (this.tag.Contains("test"))
@@ -148,13 +151,14 @@ public class Zombie : EntityBase {
 
     void OnCollisionEnter(Collision col)
     {
+        scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
         //if (col.gameObject.tag.Contains("FriendlyFire"))
         //Debug.Log(col.gameObject.tag);
         if (col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor" && col.gameObject.tag == "Bullet")
         {
             //if (col.gameObject.GetComponent<Projectile>().Sender.GetComponent<FSMBase>().GetTarget() == this.gameObject)
             {
-                if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)" && col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final")
+                if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)" || col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final")
                 {
                     //Debug.Log((col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 0.65f));
                     //Debug.Log((col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 3.0f));
@@ -166,14 +170,17 @@ public class Zombie : EntityBase {
                     }
 
                     TakeDamage(damage);
+                    if (HP <= 0)
+                        scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
                     Destroy(col.gameObject);
 
                 }
                 //if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)")
                 else
                 {
-                    scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
                     TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
+                    if (HP <= 0)
+                        scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
                     Destroy(col.gameObject);
                 }
             }

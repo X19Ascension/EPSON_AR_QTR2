@@ -141,7 +141,7 @@ public class Survivor : EntityBase
                 }
                 //Vector3.Angle(go.transform.position - pos, this.GetDirection().transform.position - pos) <= 45 &&
                    
-                else if ( Vector3.Distance(go.transform.position, pos) <= Radius && go.GetComponent<EntityBase>().GetHealth() > 0)
+                else if ( Vector3.Distance(go.transform.position, pos) <= Radius && go.GetComponent<Zombie>().GetHealth() > 0)
                 {
                     Targetables.Add(go);
                 }

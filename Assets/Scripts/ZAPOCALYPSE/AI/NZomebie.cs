@@ -122,7 +122,7 @@ public class NZomebie : Zombie {
                 }
             case NZombie_STATE.S_DEAD:
                 {
-                    
+                    gameObject.GetComponent<CapsuleCollider>().enabled = false;
                     if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
                     {
                         anim.SetTrigger("Die");
