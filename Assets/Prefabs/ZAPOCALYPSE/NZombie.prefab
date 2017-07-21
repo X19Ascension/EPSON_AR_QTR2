@@ -137,6 +137,7 @@ GameObject:
   - 195: {fileID: 19580036}
   - 136: {fileID: 13644158}
   - 82: {fileID: 8250110}
+  - 114: {fileID: 11421396}
   m_Layer: 0
   m_Name: NZombie
   m_TagString: test
@@ -490,6 +491,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11421396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813c8e92e0d162746bc98f73ea3814c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
 --- !u!114 &11467084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -509,7 +522,7 @@ MonoBehaviour:
   i_maxHP: 30
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
-  test: {fileID: 165278, guid: 4fc44455616fdda4994d0ecc4928d0de, type: 2}
+  testHealth: {fileID: 11421396}
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   moveSpd: 0.5
   attackRate: 0

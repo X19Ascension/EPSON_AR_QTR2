@@ -5,7 +5,7 @@ using System.Linq;
 
 public class Zombie : EntityBase {
     private ScoringSystem scoring;
-    public GameObject test;
+    public HealthBar testHealth;
 
     //EntityBase test;
     public GameObject spawnerGO;                                    //! Spawner Game Object
@@ -26,6 +26,7 @@ public class Zombie : EntityBase {
         i_maxHP = HP;
         attackRate = GetAttackSpeed();
         scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
+        testHealth = this.gameObject.GetComponent<HealthBar>();
         //scoring = test.GetComponent<ScoringSystem>();
     }
 
@@ -33,6 +34,8 @@ public class Zombie : EntityBase {
     void Update()
     {
         scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
+        testHealth.RescaleHealthBar(HP);
+
         if (HP <= 0)
         {
             if (this.tag.Contains("test"))
@@ -95,6 +98,7 @@ public class Zombie : EntityBase {
     
     protected void TakeDamage(int damage)
     {
+        testHealth.RescaleHealthBarDamage(damage);
         int health = this.GetHealth() - damage;
         this.SetHealth(health);
     }
@@ -105,6 +109,7 @@ public class Zombie : EntityBase {
 
         if (m_TimerDT >= 1)
         {
+            testHealth.RescaleHealthBarHeal((int)HPRegen);
             HP += (int)HPRegen;
             if (HP >= i_maxHP)
                 HP = i_maxHP;
@@ -170,7 +175,7 @@ public class Zombie : EntityBase {
                     }
 
                     TakeDamage(damage);
-                    if (HP <= 0)
+                    //if (HP <= 0)
                         scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
                     Destroy(col.gameObject);
 
@@ -179,7 +184,7 @@ public class Zombie : EntityBase {
                 else
                 {
                     TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
-                    if (HP <= 0)
+                    //if (HP <= 0)
                         scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
                     Destroy(col.gameObject);
                 }

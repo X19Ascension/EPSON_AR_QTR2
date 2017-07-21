@@ -408,6 +408,7 @@ MonoBehaviour:
   i_maxHP: 200
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
+  test: {fileID: 0}
   spawnerGO: {fileID: 0}
   moveSpd: 2
   attackRate: 0
@@ -433,7 +434,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 483.7
+  m_Height: 0.02
   m_BaseOffset: 60.88
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

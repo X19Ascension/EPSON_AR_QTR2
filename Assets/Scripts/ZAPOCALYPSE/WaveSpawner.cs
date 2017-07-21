@@ -131,15 +131,15 @@ public class WaveSpawner : MonoBehaviour {
                     {
 
                         for (int i = 0; i < currSpawnPt; i++)
-                        {
                             SpawnZombie(LoadSpawnPoint());
-                            if (currSpawnPt > 8 && (chanceToSpawnArmored > Random.Range(0, 1)))
-                                SpawnArmoredZombie(LoadSpawnPoint());
-                        }
-                        if (currSpawnPt > 5 && (chanceToSpawnGroup > Random.Range(0, 1)))
+
+                        if (currSpawnPt > 5/* && (chanceToSpawnGroup > Random.Range(0, 1))*/)
                             SpawnHorde(LoadSpawnPoint());
 
-                        if (currSpawnPt > 11 && (chanceToSpawnRanged > Random.Range(0, 1)))
+                        if (currSpawnPt > 8/* && (chanceToSpawnArmored > Random.Range(0, 1))*/)
+                            SpawnArmoredZombie(LoadSpawnPoint());
+
+                        if (currSpawnPt > 11/* && (chanceToSpawnRanged > Random.Range(0, 1))*/)
                             SpawnRangedZombie(LoadSpawnPoint());
 
                         //SpawnZombie(GenerateSpawnPos());
@@ -150,6 +150,9 @@ public class WaveSpawner : MonoBehaviour {
 
                         testTimeDelta = 0f;
                         currSpawnPt++;
+
+
+
                     }
                     if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank && spawnTankZombie && waveNo >= 6 )
                     {
@@ -312,7 +315,7 @@ public class WaveSpawner : MonoBehaviour {
                     //Debug.Log(CSVReader.loadedMap[j, i]);
                     if (CSVReader.loadedMap[k, j] >= 0)
                     {
-                        Debug.Log(CSVReader.loadedMap[k, j]);
+                        Debug.Log("The X: " + k + " - The Y: " + j);
                         Vector3 temp;
                         temp = spawnPoints[CSVReader.loadedMap[k, j]].transform.position;
                         temp.x += Random.Range(-6.5f, 6.5f);
