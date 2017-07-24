@@ -1,0 +1,11 @@
+Not doing anything:
+Frame 1-4, 40-44, 66-69
+
+Moving:
+5-39
+
+Attacking:
+45-65
+
+Dying:
+70-120

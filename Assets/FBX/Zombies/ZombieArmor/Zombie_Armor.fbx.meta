@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: 7afe6885cdbe7f349b49b731fa2a0af1
+timeCreated: 1500606740
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Main_Control5
+    100004: Zombie_Armor
+    100006: Zombie_Common_Head_Joint
+    100008: Zombie_Common_LeftArm_Joint
+    100010: Zombie_Common_LeftFeet_Joint
+    100012: Zombie_Common_LeftHand_Joint
+    100014: Zombie_Common_LeftLeg_Joint
+    100016: Zombie_Common_LeftShoulder_Joint
+    100018: Zombie_Common_LowerBody_Joint
+    100020: Zombie_Common_MiddelBody_Joint
+    100022: Zombie_Common_Neck_Joint
+    100024: Zombie_Common_RIghtArm_Joint
+    100026: Zombie_Common_RightFeet_Joint
+    100028: Zombie_Common_RightHand_Joint
+    100030: Zombie_Common_RightLeg_Joint
+    100032: Zombie_Common_RightShoulder_Joint
+    100034: Zombie_Common_Root_Joint
+    100036: Zombie_Common_UpperBody_Joint
+    400000: //RootNode
+    400002: Main_Control5
+    400004: Zombie_Armor
+    400006: Zombie_Common_Head_Joint
+    400008: Zombie_Common_LeftArm_Joint
+    400010: Zombie_Common_LeftFeet_Joint
+    400012: Zombie_Common_LeftHand_Joint
+    400014: Zombie_Common_LeftLeg_Joint
+    400016: Zombie_Common_LeftShoulder_Joint
+    400018: Zombie_Common_LowerBody_Joint
+    400020: Zombie_Common_MiddelBody_Joint
+    400022: Zombie_Common_Neck_Joint
+    400024: Zombie_Common_RIghtArm_Joint
+    400026: Zombie_Common_RightFeet_Joint
+    400028: Zombie_Common_RightHand_Joint
+    400030: Zombie_Common_RightLeg_Joint
+    400032: Zombie_Common_RightShoulder_Joint
+    400034: Zombie_Common_Root_Joint
+    400036: Zombie_Common_UpperBody_Joint
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Zombie_Armor
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Zombie_Armor
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -96,7 +96,7 @@ public class NZomebie : Zombie {
                         this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
 
                     }
-                    if (Distance < 2.0f)
+                    if (Distance < 0.5f)
                     {
                         Zombiestate = NZombie_STATE.S_ATTACK; 
                         anim.SetBool("Chase", false);

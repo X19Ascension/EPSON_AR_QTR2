@@ -1,0 +1,380 @@
+fileFormatVersion: 2
+guid: 68fb35f4c2c277c4db818178b8f56477
+timeCreated: 1500875473
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Engineer_Head_Joint
+    100002: Engineer_LeftArm_Joint
+    100004: Engineer_LeftFeet_Joint
+    100006: Engineer_LeftHand_Joint
+    100008: Engineer_LeftLeg_Joint
+    100010: Engineer_LeftShoulder_Joint
+    100012: Engineer_LowerBody_Joint
+    100014: Engineer_MiddleBody_Joint
+    100016: Engineer_Neck_Joint
+    100018: Engineer_RightArm_Joint
+    100020: Engineer_RightFeet_Joint
+    100022: Engineer_RightHand_Joint
+    100024: Engineer_RightLeg_Joint
+    100026: Engineer_RightShoulder_Joint
+    100028: Engineer_Root_Joint
+    100030: Engineer_UpperBody_Joint
+    100032: //RootNode
+    100034: Hero_Engineer
+    100036: Main_Control
+    400000: Engineer_Head_Joint
+    400002: Engineer_LeftArm_Joint
+    400004: Engineer_LeftFeet_Joint
+    400006: Engineer_LeftHand_Joint
+    400008: Engineer_LeftLeg_Joint
+    400010: Engineer_LeftShoulder_Joint
+    400012: Engineer_LowerBody_Joint
+    400014: Engineer_MiddleBody_Joint
+    400016: Engineer_Neck_Joint
+    400018: Engineer_RightArm_Joint
+    400020: Engineer_RightFeet_Joint
+    400022: Engineer_RightHand_Joint
+    400024: Engineer_RightLeg_Joint
+    400026: Engineer_RightShoulder_Joint
+    400028: Engineer_Root_Joint
+    400030: Engineer_UpperBody_Joint
+    400032: //RootNode
+    400034: Hero_Engineer
+    400036: Main_Control
+    4300000: Hero_Engineer
+    7400000: IDLE
+    7400002: ATTACK
+    7400004: DIE
+    7400006: SHOVE
+    9500000: //RootNode
+    13700000: Hero_Engineer
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: IDLE
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_Engineer
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LeftLeg_Joint/Engineer_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint/Engineer_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint/Engineer_LeftArm_Joint/Engineer_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_Neck_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_Neck_Joint/Engineer_Head_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint/Engineer_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint/Engineer_RightArm_Joint/Engineer_RightHand_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_RightLeg_Joint/Engineer_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: ATTACK
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_Engineer
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LeftLeg_Joint/Engineer_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint/Engineer_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint/Engineer_LeftArm_Joint/Engineer_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_Neck_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_Neck_Joint/Engineer_Head_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint/Engineer_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint/Engineer_RightArm_Joint/Engineer_RightHand_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_RightLeg_Joint/Engineer_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: DIE
+      takeName: Take 001
+      firstFrame: 85
+      lastFrame: 134
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_Engineer
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LeftLeg_Joint/Engineer_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint/Engineer_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint/Engineer_LeftArm_Joint/Engineer_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_Neck_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_Neck_Joint/Engineer_Head_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint/Engineer_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint/Engineer_RightArm_Joint/Engineer_RightHand_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_RightLeg_Joint/Engineer_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: SHOVE
+      takeName: Take 001
+      firstFrame: 144
+      lastFrame: 185
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_Engineer
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LeftLeg_Joint/Engineer_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint/Engineer_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_LeftShoulder_Joint/Engineer_LeftArm_Joint/Engineer_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_Neck_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_Neck_Joint/Engineer_Head_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint/Engineer_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_LowerBody_Joint/Engineer_MiddleBody_Joint/Engineer_UpperBody_Joint/Engineer_RightShoulder_Joint/Engineer_RightArm_Joint/Engineer_RightHand_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Engineer_Root_Joint/Engineer_RightLeg_Joint/Engineer_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

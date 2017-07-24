@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 6f545bff357006149b6aaca3ea927ae7
+timeCreated: 1500606740
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Main_Control
+    100002: //RootNode
+    100004: Zombie_Tank
+    100006: Zombie_Tank_Head_Joint
+    100008: Zombie_Tank_LeftArm_Joint
+    100010: Zombie_Tank_LeftElbow_Joint
+    100012: Zombie_Tank_LeftFeet_Joint
+    100014: Zombie_Tank_LeftHand_Joint
+    100016: Zombie_Tank_LeftLeg_Joint
+    100018: Zombie_Tank_LeftShoulder_Joint
+    100020: Zombie_Tank_LowerBody_Joint
+    100022: Zombie_Tank_MiddleBody_Joint
+    100024: Zombie_Tank_Neck_Joint
+    100026: Zombie_Tank_RightArm_Joint
+    100028: Zombie_Tank_RightElbow_Joint
+    100030: Zombie_Tank_RightFeet_Joint
+    100032: Zombie_Tank_RIghtHand_Joint
+    100034: Zombie_Tank_RightLeg_Joint
+    100036: Zombie_Tank_RightShoulder_Joint
+    100038: Zombie_Tank_Root_Joint
+    100040: Zombie_Tank_UpperBody_Joint
+    400000: Main_Control
+    400002: //RootNode
+    400004: Zombie_Tank
+    400006: Zombie_Tank_Head_Joint
+    400008: Zombie_Tank_LeftArm_Joint
+    400010: Zombie_Tank_LeftElbow_Joint
+    400012: Zombie_Tank_LeftFeet_Joint
+    400014: Zombie_Tank_LeftHand_Joint
+    400016: Zombie_Tank_LeftLeg_Joint
+    400018: Zombie_Tank_LeftShoulder_Joint
+    400020: Zombie_Tank_LowerBody_Joint
+    400022: Zombie_Tank_MiddleBody_Joint
+    400024: Zombie_Tank_Neck_Joint
+    400026: Zombie_Tank_RightArm_Joint
+    400028: Zombie_Tank_RightElbow_Joint
+    400030: Zombie_Tank_RightFeet_Joint
+    400032: Zombie_Tank_RIghtHand_Joint
+    400034: Zombie_Tank_RightLeg_Joint
+    400036: Zombie_Tank_RightShoulder_Joint
+    400038: Zombie_Tank_Root_Joint
+    400040: Zombie_Tank_UpperBody_Joint
+    4300000: Zombie_Tank
+    7400000: Moving
+    7400002: Attacking
+    7400004: Dying
+    7400006: Idle
+    9500000: //RootNode
+    13700000: Zombie_Tank
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Moving
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LeftLeg_Joint/Zombie_Tank_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint/Zombie_Tank_LeftElbow_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint/Zombie_Tank_LeftElbow_Joint/Zombie_Tank_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_Neck_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_Neck_Joint/Zombie_Tank_Head_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint/Zombie_Tank_RightElbow_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint/Zombie_Tank_RightElbow_Joint/Zombie_Tank_RIghtHand_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_RightLeg_Joint/Zombie_Tank_RightFeet_Joint
+        weight: 1
+      - path: Zombie_Tank
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Attacking
+      takeName: Take 001
+      firstFrame: 34
+      lastFrame: 64
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LeftLeg_Joint/Zombie_Tank_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint/Zombie_Tank_LeftElbow_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint/Zombie_Tank_LeftElbow_Joint/Zombie_Tank_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_Neck_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_Neck_Joint/Zombie_Tank_Head_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint/Zombie_Tank_RightElbow_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint/Zombie_Tank_RightElbow_Joint/Zombie_Tank_RIghtHand_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_RightLeg_Joint/Zombie_Tank_RightFeet_Joint
+        weight: 1
+      - path: Zombie_Tank
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Dying
+      takeName: Take 001
+      firstFrame: 65
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LeftLeg_Joint/Zombie_Tank_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint/Zombie_Tank_LeftElbow_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint/Zombie_Tank_LeftElbow_Joint/Zombie_Tank_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_Neck_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_Neck_Joint/Zombie_Tank_Head_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint/Zombie_Tank_RightElbow_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint/Zombie_Tank_RightElbow_Joint/Zombie_Tank_RIghtHand_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_RightLeg_Joint/Zombie_Tank_RightFeet_Joint
+        weight: 1
+      - path: Zombie_Tank
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LeftLeg_Joint/Zombie_Tank_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint/Zombie_Tank_LeftElbow_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_LeftShoulder_Joint/Zombie_Tank_LeftArm_Joint/Zombie_Tank_LeftElbow_Joint/Zombie_Tank_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_Neck_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_Neck_Joint/Zombie_Tank_Head_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint/Zombie_Tank_RightElbow_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_LowerBody_Joint/Zombie_Tank_MiddleBody_Joint/Zombie_Tank_UpperBody_Joint/Zombie_Tank_RightShoulder_Joint/Zombie_Tank_RightArm_Joint/Zombie_Tank_RightElbow_Joint/Zombie_Tank_RIghtHand_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Zombie_Tank_Root_Joint/Zombie_Tank_RightLeg_Joint/Zombie_Tank_RightFeet_Joint
+        weight: 1
+      - path: Zombie_Tank
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
