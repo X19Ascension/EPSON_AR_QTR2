@@ -105,7 +105,8 @@ public class NZomebie : Zombie {
                 }
             case NZombie_STATE.S_ATTACK:
                 {
-                    if (go_targetedEnemy != null)
+                    float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
+                    if (go_targetedEnemy != null && Distance < 0.5f) 
                     {
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;

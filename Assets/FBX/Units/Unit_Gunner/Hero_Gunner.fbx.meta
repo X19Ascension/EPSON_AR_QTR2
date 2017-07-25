@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: 3f341843276274e4abf471374a503244
+timeCreated: 1500966034
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Gunner_Head_Joint
+    100002: Gunner_LeftArm_Joint
+    100004: Gunner_LeftFeet_Joint
+    100006: Gunner_LeftHand_Joint
+    100008: Gunner_LeftLeg_Joint
+    100010: Gunner_LeftShoulder_Joint
+    100012: Gunner_LowerBody_Joint
+    100014: Gunner_MiddleBody_Joint
+    100016: Gunner_Neck_Joint
+    100018: Gunner_RightArm_Joint
+    100020: Gunner_RightFeet_Joint
+    100022: Gunner_RightHand_Joint
+    100024: Gunner_RightLeg_Joint
+    100026: Gunner_RightShoulder_Joint
+    100028: Gunner_Root_Joint
+    100030: Gunner_UpperBody_Joint
+    100032: //RootNode
+    100034: Hero_Gunner
+    100036: Hero_Gunner_Weapon
+    100038: Hero_Gunner_Weapon_Barrel
+    100040: Main_Control
+    100042: nurbsCircle1
+    400000: Gunner_Head_Joint
+    400002: Gunner_LeftArm_Joint
+    400004: Gunner_LeftFeet_Joint
+    400006: Gunner_LeftHand_Joint
+    400008: Gunner_LeftLeg_Joint
+    400010: Gunner_LeftShoulder_Joint
+    400012: Gunner_LowerBody_Joint
+    400014: Gunner_MiddleBody_Joint
+    400016: Gunner_Neck_Joint
+    400018: Gunner_RightArm_Joint
+    400020: Gunner_RightFeet_Joint
+    400022: Gunner_RightHand_Joint
+    400024: Gunner_RightLeg_Joint
+    400026: Gunner_RightShoulder_Joint
+    400028: Gunner_Root_Joint
+    400030: Gunner_UpperBody_Joint
+    400032: //RootNode
+    400034: Hero_Gunner
+    400036: Hero_Gunner_Weapon
+    400038: Hero_Gunner_Weapon_Barrel
+    400040: Main_Control
+    400042: nurbsCircle1
+    2300000: Hero_Gunner_Weapon
+    2300002: Hero_Gunner_Weapon_Barrel
+    3300000: Hero_Gunner_Weapon
+    3300002: Hero_Gunner_Weapon_Barrel
+    4300000: Hero_Gunner
+    4300002: Hero_Gunner_Weapon
+    4300004: Hero_Gunner_Weapon_Barrel
+    7400000: IDLE
+    7400002: ATTACK
+    7400004: DIE
+    7400006: RELOAD
+    7400008: SHOVE
+    9500000: //RootNode
+    13700000: Hero_Gunner
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: IDLE
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_Gunner
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint/Gunner_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint/Gunner_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint/Gunner_Head_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint/Gunner_RightHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint/Gunner_RightFeet_Joint
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon/Hero_Gunner_Weapon_Barrel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: ATTACK
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_Gunner
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint/Gunner_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint/Gunner_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint/Gunner_Head_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint/Gunner_RightHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint/Gunner_RightFeet_Joint
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon/Hero_Gunner_Weapon_Barrel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: DIE
+      takeName: Take 001
+      firstFrame: 85
+      lastFrame: 124
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_Gunner
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint/Gunner_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint/Gunner_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint/Gunner_Head_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint/Gunner_RightHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint/Gunner_RightFeet_Joint
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon/Hero_Gunner_Weapon_Barrel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: RELOAD
+      takeName: Take 001
+      firstFrame: 125
+      lastFrame: 145
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_Gunner
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint/Gunner_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint/Gunner_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint/Gunner_Head_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint/Gunner_RightHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint/Gunner_RightFeet_Joint
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon/Hero_Gunner_Weapon_Barrel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: SHOVE
+      takeName: Take 001
+      firstFrame: 150
+      lastFrame: 185
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_Gunner
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LeftLeg_Joint/Gunner_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_LeftShoulder_Joint/Gunner_LeftArm_Joint/Gunner_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_Neck_Joint/Gunner_Head_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_LowerBody_Joint/Gunner_MiddleBody_Joint/Gunner_UpperBody_Joint/Gunner_RightShoulder_Joint/Gunner_RightArm_Joint/Gunner_RightHand_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/Gunner_Root_Joint/Gunner_RightLeg_Joint/Gunner_RightFeet_Joint
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon
+        weight: 1
+      - path: nurbsCircle1/Hero_Gunner_Weapon/Hero_Gunner_Weapon_Barrel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

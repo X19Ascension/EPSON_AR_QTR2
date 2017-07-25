@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: 638f06b169a137b4099ee91a54c7cd49
+timeCreated: 1500965107
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: HERO_1:ass2
+    100002: Hero_CloseCombat_Head_Joint
+    100004: Hero_CloseCombat_LeftArm_Joint
+    100006: Hero_CloseCombat_LeftFeet_Joint
+    100008: Hero_CloseCombat_LeftHand_Joint
+    100010: Hero_CloseCombat_LeftLeg_Joint
+    100012: Hero_CloseCombat_LeftShoulder_Joint
+    100014: Hero_CloseCombat_LowerBody_Joint
+    100016: Hero_CloseCombat_MiddleBody_Joint
+    100018: Hero_CloseCombat_Neck_Joint
+    100020: Hero_CloseCombat_RightArm_Joint
+    100022: Hero_CloseCombat_RightFeet_Joint
+    100024: Hero_CloseCombat_RightHand_Joint
+    100026: Hero_CloseCombat_RightLeg_Joint
+    100028: Hero_CloseCombat_RightShoulder_Joint
+    100030: Hero_CloseCombat_Root_Joint
+    100032: Hero_CloseCombat_UpperBody_Joint
+    100034: //RootNode
+    100036: nurbsCircle1
+    400000: HERO_1:ass2
+    400002: Hero_CloseCombat_Head_Joint
+    400004: Hero_CloseCombat_LeftArm_Joint
+    400006: Hero_CloseCombat_LeftFeet_Joint
+    400008: Hero_CloseCombat_LeftHand_Joint
+    400010: Hero_CloseCombat_LeftLeg_Joint
+    400012: Hero_CloseCombat_LeftShoulder_Joint
+    400014: Hero_CloseCombat_LowerBody_Joint
+    400016: Hero_CloseCombat_MiddleBody_Joint
+    400018: Hero_CloseCombat_Neck_Joint
+    400020: Hero_CloseCombat_RightArm_Joint
+    400022: Hero_CloseCombat_RightFeet_Joint
+    400024: Hero_CloseCombat_RightHand_Joint
+    400026: Hero_CloseCombat_RightLeg_Joint
+    400028: Hero_CloseCombat_RightShoulder_Joint
+    400030: Hero_CloseCombat_Root_Joint
+    400032: Hero_CloseCombat_UpperBody_Joint
+    400034: //RootNode
+    400036: nurbsCircle1
+    4300000: HERO_1:ass2
+    7400000: IDLE
+    7400002: ATTACK
+    7400004: DIE
+    9500000: //RootNode
+    13700000: HERO_1:ass2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: IDLE
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: HERO_1:ass2
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LeftLeg_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LeftLeg_Joint/Hero_CloseCombat_LeftFeet_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_LeftShoulder_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_LeftShoulder_Joint/Hero_CloseCombat_LeftArm_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_LeftShoulder_Joint/Hero_CloseCombat_LeftArm_Joint/Hero_CloseCombat_LeftHand_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_Neck_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_Neck_Joint/Hero_CloseCombat_Head_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_RightShoulder_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_RightShoulder_Joint/Hero_CloseCombat_RightArm_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_RightShoulder_Joint/Hero_CloseCombat_RightArm_Joint/Hero_CloseCombat_RightHand_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_RightLeg_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_RightLeg_Joint/Hero_CloseCombat_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: ATTACK
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: HERO_1:ass2
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LeftLeg_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LeftLeg_Joint/Hero_CloseCombat_LeftFeet_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_LeftShoulder_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_LeftShoulder_Joint/Hero_CloseCombat_LeftArm_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_LeftShoulder_Joint/Hero_CloseCombat_LeftArm_Joint/Hero_CloseCombat_LeftHand_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_Neck_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_Neck_Joint/Hero_CloseCombat_Head_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_RightShoulder_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_RightShoulder_Joint/Hero_CloseCombat_RightArm_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_RightShoulder_Joint/Hero_CloseCombat_RightArm_Joint/Hero_CloseCombat_RightHand_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_RightLeg_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_RightLeg_Joint/Hero_CloseCombat_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: DIE
+      takeName: Take 001
+      firstFrame: 85
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: HERO_1:ass2
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LeftLeg_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LeftLeg_Joint/Hero_CloseCombat_LeftFeet_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_LeftShoulder_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_LeftShoulder_Joint/Hero_CloseCombat_LeftArm_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_LeftShoulder_Joint/Hero_CloseCombat_LeftArm_Joint/Hero_CloseCombat_LeftHand_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_Neck_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_Neck_Joint/Hero_CloseCombat_Head_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_RightShoulder_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_RightShoulder_Joint/Hero_CloseCombat_RightArm_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_LowerBody_Joint/Hero_CloseCombat_MiddleBody_Joint/Hero_CloseCombat_UpperBody_Joint/Hero_CloseCombat_RightShoulder_Joint/Hero_CloseCombat_RightArm_Joint/Hero_CloseCombat_RightHand_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_RightLeg_Joint
+        weight: 1
+      - path: nurbsCircle1/Hero_CloseCombat_Root_Joint/Hero_CloseCombat_RightLeg_Joint/Hero_CloseCombat_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

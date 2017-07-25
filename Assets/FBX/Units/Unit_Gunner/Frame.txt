@@ -1,0 +1,17 @@
+Not doing anything:
+Frame 1-4, 56-59, 81-84, 146-149
+
+Idle:
+5-56
+
+Attacking:
+60-80
+
+Dying:
+85-124
+
+Reloading:
+125-145
+
+Pushing:
+150-185
