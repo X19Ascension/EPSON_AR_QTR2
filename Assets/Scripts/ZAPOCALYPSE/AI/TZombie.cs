@@ -33,8 +33,16 @@ public class TZombie : Zombie
 	// Use this for initialization
 	void Start ()
     {
-	    
-	}
+        testHealth = this.gameObject.GetComponent<HealthBar>();
+        anim = GetComponent<Animator>();
+        atkSpd = 0.2f;
+        f_attackRate = atkSpd;
+        this.moveSpd = 1.5f;
+
+        this.moveSpd = Random.Range(1.0f, 2.0f);
+        // this.gameObject.transform.parent = GameObject.Find("TerrainSpawn").transform;
+        //SpawnerGO = GameObject.Find("SpawnerPrefab");
+    }
 	
 	// Update is called once per frame
 	void Update ()

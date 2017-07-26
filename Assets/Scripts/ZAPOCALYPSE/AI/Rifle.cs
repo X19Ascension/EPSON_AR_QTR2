@@ -39,13 +39,9 @@ public class Rifle : Survivor
     {
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
 
-        //Debug.Log(gameControl.range_Rifle);
-        this.atkRange = gameControl.range_Rifle;//25.0f;
-        this.timeActive = gameControl.durationUp_Rifle;
-        this.experiencePt = gameControl.EXP_Rifle;
-        this.HP = gameControl.HP_Rifle;
-        this.level = gameControl.LVL_Rifle;
-        
+        if (gameControl != null)
+            LoadFromGameControl();
+
         //this.atkRange = 25.0f;
         this.atkRange = atkRange * this.transform.localScale.x * 0.2f;
         Anim = GetComponent<Animator>();
@@ -59,6 +55,16 @@ public class Rifle : Survivor
         RunDeathDoor();
         Regenerate();
 	}
+
+    void LoadFromGameControl()
+    {
+        //Debug.Log(gameControl.range_Rifle);
+        this.atkRange = gameControl.range_Rifle;//25.0f;
+        this.timeActive = gameControl.durationUp_Rifle;
+        this.experiencePt = gameControl.EXP_Rifle;
+        this.HP = gameControl.HP_Rifle;
+        this.level = gameControl.LVL_Rifle;
+    }
 
 
     public override void RunFSM()
@@ -167,7 +173,7 @@ public class Rifle : Survivor
                         }
                         else
                         {
-
+                            
                         }
                     }
                     break;

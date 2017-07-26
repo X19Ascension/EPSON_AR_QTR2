@@ -41,6 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveNo: 1
+  difficulty: 1
   HP_Rifle: 80
   EXP_Rifle: 0
   LVL_Rifle: 1

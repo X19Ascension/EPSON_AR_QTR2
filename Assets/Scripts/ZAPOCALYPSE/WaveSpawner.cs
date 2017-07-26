@@ -40,7 +40,7 @@ public class WaveSpawner : MonoBehaviour {
     public int killcount;                                           //! Total Kill count player has
 
     [Header("Spawn Value for a wave")]
-    public float spawnValue = 150.0f;                               //! Spawn Value for each wave.
+    public float spawnValue = 9999.0f;                               //! Spawn Value for each wave.
 
     public int minutePerWave;                                       //! Wave Time Limit in minutes. 
     public int secondPerWave;                                       //! Wave Time Limit in seconds.
@@ -97,6 +97,8 @@ public class WaveSpawner : MonoBehaviour {
                 maxWaveNo = 17;
                 break;
         }
+        if (gameControl != null)
+            difficultyMod = gameControl.difficulty;
 
         waveDuration = minutePerWave * 60 + secondPerWave;
         waveDurationSave = waveDuration;
@@ -167,6 +169,7 @@ public class WaveSpawner : MonoBehaviour {
         {
             waveNo++;
             waveEnded = true;
+            spawnValue = 9999.0f;
             Debug.Log("Wave " + waveNo + " Ended");
 
             LevelManagement pewpew = GameObject.Find("testupgrade").GetComponent<LevelManagement>();
@@ -213,6 +216,8 @@ public class WaveSpawner : MonoBehaviour {
     {
         if (diff != TEMP_DIFF.NORMAL)
         {
+            if (difficultyMod <= 0)
+                difficultyMod = 1;
             randomModifier = Random.Range(0.7f, 1.3f);
             go.GetComponent<Zombie>().HP = (int)((float)(go.GetComponent<Zombie>().HP) * difficultyMod);
             go.GetComponent<Zombie>().i_maxHP = go.GetComponent<Zombie>().HP;

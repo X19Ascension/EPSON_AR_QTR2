@@ -29,6 +29,7 @@ public class RZombie : Zombie
     // Use this for initialization
     void Start ()
     {
+        testHealth = this.gameObject.GetComponent<HealthBar>();
         atkSpd = 3.0f;
         f_attackRate = atkSpd;
         this.moveSpd = 0.5f;

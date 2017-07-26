@@ -18,6 +18,7 @@ public class GameControl: MonoBehaviour {
     //public GameObject[] survivors;
 
     public int waveNo;                      //! Current Wave Number
+    public float difficulty;                //! Difficulty of Game
 
     public int HP_Rifle;                    //! HP of the Rifler
     public float EXP_Rifle;                 //! EXP of the Rifler
@@ -70,9 +71,9 @@ public class GameControl: MonoBehaviour {
     // GUI Display onto Unity Screen
     void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health);
-        GUI.Label(new Rect(10, 20, 250, 30), "Experience: " + experience);
-        GUI.Label(new Rect(10, 30, 250, 30), "Rifle Health: " + HP_Rifle);
+        //GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health);
+        //GUI.Label(new Rect(10, 20, 250, 30), "Experience: " + experience);
+        //GUI.Label(new Rect(10, 30, 250, 30), "Rifle Health: " + HP_Rifle);
     }
 
     public void Save()
@@ -135,6 +136,7 @@ public class GameControl: MonoBehaviour {
         data.experience = experience;
         //data.Scene_Enemies = enemies;
         data.waveNo = demWave;
+        data.difficulty = difficulty;
         foreach (GameObject pew in survivors)
         {
             switch (pew.GetComponent<Survivor>().entityType)
@@ -217,6 +219,7 @@ public class GameControl: MonoBehaviour {
             range_Engineer = data.range_Engineer;
 
             waveNo = data.waveNo;
+            difficulty = data.difficulty;
 
             SceneChange pew = new SceneChange();
             pew.ChangePlayGame();
@@ -233,28 +236,30 @@ class PlayerTestData
 
     public int waveNo;
 
-    public int HP_Rifle;              //! HP of the Rifler
+    public float difficulty;            //! Difficulty of Game
+
+    public int HP_Rifle;                //! HP of the Rifler
     public float EXP_Rifle;             //! EXP of the Rifler
-    public int LVL_Rifle;             //! Level of the rifler <- probaby the only essential one in stats as stats will be recalculated.
+    public int LVL_Rifle;               //! Level of the rifler <- probaby the only essential one in stats as stats will be recalculated.
     public float durationUp_Rifle;      //! Duration of the rifler active
     public float range_Rifle;           //! Range of the Rifler
     
 
-    public int HP_Shotgun;            //! HP of the Shotgunner
+    public int HP_Shotgun;              //! HP of the Shotgunner
     public float EXP_Shotgun;           //! EXP of the Shotgunner
-    public int LVL_Shotgun;           //! Level of the Shotgunner
+    public int LVL_Shotgun;             //! Level of the Shotgunner
     public float durationUp_Shotgun;    //! Duration of the shotgunner active
     public float range_Shotgun;         //! Range of the Shotgunner
 
-    public int HP_Melee;              //! HP Of the Melee
+    public int HP_Melee;                //! HP Of the Melee
     public float EXP_Melee;             //! EXP of the Melee
-    public int LVL_Melee;             //! Level of the Melee
+    public int LVL_Melee;               //! Level of the Melee
     public float durationUp_Melee;      //! Duration of the melee active
     public float range_Melee;           //! Range of the Melee
 
-    public int HP_Engineer;           //! HP of the Engineer
+    public int HP_Engineer;             //! HP of the Engineer
     public float EXP_Engineer;          //! EXP of the Engineer
-    public int LVL_Engineer;          //! Level of the Engineer
+    public int LVL_Engineer;            //! Level of the Engineer
     public float durationUp_Engineer;   //! Duration of the Engineer active
     public float range_Engineer;        //! Range of the Engineer
 
@@ -268,8 +273,4 @@ class PlayerTestData
 
     public float EXP_Player;
     public float test;
-
-    //    public float 
-
-
 }

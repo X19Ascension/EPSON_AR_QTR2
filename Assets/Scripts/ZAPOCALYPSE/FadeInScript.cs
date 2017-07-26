@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FadeOutScript : MonoBehaviour {
+public class FadeInScript : MonoBehaviour {
+
 
     public bool fade = true;
     public Texture2D fadeTexture;
@@ -10,13 +11,15 @@ public class FadeOutScript : MonoBehaviour {
     private float alpha = 1.0f;
     private int fadeDir = -1;
 
-	// Use this for initialization
-	void Start () {
-	    //fade = true;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+        //fade = true;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
     }
 

@@ -18,6 +18,7 @@ public class Zombie : EntityBase {
     void Awake()
     {
         atkRange = 999;
+        testHealth = this.gameObject.GetComponent<HealthBar>();
     }
 
     // Use this for initialization
@@ -26,7 +27,7 @@ public class Zombie : EntityBase {
         i_maxHP = HP;
         attackRate = GetAttackSpeed();
         scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
-        testHealth = this.gameObject.GetComponent<HealthBar>();
+
         //scoring = test.GetComponent<ScoringSystem>();
     }
 
