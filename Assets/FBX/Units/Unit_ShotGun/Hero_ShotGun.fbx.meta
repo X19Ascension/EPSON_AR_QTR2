@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: 4335d468a1aefdc41bcced9f9f089c5b
+timeCreated: 1500872779
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Hero_ShotGun_LeftArm
+    100004: Hero_ShotGun_ShotGun_Main1
+    100006: Hero_ShotGun_ShotGun_Reload_Main
+    100008: Left_Hand_Control
+    100010: Main_Control
+    100012: nurbsCircle1
+    100014: ShotGun_Head_Joint
+    100016: ShotGun_LeftArm_Joint
+    100018: ShotGun_LeftFeet_Joint
+    100020: ShotGun_LeftHand_Joint
+    100022: ShotGun_LeftLeg_Joint
+    100024: ShotGun_LeftShoulder_Joint
+    100026: ShotGun_MiddleBody_Joint
+    100028: ShotGun_Neck_Joint
+    100030: ShotGun_RightArm_Joint
+    100032: ShotGun_RightFeet_Joint
+    100034: ShotGun_RightHand_Joint
+    100036: ShotGun_RightLeg_Joint
+    100038: ShotGun_RightShoulder_Joint
+    100040: ShotGun_Root_Joint
+    100042: ShotGun_UpperBody_Joint
+    400000: //RootNode
+    400002: Hero_ShotGun_LeftArm
+    400004: Hero_ShotGun_ShotGun_Main1
+    400006: Hero_ShotGun_ShotGun_Reload_Main
+    400008: Left_Hand_Control
+    400010: Main_Control
+    400012: nurbsCircle1
+    400014: ShotGun_Head_Joint
+    400016: ShotGun_LeftArm_Joint
+    400018: ShotGun_LeftFeet_Joint
+    400020: ShotGun_LeftHand_Joint
+    400022: ShotGun_LeftLeg_Joint
+    400024: ShotGun_LeftShoulder_Joint
+    400026: ShotGun_MiddleBody_Joint
+    400028: ShotGun_Neck_Joint
+    400030: ShotGun_RightArm_Joint
+    400032: ShotGun_RightFeet_Joint
+    400034: ShotGun_RightHand_Joint
+    400036: ShotGun_RightLeg_Joint
+    400038: ShotGun_RightShoulder_Joint
+    400040: ShotGun_Root_Joint
+    400042: ShotGun_UpperBody_Joint
+    2300000: Hero_ShotGun_ShotGun_Main1
+    2300002: Hero_ShotGun_ShotGun_Reload_Main
+    3300000: Hero_ShotGun_ShotGun_Main1
+    3300002: Hero_ShotGun_ShotGun_Reload_Main
+    4300000: Hero_ShotGun_LeftArm
+    4300002: Hero_ShotGun_ShotGun_Main1
+    4300004: Hero_ShotGun_ShotGun_Reload_Main
+    7400000: IDLE
+    7400002: ATTACK
+    7400004: DIE
+    7400006: SHOVE
+    7400008: RELOAD
+    9500000: //RootNode
+    13700000: Hero_ShotGun_LeftArm
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: IDLE
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_ShotGun_LeftArm
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1/Hero_ShotGun_ShotGun_Reload_Main
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint/ShotGun_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint/ShotGun_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint/ShotGun_Head_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint/ShotGun_RightHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint/ShotGun_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: ATTACK
+      takeName: Take 001
+      firstFrame: 55
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_ShotGun_LeftArm
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1/Hero_ShotGun_ShotGun_Reload_Main
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint/ShotGun_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint/ShotGun_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint/ShotGun_Head_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint/ShotGun_RightHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint/ShotGun_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: DIE
+      takeName: Take 001
+      firstFrame: 85
+      lastFrame: 109
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_ShotGun_LeftArm
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1/Hero_ShotGun_ShotGun_Reload_Main
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint/ShotGun_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint/ShotGun_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint/ShotGun_Head_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint/ShotGun_RightHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint/ShotGun_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: SHOVE
+      takeName: Take 001
+      firstFrame: 110
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_ShotGun_LeftArm
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1/Hero_ShotGun_ShotGun_Reload_Main
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint/ShotGun_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint/ShotGun_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint/ShotGun_Head_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint/ShotGun_RightHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint/ShotGun_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: RELOAD
+      takeName: Take 001
+      firstFrame: 145
+      lastFrame: 188
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hero_ShotGun_LeftArm
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1
+        weight: 1
+      - path: Main_Control/Left_Hand_Control/nurbsCircle1/Hero_ShotGun_ShotGun_Main1/Hero_ShotGun_ShotGun_Reload_Main
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_LeftLeg_Joint/ShotGun_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_LeftShoulder_Joint/ShotGun_LeftArm_Joint/ShotGun_LeftHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_Neck_Joint/ShotGun_Head_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_MiddleBody_Joint/ShotGun_UpperBody_Joint/ShotGun_RightShoulder_Joint/ShotGun_RightArm_Joint/ShotGun_RightHand_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint
+        weight: 1
+      - path: Main_Control/ShotGun_Root_Joint/ShotGun_RightLeg_Joint/ShotGun_RightFeet_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

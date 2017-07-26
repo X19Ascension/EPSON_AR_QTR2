@@ -1,0 +1,11 @@
+Not doing anything:
+Frame 1-4, 41-44, 81-84,
+
+Idle:
+5-40
+
+Attacking:
+45-80
+
+Dying:
+85-130

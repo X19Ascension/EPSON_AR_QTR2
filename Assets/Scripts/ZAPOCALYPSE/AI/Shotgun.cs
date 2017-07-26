@@ -16,6 +16,7 @@ public class Shotgun : Survivor
 
     public GameObject target;
     public Shotgun_State shotgunstate;
+    private Animation anim;
 
     private GameControl gameControl;
 
@@ -37,6 +38,7 @@ public class Shotgun : Survivor
         this.experiencePt = gameControl.EXP_Shotgun;
         this.HP = gameControl.HP_Shotgun;
         this.level = gameControl.LVL_Shotgun;
+	
     }
 	
 	// Update is called once per frame
