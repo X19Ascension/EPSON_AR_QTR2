@@ -16,7 +16,7 @@ public class Shotgun : Survivor
 
     public GameObject target;
     public Shotgun_State shotgunstate;
-    private Animation anim;
+    private Animator anim;
 
     private GameControl gameControl;
 
@@ -32,7 +32,7 @@ public class Shotgun : Survivor
     {
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         this.atkRange = 15.0f;
-
+        anim = this.GetComponent<Animator>();
         this.atkRange = gameControl.range_Shotgun;//25.0f;
         this.timeActive = gameControl.durationUp_Shotgun;
         this.experiencePt = gameControl.EXP_Shotgun;
@@ -61,19 +61,32 @@ public class Shotgun : Survivor
                 {
                     if (this.Enemynear(this.atkRange))
                     {
-                        target = SelectTarget(this.atkRange,this.transform.position);
+                        target = SelectTarget(this.atkRange, this.transform.position);
                         shotgunstate = Shotgun_State.S_ATTACK;
+                    }
+                    else if (this.Enemynear(1f))
+                    {
+                        
+                        target = SelectTarget(1f, this.transform.position);
+                        shotgunstate = Shotgun_State.S_PANIC;
+                    }
+                    else
+                    {
+                        anim.SetTrigger("IDLE");
                     }
                     break;
                 }
             case Shotgun_State.S_PANIC:
                 {
+                    ShoveEnemy(target);
+                    anim.SetTrigger("SHOVE");
                     break;
                 }
             case Shotgun_State.S_ATTACK:
                 {
                     if (target != null)
                     {
+                        anim.SetTrigger("ATTACK");
                         Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
                         Attackenemy(V3_Direction, 10, true) ;
                     }
@@ -85,7 +98,8 @@ public class Shotgun : Survivor
                 }
             case Shotgun_State.S_DEAD:
                 {
-                    Destroy(this.gameObject);
+                    anim.SetBool("DIE", true);
+                    DestroyGO();
                     break;
                 }
         }

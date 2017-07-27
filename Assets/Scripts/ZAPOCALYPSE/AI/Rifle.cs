@@ -38,13 +38,13 @@ public class Rifle : Survivor
 	void Start ()
     {
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
+        Anim = GetComponent<Animator>();
 
         if (gameControl != null)
             LoadFromGameControl();
 
         //this.atkRange = 25.0f;
         this.atkRange = atkRange * this.transform.localScale.x * 0.2f;
-        Anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -79,9 +79,13 @@ public class Rifle : Survivor
             case Rifle_State.S_IDLE:
                 {
                     //if(this.Enemynear(0.5f))
-                    if(this.Enemynear(atkRange))
+                    if (this.Enemynear(atkRange))
                     {
                         riflestate = Rifle_State.S_SEARCH;
+                    }
+                    else
+                    {
+                        Anim.SetTrigger("IDLE");
                     }
                     break;
                     
@@ -90,7 +94,7 @@ public class Rifle : Survivor
                 {
                     if (target != null)
                     {
-                        Anim.SetTrigger("Shove");
+                        Anim.SetTrigger("SHOVE");
                         ShoveEnemy(target);
                     }
                     else
@@ -124,6 +128,7 @@ public class Rifle : Survivor
                         Attackenemy(V3_Direction);
                         V3_targetpos = target.transform.position;
                         i_targetSurroundings = target.GetComponent<Zombie>().CheckSurroundings();
+                        Anim.SetTrigger("ATTACK");
                     }
                     else
                     {
@@ -138,7 +143,8 @@ public class Rifle : Survivor
                 }
             case Rifle_State.S_DEAD:
                 {
-                    Anim.SetTrigger("Die");
+                    Anim.SetBool("DIE", true);
+                    DestroyGO();
                     break;
                 }
         }

@@ -51,6 +51,7 @@ public class Melee : Survivor
                     if (this.Enemynear(this.atkRange))
                     {
                         meleestate = Melee_State.S_SEARCH;
+                        Anim.SetTrigger("IDLE");
                     }
                     break;
                 }
@@ -65,7 +66,7 @@ public class Melee : Survivor
                     if (target != null)
                     { 
                         Attackenemy(target);
-                        Anim.SetTrigger("Attack");
+                        Anim.SetTrigger("ATTACK");
                     }
                     else
                     {
@@ -75,7 +76,8 @@ public class Melee : Survivor
                 }
             case Melee_State.S_DEAD:
                 {
-                    Anim.SetTrigger("Die");
+                    Anim.SetBool("DIE", true);
+                    DestroyGO();
                     break;
                 }
         }
