@@ -13,7 +13,8 @@ public class Wait : MonoBehaviour {
 
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         gameControl.Load();
-        SceneManager.LoadScene("NCTest 1 - Copy - Copy");
+        //SceneManager.LoadScene("NCTest 1 - Copy - Copy");
+        SceneManager.LoadScene("FinalTest");
 
         if (SceneManager.GetActiveScene().name.Contains("Main"))
             SceneManager.LoadScene("LevelSelect");//go to game scene
