@@ -33,7 +33,7 @@ public class Shotgun : Survivor
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         this.atkRange = 15.0f;
         anim = this.GetComponent<Animator>();
-        this.atkRange = gameControl.range_Shotgun;//25.0f;
+        //this.atkRange = gameControl.range_Shotgun;//25.0f;
         this.timeActive = gameControl.durationUp_Shotgun;
         this.experiencePt = gameControl.EXP_Shotgun;
         this.HP = gameControl.HP_Shotgun;

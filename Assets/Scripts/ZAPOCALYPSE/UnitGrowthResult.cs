@@ -22,7 +22,8 @@ public class UnitGrowthResult : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //unitGrowth.surv.GetComponent<Survivor>().experiencePt;
-
+        if (survivior == null)
+            Destroy(this.gameObject);
 
         RescaleEXPBar();
     }

@@ -135,12 +135,14 @@ public class Survivor : EntityBase
         {
             foreach (GameObject go in AllEnemies)
             {
+                Debug.Log(Vector3.Distance(go.transform.position, pos));
+
                 if (go == null)
                 {
                     continue;
                 }
                 //Vector3.Angle(go.transform.position - pos, this.GetDirection().transform.position - pos) <= 45 &&
-                   
+
                 else if ( Vector3.Distance(go.transform.position, pos) <= Radius && go.GetComponent<Zombie>().GetHealth() > 0)
                 {
                     Targetables.Add(go);

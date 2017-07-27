@@ -62,8 +62,11 @@ public class LevelManagement : MonoBehaviour {
 
         foreach (GameObject surv in The_Survivors)
         {
-            surv.SetActive(true);
-            surv.GetComponent<UnitGrowth>().Updated = false;
+            if (surv != null)
+            {
+                surv.SetActive(true);
+                surv.GetComponent<UnitGrowth>().Updated = false;
+            }
         }
         currLevel = LEVEL.PLAY;
     }

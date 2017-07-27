@@ -21,6 +21,7 @@ public class TZombie : Zombie
     public AudioClip[] zombieSound;
     private AudioSource source;
 
+    private float atkDist;
     void Awake()
     {
         source = GetComponent<AudioSource>();
@@ -29,15 +30,16 @@ public class TZombie : Zombie
         f_attackRate = 0.9f;
         i_Threatvalue = 5;
         atkRange = 999;
+        atkDist = 9.0f;
     }
 	// Use this for initialization
 	void Start ()
     {
         testHealth = this.gameObject.GetComponent<HealthBar>();
         anim = GetComponent<Animator>();
-        atkSpd = 0.2f;
+        atkSpd = 2.2f;
         f_attackRate = atkSpd;
-        this.moveSpd = 1.5f;
+        this.moveSpd = 3.5f;
 
         this.moveSpd = Random.Range(1.0f, 2.0f);
         // this.gameObject.transform.parent = GameObject.Find("TerrainSpawn").transform;
@@ -70,8 +72,17 @@ public class TZombie : Zombie
                 }
             case TZombieSTATE.S_CHASE:
                 {
+                    if (go_targetedEnemy == null)
+                    {
+                        Zombiestate = TZombieSTATE.S_IDLE;
+                    }
+                    anim.SetBool("Chase", true);
+
+                    float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
                     if (go_targetedEnemy != null)
                     {
+                        if (!source.isPlaying)
+                            source.PlayOneShot(zombieSound[Random.Range(0, 2)], 0.2F);
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
                         this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
@@ -79,27 +90,33 @@ public class TZombie : Zombie
                         Quaternion lookRotation = Quaternion.LookRotation(dir);
 
                         this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
-                        if (!source.isPlaying)
-                            source.PlayOneShot(zombieSound[0], 1F);
+
                     }
-                    else if (TargetToAttack() == null)
+                    if (Distance < atkDist)
                     {
-                        Zombiestate = TZombieSTATE.S_IDLE;
-                    }
-                    else
-                    {
+                        anim.SetBool("Chase", false);
                         Zombiestate = TZombieSTATE.S_ATTACK;
                     }
                     break;
                 }
             case TZombieSTATE.S_ATTACK:
                 {
-                    if (go_targetedEnemy != null)
+                    float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
+                    if (go_targetedEnemy != null && Distance < atkDist)
                     {
+                        Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
+                        dir.y = 0;
+                        Quaternion lookRotation = Quaternion.LookRotation(dir);
+
+                        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
+
+                        anim.SetTrigger("Attack");
                         AttackEnemy(go_targetedEnemy);
                     }
                     else
+                    {
                         Zombiestate = TZombieSTATE.S_CHASE;
+                    }
                     break;
                 }
             case TZombieSTATE.S_DEAD:

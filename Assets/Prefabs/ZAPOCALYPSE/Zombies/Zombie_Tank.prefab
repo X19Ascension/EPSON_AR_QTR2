@@ -314,9 +314,10 @@ GameObject:
   - 136: {fileID: 13697514}
   - 195: {fileID: 19501096}
   - 114: {fileID: 11431540}
+  - 82: {fileID: 8282864}
   m_Layer: 0
   m_Name: Zombie_Tank
-  m_TagString: Untagged
+  m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -412,7 +413,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5979147, y: 3.3749123, z: 4.499755}
+  m_LocalPosition: {x: 1.5979147, y: 0.77, z: 4.499755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -614,6 +615,80 @@ Transform:
   - {fileID: 449806}
   m_Father: {fileID: 466972}
   m_RootOrder: 0
+--- !u!82 &8282864
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199398}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &9551448
 Animator:
   serializedVersion: 3
@@ -642,9 +717,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568168cb2bc36594b9f64593c634e8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 1
-  atkSpd: 1
-  atkDmg: 1
+  atkRange: 999
+  atkSpd: 3.2
+  atkDmg: 30
   HP: 999999999
   HPRegen: 0
   i_maxHP: 999999999
@@ -652,11 +727,14 @@ MonoBehaviour:
   HPBarPlaneTemplate: {fileID: 0}
   testHealth: {fileID: 0}
   spawnerGO: {fileID: 0}
-  moveSpd: 0
+  moveSpd: 4
   attackRate: 0
   Zombiestate: 0
   SpawnerGO: {fileID: 0}
-  zombieSound: []
+  zombieSound:
+  - {fileID: 8300000, guid: 0d7f91000546f5e45aff3e9f81ceec03, type: 3}
+  - {fileID: 8300000, guid: c05db66b176a2254c85985b08b6aa51a, type: 3}
+  - {fileID: 8300000, guid: 6249c6f208b5d8940a39baf10d052dba, type: 3}
 --- !u!114 &11431540
 MonoBehaviour:
   m_ObjectHideFlags: 1
