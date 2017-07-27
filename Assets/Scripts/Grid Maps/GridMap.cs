@@ -65,8 +65,6 @@ public class GridMap : MonoBehaviour {
         BuildGrid();
 
         BuildTargetingPoints();
-
-        BuildTargetingGrid();
     }
 
     // Use this for initialization
@@ -92,7 +90,6 @@ public class GridMap : MonoBehaviour {
                 gridplane.gameObject.tag = "Empty Grid";
                 gridplane.transform.parent = Grid_Encapsulate.transform;
                 Grid[x, z] = gridplane;
-                gridplane.transform.parent = Original.transform;
                 if ((x == 0 || x == i_GridSize_X - 1) || (z == 0 || z == i_GridSize_Y - 1))
                 {
                     Grid_Exceptions.Add(gridplane);
@@ -103,30 +100,32 @@ public class GridMap : MonoBehaviour {
         Vector3 Front_Midpoint = Grid[0, 0].transform.position + ((Grid[0, i_GridSize_Y - 1].transform.position - Grid[0, 0].transform.position) / 2);
         GameObject Front_3 = (GameObject)Instantiate(Grid_Barricade_Front);
         Front_3.transform.position = Front_Midpoint + Front_Offset;
-        Front_3.transform.parent = Original.transform;
+        Front_3.transform.parent = Grid_Encapsulate.transform;
         Front_3.gameObject.name = "Barrier_Front";
         Front_3.gameObject.tag = "Barrier";
 
         Vector3 Back_Midpoint = Grid[i_GridSize_X - 1, 0].transform.position + ((Grid[i_GridSize_X - 1,i_GridSize_Y - 1].transform.position - Grid[i_GridSize_X - 1, 0].transform.position) / 2);
         GameObject Back_3 = (GameObject)Instantiate(Grid_Barricade_Back);
         Back_3.transform.position = Back_Midpoint + Back_Offset;
-        Back_3.transform.parent = Original.transform;
+        Back_3.transform.parent = Grid_Encapsulate.transform;
         Back_3.gameObject.name = "Barrier_Back";
         Back_3.gameObject.tag = "Barrier";
 
         Vector3 Left_Midpoint = Grid[0, 0].transform.position + ((Grid[i_GridSize_X - 1,0].transform.position - Grid[0, 0].transform.position) / 2);
         GameObject Left_3 = (GameObject)Instantiate(Grid_Barricade_Left);
         Left_3.transform.position = Left_Midpoint + Left_Offset;
-        Left_3.transform.parent = Original.transform;
+        Left_3.transform.parent = Grid_Encapsulate.transform;
         Left_3.gameObject.name = "Barrier_Left";
         Left_3.gameObject.tag = "Barrier";
 
         Vector3 Right_Midpoint = Grid[0, i_GridSize_Y - 1].transform.position + ((Grid[i_GridSize_X - 1, i_GridSize_Y - 1].transform.position - Grid[0, i_GridSize_Y - 1].transform.position) / 2);
         GameObject Right_3 = (GameObject)Instantiate(Grid_Barricade_Right);
         Right_3.transform.position = Right_Midpoint + Right_Offset;
-        Right_3.transform.parent = Original.transform;
+        Right_3.transform.parent = Grid_Encapsulate.transform;
         Right_3.gameObject.name = "Barrier_Right";
         Right_3.gameObject.tag = "Barrier";
+
+        Grid_Encapsulate.transform.parent = Original.transform;
     }
 
     void BuildTargetingPoints()
@@ -141,28 +140,11 @@ public class GridMap : MonoBehaviour {
             point_test.transform.localRotation = Quaternion.Euler(0, 0, 0) ;
             point_test.gameObject.tag = "DirectionPoint";
             point_test.gameObject.name = S_Directions[i];
-            point_test.transform.parent = Original.transform;
+            Directions.transform.parent = Original.transform;
 
         }
     }
-
-    void BuildTargetingGrid()
-    {
-        Vector3 Tempoffset = new Vector3(-25,0,-25);
-        for (int x = 0; x < 3; x++)
-        {
-            for (int z = 0; z < 3; z++)
-            {
-                GameObject gridplane = (GameObject)Instantiate(Grid_Empty, Tempoffset + new Vector3(x * 25, 0, z * 25 ), Quaternion.identity);
-                gridplane.gameObject.name = (x + 1).ToString() + " , " + (z + 1).ToString();
-                gridplane.gameObject.tag = "Targeting Grid";
-                gridplane.transform.localScale += new Vector3(25,0,25);
-                gridplane.transform.parent = TargetGrid_Encapsulate.transform;
-                Target_Grid[x, z] = gridplane;
-
-            }
-        }
-    }
+    
 
     public void ClamptoGrid(GameObject go)
     {

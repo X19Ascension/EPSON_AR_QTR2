@@ -44,7 +44,6 @@ public class Rifle : Survivor
             LoadFromGameControl();
 
         //this.atkRange = 25.0f;
-        this.atkRange = atkRange * this.transform.localScale.x * 0.2f;
     }
 	
 	// Update is called once per frame

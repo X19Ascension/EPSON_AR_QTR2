@@ -254,8 +254,8 @@ public class WaveSpawner : MonoBehaviour {
                 spawnPos.x = Random.Range(-3.0f, 3.0f);
                 spawnPos.z = Random.Range(-3.0f, 3.0f);
                 GameObject go = Instantiate(fastzombieGO, spawnPos, Quaternion.identity) as GameObject;
+                go.gameObject.transform.parent = OriginPoint.transform;
                 TweakStats(go);
-                go.transform.parent = this.transform.parent;
                 spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
             }
             spawnValue -= 1;
@@ -269,6 +269,7 @@ public class WaveSpawner : MonoBehaviour {
         if (spawnTankZombie == true)
         {
             GameObject go = Instantiate(tankzombieGO, spawnPos, Quaternion.identity) as GameObject;
+            go.gameObject.transform.parent = OriginPoint.transform;
             TweakStats(go);
             go.transform.parent = this.transform.parent;
             Debug.Log("Tank Zombie Spawn");
@@ -281,6 +282,7 @@ public class WaveSpawner : MonoBehaviour {
         if (spawnRangedZombie == true)
         {
             GameObject go = Instantiate(rangezombieGO, spawnPos, Quaternion.identity) as GameObject;
+            go.gameObject.transform.parent = OriginPoint.transform;
             TweakStats(go);
             go.transform.parent = this.transform.parent;
 
@@ -294,6 +296,7 @@ public class WaveSpawner : MonoBehaviour {
         if (spawnArmoredZombie == true)
         {
             GameObject go = Instantiate(armoredzombieGO, spawnPos, Quaternion.identity) as GameObject;
+            go.gameObject.transform.parent = OriginPoint.transform;
             TweakStats(go);
             go.transform.parent = this.transform.parent;
 

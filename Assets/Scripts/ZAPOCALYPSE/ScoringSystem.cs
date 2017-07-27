@@ -53,11 +53,13 @@ public class ScoringSystem : MonoBehaviour {
         if (scoreToAdd != null && scoreToAdd[0] > 0)
         {
             if (!source.isPlaying)
+            {
                 source.PlayOneShot(scoreSound, 5F);
+            }
             AddScore();
-            scoreToAdd.RemoveAt(0);
             player_scoreText.text = "Score: " + player_score;
             m_textdt = 2.0f;
+            scoreToAdd.RemoveAt(0);
         }
     }
 
