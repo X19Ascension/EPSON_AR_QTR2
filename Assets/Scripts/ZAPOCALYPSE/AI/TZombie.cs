@@ -76,6 +76,9 @@ public class TZombie : Zombie
                         dir.y = 0;
                         this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
 
+                        Quaternion lookRotation = Quaternion.LookRotation(dir);
+
+                        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
                         if (!source.isPlaying)
                             source.PlayOneShot(zombieSound[0], 1F);
                     }

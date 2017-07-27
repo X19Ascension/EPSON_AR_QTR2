@@ -313,6 +313,7 @@ GameObject:
   - 114: {fileID: 11405008}
   - 136: {fileID: 13697514}
   - 195: {fileID: 19501096}
+  - 114: {fileID: 11431540}
   m_Layer: 0
   m_Name: Zombie_Tank
   m_TagString: Untagged
@@ -411,7 +412,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.78, z: 0}
+  m_LocalPosition: {x: 1.5979147, y: 3.3749123, z: 4.499755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -644,17 +645,30 @@ MonoBehaviour:
   atkRange: 1
   atkSpd: 1
   atkDmg: 1
-  HP: 100
-  HPRegen: 1
-  i_maxHP: 100
+  HP: 999999999
+  HPRegen: 0
+  i_maxHP: 999999999
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
+  testHealth: {fileID: 0}
   spawnerGO: {fileID: 0}
   moveSpd: 0
   attackRate: 0
   Zombiestate: 0
   SpawnerGO: {fileID: 0}
   zombieSound: []
+--- !u!114 &11431540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813c8e92e0d162746bc98f73ea3814c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
 --- !u!136 &13697514
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -730,7 +744,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199398}
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 2.23
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

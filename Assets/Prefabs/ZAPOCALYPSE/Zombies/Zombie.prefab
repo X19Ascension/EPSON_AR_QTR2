@@ -53,6 +53,7 @@ GameObject:
   - 114: {fileID: 11470000}
   - 195: {fileID: 19573258}
   - 114: {fileID: 11479606}
+  - 114: {fileID: 11412040}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: test
@@ -229,6 +230,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11412040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813c8e92e0d162746bc98f73ea3814c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarPlaneTemplate: {fileID: 0}
 --- !u!114 &11417256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,6 +285,7 @@ MonoBehaviour:
   i_maxHP: 59
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
+  testHealth: {fileID: 0}
   spawnerGO: {fileID: 0}
   moveSpd: 3
   attackRate: 0
@@ -305,11 +319,15 @@ MonoBehaviour:
   i_maxHP: 70
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
+  testHealth: {fileID: 0}
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   moveSpd: 2
   attackRate: 0
+  blood: {fileID: 0}
+  blood1: {fileID: 0}
+  blood2: {fileID: 0}
   Zombiestate: 0
-  SpawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
+  zombieSound: []
 --- !u!195 &19573258
 NavMeshAgent:
   m_ObjectHideFlags: 1

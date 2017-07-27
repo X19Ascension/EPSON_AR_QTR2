@@ -64,9 +64,16 @@ public class RZombie : Zombie
                     float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
                     if (go_targetedEnemy != null && (Distance < atkRange))
                     {
+                        //Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
+                        //dir.y = 0;
+                        //this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
                         this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
+
+                        Quaternion lookRotation = Quaternion.LookRotation(dir);
+
+                        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
                     }
                     break;
                 }

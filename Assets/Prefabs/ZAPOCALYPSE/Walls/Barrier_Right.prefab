@@ -115,6 +115,8 @@ MonoBehaviour:
   i_maxHP: 99999
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
+  barrier_state_damaged: {fileID: 0}
+  barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 163070}
 --- !u!208 &20809588
 NavMeshObstacle:
@@ -125,7 +127,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 409.77203, y: 138.15, z: 73.745}
+  m_Extents: {x: 409.77203, y: 260.1, z: 14.6}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1

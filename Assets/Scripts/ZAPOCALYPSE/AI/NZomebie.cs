@@ -38,6 +38,7 @@ public class NZomebie : Zombie {
 	// Use this for initialization
 	void Start ()
     {
+        testHealth = this.gameObject.GetComponent<HealthBar>();
         anim = GetComponent<Animator>();
         atkSpd = 0.2f;
         f_attackRate = atkSpd;

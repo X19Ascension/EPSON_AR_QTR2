@@ -17,6 +17,7 @@ GameObject:
   - 195: {fileID: 19558612}
   - 114: {fileID: 11425058}
   - 82: {fileID: 8258768}
+  - 114: {fileID: 11414498}
   m_Layer: 0
   m_Name: Tank_Zombie
   m_TagString: test
@@ -365,6 +366,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11414498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813c8e92e0d162746bc98f73ea3814c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarPlaneTemplate: {fileID: 0}
 --- !u!114 &11414952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,6 +421,7 @@ MonoBehaviour:
   i_maxHP: 200
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
+  testHealth: {fileID: 0}
   spawnerGO: {fileID: 0}
   moveSpd: 2
   attackRate: 0

@@ -73,6 +73,7 @@ GameObject:
   - 195: {fileID: 19585744}
   - 136: {fileID: 13614312}
   - 82: {fileID: 8288386}
+  - 114: {fileID: 11452188}
   m_Layer: 0
   m_Name: ZZombie
   m_TagString: test
@@ -509,6 +510,7 @@ MonoBehaviour:
   i_maxHP: 30
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
+  testHealth: {fileID: 0}
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
   moveSpd: 4
   attackRate: 0
@@ -524,6 +526,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6b6e4741594d5174ca6199c2f73aef46, type: 3}
   - {fileID: 8300000, guid: 524da22e4149c6f438cfca3f82691b6d, type: 3}
   - {fileID: 8300000, guid: 02edd99630b42c843b1b767aea1a9515, type: 3}
+--- !u!114 &11452188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813c8e92e0d162746bc98f73ea3814c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
 --- !u!136 &13614312
 CapsuleCollider:
   m_ObjectHideFlags: 1
