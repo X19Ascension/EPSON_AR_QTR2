@@ -17,14 +17,15 @@ public class PlayerMove : MonoBehaviour {
     // Use this for initialization
     void Start () {
         test = new GameObject();
-        The_Grid = GameObject.Find("Grid Spawner").GetComponent<GridMap>();
+        The_Grid = GameObject.Find("Game Manager").GetComponent<GridMap>();
 	}
 
     // Update is called once per frame
     void Update()
     {
         viewPortPos = Camera.main.WorldToViewportPoint(transform.position);
-        The_Grid.ClamptoGrid(gameObject);
+        //The_Grid.ClamptoGrid(gameObject);
+        The_Grid.ClamptoGrid(this.gameObject);
 
         offset.Set(0.5f, 0.5f, 0.5f);
         Vector3 screenPt = Camera.main.WorldToScreenPoint(transform.position);
@@ -48,6 +49,7 @@ public class PlayerMove : MonoBehaviour {
     {
         Debug.Log("Mouse Down");
         screenPoint = Camera.main.WorldToScreenPoint(transform.position);
+        //The_Grid.ClamptoGrid(this.gameObject);
     }
 
     void OnMouseDrag()

@@ -148,7 +148,7 @@ public class GridMap : MonoBehaviour {
 
     public void ClamptoGrid(GameObject go)
     {
-        float radius = 10.0f;
+        float radius = 100.0f;
         GameObject PointtoClamp = null;
         List<GameObject> NearestGridList = new List<GameObject>();
         for (int x = 0; x < i_GridSize_X; x++)
@@ -185,8 +185,8 @@ public class GridMap : MonoBehaviour {
             if (tempdistance == radius)
             {
                 go.transform.position = PointtoClamp.transform.position;
-                go.gameObject.transform.parent = Original.transform;
-                Grid_Exceptions.Add(NearestGridList[i]);
+                //go.gameObject.transform.parent = Original.transform;
+                //Grid_Exceptions.Add(NearestGridList[i]);
             }
         }
 

@@ -413,7 +413,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5979147, y: 0.77, z: 4.499755}
+  m_LocalPosition: {x: -0.09654617, y: 21.911232, z: -15.328433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -727,6 +727,7 @@ MonoBehaviour:
   HPBarPlaneTemplate: {fileID: 0}
   testHealth: {fileID: 0}
   spawnerGO: {fileID: 0}
+  OriginPOint: {fileID: 0}
   moveSpd: 4
   attackRate: 0
   Zombiestate: 0
@@ -756,10 +757,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.9450994
+  m_Radius: 2.53
   m_Height: 4.3642783
   m_Direction: 1
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 0.81, z: 0}
 --- !u!137 &13761332
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

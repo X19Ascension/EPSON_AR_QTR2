@@ -129,7 +129,7 @@ public class Shotgun : Survivor
                 Direction.Normalize();
 
                 //direction.y += 2;
-                pew.y = 2.5f;
+                //pew.y = 2.5f;
                 bullet = Instantiate(EProjectile, pew, Quaternion.identity) as GameObject;
                 bullet.GetComponent<Rigidbody>().AddForce(Direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
                 bullet.GetComponent<Projectile>().Sender = this.gameObject;

@@ -8,7 +8,8 @@ public class Zombie : EntityBase {
     public HealthBar testHealth;
 
     //EntityBase test;
-    public GameObject spawnerGO;                                    //! Spawner Game Object
+    public GameObject spawnerGO;
+    public GameObject OriginPOint;//! Spawner Game Object
 
     public float moveSpd;
     [HideInInspector]
@@ -27,7 +28,7 @@ public class Zombie : EntityBase {
         i_maxHP = HP;
         attackRate = GetAttackSpeed();
         scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
-
+        OriginPOint = GameObject.Find("TownSpawn");
         //scoring = test.GetComponent<ScoringSystem>();
     }
 

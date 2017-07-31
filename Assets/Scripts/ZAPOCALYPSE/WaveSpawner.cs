@@ -77,9 +77,13 @@ public class WaveSpawner : MonoBehaviour {
     public GameObject OriginPoint;                                  //! Spawner's Point of Origin
 
     private GameControl gameControl;                                //! Game Control to load/save data
+    public GameObject OriginPOint;//! Spawner Game Object
 
     // Use this for initialization
     void Start () {
+        OriginPOint = GameObject.Find("CityTerrain");
+       // this.transform.parent = OriginPOint.transform;
+
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         spawnerGO.GetComponent<WaveSpawner>().maxAmount = 0;
         switch (diff)
@@ -138,8 +142,8 @@ public class WaveSpawner : MonoBehaviour {
                         if (currSpawnPt > 5/* && (chanceToSpawnGroup > Random.Range(0, 1))*/)
                             SpawnHorde(LoadSpawnPoint());
 
-                        if (currSpawnPt > 8/* && (chanceToSpawnArmored > Random.Range(0, 1))*/)
-                            SpawnArmoredZombie(LoadSpawnPoint());
+                        //if (currSpawnPt > 8/* && (chanceToSpawnArmored > Random.Range(0, 1))*/)
+                        //    SpawnArmoredZombie(LoadSpawnPoint());
 
                         if (currSpawnPt > 11/* && (chanceToSpawnRanged > Random.Range(0, 1))*/)
                             SpawnRangedZombie(LoadSpawnPoint());
@@ -234,8 +238,8 @@ public class WaveSpawner : MonoBehaviour {
         {
             GameObject go = Instantiate(zombieGO, spawnPos, Quaternion.identity) as GameObject;
             TweakStats(go);
-            go.gameObject.transform.parent = OriginPoint.transform;
-            //go.transform.parent = this.transform.parent;
+            GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
+            go.transform.SetParent(it.transform);
             spawnValue -= 1;
             Debug.Log("Zombie Spawn");
             spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
@@ -254,7 +258,8 @@ public class WaveSpawner : MonoBehaviour {
                 spawnPos.x = Random.Range(-3.0f, 3.0f);
                 spawnPos.z = Random.Range(-3.0f, 3.0f);
                 GameObject go = Instantiate(fastzombieGO, spawnPos, Quaternion.identity) as GameObject;
-                go.gameObject.transform.parent = OriginPoint.transform;
+                GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
+                go.transform.SetParent(it.transform);
                 TweakStats(go);
                 spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
             }
@@ -271,7 +276,8 @@ public class WaveSpawner : MonoBehaviour {
             GameObject go = Instantiate(tankzombieGO, spawnPos, Quaternion.identity) as GameObject;
             go.gameObject.transform.parent = OriginPoint.transform;
             TweakStats(go);
-            go.transform.parent = this.transform.parent;
+            GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
+            go.transform.SetParent(it.transform);
             Debug.Log("Tank Zombie Spawn");
             spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
         }
@@ -284,8 +290,8 @@ public class WaveSpawner : MonoBehaviour {
             GameObject go = Instantiate(rangezombieGO, spawnPos, Quaternion.identity) as GameObject;
             go.gameObject.transform.parent = OriginPoint.transform;
             TweakStats(go);
-            go.transform.parent = this.transform.parent;
-
+            GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
+            go.transform.SetParent(it.transform);
             Debug.Log("Ranged Zombie Spawn");
             spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
         }
