@@ -182,7 +182,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.493042, y: 0.06, z: 13.151093}
+  m_LocalPosition: {x: 2.02, y: 0.47, z: 31}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -505,14 +505,15 @@ MonoBehaviour:
   atkRange: 1
   atkSpd: 1
   atkDmg: 1
-  HP: 30
-  HPRegen: 0
-  i_maxHP: 30
+  HP: 100
+  HPRegen: 5
+  i_maxHP: 100
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   testHealth: {fileID: 0}
   spawnerGO: {fileID: 111530, guid: 7aa7b858d8a477a49805360297d6f5ec, type: 2}
-  moveSpd: 0.5
+  OriginPOint: {fileID: 0}
+  moveSpd: 1
   attackRate: 0
   blood: {fileID: 100000, guid: acd09612e3d274e4b8c330089f81dfe8, type: 3}
   blood1: {fileID: 100000, guid: b9316e5d08d20de45ab2b355a09d4b70, type: 3}
@@ -547,17 +548,17 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.9923353
+  m_Radius: 71.9
   m_Height: 4.403124
   m_Direction: 1
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 0.39, z: 0}
 --- !u!195 &19580036
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 1.17
   m_Speed: 3.5
   m_Acceleration: 8
