@@ -1544,19 +1544,6 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 115256, guid: 6057e1894f26875498981470419c2410, type: 2}
   m_PrefabInternal: {fileID: 2068807327}
---- !u!114 &136323649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 136323644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891c5e4ec4da84d44a4d9e2bff8f42c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  test: {fileID: 0}
-  The_Grid: {fileID: 0}
 --- !u!1 &145394168
 GameObject:
   m_ObjectHideFlags: 0
@@ -19543,22 +19530,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 13661764, guid: 6057e1894f26875498981470419c2410, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 479954, guid: 6057e1894f26875498981470419c2410, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 479954, guid: 6057e1894f26875498981470419c2410, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 479954, guid: 6057e1894f26875498981470419c2410, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.7
-      objectReference: {fileID: 0}
+    - target: {fileID: 11479444, guid: 6057e1894f26875498981470419c2410, type: 2}
+      propertyPath: surv
+      value: 
+      objectReference: {fileID: 107878, guid: 85846c7ee738869478c5c36b797fcfcf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6057e1894f26875498981470419c2410, type: 2}
   m_IsPrefabParent: 0

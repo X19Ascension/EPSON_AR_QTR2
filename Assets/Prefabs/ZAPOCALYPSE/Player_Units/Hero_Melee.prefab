@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11407778}
   - 114: {fileID: 11479444}
   - 136: {fileID: 13661764}
+  - 114: {fileID: 11495976}
   m_Layer: 0
   m_Name: Hero_Melee
   m_TagString: Survivor
@@ -534,7 +535,7 @@ Transform:
   m_GameObject: {fileID: 115256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 447552}
@@ -583,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d420630a67c1b4dbb86c42ef7877ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 5
+  atkRange: 4
   atkSpd: 1
   atkDmg: 70
   HP: 900
@@ -617,8 +618,21 @@ MonoBehaviour:
   maxDMG: 100
   maxSpd: 4
   maxReload: 1
-  surv: {fileID: 107878, guid: 85846c7ee738869478c5c36b797fcfcf, type: 2}
+  surv: {fileID: 0}
   Updated: 0
+--- !u!114 &11495976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891c5e4ec4da84d44a4d9e2bff8f42c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test: {fileID: 0}
+  The_Grid: {fileID: 0}
 --- !u!136 &13661764
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -627,7 +641,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 115256}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.8833548
   m_Height: 4.2339387
   m_Direction: 1

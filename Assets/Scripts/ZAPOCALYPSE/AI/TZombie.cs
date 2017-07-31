@@ -136,6 +136,7 @@ public class TZombie : Zombie
 
         if (f_attackRate < 0)
         {
+
             if (!source.isPlaying)
                 source.PlayOneShot(zombieSound[1], 1F);
             int health = target.GetComponent<EntityBase>().GetHealth() - this.GetAttackDamage();

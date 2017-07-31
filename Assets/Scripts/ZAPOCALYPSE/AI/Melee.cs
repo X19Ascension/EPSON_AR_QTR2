@@ -132,5 +132,11 @@ public class Melee : Survivor
         }
     }
 
-   
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, atkRange);
+    }
+
+
 }
