@@ -18,17 +18,23 @@ public class RZombie : Zombie
     float f_attackRate;
     int i_Threatvalue;
 
+    private Animator anim;
+
+    private float atkDist;
+
     void Awake()
     {
         Zombiestate = RZombieSTATE.S_IDLE;
-        f_movespeed = 2f;
+        f_movespeed = 5.0f;
         f_attackRate = 0.2f;
         i_Threatvalue = 3;
-        atkRange = 30.0f;
+        atkRange = 999.0f;
+        atkDist = 18.0f;
     }
     // Use this for initialization
     void Start ()
     {
+        anim = GetComponent<Animator>();
         testHealth = this.gameObject.GetComponent<HealthBar>();
         atkSpd = 3.0f;
         f_attackRate = atkSpd;
@@ -64,6 +70,7 @@ public class RZombie : Zombie
                     float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
                     if (go_targetedEnemy != null && (Distance < atkRange))
                     {
+                        anim.SetBool("CHASE", true);
                         //Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         //dir.y = 0;
                         //this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
@@ -75,18 +82,27 @@ public class RZombie : Zombie
 
                         this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
                     }
+                    if (Distance < atkDist)
+                    {
+                        anim.SetBool("CHASE", false);
+                        Zombiestate = RZombieSTATE.S_ATTACK;
+                    }
                     break;
                 }
             case RZombieSTATE.S_ATTACK:
                 {
-                    if (go_targetedEnemy != null)
+                    float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
+                    if (go_targetedEnemy != null && Distance < atkDist)
                     {
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
-
                         AttackEnemy(dir);
                     }
                     else
+                    {
+                        anim.speed = 1.0f;
+                        anim.SetBool("ATTACK", false);
                         Zombiestate = RZombieSTATE.S_CHASE;
+                    }
                     break;
                 }
             case RZombieSTATE.S_DEAD:
@@ -103,11 +119,15 @@ public class RZombie : Zombie
         attackRate -= Time.deltaTime;
         if(attackRate <=0)
         {
+            anim.SetBool("ATTACK", true);
+            anim.speed = 0.6f;
             Vector3 v3_bullet = this.gameObject.transform.position;
             GameObject go_bullet = null;
 
             go_bullet = Instantiate(Projectile, this.gameObject.transform.position, Quaternion.identity) as GameObject;
             go_bullet.GetComponent<Rigidbody>().AddForce(Direction * go_bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
+            go_bullet.GetComponent<Projectile>().Sender = this.gameObject;
+            go_bullet.GetComponent<Projectile>().ProjectileLifetime = 0.65f;
             go_bullet.transform.parent = this.transform.parent;
             attackRate = atkSpd;
         }

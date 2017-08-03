@@ -138,6 +138,7 @@ GameObject:
   - 136: {fileID: 13644158}
   - 82: {fileID: 8250110}
   - 114: {fileID: 11492098}
+  - 114: {fileID: 11442692}
   m_Layer: 0
   m_Name: Zombie_Normal
   m_TagString: test
@@ -182,7 +183,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.02, y: 0.47, z: 31}
+  m_LocalPosition: {x: -1.2350483, y: 1.66892, z: 13.29}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -491,6 +492,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11442692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df379efbff39d9345856607e34c7864e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &11467084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -548,17 +561,17 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 71.9
+  m_Radius: 1
   m_Height: 4.403124
   m_Direction: 1
-  m_Center: {x: 0, y: 0.39, z: 0}
+  m_Center: {x: 0, y: -0.03, z: 0}
 --- !u!195 &19580036
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 1.17
   m_Speed: 3.5
   m_Acceleration: 8

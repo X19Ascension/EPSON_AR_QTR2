@@ -35,7 +35,22 @@ public abstract class EntityBase : MonoBehaviour
     {
         m_TimerDT += Time.deltaTime;
     }
-    
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.GetComponent<Projectile>().Sender.tag == "test" && col.gameObject.tag == "EnemyBullet")
+        {
+            TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<RZombie>().GetAttackDamage());
+            Destroy(col.gameObject);
+        }
+    }
+
+    protected void TakeDamage(int damage)
+    {
+        int health = this.GetHealth() - damage;
+        this.SetHealth(health);
+    }
+
     //public abstract int UpdateFSM();            ///! process the updates
     public abstract void RunFSM();                      ///! act upon any change in behaviour   
     public abstract float GetAttackSpeed();             ///! Returns Attack Speed of Unit

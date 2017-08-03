@@ -8,6 +8,7 @@ public class SampleAgentScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
+        target = GameObject.Find("Target").GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame

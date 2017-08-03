@@ -253,7 +253,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417984, guid: 9ba785dc97b8bf849b165507c8d32399, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ba785dc97b8bf849b165507c8d32399, type: 2}
@@ -6272,7 +6272,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407392, guid: b369271946f5792428faf5f807b6b998, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11455342, guid: b369271946f5792428faf5f807b6b998, type: 2}
       propertyPath: b_InitialLoad
@@ -9038,7 +9038,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11450282, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: debugText
@@ -9092,7 +9092,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480324, guid: f78253a4cb1e3a846a6d6ce4ded05f3e, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11435040, guid: f78253a4cb1e3a846a6d6ce4ded05f3e, type: 2}
       propertyPath: Tooltip
@@ -10879,7 +10879,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 401708, guid: ac6139004be78094d8ddc7dc59926fbb, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3346614, guid: ac6139004be78094d8ddc7dc59926fbb, type: 2}
       propertyPath: m_Mesh

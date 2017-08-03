@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/FinalTest.unity
+- path: Assets/Scenes/NCTest 1 - Copy - Copy.unity
   isLoaded: 1
   isActive: 1

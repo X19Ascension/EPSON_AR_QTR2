@@ -16,8 +16,8 @@ public class Mechanic : Survivor {
     public MechanicSTATE Mechastate;
 
     float f_Attackdamage;
+    private Animator anim;
 
-    
     void Awake()
     {
 
@@ -46,14 +46,14 @@ public class Mechanic : Survivor {
         {
             case MechanicSTATE.S_IDLE:
                 {
-                    if(Enemynear(PanicRange))
+                    if (Enemynear(PanicRange))
                     {
                         target = GetNearestTarget();
                         Mechastate = MechanicSTATE.S_PANIC;
                     }
                     else if(SearchRepairTarget() == null)
                     {
-                        
+                        anim.SetTrigger("IDLE");
                     }
                     else
                     {
@@ -64,7 +64,10 @@ public class Mechanic : Survivor {
             case MechanicSTATE.S_PANIC:
                 {
                     if (target != null)
+                    {
+                        anim.SetTrigger("SHOVE");
                         ShoveEnemy(target);
+                    }
                     else
                     {
                         Mechastate = MechanicSTATE.S_IDLE;
@@ -97,6 +100,7 @@ public class Mechanic : Survivor {
                 }
             case MechanicSTATE.S_DEAD:
                 {
+                    anim.SetBool("DIE", true);
                     Destroy(this);
                     break;
                 }
@@ -163,6 +167,7 @@ public class Mechanic : Survivor {
 
     void RepairTarget(GameObject Target)
     {
+        anim.SetTrigger("REPAIR");
         target.GetComponent<Barrier>().HP += this.atkDmg;
         if(target.GetComponent<Barrier>().HP > target.GetComponent<Barrier>().GetMaxHealth())
         {

@@ -46,7 +46,10 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Zombie_Armor
-    7400000: Take 001
+    7400000: IDLE
+    7400002: CHASE
+    7400004: ATTACK
+    7400006: DIE
     9500000: //RootNode
     13700000: Zombie_Armor
   materials:
@@ -69,7 +72,271 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: CHASE
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Control5
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LeftLeg_Joint/Zombie_Common_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint/Zombie_Common_LeftArm_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint/Zombie_Common_LeftArm_Joint/Zombie_Common_LeftHand_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_Neck_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_Neck_Joint/Zombie_Common_Head_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint/Zombie_Common_RIghtArm_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint/Zombie_Common_RIghtArm_Joint/Zombie_Common_RightHand_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_RightLeg_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_RightLeg_Joint/Zombie_Common_RightFeet_Joint
+        weight: 1
+      - path: Zombie_Armor
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: ATTACK
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Control5
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LeftLeg_Joint/Zombie_Common_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint/Zombie_Common_LeftArm_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint/Zombie_Common_LeftArm_Joint/Zombie_Common_LeftHand_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_Neck_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_Neck_Joint/Zombie_Common_Head_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint/Zombie_Common_RIghtArm_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint/Zombie_Common_RIghtArm_Joint/Zombie_Common_RightHand_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_RightLeg_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_RightLeg_Joint/Zombie_Common_RightFeet_Joint
+        weight: 1
+      - path: Zombie_Armor
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: DIE
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Control5
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LeftLeg_Joint/Zombie_Common_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint/Zombie_Common_LeftArm_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint/Zombie_Common_LeftArm_Joint/Zombie_Common_LeftHand_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_Neck_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_Neck_Joint/Zombie_Common_Head_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint/Zombie_Common_RIghtArm_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint/Zombie_Common_RIghtArm_Joint/Zombie_Common_RightHand_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_RightLeg_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_RightLeg_Joint/Zombie_Common_RightFeet_Joint
+        weight: 1
+      - path: Zombie_Armor
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: IDLE
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Control5
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LeftLeg_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LeftLeg_Joint/Zombie_Common_LeftFeet_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint/Zombie_Common_LeftArm_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_LeftShoulder_Joint/Zombie_Common_LeftArm_Joint/Zombie_Common_LeftHand_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_Neck_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_Neck_Joint/Zombie_Common_Head_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint/Zombie_Common_RIghtArm_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_LowerBody_Joint/Zombie_Common_MiddelBody_Joint/Zombie_Common_UpperBody_Joint/Zombie_Common_RightShoulder_Joint/Zombie_Common_RIghtArm_Joint/Zombie_Common_RightHand_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_RightLeg_Joint
+        weight: 1
+      - path: Main_Control5/Zombie_Common_Root_Joint/Zombie_Common_RightLeg_Joint/Zombie_Common_RightFeet_Joint
+        weight: 1
+      - path: Zombie_Armor
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

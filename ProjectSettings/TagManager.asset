@@ -25,6 +25,7 @@ TagManager:
   - DirectionPoint
   - Targeting Grid
   - Town Objects
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

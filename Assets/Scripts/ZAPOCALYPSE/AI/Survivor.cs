@@ -125,6 +125,15 @@ public class Survivor : EntityBase
         Destroy(gameObject, 3);
     }
 
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.GetComponent<Projectile>().Sender.tag == "test" && col.gameObject.tag == "EnemyBullet")
+        {
+            TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<RZombie>().GetAttackDamage());
+            Destroy(col.gameObject);
+        }
+    }
+
     #region Targeting
     public GameObject SelectTarget(float Radius,Vector3 pos)
     {
@@ -135,7 +144,6 @@ public class Survivor : EntityBase
         {
             foreach (GameObject go in AllEnemies)
             {
-                Debug.Log(Vector3.Distance(go.transform.position, pos));
 
                 if (go == null)
                 {

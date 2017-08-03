@@ -169,7 +169,7 @@ GameObject:
   - 136: {fileID: 13655306}
   m_Layer: 0
   m_Name: Hero_Gunner
-  m_TagString: Untagged
+  m_TagString: Survivor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,8 +519,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7857143, y: 0.7857143, z: 0.7857143}
+  m_LocalPosition: {x: -1.5537467, y: 4.2730484, z: -1.352684}
+  m_LocalScale: {x: 0.4214182, y: 0.4214182, z: 0.4214182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 431020}

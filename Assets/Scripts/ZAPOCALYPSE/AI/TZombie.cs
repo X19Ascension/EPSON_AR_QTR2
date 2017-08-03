@@ -76,7 +76,7 @@ public class TZombie : Zombie
                     {
                         Zombiestate = TZombieSTATE.S_IDLE;
                     }
-                    anim.SetBool("Chase", true);
+                    anim.SetBool("CHASE", true);
 
                     float Distance = Vector3.Distance(this.gameObject.transform.position, go_targetedEnemy.gameObject.transform.position);
                     if (go_targetedEnemy != null)
@@ -94,7 +94,7 @@ public class TZombie : Zombie
                     }
                     if (Distance < atkDist)
                     {
-                        anim.SetBool("Chase", false);
+                        anim.SetBool("CHASE", false);
                         Zombiestate = TZombieSTATE.S_ATTACK;
                     }
                     break;
@@ -110,7 +110,7 @@ public class TZombie : Zombie
 
                         this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
 
-                        anim.SetTrigger("Attack");
+                        anim.SetTrigger("ATTACK");
                         AttackEnemy(go_targetedEnemy);
                     }
                     else

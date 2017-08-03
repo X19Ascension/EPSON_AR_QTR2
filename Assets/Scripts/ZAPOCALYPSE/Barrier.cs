@@ -69,4 +69,14 @@ public class Barrier : EntityBase {
     {
         i_maxHP = maxhealth;
     }
+
+    void OnCollisionEnter(Collision col)
+    {
+        Debug.Log("Hi");
+        if (col.gameObject.GetComponent<Projectile>().Sender.tag == "test" && col.gameObject.tag == "EnemyBullet")
+        {
+            TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<RZombie>().GetAttackDamage());
+            Destroy(col.gameObject);
+        }
+    }
 }
