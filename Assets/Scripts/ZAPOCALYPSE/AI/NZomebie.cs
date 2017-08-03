@@ -43,7 +43,7 @@ public class NZomebie : Zombie {
         atkSpd = 0.2f;
         f_attackRate = atkSpd;
         this.moveSpd = 1.5f;
-        OriginPOint = GameObject.Find("CityTerrain");
+        OriginPOint = GameObject.Find("TownSpawn");
         this.transform.parent = OriginPOint.transform;
         this.moveSpd = Random.Range(1.0f, 2.5f);
         // this.gameObject.transform.parent = GameObject.Find("TerrainSpawn").transform;
@@ -91,10 +91,9 @@ public class NZomebie : Zombie {
                             source.PlayOneShot(zombieSound[Random.Range(0, 2)], 0.2F);
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         //dir.y = 0;
-                        this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
+                        this.gameObject.transform.localPosition += dir * moveSpd * Time.deltaTime;
 
                         Quaternion lookRotation = Quaternion.LookRotation(dir);
-
                         this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
 
                     }

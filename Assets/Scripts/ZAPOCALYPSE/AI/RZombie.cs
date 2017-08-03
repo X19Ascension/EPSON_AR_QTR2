@@ -76,7 +76,7 @@ public class RZombie : Zombie
                         //this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
-                        this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
+                        this.gameObject.transform.localPosition += dir * moveSpd * Time.deltaTime;
 
                         Quaternion lookRotation = Quaternion.LookRotation(dir);
 

@@ -61,7 +61,7 @@ public class ZZombie : Zombie {
                     {
                         Vector3 dir = (go_targetEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
-                        this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
+                        this.gameObject.transform.localPosition += dir * moveSpd * Time.deltaTime;
                     }
                     if (Distance < 0.2f)
                     {
