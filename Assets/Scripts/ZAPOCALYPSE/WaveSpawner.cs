@@ -241,7 +241,7 @@ public class WaveSpawner : MonoBehaviour {
             GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
             go.transform.SetParent(it.transform);
             spawnValue -= 1;
-            Debug.Log("Zombie Spawn");
+            //Debug.Log("Zombie Spawn");
             spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
             //Debug.Log(spawnerGO.GetComponent<WaveSpawner>().maxAmount);
         }
@@ -264,7 +264,7 @@ public class WaveSpawner : MonoBehaviour {
                 spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
             }
             spawnValue -= 1;
-            Debug.Log("Horde Spawn");
+            //Debug.Log("Horde Spawn");
         }
         //testTimeDelta = 0f;
     }
@@ -350,5 +350,10 @@ public class WaveSpawner : MonoBehaviour {
         {
             OriginPoint.transform.GetChild(i).gameObject.transform.parent = OriginPoint.transform;
         }
+    }
+
+    public int  GetSpawnPoint()
+    {
+        return currSpawnPt;
     }
 }

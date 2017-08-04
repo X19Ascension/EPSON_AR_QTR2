@@ -144,6 +144,10 @@ public class Survivor : EntityBase
         {
             foreach (GameObject go in AllEnemies)
             {
+<<<<<<< HEAD
+=======
+               // Debug.Log(Vector3.Distance(go.transform.position, pos));
+>>>>>>> Added tracking for zombies
 
                 if (go == null)
                 {

@@ -16,6 +16,11 @@ public class Zombie : EntityBase {
     public float attackRate;
     int Threat;
 
+    [SerializeField]
+    protected List<GameObject> GO_SpawnPointFollower;
+    [SerializeField]
+    protected List<Vector3> V3_SpawnPointFollower;
+
     void Awake()
     {
         atkRange = 999;
@@ -29,6 +34,7 @@ public class Zombie : EntityBase {
         attackRate = GetAttackSpeed();
         scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
         OriginPOint = GameObject.Find("TownSpawn");
+        ChoosePointSequence();
         //scoring = test.GetComponent<ScoringSystem>();
     }
 
@@ -198,6 +204,34 @@ public class Zombie : EntityBase {
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, atkRange);
+    }
+
+    void ChoosePointSequence()
+    {
+        int Spawnpoint = spawnerGO.GetComponent<WaveSpawner>().GetSpawnPoint();
+        Spawnpoint += 1;
+        if (Spawnpoint > 4)
+        {
+            Spawnpoint = 4;
+        }
+        PickSpawnPointSequence(Spawnpoint);
+    }
+
+    void PickSpawnPointSequence(int SpawnPoint)
+    {
+        string temp = SpawnPoint.ToString();
+        GO_SpawnPointFollower = new List<GameObject>();
+        GO_SpawnPointFollower = GameObject.FindGameObjectsWithTag("SpawnPoint" + temp).ToList();
+    }
+
+    protected void ChaseSequence()
+    {
+        for (int i = 1; i < 10; i++)
+        {
+            Vector3 temp = GO_SpawnPointFollower[i - 1].transform.position;
+            temp += new Vector3(Random.Range(1, 4), 0, Random.Range(1, 4));
+            V3_SpawnPointFollower.Add(temp);
+        }
     }
 
     public int CheckSurroundings()
