@@ -34,8 +34,8 @@ public class Zombie : EntityBase {
         attackRate = GetAttackSpeed();
         scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
         OriginPOint = GameObject.Find("TownSpawn");
-        ChoosePointSequence();
-        //scoring = test.GetComponent<ScoringSystem>();
+        GO_SpawnPointFollower = new List<GameObject>();
+        V3_SpawnPointFollower = new List<Vector3>();
     }
 
     // Update is called once per frame
@@ -206,32 +206,56 @@ public class Zombie : EntityBase {
         Gizmos.DrawWireSphere(transform.position, atkRange);
     }
 
-    void ChoosePointSequence()
+    protected void ChoosePointSequence(GameObject target)
     {
         int Spawnpoint = spawnerGO.GetComponent<WaveSpawner>().GetSpawnPoint();
+        Debug.Log(Spawnpoint.ToString());
         Spawnpoint += 1;
         if (Spawnpoint > 4)
         {
             Spawnpoint = 4;
         }
         PickSpawnPointSequence(Spawnpoint);
+        if (target != null)
+        {
+            V3_SpawnPointFollower.Add(target.transform.position);
+        }
     }
 
-    void PickSpawnPointSequence(int SpawnPoint)
+    protected void PickSpawnPointSequence(int SpawnPoint)
     {
         string temp = SpawnPoint.ToString();
-        GO_SpawnPointFollower = new List<GameObject>();
         GO_SpawnPointFollower = GameObject.FindGameObjectsWithTag("SpawnPoint" + temp).ToList();
+        for (int i = 0; i < 10; i++)
+        {
+            Vector3 temp2 = GO_SpawnPointFollower[i].transform.position;
+            temp2 += new Vector3(Random.Range(1, 4), 0, Random.Range(1, 4));
+            V3_SpawnPointFollower.Add(temp2);
+        }
     }
 
     protected void ChaseSequence()
     {
-        for (int i = 1; i < 10; i++)
+        int index = 0;
+
+        float Distance = Vector3.Distance(this.gameObject.transform.position, V3_SpawnPointFollower[index]);
+        FollowPath(V3_SpawnPointFollower[index]);
+        
+        if (this.transform.position == V3_SpawnPointFollower[index] && index != V3_SpawnPointFollower.Count && index < V3_SpawnPointFollower.Count)
         {
-            Vector3 temp = GO_SpawnPointFollower[i - 1].transform.position;
-            temp += new Vector3(Random.Range(1, 4), 0, Random.Range(1, 4));
-            V3_SpawnPointFollower.Add(temp);
+            index += 1;
+            FollowPath(V3_SpawnPointFollower[index]);
+
         }
+    }
+
+    protected void FollowPath(Vector3 V3)
+    {
+        Vector3 Dir = (V3 - this.transform.position).normalized;
+        this.gameObject.transform.localPosition += Dir * moveSpd * Time.deltaTime;
+
+        Quaternion lookRotation = Quaternion.LookRotation(Dir);
+        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
     }
 
     public int CheckSurroundings()

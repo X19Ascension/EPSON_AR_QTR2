@@ -137,7 +137,7 @@ GameObject:
   - 136: {fileID: 13644158}
   - 82: {fileID: 8250110}
   - 114: {fileID: 11492098}
-  - 114: {fileID: 11442692}
+  - 195: {fileID: 19580036}
   m_Layer: 0
   m_Name: Zombie_Normal
   m_TagString: test
@@ -481,18 +481,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11442692
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df379efbff39d9345856607e34c7864e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!114 &11467084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -558,7 +546,7 @@ CapsuleCollider:
   m_Center: {x: 0, y: -0.03, z: 0}
 --- !u!195 &19580036
 NavMeshAgent:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192902}
