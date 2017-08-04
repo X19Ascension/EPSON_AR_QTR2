@@ -22,13 +22,14 @@ public class GridMap : MonoBehaviour {
     //Empty GameObject for Organizing purposes in scene
     GameObject TargetGrid_Encapsulate;
 
+    GameObject Empty_GAmeobject;
+
     //Grid Size that can be changed to meet desres
     public int i_GridSize_X = 6;
     public int i_GridSize_Y = 6;
 
     //Object to hold all Squares to hold a Grid like system
     private GameObject[,] Grid;
-    public GameObject[,] Target_Grid;
     //Exceptions of the grid above, to hold other items i.e Barricades
     List<GameObject> Grid_Exceptions;
     //Offsets for the barricades
@@ -39,10 +40,10 @@ public class GridMap : MonoBehaviour {
 
     void Awake()
     {
-        Grid_Exceptions = new List<GameObject>();
+        Empty_GAmeobject = new GameObject();
 
-        Grid_Encapsulate = new GameObject();
-        Grid_Encapsulate.gameObject.name = "The Grid";
+        //Grid_Encapsulate = new GameObject();
+        Grid_Encapsulate = GameObject.FindWithTag("The Grid");
 
         TargetGrid_Encapsulate = new GameObject();
         TargetGrid_Encapsulate.gameObject.name = "Targeting Grid";
@@ -51,14 +52,8 @@ public class GridMap : MonoBehaviour {
         Directions.gameObject.name = "Directions";
 
         Grid = new GameObject[i_GridSize_X, i_GridSize_Y];
-        Target_Grid = new GameObject[3, 3];
 
         Offset = new Vector3((i_GridSize_X - 1) * -.5f, 0, (i_GridSize_Y - 1) * -.5f);
-        Front_Offset = new Vector3(-1, 0, 0);
-        Back_Offset = new Vector3(1, 0, 0);
-        Left_Offset = new Vector3(0, 0, -1);
-        Right_Offset = new Vector3(0, 0, 1);
-
 
         S_Directions = new string[] { "North West", "West", "South West", "South", "South East", "East", "North East", "North" };
 
@@ -90,40 +85,38 @@ public class GridMap : MonoBehaviour {
                 gridplane.gameObject.tag = "Empty Grid";
                 gridplane.transform.parent = Grid_Encapsulate.transform;
                 Grid[x, z] = gridplane;
-                if ((x == 0 || x == i_GridSize_X - 1) || (z == 0 || z == i_GridSize_Y - 1))
-                {
-                    Grid_Exceptions.Add(gridplane);
-                }
+               //if ((x == 0 || x == i_GridSize_X - 1) || (z == 0 || z == i_GridSize_Y - 1))
+               //{
+               //    Grid_Exceptions.Add(gridplane);
+               //}
 
             }
         }
-        Vector3 Front_Midpoint = Grid[0, 0].transform.position + ((Grid[0, i_GridSize_Y - 1].transform.position - Grid[0, 0].transform.position) / 2);
-        GameObject Front_3 = (GameObject)Instantiate(Grid_Barricade_Front);
-        Front_3.transform.position = Front_Midpoint + Front_Offset;
-        Front_3.transform.parent = Grid_Encapsulate.transform;
-        Front_3.gameObject.name = "Barrier_Front";
-        Front_3.gameObject.tag = "Barrier";
 
-        Vector3 Back_Midpoint = Grid[i_GridSize_X - 1, 0].transform.position + ((Grid[i_GridSize_X - 1,i_GridSize_Y - 1].transform.position - Grid[i_GridSize_X - 1, 0].transform.position) / 2);
-        GameObject Back_3 = (GameObject)Instantiate(Grid_Barricade_Back);
-        Back_3.transform.position = Back_Midpoint + Back_Offset;
-        Back_3.transform.parent = Grid_Encapsulate.transform;
-        Back_3.gameObject.name = "Barrier_Back";
-        Back_3.gameObject.tag = "Barrier";
+        // 1 is Back, 2 is front, 3 is Right, 4 is Left
+        for (int i = 0; i < 10; i++)
+        {
+            GameObject go = (GameObject)Instantiate(Empty_GAmeobject, new Vector3(1 * i * 5, 0, 0), Quaternion.identity);
+            go.transform.parent = Grid_Encapsulate.transform;
+            go.tag = "SpawnPoint1";
+            go.name = "1 " + (i + 1).ToString();
 
-        Vector3 Left_Midpoint = Grid[0, 0].transform.position + ((Grid[i_GridSize_X - 1,0].transform.position - Grid[0, 0].transform.position) / 2);
-        GameObject Left_3 = (GameObject)Instantiate(Grid_Barricade_Left);
-        Left_3.transform.position = Left_Midpoint + Left_Offset;
-        Left_3.transform.parent = Grid_Encapsulate.transform;
-        Left_3.gameObject.name = "Barrier_Left";
-        Left_3.gameObject.tag = "Barrier";
+            GameObject go1 = (GameObject)Instantiate(Empty_GAmeobject, new Vector3(1 * i * -5, 0, 0), Quaternion.identity);
+            go1.transform.parent = Grid_Encapsulate.transform;
+            go1.tag = "SpawnPoint2";
+            go1.name = "2 " + (i + 1).ToString();
 
-        Vector3 Right_Midpoint = Grid[0, i_GridSize_Y - 1].transform.position + ((Grid[i_GridSize_X - 1, i_GridSize_Y - 1].transform.position - Grid[0, i_GridSize_Y - 1].transform.position) / 2);
-        GameObject Right_3 = (GameObject)Instantiate(Grid_Barricade_Right);
-        Right_3.transform.position = Right_Midpoint + Right_Offset;
-        Right_3.transform.parent = Grid_Encapsulate.transform;
-        Right_3.gameObject.name = "Barrier_Right";
-        Right_3.gameObject.tag = "Barrier";
+            GameObject go2 = (GameObject)Instantiate(Empty_GAmeobject, new Vector3(0, 0, 1 * i * 5), Quaternion.identity);
+            go2.transform.parent = Grid_Encapsulate.transform;
+            go2.tag = "SpawnPoint3";
+            go2.name = "3 " + (i + 1).ToString();
+
+            GameObject go3 = (GameObject)Instantiate(Empty_GAmeobject, new Vector3(0, 0, 1 * i * -5), Quaternion.identity);
+            go3.transform.parent = Grid_Encapsulate.transform;
+            go3.tag = "SpawnPoint4";
+            go3.name = "4 " + (i + 1).ToString();
+
+        }
 
         Grid_Encapsulate.transform.parent = Original.transform;
     }
@@ -155,11 +148,11 @@ public class GridMap : MonoBehaviour {
         {
             for (int z = 0; z < i_GridSize_Y; z++)
             {
-                if (x == 0 || z == 0 || x == i_GridSize_X - 1 || z == i_GridSize_Y - 1)
-                {
-                    Grid_Exceptions.Add(Grid[x, z]);
-                }
-                else if (Vector3.Distance(Grid[x, z].transform.position, go.transform.position) <= radius)
+               // if (x == 0 || z == 0 || x == i_GridSize_X - 1 || z == i_GridSize_Y - 1)
+               // {
+               //     Grid_Exceptions.Add(Grid[x, z]);
+               // }
+                if (Vector3.Distance(Grid[x, z].transform.position, go.transform.position) <= radius)
                 {
                     NearestGridList.Add(Grid[x, z]);
                 }

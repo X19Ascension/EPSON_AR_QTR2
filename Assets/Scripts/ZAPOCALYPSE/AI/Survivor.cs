@@ -144,6 +144,7 @@ public class Survivor : EntityBase
         {
             foreach (GameObject go in AllEnemies)
             {
+               // Debug.Log(Vector3.Distance(go.transform.position, pos));
 
                 if (go == null)
                 {

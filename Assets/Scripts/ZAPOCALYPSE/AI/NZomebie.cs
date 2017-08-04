@@ -45,8 +45,8 @@ public class NZomebie : Zombie {
         this.moveSpd = 1.5f;
         OriginPOint = GameObject.Find("TownSpawn");
         this.transform.parent = OriginPOint.transform;
-        this.moveSpd = Random.Range(1.0f, 2.5f);
-        // this.gameObject.transform.parent = GameObject.Find("TerrainSpawn").transform;
+        this.moveSpd = Random.Range(1.0f, 2.5f); GameObject go_targetedEnemy = TargetToAttack();
+        ChoosePointSequence(go_targetedEnemy);
         SpawnerGO = GameObject.Find("SpawnerPrefab");
 	}
 	
@@ -89,14 +89,15 @@ public class NZomebie : Zombie {
                     {
                         if (!source.isPlaying)
                             source.PlayOneShot(zombieSound[Random.Range(0, 2)], 0.2F);
-                        Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
-                        //dir.y = 0;
-                        this.gameObject.transform.localPosition += dir * moveSpd * Time.deltaTime;
+                        //Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
+                        ////dir.y = 0;
+                        //this.gameObject.transform.localPosition += dir * moveSpd * Time.deltaTime;
 
-                        Quaternion lookRotation = Quaternion.LookRotation(dir);
-                        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
+                        //Quaternion lookRotation = Quaternion.LookRotation(dir);
+                        //this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
 
                     }
+                    ChaseSequence();
                     if (Distance < 1.5f)
                     {
                         Zombiestate = NZombie_STATE.S_ATTACK; 
