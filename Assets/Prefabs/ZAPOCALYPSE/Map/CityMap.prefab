@@ -2797,7 +2797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &195492
 GameObject:
   m_ObjectHideFlags: 1
@@ -3442,7 +3442,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00045353637, y: -0.043674592, z: -0.00005747445}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.03181818, y: 0.03181818, z: 0.03181818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -11718,9 +11718,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b980002697e62748ba8b136b6886011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 30
+  atkRange: 40
   atkSpd: 0.2
-  atkDmg: 1
+  atkDmg: 10
   HP: 500
   HPRegen: 50
   i_maxHP: 500
@@ -11816,7 +11816,7 @@ MonoBehaviour:
   waveNo: 1
   maxWaveNo: 0
   zombieGO: {fileID: 192902, guid: 4fcb32a6c03440e41a75451f19113f9f, type: 2}
-  armoredzombieGO: {fileID: 100000, guid: 7afe6885cdbe7f349b49b731fa2a0af1, type: 3}
+  armoredzombieGO: {fileID: 196830, guid: 0dbad3f9dad392b4799ca98d59088121, type: 2}
   fastzombieGO: {fileID: 126988, guid: a496ad9f60806584b88482e49f2c855f, type: 2}
   tankzombieGO: {fileID: 199398, guid: 84275431510b7c74eb99f1463210bcd0, type: 2}
   rangezombieGO: {fileID: 125706, guid: 39a14ab85441e9a499c6a4b92eae5494, type: 2}
@@ -11832,6 +11832,7 @@ MonoBehaviour:
   diff: 0
   waveEnded: 0
   OriginPoint: {fileID: 187132}
+  OriginPOint: {fileID: 0}
 --- !u!114 &11478384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11888,9 +11889,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   survivorType:
-  - {fileID: 124242, guid: 0659067b545060a4e99744cc8fa3565c, type: 2}
-  - {fileID: 124242, guid: 0659067b545060a4e99744cc8fa3565c, type: 2}
-  - {fileID: 124242, guid: 0659067b545060a4e99744cc8fa3565c, type: 2}
+  - {fileID: 142414, guid: 95bf0ee1e6d6b754f9c28d3b8f82115a, type: 2}
+  - {fileID: 115256, guid: 6057e1894f26875498981470419c2410, type: 2}
+  - {fileID: 169764, guid: 4b15ed267e2a804478d1f8f45e629378, type: 2}
   The_Grid: {fileID: 11416780}
 --- !u!114 &11481414
 MonoBehaviour:

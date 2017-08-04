@@ -14,7 +14,10 @@ public class FadeInOutScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	    //fade = true;
-	}
+        if (!fadeOut)
+            alpha = 1.0f;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
