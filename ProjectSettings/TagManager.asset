@@ -3,7 +3,33 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Resources
+  - Buildings
+  - Grid
+  - Wall
+  - Tower
+  - Enemy
+  - ImageTarget
+  - Destroyed
+  - FriendlyFire
+  - Prop
+  - Survivor
+  - Bullet
+  - Barrier
+  - Entities
+  - test
+  - Empty Grid
+  - Buttons
+  - Priority
+  - DirectionPoint
+  - Targeting Grid
+  - Town Objects
+  - EnemyBullet
+  - Spawnpoint1
+  - Spawnpoint2
+  - Spawnpoint3
+  - Spawnpoint4
   layers:
   - Default
   - TransparentFX
@@ -13,11 +39,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - FriendlyFire
+  - EnemyFire
+  - FriendlyBuildings
+  - Neutral
+  - BulletLayer
   - 
   - 
   - 
