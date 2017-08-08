@@ -19,9 +19,9 @@ public class SpawnUnitTest : MonoBehaviour {
         //initialises the units, all of them
         //Temporary add testunit
         Unit_List.Add(unit);
-        unit = (GameObject)Instantiate(survivorType[0], new Vector3(-0.5f, 0, 1.5f), Quaternion.identity);
+        unit = (GameObject)Instantiate(survivorType[1], new Vector3(-0.5f, 0, 1.5f), Quaternion.identity);
         Unit_List.Add(unit);
-        unit = (GameObject)Instantiate(survivorType[1], new Vector3(0.5f, 0, 1.5f), Quaternion.identity); 
+        unit = (GameObject)Instantiate(survivorType[2], new Vector3(0.5f, 0, 1.5f), Quaternion.identity); 
         Unit_List.Add(unit);
     }
 

@@ -10834,6 +10834,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 138258}
+  testHealth: {fileID: 0}
 --- !u!114 &11402456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10856,6 +10857,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 142336}
+  testHealth: {fileID: 0}
 --- !u!114 &11404112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10889,6 +10891,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 101796}
+  testHealth: {fileID: 0}
 --- !u!114 &11408784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10911,6 +10914,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 181336}
+  testHealth: {fileID: 0}
 --- !u!114 &11410228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10933,6 +10937,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 138950}
+  testHealth: {fileID: 0}
 --- !u!114 &11410302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10955,6 +10960,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 104706}
+  testHealth: {fileID: 0}
 --- !u!114 &11411548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11038,6 +11044,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 158168}
+  testHealth: {fileID: 0}
 --- !u!114 &11416452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11060,6 +11067,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 198152}
+  testHealth: {fileID: 0}
 --- !u!114 &11416780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11115,6 +11123,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 179616}
+  testHealth: {fileID: 0}
 --- !u!114 &11422814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11169,6 +11178,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 150550}
+  testHealth: {fileID: 0}
 --- !u!114 &11433104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11191,6 +11201,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 172782}
+  testHealth: {fileID: 0}
 --- !u!114 &11434900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11213,6 +11224,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 107862}
+  testHealth: {fileID: 0}
 --- !u!114 &11436762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11251,6 +11263,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 197522}
+  testHealth: {fileID: 0}
 --- !u!114 &11438122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11273,6 +11286,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 173794}
+  testHealth: {fileID: 0}
 --- !u!114 &11442082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11295,6 +11309,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 162428}
+  testHealth: {fileID: 0}
 --- !u!114 &11443152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11317,6 +11332,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 119116}
+  testHealth: {fileID: 0}
 --- !u!114 &11443582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11352,6 +11368,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 131708}
+  testHealth: {fileID: 0}
 --- !u!114 &11444312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11374,6 +11391,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 119318}
+  testHealth: {fileID: 0}
 --- !u!114 &11446890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11407,6 +11425,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 145796}
+  testHealth: {fileID: 0}
 --- !u!114 &11447930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11507,6 +11526,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 133540}
+  testHealth: {fileID: 0}
 --- !u!114 &11451582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11607,6 +11627,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 173612}
+  testHealth: {fileID: 0}
 --- !u!114 &11461212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11629,6 +11650,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 180186}
+  testHealth: {fileID: 0}
 --- !u!114 &11464222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11707,6 +11729,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 171748}
+  testHealth: {fileID: 0}
 --- !u!114 &11473288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11775,6 +11798,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 115780}
+  testHealth: {fileID: 0}
 --- !u!114 &11475152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11830,6 +11854,8 @@ MonoBehaviour:
   maxAmount: 0
   CSVReader: {fileID: 11457890}
   diff: 0
+  waveDuration: 0
+  waveDurationSave: 0
   waveEnded: 0
   OriginPoint: {fileID: 187132}
   OriginPOint: {fileID: 0}
@@ -11855,6 +11881,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 130910}
+  testHealth: {fileID: 0}
 --- !u!114 &11479324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11877,6 +11904,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 110356}
+  testHealth: {fileID: 0}
 --- !u!114 &11479956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11943,6 +11971,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 190836}
+  testHealth: {fileID: 0}
 --- !u!114 &11491228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11965,6 +11994,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 193584}
+  testHealth: {fileID: 0}
 --- !u!114 &11491302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12036,6 +12066,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 139426}
+  testHealth: {fileID: 0}
 --- !u!114 &11494552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12084,6 +12115,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 160348}
+  testHealth: {fileID: 0}
 --- !u!114 &11498654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12106,6 +12138,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 152208}
+  testHealth: {fileID: 0}
 --- !u!114 &11498756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12128,6 +12161,7 @@ MonoBehaviour:
   barrier_state_damaged: {fileID: 0}
   barrier_state_destroyed: {fileID: 0}
   barrier: {fileID: 155358}
+  testHealth: {fileID: 0}
 --- !u!114 &11499220
 MonoBehaviour:
   m_ObjectHideFlags: 1

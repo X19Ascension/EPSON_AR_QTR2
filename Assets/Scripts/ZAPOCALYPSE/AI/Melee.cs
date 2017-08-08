@@ -63,7 +63,7 @@ public class Melee : Survivor
                 }
             case Melee_State.S_ATTACK:
                 {
-                    if (target != null)
+                    if (target != null && target.activeSelf)
                     { 
                         Attackenemy(target);
                         Anim.SetTrigger("ATTACK");

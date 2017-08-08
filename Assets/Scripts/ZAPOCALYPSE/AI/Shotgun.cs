@@ -84,7 +84,7 @@ public class Shotgun : Survivor
                 }
             case Shotgun_State.S_ATTACK:
                 {
-                    if (target != null)
+                    if (target != null && target.activeSelf)
                     {
                         anim.SetTrigger("ATTACK");
                         Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;

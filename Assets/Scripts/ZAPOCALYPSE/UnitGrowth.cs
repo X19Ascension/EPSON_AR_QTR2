@@ -51,7 +51,7 @@ public class UnitGrowth : MonoBehaviour {
         if (The_Spawner.waveEnded && !Updated)
         {
             surv.gameObject.GetComponent<UnitGrowth>().CalculateEXPGain();
-            surv.SetActive(false);
+            //surv.SetActive(false);
         }
     }
 

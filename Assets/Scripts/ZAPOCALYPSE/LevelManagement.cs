@@ -14,11 +14,14 @@ public class LevelManagement : MonoBehaviour {
 
     WaveSpawner The_Spawner;                                                //! The Grid
     GameObject[] The_Survivors;
+    GameObject[] The_Enemies;
+    bool findfirst;
 
     public LEVEL currLevel = LEVEL.PLAY;
 
     void Awake()
     {
+        findfirst = true;
         The_Spawner = GameObject.Find("SpawnerPrefab").GetComponent<WaveSpawner>();
         The_Survivors = GameObject.FindGameObjectsWithTag("Survivor");
     }
@@ -36,17 +39,48 @@ public class LevelManagement : MonoBehaviour {
         {
             case LEVEL.PLAY:
                 upgradeGO.SetActive(false);
-
+                ActivateEnemies();
                 break;
             case LEVEL.PAUSE:
 
                 break;
             case LEVEL.UPGRADE:
                 upgradeGO.SetActive(true);
-
+                DeactivateEnemies();
                 break;
         }
 	}
+
+    void DeactivateEnemies()
+    {
+        if (findfirst)
+        {
+            The_Enemies = GameObject.FindGameObjectsWithTag("test");
+            findfirst = false;
+        }
+
+        foreach (GameObject enem in The_Enemies)
+        {
+            if (enem.activeSelf)
+            {
+                //surv.SetActive(true);
+                enem.SetActive(false);
+            }
+        }
+    }
+
+    void ActivateEnemies()
+    {
+        findfirst = true;
+        foreach (GameObject enem in The_Enemies)
+        {
+            if (!enem.activeSelf)
+            {
+                //surv.SetActive(true);
+                enem.SetActive(true);
+            }
+        }
+    }
 
     public void ChangeLevel(LEVEL nextLevel)
     {
@@ -64,7 +98,7 @@ public class LevelManagement : MonoBehaviour {
         {
             if (surv != null)
             {
-                surv.SetActive(true);
+                //surv.SetActive(true);
                 surv.GetComponent<UnitGrowth>().Updated = false;
             }
         }

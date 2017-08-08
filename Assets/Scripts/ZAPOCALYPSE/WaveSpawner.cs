@@ -69,8 +69,10 @@ public class WaveSpawner : MonoBehaviour {
 
     private float testTimeDelta;                                    //! Rate of spawning between zombies. //Default
     private float testTankSpawn;                                    //! Debug Test value
-    private float waveDuration;                                     //! Duration of Wave passed
-    private float waveDurationSave;                                 //! For Gamecontrol Saving
+    [HideInInspector]
+    public float waveDuration;                                     //! Duration of Wave passed
+    [HideInInspector]
+    public float waveDurationSave;                                 //! For Gamecontrol Saving
 
     public bool waveEnded;                                          //! Check if wave has ended.
 

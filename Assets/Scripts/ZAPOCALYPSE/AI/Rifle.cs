@@ -120,7 +120,7 @@ public class Rifle : Survivor
                 }
             case Rifle_State.S_ATTACK:
                 {
-                    if (target != null) 
+                    if (target != null && target.activeSelf) 
                     {
                            //Anim.SetTrigger("Attack");
                            Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
