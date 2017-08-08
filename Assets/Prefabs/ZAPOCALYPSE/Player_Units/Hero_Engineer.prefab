@@ -175,6 +175,8 @@ GameObject:
   - 4: {fileID: 477822}
   - 95: {fileID: 9569822}
   - 114: {fileID: 11470886}
+  - 114: {fileID: 11429076}
+  - 114: {fileID: 11430032}
   m_Layer: 0
   m_Name: Hero_Engineer
   m_TagString: Untagged
@@ -570,6 +572,35 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11429076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fa88128e562c64b91617e88e89135b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDMG: 45
+  maxSpd: 1
+  maxReload: 1
+  surv: {fileID: 184754}
+  Updated: 0
+--- !u!114 &11430032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891c5e4ec4da84d44a4d9e2bff8f42c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test: {fileID: 0}
+  The_Grid: {fileID: 0}
 --- !u!114 &11470886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -584,9 +615,9 @@ MonoBehaviour:
   atkRange: 1
   atkSpd: 1
   atkDmg: 1
-  HP: 0
-  HPRegen: 0
-  i_maxHP: 0
+  HP: 50
+  HPRegen: 5
+  i_maxHP: 50
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   EProjectile: {fileID: 0}

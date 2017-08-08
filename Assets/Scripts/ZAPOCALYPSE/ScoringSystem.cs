@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class ScoringSystem : MonoBehaviour {
 
-    [SerializeField]
-    GridMap The_Grid;
-
     public Image DecayThing;
     public AudioClip scoreSound;
     private AudioSource source;
@@ -50,7 +47,7 @@ public class ScoringSystem : MonoBehaviour {
         if (m_textdt <= 0.0f)
             killFeedbackText.text = "";
 
-        if (scoreToAdd != null && scoreToAdd[0] > 0)
+        if (scoreToAdd != null && scoreToAdd.Count != 0)
         {
             if (!source.isPlaying)
             {

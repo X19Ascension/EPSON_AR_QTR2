@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Shotgun : Survivor
 {
@@ -19,6 +20,7 @@ public class Shotgun : Survivor
     private Animator anim;
 
     private GameControl gameControl;
+    private Slider SGSlider;
 
     void Awake()
     {
@@ -30,6 +32,7 @@ public class Shotgun : Survivor
 	// Use this for initialization
 	void Start ()
     {
+        SGSlider = GameObject.FindGameObjectWithTag("SGHP").GetComponent<Slider>();
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         this.atkRange = 15.0f;
         anim = this.GetComponent<Animator>();
@@ -47,7 +50,13 @@ public class Shotgun : Survivor
         timeActive += Time.deltaTime;
         RunFSM();
         Regenerate();
-	}
+        ScaleHP();
+    }
+
+    void ScaleHP()
+    {
+        SGSlider.value = ((float)HP / (float)i_maxHP);
+    }
 
     public override void RunFSM()
     {
@@ -88,7 +97,12 @@ public class Shotgun : Survivor
                     {
                         anim.SetTrigger("ATTACK");
                         Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
-                        Attackenemy(V3_Direction, 10, true) ;
+                        if (currAmmo > 0)
+                            Attackenemy(V3_Direction, 10, true);
+                        else
+                        {
+                            Reload();
+                        }
                     }
                     else
                     {
@@ -137,6 +151,7 @@ public class Shotgun : Survivor
             }
             bullet.transform.parent = this.transform.parent;
             attackRate = atkSpd;
+            currAmmo--;
         }
     }
 

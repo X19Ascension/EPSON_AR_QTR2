@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Melee : Survivor
 {
@@ -16,6 +17,7 @@ public class Melee : Survivor
 
     public GameObject target;
     public Melee_State meleestate;
+    private Slider CCSlider;
 
     void Awake()
     {
@@ -27,6 +29,7 @@ public class Melee : Survivor
     // Use this for initialization
     void Start ()
     {
+        CCSlider = GameObject.FindGameObjectWithTag("CCHP").GetComponent<Slider>();
         this.atkRange = 5.0f;
     }
 
@@ -36,6 +39,12 @@ public class Melee : Survivor
         Regenerate();
         RunFSM();
         RunDeathDoor();
+        ScaleHP();
+    }
+
+    void ScaleHP()
+    {
+        CCSlider.value = ((float)HP / (float)i_maxHP);
     }
 
     public override void RunFSM()

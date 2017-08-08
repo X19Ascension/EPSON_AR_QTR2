@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Mechanic : Survivor {
 
@@ -14,6 +15,7 @@ public class Mechanic : Survivor {
 
     public GameObject target;
     public MechanicSTATE Mechastate;
+    private Slider ESlider;
 
     float f_Attackdamage;
     private Animator anim;
@@ -25,6 +27,7 @@ public class Mechanic : Survivor {
 	// Use this for initialization
 	void Start ()
     {
+        ESlider = GameObject.FindGameObjectWithTag("EHP").GetComponent<Slider>();
         Ustate = UnitState.S_HEALTHY;
     }
 	
@@ -35,6 +38,12 @@ public class Mechanic : Survivor {
         RunFSM();
         RunDeathDoor();
     }
+
+    void ScaleHP()
+    {
+        ESlider.value = ((float)HP / (float)i_maxHP);
+    }
+
 
     public override void RunFSM()
     {

@@ -33,7 +33,8 @@ public class Survivor : EntityBase
     private float idleDt = 5.0f;
 
     public int maxAmmo;                                                     //! Max Ammo Survivor Have
-    private int currAmmo;                                                   //! Current Ammo Survivor Has
+    [HideInInspector]
+    public int currAmmo;                                                   //! Current Ammo Survivor Has
 
     [SerializeField]
     GameObject Directionpoint;
@@ -72,6 +73,7 @@ public class Survivor : EntityBase
     // Use this for initialization
     void Start()
     {
+        reloadDt = reloadRate;
         //i_maxHP = HP;
         f_DeathDoorrefresher = 60f;
         f_DeathDoortimer = f_DeathDoorrefresher;
@@ -95,6 +97,16 @@ public class Survivor : EntityBase
     public override void RunFSM()
     {
         
+    }
+
+    protected void Reload()
+    {
+        reloadDt -= Time.deltaTime;
+        if (reloadDt <= 0)
+        {
+            currAmmo = maxAmmo;
+            reloadDt = reloadRate;
+        }
     }
     
     protected void Regenerate()

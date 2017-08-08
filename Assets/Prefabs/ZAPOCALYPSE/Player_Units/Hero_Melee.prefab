@@ -584,12 +584,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d420630a67c1b4dbb86c42ef7877ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 4
+  atkRange: 2
   atkSpd: 1
   atkDmg: 70
-  HP: 900
-  HPRegen: 90
-  i_maxHP: 900
+  HP: 100
+  HPRegen: 10
+  i_maxHP: 100
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   EProjectile: {fileID: 0}
@@ -618,7 +618,7 @@ MonoBehaviour:
   maxDMG: 100
   maxSpd: 4
   maxReload: 1
-  surv: {fileID: 0}
+  surv: {fileID: 115256}
   Updated: 0
 --- !u!114 &11495976
 MonoBehaviour:

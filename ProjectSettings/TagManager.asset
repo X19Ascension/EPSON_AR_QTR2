@@ -32,6 +32,10 @@ TagManager:
   - SpawnPoint4
   - Fire
   - The Grid
+  - CCHP
+  - EHP
+  - GHP
+  - SGHP
   layers:
   - Default
   - TransparentFX

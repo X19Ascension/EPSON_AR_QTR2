@@ -24,7 +24,9 @@ public class HealthBar : MonoBehaviour {
         m_HPBar.transform.LookAt(Camera.main.transform.position, -Vector3.up);
         m_HPBar.transform.Rotate(new Vector3(0, 180, 0));
 
-        if (this.gameObject.GetComponent<Zombie>().HP < this.gameObject.GetComponent<Zombie>().i_maxHP)
+        if (this.gameObject.tag == "test" && this.gameObject.GetComponent<Zombie>().HP < this.gameObject.GetComponent<Zombie>().i_maxHP)
+            m_HPBar.SetActive(true);
+        else if (this.gameObject.tag == "Barrier" && this.gameObject.GetComponent<Barrier>().HP < this.gameObject.GetComponent<Barrier>().i_maxHP)
             m_HPBar.SetActive(true);
     }
 
@@ -44,4 +46,21 @@ public class HealthBar : MonoBehaviour {
         float ScaleChange = (heal / (float)this.gameObject.GetComponent<Zombie>().GetMaxHealth());
         m_HPBar.transform.localScale += new Vector3(HPBarPlaneTemplate.transform.localScale.x * ScaleChange, 0, 0);
     }
+
+    //// Another Autistic Functions.
+    //public void B_RescaleHealthBar(int val)
+    //{
+    //    float ScaleChange = (val / (float)this.gameObject.GetComponent<Barrier>().GetMaxHealth());
+    //    m_HPBar.transform.localScale -= new Vector3(HPBarPlaneTemplate.transform.localScale.x * ScaleChange, 0, 0);
+    //}
+    //public void B_RescaleHealthBarDamage(int damage)
+    //{
+    //    float ScaleChange = (damage / (float)this.gameObject.GetComponent<Barrier>().GetMaxHealth());
+    //    m_HPBar.transform.localScale -= new Vector3(HPBarPlaneTemplate.transform.localScale.x * ScaleChange, 0, 0);
+    //}
+    //public void B_RescaleHealthBarHeal(int heal)
+    //{
+    //    float ScaleChange = (heal / (float)this.gameObject.GetComponent<Barrier>().GetMaxHealth());
+    //    m_HPBar.transform.localScale += new Vector3(HPBarPlaneTemplate.transform.localScale.x * ScaleChange, 0, 0);
+    //}
 }

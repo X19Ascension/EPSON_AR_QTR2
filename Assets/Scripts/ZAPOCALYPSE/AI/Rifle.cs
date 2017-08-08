@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Rifle : Survivor
 { 
@@ -26,6 +27,7 @@ public class Rifle : Survivor
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
+    private Slider GSlider;
 
     void Awake()
     {
@@ -37,6 +39,7 @@ public class Rifle : Survivor
 
 	void Start ()
     {
+        GSlider = GameObject.FindGameObjectWithTag("GHP").GetComponent<Slider>();
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         Anim = GetComponent<Animator>();
 
@@ -53,7 +56,13 @@ public class Rifle : Survivor
         RunFSM();
         RunDeathDoor();
         Regenerate();
-	}
+        ScaleHP();
+    }
+
+    void ScaleHP()
+    {
+        GSlider.value = ((float)HP / (float)i_maxHP);
+    }
 
     void LoadFromGameControl()
     {
@@ -124,10 +133,17 @@ public class Rifle : Survivor
                     {
                            //Anim.SetTrigger("Attack");
                            Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
-                        Attackenemy(V3_Direction);
-                        V3_targetpos = target.transform.position;
-                        i_targetSurroundings = target.GetComponent<Zombie>().CheckSurroundings();
-                        Anim.SetTrigger("ATTACK");
+                        if (currAmmo > 0)
+                        {
+                            Attackenemy(V3_Direction);
+                            V3_targetpos = target.transform.position;
+                            i_targetSurroundings = target.GetComponent<Zombie>().CheckSurroundings();
+                            Anim.SetTrigger("ATTACK");
+                        }
+                        else
+                        {
+                            Reload();
+                        }
                     }
                     else
                     {
@@ -204,7 +220,7 @@ public class Rifle : Survivor
             bullet.transform.parent = this.transform.parent;
             attackRate = atkSpd;
             //source.Play();
-            
+            currAmmo--;
         }
     }
 

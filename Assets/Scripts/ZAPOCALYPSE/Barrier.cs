@@ -6,17 +6,17 @@ public class Barrier : EntityBase {
     public Mesh barrier_state_damaged;
     public Mesh barrier_state_destroyed;
     public GameObject barrier;
-    public HealthBar testHealth;
+    private HealthBar testHealth;
     // Use this for initialization
     void Start () {
         i_maxHP = HP;
         //mesh = GetComponent<MeshFilter>().sharedMesh;
-        testHealth = this.gameObject.GetComponent<HealthBar>();
+        //testHealth = this.gameObject.GetComponent<HealthBar>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        testHealth.RescaleHealthBar(HP);
+        //testHealth.B_RescaleHealthBar(HP);
         if (HP < i_maxHP)
         {
             //i_maxHP.SetActive(true);
@@ -78,7 +78,7 @@ public class Barrier : EntityBase {
         if (col.gameObject.GetComponent<Projectile>().Sender.tag == "test" && col.gameObject.tag == "EnemyBullet")
         {
             TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<RZombie>().GetAttackDamage());
-            testHealth.RescaleHealthBarDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<RZombie>().GetAttackDamage());
+            //testHealth.B_RescaleHealthBarDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<RZombie>().GetAttackDamage());
             Destroy(col.gameObject);
         }
     }

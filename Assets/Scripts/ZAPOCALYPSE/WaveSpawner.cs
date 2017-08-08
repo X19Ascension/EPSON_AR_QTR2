@@ -225,10 +225,10 @@ public class WaveSpawner : MonoBehaviour {
             if (difficultyMod <= 0)
                 difficultyMod = 1;
             randomModifier = Random.Range(0.7f, 1.3f);
-            go.GetComponent<Zombie>().HP = (int)((float)(go.GetComponent<Zombie>().HP) * difficultyMod);
+            go.GetComponent<Zombie>().HP = (int)((float)(go.GetComponent<Zombie>().HP + (waveNo * 6)) * difficultyMod);
             go.GetComponent<Zombie>().i_maxHP = go.GetComponent<Zombie>().HP;
             if (go.GetComponent<Zombie>().atkDmg > 3)
-                go.GetComponent<Zombie>().atkDmg = (int)((float)(go.GetComponent<Zombie>().atkDmg) * difficultyMod);
+                go.GetComponent<Zombie>().atkDmg = (int)((float)(go.GetComponent<Zombie>().atkDmg + waveNo) * difficultyMod);
             go.GetComponent<Zombie>().moveSpd *= randomModifier;
         }
 

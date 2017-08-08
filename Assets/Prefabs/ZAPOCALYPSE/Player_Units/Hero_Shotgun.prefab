@@ -177,9 +177,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 414494}
   - 95: {fileID: 9531994}
+  - 114: {fileID: 11461684}
   - 136: {fileID: 13636668}
   - 114: {fileID: 11408318}
-  - 114: {fileID: 11461684}
   - 114: {fileID: 11406316}
   m_Layer: 0
   m_Name: Hero_Shotgun
@@ -754,10 +754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79fa88128e562c64b91617e88e89135b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDMG: 40
+  maxDMG: 50
   maxSpd: 1
   maxReload: 1
-  surv: {fileID: 0}
+  surv: {fileID: 169764}
   Updated: 0
 --- !u!114 &11461684
 MonoBehaviour:
@@ -771,17 +771,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atkRange: 10
-  atkSpd: 1.2
-  atkDmg: 10
+  atkSpd: 1.5
+  atkDmg: 15
   HP: 80
-  HPRegen: 90
+  HPRegen: 15
   i_maxHP: 80
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   EProjectile: {fileID: 113460, guid: f98c3ad46a6453045a2ce7101ab5aead, type: 2}
   entityType: 2
   attackRate: 0
-  reloadRate: 3
+  reloadRate: 2
   maxAmmo: 10
   Directionpoint: {fileID: 0}
   Ustate: 0

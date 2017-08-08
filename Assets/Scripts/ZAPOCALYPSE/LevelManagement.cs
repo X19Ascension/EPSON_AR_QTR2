@@ -39,7 +39,8 @@ public class LevelManagement : MonoBehaviour {
         {
             case LEVEL.PLAY:
                 upgradeGO.SetActive(false);
-                ActivateEnemies();
+                if (!findfirst)
+                    ActivateEnemies();
                 break;
             case LEVEL.PAUSE:
 
@@ -80,6 +81,7 @@ public class LevelManagement : MonoBehaviour {
                 enem.SetActive(true);
             }
         }
+        findfirst = true;
     }
 
     public void ChangeLevel(LEVEL nextLevel)

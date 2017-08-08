@@ -30,7 +30,6 @@ public class UnitGrowthResult : MonoBehaviour {
 
     public void RescaleEXPBar()
     {
-        Debug.Log("Test");
         float expScale = survivior.experiencePt / Unit.GetComponent<UnitGrowth>().EXPToLVL(survivior);
         mainSlider.value = expScale;
 
