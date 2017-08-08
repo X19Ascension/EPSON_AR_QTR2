@@ -45,7 +45,8 @@ public class NZomebie : Zombie {
         this.moveSpd = 1.5f;
         OriginPOint = GameObject.Find("TownSpawn");
         this.transform.parent = OriginPOint.transform;
-        this.moveSpd = Random.Range(1.0f, 2.5f); GameObject go_targetedEnemy = TargetToAttack();
+        this.moveSpd = Random.Range(1.0f, 2.5f); 
+        GameObject go_targetedEnemy = TargetToAttack();
         ChoosePointSequence(go_targetedEnemy);
         SpawnerGO = GameObject.Find("SpawnerPrefab");
 	}

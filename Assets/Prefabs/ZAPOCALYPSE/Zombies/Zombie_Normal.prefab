@@ -505,8 +505,28 @@ MonoBehaviour:
   OriginPOint: {fileID: 0}
   moveSpd: 1
   attackRate: 0
-  GO_SpawnPointFollower: []
-  V3_SpawnPointFollower: []
+  GO_SpawnPointFollower:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  V3_SpawnPointFollower:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   blood: {fileID: 100000, guid: acd09612e3d274e4b8c330089f81dfe8, type: 3}
   blood1: {fileID: 100000, guid: b9316e5d08d20de45ab2b355a09d4b70, type: 3}
   blood2: {fileID: 100000, guid: 8b7c4112eb31911469d6e518e66a84ec, type: 3}

@@ -26,10 +26,12 @@ TagManager:
   - Targeting Grid
   - Town Objects
   - EnemyBullet
-  - Spawnpoint1
-  - Spawnpoint2
-  - Spawnpoint3
-  - Spawnpoint4
+  - SpawnPoint1
+  - SpawnPoint2
+  - SpawnPoint3
+  - SpawnPoint4
+  - Fire
+  - The Grid
   layers:
   - Default
   - TransparentFX
