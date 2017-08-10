@@ -41,6 +41,7 @@ TagManager:
   - ShotgunLVL
   - MeleeLVL
   - EngineerLVL
+  - Scoring
   layers:
   - Default
   - TransparentFX

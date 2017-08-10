@@ -43,6 +43,8 @@ public class Zombie : EntityBase {
     {
         scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
         testHealth.RescaleHealthBar(HP);
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
         if (HP <= 0)
         {
@@ -164,23 +166,20 @@ public class Zombie : EntityBase {
 
     void OnCollisionEnter(Collision col)
     {
-        // If the object we hit is the enemy
-        if (col.gameObject.tag == "test")
-        {
-            // force is how forcefully we will push the player away from the enemy.
-            float force = 3;
+        Debug.Log("Colliding With: " + col.gameObject.name);
+        //// If the object we hit is the enemy
+        //if (col.gameObject.tag == "test")
+        //{
+        //    // force is how forcefully we will push the player away from the enemy.
+        //    float force = 3;
 
-                // Calculate Angle Between the collision point and the player
-                Vector3 dir = col.contacts[0].point - transform.position;
-                // We then get the opposite (-Vector3) and normalize it
-                dir = -dir.normalized;
-                // And finally we add force in the direction of dir and multiply it by force. 
-                // This will push back the player
-                //GetComponent<Rigidbody>().AddForce(dir * force);
-        }
+        //        // Calculate Angle Between the collision point and the player
+        //        Vector3 dir = col.contacts[0].point - transform.position;
+        //        dir = -dir.normalized;
+        //}
 
 
-        scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
+        scoring = GameObject.FindGameObjectWithTag("Scoring").GetComponent<ScoringSystem>();
         //if (col.gameObject.tag.Contains("FriendlyFire"))
         //Debug.Log(col.gameObject.tag);
         if (col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor" && col.gameObject.tag == "Bullet")
@@ -213,6 +212,22 @@ public class Zombie : EntityBase {
                     Destroy(col.gameObject);
                 }
             }
+        }
+    }
+
+    void OnCollisionStay(Collision colInfo)
+    {
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+    }
+
+    void OnCollisionExit(Collision colInfo)
+    {
+        Debug.Log("Colliding With: " + colInfo.gameObject.name);
+        if (colInfo.gameObject.tag == "test" && colInfo.gameObject.tag == "Bullet")
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
     }
 
