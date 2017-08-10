@@ -28,6 +28,7 @@ public class Mechanic : Survivor {
 	void Start ()
     {
         ESlider = GameObject.FindGameObjectWithTag("EHP").GetComponent<Slider>();
+        GameObject.FindGameObjectWithTag("MeleeLVL").GetComponent<UnitGrowthResult>().Unit = this.gameObject;
         Ustate = UnitState.S_HEALTHY;
     }
 	

@@ -20,25 +20,18 @@ public class Barrier : EntityBase {
         if (HP < i_maxHP)
         {
             //i_maxHP.SetActive(true);
-            if (HP <= 250)
+            if (HP <= 250 && HP > 0)
             {
                 GetComponent<MeshFilter>().sharedMesh = barrier_state_damaged;
             }
-
             if (HP <= 0)
             {
-                //GetComponent<Collider>().collider = false;
-                GetComponent<BoxCollider>().enabled = false;
-                GetComponent<NavMeshObstacle>().enabled = false;
-
                 GetComponent<MeshFilter>().sharedMesh = barrier_state_destroyed;
-                //barrier.SetActive(false);
-                //if (this.tag.Contains("Barrier"))
-                //Destroy(this.gameObject);
-                //else
-                //    this.gameObject.SetActive(false);
+                GetComponent<NavMeshObstacle>().enabled = false;
+                GetComponent<BoxCollider>().enabled = false;
             }
         }
+        
     }
 
     public override void RunFSM()

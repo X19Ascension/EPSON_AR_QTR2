@@ -133,28 +133,30 @@ public class WaveSpawner : MonoBehaviour {
         {
             if (CheckAnyAlive() == true && spawnerGO.GetComponent<WaveSpawner>().maxAmount < limitAmount)
             {
-                if (spawnValue >= 0)
-                {
+                //if (spawnValue >= 0)
+                //{
                     if (testTimeDelta >= randomSpawnTimer)
                     {
-
+                    Vector3 spawnPt = LoadSpawnPoint();
                         for (int i = 0; i < currSpawnPt; i++)
-                            SpawnZombie(LoadSpawnPoint());
+                            SpawnZombie(spawnPt);
 
-                        if (currSpawnPt > 5/* && (chanceToSpawnGroup > Random.Range(0, 1))*/)
-                            SpawnHorde(LoadSpawnPoint());
+                        if (currSpawnPt > 8 && (chanceToSpawnGroup > Random.Range(0, 1)))
+                            SpawnHorde(spawnPt);
 
-                        //if (currSpawnPt > 8/* && (chanceToSpawnArmored > Random.Range(0, 1))*/)
-                        //    SpawnArmoredZombie(LoadSpawnPoint());
+                        if (currSpawnPt > 8 && (chanceToSpawnArmored > Random.Range(0, 1)))
+                            SpawnArmoredZombie(spawnPt);
 
-                        if (currSpawnPt > 11/* && (chanceToSpawnRanged > Random.Range(0, 1))*/)
-                            SpawnRangedZombie(LoadSpawnPoint());
+                        if (currSpawnPt > 11 && (chanceToSpawnRanged > Random.Range(0, 1)))
+                            SpawnRangedZombie(spawnPt);
 
-                        //SpawnZombie(GenerateSpawnPos());
-                        randomSpawnTimer = Random.Range(2.5f, 3.2f);
+                    if (currSpawnPt > 13)
+                        SpawnTankZombie(spawnPt);
+
+                        randomSpawnTimer = Random.Range(2.5f, 4.0f);
 
                         if (currSpawnPt > 14)
-                            currSpawnPt = Random.Range(8,14);
+                            currSpawnPt = 8;
 
                         testTimeDelta = 0f;
                         currSpawnPt++;
@@ -167,7 +169,7 @@ public class WaveSpawner : MonoBehaviour {
                         SpawnTankZombie(GenerateSpawnPos());
                         spawnerGO.GetComponent<WaveSpawner>().killcount = 0;
                     }
-                }
+                //}
                 
             }
         }
@@ -176,9 +178,9 @@ public class WaveSpawner : MonoBehaviour {
             waveNo++;
             waveEnded = true;
             spawnValue = 9999.0f;
-            Debug.Log("Wave " + waveNo + " Ended");
 
-            LevelManagement pewpew = GameObject.Find("testupgrade").GetComponent<LevelManagement>();
+            //LevelManagement pewpew = GameObject.Find("testupgrade").GetComponent<LevelManagement>();
+            LevelManagement pewpew = GameObject.FindGameObjectWithTag("Upgrade").GetComponent<LevelManagement>();
             pewpew.ChangeLevel(LevelManagement.LEVEL.UPGRADE);
 
             // Handle These Elsewhere
@@ -220,18 +222,14 @@ public class WaveSpawner : MonoBehaviour {
 
     void TweakStats(GameObject go)
     {
-        if (diff != TEMP_DIFF.NORMAL)
-        {
-            if (difficultyMod <= 0)
-                difficultyMod = 1;
-            randomModifier = Random.Range(0.7f, 1.3f);
-            go.GetComponent<Zombie>().HP = (int)((float)(go.GetComponent<Zombie>().HP + (waveNo * 6)) * difficultyMod);
-            go.GetComponent<Zombie>().i_maxHP = go.GetComponent<Zombie>().HP;
-            if (go.GetComponent<Zombie>().atkDmg > 3)
-                go.GetComponent<Zombie>().atkDmg = (int)((float)(go.GetComponent<Zombie>().atkDmg + waveNo) * difficultyMod);
-            go.GetComponent<Zombie>().moveSpd *= randomModifier;
-        }
-
+        if (difficultyMod <= 0)
+            difficultyMod = 1;
+        randomModifier = Random.Range(0.4f, 1.7f);
+        go.GetComponent<Zombie>().HP = (int)((float)(go.GetComponent<Zombie>().HP + (waveNo * 6)) * difficultyMod);
+        go.GetComponent<Zombie>().i_maxHP = go.GetComponent<Zombie>().HP;
+        if (go.GetComponent<Zombie>().atkDmg > 3)
+            go.GetComponent<Zombie>().atkDmg = (int)((float)(go.GetComponent<Zombie>().atkDmg + waveNo) * difficultyMod);
+        go.GetComponent<Zombie>().moveSpd *= randomModifier;
     }
 
     void SpawnZombie(Vector3 spawnPos)
@@ -242,7 +240,7 @@ public class WaveSpawner : MonoBehaviour {
             TweakStats(go);
             GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
             go.transform.SetParent(it.transform);
-            spawnValue -= 1;
+            //spawnValue -= 1;
             //Debug.Log("Zombie Spawn");
             spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
             //Debug.Log(spawnerGO.GetComponent<WaveSpawner>().maxAmount);
@@ -263,9 +261,10 @@ public class WaveSpawner : MonoBehaviour {
                 GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
                 go.transform.SetParent(it.transform);
                 TweakStats(go);
+                go.GetComponent<Zombie>().moveSpd = 4.0f;
                 spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
             }
-            spawnValue -= 1;
+            //spawnValue -= 1;
             //Debug.Log("Horde Spawn");
         }
         //testTimeDelta = 0f;
@@ -294,7 +293,6 @@ public class WaveSpawner : MonoBehaviour {
             TweakStats(go);
             GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
             go.transform.SetParent(it.transform);
-            Debug.Log("Ranged Zombie Spawn");
             spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
         }
     }
@@ -308,7 +306,6 @@ public class WaveSpawner : MonoBehaviour {
             TweakStats(go);
             go.transform.parent = this.transform.parent;
 
-            Debug.Log("Armored Zombie Spawn");
             spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
         }
     }
@@ -320,8 +317,6 @@ public class WaveSpawner : MonoBehaviour {
 
     public Vector3 LoadSpawnPoint()
     {
-        //if (waveEnded)
-        //{
         for (int j = 0; j < (15 - 1); j++)
         {
             for (int k = 0; k < (17 - 1); k++)
@@ -341,9 +336,7 @@ public class WaveSpawner : MonoBehaviour {
                 }
                 }
             }
-        //}
-
-        return new Vector3(0, 0, 0);
+        return new Vector3(20, 0, 0);
     }
 
     void SetOriginPoint()

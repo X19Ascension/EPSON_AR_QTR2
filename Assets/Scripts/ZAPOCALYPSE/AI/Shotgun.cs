@@ -33,6 +33,7 @@ public class Shotgun : Survivor
 	void Start ()
     {
         SGSlider = GameObject.FindGameObjectWithTag("SGHP").GetComponent<Slider>();
+        GameObject.FindGameObjectWithTag("ShotgunLVL").GetComponent<UnitGrowthResult>().Unit = this.gameObject;
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         this.atkRange = 15.0f;
         anim = this.GetComponent<Animator>();

@@ -30,6 +30,7 @@ public class Melee : Survivor
     void Start ()
     {
         CCSlider = GameObject.FindGameObjectWithTag("CCHP").GetComponent<Slider>();
+        GameObject.FindGameObjectWithTag("MeleeLVL").GetComponent<UnitGrowthResult>().Unit = this.gameObject;
         this.atkRange = 5.0f;
     }
 
