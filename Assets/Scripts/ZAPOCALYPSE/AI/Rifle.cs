@@ -40,6 +40,7 @@ public class Rifle : Survivor
 	void Start ()
     {
         GSlider = GameObject.FindGameObjectWithTag("GHP").GetComponent<Slider>();
+        GameObject.FindGameObjectWithTag("RifleLVL").GetComponent<UnitGrowthResult>().Unit = this.gameObject;
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
         Anim = GetComponent<Animator>();
 

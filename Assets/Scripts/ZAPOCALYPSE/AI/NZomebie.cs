@@ -40,7 +40,7 @@ public class NZomebie : Zombie {
     {
         testHealth = this.gameObject.GetComponent<HealthBar>();
         anim = GetComponent<Animator>();
-        atkSpd = 0.2f;
+        atkSpd = 0.5f;
         f_attackRate = atkSpd;
         this.moveSpd = 1.5f;
         OriginPOint = GameObject.Find("TownSpawn");

@@ -36,6 +36,11 @@ TagManager:
   - EHP
   - GHP
   - SGHP
+  - Upgrade
+  - RifleLVL
+  - ShotgunLVL
+  - MeleeLVL
+  - EngineerLVL
   layers:
   - Default
   - TransparentFX
