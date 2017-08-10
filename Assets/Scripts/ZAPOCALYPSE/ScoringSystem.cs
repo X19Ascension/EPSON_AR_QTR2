@@ -13,7 +13,7 @@ public class ScoringSystem : MonoBehaviour {
     public Text killFeedbackText;
     public Text player_scoreText;
     public int player_score;
-    public List<int> scoreToAdd = new List<int>();
+    public List<int> scoreToAdd;
 
     private float m_textdt;
 
@@ -26,6 +26,7 @@ public class ScoringSystem : MonoBehaviour {
     void Awake()
     {
         source = GetComponent<AudioSource>();
+        scoreToAdd = new List<int>();
     }
 
     // Use this for initialization
