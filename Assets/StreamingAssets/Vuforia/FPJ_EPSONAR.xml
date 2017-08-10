@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Terrain_Marker" size="1.000000 0.706651" />
     <ImageTarget name="Marker_S_2" size="0.070000 0.070000" />
     <ImageTarget name="Marker_M_2" size="0.070000 0.070000" />
     <ImageTarget name="Marker_G_2" size="0.070000 0.070000" />
