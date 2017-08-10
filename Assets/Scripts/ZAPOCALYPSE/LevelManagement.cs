@@ -24,6 +24,7 @@ public class LevelManagement : MonoBehaviour {
         findfirst = true;
         The_Spawner = GameObject.Find("SpawnerPrefab").GetComponent<WaveSpawner>();
         The_Survivors = GameObject.FindGameObjectsWithTag("Survivor");
+        The_Enemies = GameObject.FindGameObjectsWithTag("test");
     }
 
 	// Use this for initialization
@@ -56,7 +57,6 @@ public class LevelManagement : MonoBehaviour {
     {
         if (findfirst)
         {
-            The_Enemies = GameObject.FindGameObjectsWithTag("test");
             findfirst = false;
         }
 
