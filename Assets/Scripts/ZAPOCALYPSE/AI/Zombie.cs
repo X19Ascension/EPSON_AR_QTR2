@@ -164,6 +164,22 @@ public class Zombie : EntityBase {
 
     void OnCollisionEnter(Collision col)
     {
+        // If the object we hit is the enemy
+        if (col.gameObject.tag == "test")
+        {
+            // force is how forcefully we will push the player away from the enemy.
+            float force = 3;
+
+                // Calculate Angle Between the collision point and the player
+                Vector3 dir = col.contacts[0].point - transform.position;
+                // We then get the opposite (-Vector3) and normalize it
+                dir = -dir.normalized;
+                // And finally we add force in the direction of dir and multiply it by force. 
+                // This will push back the player
+                //GetComponent<Rigidbody>().AddForce(dir * force);
+        }
+
+
         scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
         //if (col.gameObject.tag.Contains("FriendlyFire"))
         //Debug.Log(col.gameObject.tag);
@@ -275,5 +291,4 @@ public class Zombie : EntityBase {
         }
         return 0;
     }
-
 }
