@@ -311,10 +311,10 @@ GameObject:
   - 4: {fileID: 425948}
   - 95: {fileID: 9551448}
   - 114: {fileID: 11405008}
-  - 136: {fileID: 13697514}
   - 195: {fileID: 19501096}
   - 114: {fileID: 11431540}
   - 82: {fileID: 8282864}
+  - 65: {fileID: 6574424}
   m_Layer: 0
   m_Name: Zombie_Tank
   m_TagString: test
@@ -413,7 +413,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.423142, y: 1.2577505, z: 5.6449566}
+  m_LocalPosition: {x: 1.5197234, y: -0.61447716, z: 16.5209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -615,6 +615,18 @@ Transform:
   - {fileID: 449806}
   m_Father: {fileID: 466972}
   m_RootOrder: 0
+--- !u!65 &6574424
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199398}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8539987, y: 3.9274802, z: 3.684174}
+  m_Center: {x: -0.05533552, y: 1.4637401, z: 0.44332314}
 --- !u!82 &8282864
 AudioSource:
   m_ObjectHideFlags: 1
@@ -750,19 +762,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
---- !u!136 &13697514
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199398}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.53
-  m_Height: 4.3642783
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.81, z: 0}
 --- !u!137 &13761332
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

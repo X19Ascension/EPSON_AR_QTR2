@@ -27,7 +27,6 @@ public class Barrier : EntityBase {
             if (HP <= 0)
             {
                 GetComponent<MeshFilter>().sharedMesh = barrier_state_destroyed;
-                GetComponent<NavMeshObstacle>().enabled = false;
                 GetComponent<BoxCollider>().enabled = false;
             }
         }

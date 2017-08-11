@@ -265,11 +265,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 484130}
   - 95: {fileID: 9545432}
-  - 195: {fileID: 19541030}
   - 114: {fileID: 11403342}
   - 82: {fileID: 8208436}
-  - 136: {fileID: 13699696}
   - 114: {fileID: 11414262}
+  - 65: {fileID: 6505692}
   m_Layer: 0
   m_Name: Zombie_Armored
   m_TagString: test
@@ -508,7 +507,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.241507, y: 1.5806813, z: 18.811764}
+  m_LocalPosition: {x: -1.1791673, y: -0.61447716, z: 11.672679}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -557,6 +556,18 @@ Transform:
   - {fileID: 447024}
   m_Father: {fileID: 420532}
   m_RootOrder: 2
+--- !u!65 &6505692
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196830}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8446236, y: 3.511116, z: 1.5385255}
+  m_Center: {x: -0.008169413, y: 1.255558, z: 0.2692623}
 --- !u!82 &8208436
 AudioSource:
   m_ObjectHideFlags: 1
@@ -708,19 +719,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
---- !u!136 &13699696
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196830}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 4.403124
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.03, z: 0}
 --- !u!137 &13710020
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -774,26 +772,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.027096272, y: 1.0511041, z: 0.4748246}
     m_Extent: {x: 0.8924637, y: 1.5044765, z: 1.0116472}
   m_DirtyAABB: 0
---- !u!195 &19541030
-NavMeshAgent:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196830}
-  m_Enabled: 1
-  m_Radius: 1
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.00001
-  m_BaseOffset: 0.35
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

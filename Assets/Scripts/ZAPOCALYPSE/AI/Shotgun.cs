@@ -94,14 +94,18 @@ public class Shotgun : Survivor
                 }
             case Shotgun_State.S_ATTACK:
                 {
+
                     if (target != null && target.activeSelf)
                     {
                         anim.SetTrigger("ATTACK");
                         Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
+                        Quaternion lookRotation = Quaternion.LookRotation(V3_Direction);
+                        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
                         if (currAmmo > 0)
                             Attackenemy(V3_Direction, 10, true);
                         else
                         {
+                            anim.SetTrigger("RELOAD");
                             Reload();
                         }
                     }
@@ -144,7 +148,7 @@ public class Shotgun : Survivor
                 Direction.Normalize();
 
                 //direction.y += 2;
-                //pew.y = 2.5f;
+                pew.y = 0.5f;
                 bullet = Instantiate(EProjectile, pew, Quaternion.identity) as GameObject;
                 bullet.GetComponent<Rigidbody>().AddForce(Direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
                 bullet.GetComponent<Projectile>().Sender = this.gameObject;

@@ -183,46 +183,30 @@ public class Zombie : EntityBase {
     void OnCollisionEnter(Collision col)
     {
         Debug.Log("Colliding With: " + col.gameObject.name);
-        //// If the object we hit is the enemy
-        //if (col.gameObject.tag == "test")
-        //{
-        //    // force is how forcefully we will push the player away from the enemy.
-        //    float force = 3;
-
-        //        // Calculate Angle Between the collision point and the player
-        //        Vector3 dir = col.contacts[0].point - transform.position;
-        //        dir = -dir.normalized;
-        //}
-        tempStore = moveSpd;
 
         scoring = GameObject.FindGameObjectWithTag("Scoring").GetComponent<ScoringSystem>();
-        if (col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor" && col.gameObject.tag == "Bullet")
+        if (col.gameObject.tag == "Bullet" && col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor")
         {
-            //if (col.gameObject.GetComponent<Projectile>().Sender.GetComponent<FSMBase>().GetTarget() == this.gameObject)
+            if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)" || col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final")
             {
-                if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)" || col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final")
+                int damage = (int)(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage() * (col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 3.0f));
+                if (col.gameObject.GetComponent<Projectile>().ProjectileLifetime > Random.Range(0, 20))
                 {
-                    //Debug.Log((col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 0.65f));
-                    //Debug.Log((col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 3.0f));
-                    int damage = (int)(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage() * (col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 3.0f));
-                    if (col.gameObject.GetComponent<Projectile>().ProjectileLifetime > Random.Range(0, 20))
-                    {
-                        damage *= 2;
-                        Debug.Log("Crit boi");
-                    }
-
-                    TakeDamage(damage);
-                    scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
-                    Destroy(col.gameObject);
-
+                    damage *= 2;
+                    Debug.Log("Crit boi");
                 }
-                //if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)")
-                else
-                {
-                    TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
-                    scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
-                    Destroy(col.gameObject);
-                }
+            
+                TakeDamage(damage);
+                scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
+                Destroy(col.gameObject);
+            
+            }
+            //if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)")
+            else
+            {
+                TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
+                scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
+                Destroy(col.gameObject);
             }
         }
 
@@ -230,12 +214,22 @@ public class Zombie : EntityBase {
 
     void OnCollisionStay(Collision colInfo)
     {
-        if (colInfo.gameObject.tag != "test" && colInfo.gameObject.tag != "Bullet")
+        //if (colInfo.gameObject.tag != "terraincollide" && colInfo.gameObject.tag != "Bullet")
+        //{
+        //    GetComponent<Rigidbody>().velocity = Vector3.zero;
+        //    GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        //    //tempStore = moveSpd;
+        //    moveSpd = 0;
+        //}
+        if (colInfo.gameObject.tag == "PreventionRange")
         {
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            //tempStore = moveSpd;
-            moveSpd = 0;
+            if (colInfo.gameObject.tag == "test")
+            {
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
+                GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                //tempStore = moveSpd;
+                moveSpd = 0;
+            }
         }
     }
 

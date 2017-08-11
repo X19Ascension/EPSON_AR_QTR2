@@ -73,6 +73,10 @@ public class Melee : Survivor
                 }
             case Melee_State.S_ATTACK:
                 {
+                    Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
+                    Quaternion lookRotation = Quaternion.LookRotation(V3_Direction);
+                    this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
+
                     if (target != null && target.activeSelf)
                     { 
                         Attackenemy(target);

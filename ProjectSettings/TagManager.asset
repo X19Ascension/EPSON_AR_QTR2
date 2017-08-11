@@ -42,6 +42,8 @@ TagManager:
   - MeleeLVL
   - EngineerLVL
   - Scoring
+  - terraincollide
+  - Prevention Range
   layers:
   - Default
   - TransparentFX
