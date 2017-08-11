@@ -34,6 +34,7 @@ public class Zombie : EntityBase {
     // Use this for initialization
     void Start()
     {
+        movSpdSet = true;
         i_maxHP = HP;
         attackRate = GetAttackSpeed();
         scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
@@ -57,6 +58,7 @@ public class Zombie : EntityBase {
         if (!movSpdSet)
         {
             moveSpd = Random.Range(0.15f, 0.45f);
+            movSpdSet = true;
         }
 
 
@@ -243,6 +245,7 @@ public class Zombie : EntityBase {
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         //moveSpd = Random.Range(0.15f, 0.45f);
+        movSpdSet = false;
         idleDt = 1.0f;
         //if (colInfo.gameObject.tag == "test" && colInfo.gameObject.tag == "Bullet")
         //{
