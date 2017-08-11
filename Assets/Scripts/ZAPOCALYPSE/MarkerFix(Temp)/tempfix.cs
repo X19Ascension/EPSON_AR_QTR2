@@ -15,7 +15,7 @@ public class tempfix : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        //text.text = this.transform.position.x.ToString() + " Y: " + this.transform.position.y.ToString() + " Z: " + this.transform.position.z.ToString();
+        //Debug.Log(this.gameObject.GetComponent<Defau);
 	
 	}
 }
