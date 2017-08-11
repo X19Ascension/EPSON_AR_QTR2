@@ -61,7 +61,7 @@ public class GameControl: MonoBehaviour {
             Destroy(gameObject);
         }
 	}
-
+    
     void Update()
     {
         //enemies = GameObject.FindGameObjectsWithTag("test");
