@@ -224,12 +224,12 @@ public class WaveSpawner : MonoBehaviour {
     {
         if (difficultyMod <= 0)
             difficultyMod = 1;
-        randomModifier = Random.Range(0.4f, 1.7f);
+        //randomModifier = Random.Range(0.4f, 1.7f);
         go.GetComponent<Zombie>().HP = (int)((float)(go.GetComponent<Zombie>().HP + (waveNo * 6)) * difficultyMod);
         go.GetComponent<Zombie>().i_maxHP = go.GetComponent<Zombie>().HP;
         if (go.GetComponent<Zombie>().atkDmg > 3)
             go.GetComponent<Zombie>().atkDmg = (int)((float)(go.GetComponent<Zombie>().atkDmg + waveNo) * difficultyMod);
-        go.GetComponent<Zombie>().moveSpd *= randomModifier;
+        //go.GetComponent<Zombie>().moveSpd *= randomModifier;
     }
 
     void SpawnZombie(Vector3 spawnPos)

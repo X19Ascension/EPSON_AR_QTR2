@@ -42,10 +42,9 @@ public class NZomebie : Zombie {
         anim = GetComponent<Animator>();
         atkSpd = 0.5f;
         f_attackRate = atkSpd;
-        this.moveSpd = 1.5f;
         OriginPOint = GameObject.Find("TownSpawn");
         this.transform.parent = OriginPOint.transform;
-        this.moveSpd = Random.Range(1.0f, 2.5f); 
+        this.moveSpd = Random.Range(0.15f, 0.45f); 
         GameObject go_targetedEnemy = TargetToAttack();
         ChoosePointSequence(go_targetedEnemy);
         SpawnerGO = GameObject.Find("SpawnerPrefab");
@@ -126,7 +125,7 @@ public class NZomebie : Zombie {
                 }
             case NZombie_STATE.S_DEAD:
                 {
-                    gameObject.GetComponent<CapsuleCollider>().enabled = false;
+                    gameObject.GetComponent<BoxCollider>().enabled = false;
                     if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
                     {
                         anim.SetTrigger("Die");

@@ -134,7 +134,7 @@ GameObject:
   - 4: {fileID: 402706}
   - 95: {fileID: 9515748}
   - 114: {fileID: 11467084}
-  - 136: {fileID: 13644158}
+  - 65: {fileID: 6587678}
   - 82: {fileID: 8250110}
   - 114: {fileID: 11492098}
   - 54: {fileID: 5447382}
@@ -182,7 +182,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0373476, y: 1.28, z: -76.12974}
+  m_LocalPosition: {x: 1.8230109, y: 0.498, z: 24.934101}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -268,7 +268,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.15128344, z: 0, w: 0.98849046}
   m_LocalPosition: {x: 0, y: 1.5455623, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 17.4026, z: 0}
   m_Children:
   - {fileID: 493344}
   m_Father: {fileID: 402706}
@@ -415,6 +415,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6587678
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7237854, y: 2.961, z: 1}
+  m_Center: {x: 0.0924418, y: 1.4577534, z: 0}
 --- !u!82 &8250110
 AudioSource:
   m_ObjectHideFlags: 1
@@ -576,19 +588,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
---- !u!136 &13644158
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192902}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 4.403124
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.03, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -21,6 +21,10 @@ public class Zombie : EntityBase {
     [SerializeField]
     protected List<Vector3> V3_SpawnPointFollower;
 
+    private float tempStore;
+    private float idleDt;
+    private bool movSpdSet;
+
     void Awake()
     {
         atkRange = 999;
@@ -41,10 +45,20 @@ public class Zombie : EntityBase {
     // Update is called once per frame
     void Update()
     {
-        scoring = GameObject.Find("ScoringText").GetComponent<ScoringSystem>();
+        scoring = GameObject.FindGameObjectWithTag("Scoring").GetComponent<ScoringSystem>();
         testHealth.RescaleHealthBar(HP);
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+        if (idleDt > 0.0f)
+        {
+            idleDt -= Time.deltaTime;
+        }
+        if (!movSpdSet)
+        {
+            moveSpd = Random.Range(0.15f, 0.45f);
+        }
+
 
         if (HP <= 0)
         {
@@ -177,11 +191,9 @@ public class Zombie : EntityBase {
         //        Vector3 dir = col.contacts[0].point - transform.position;
         //        dir = -dir.normalized;
         //}
-
+        tempStore = moveSpd;
 
         scoring = GameObject.FindGameObjectWithTag("Scoring").GetComponent<ScoringSystem>();
-        //if (col.gameObject.tag.Contains("FriendlyFire"))
-        //Debug.Log(col.gameObject.tag);
         if (col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor" && col.gameObject.tag == "Bullet")
         {
             //if (col.gameObject.GetComponent<Projectile>().Sender.GetComponent<FSMBase>().GetTarget() == this.gameObject)
@@ -198,8 +210,7 @@ public class Zombie : EntityBase {
                     }
 
                     TakeDamage(damage);
-                    //if (HP <= 0)
-                        scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
+                    scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
                     Destroy(col.gameObject);
 
                 }
@@ -207,28 +218,38 @@ public class Zombie : EntityBase {
                 else
                 {
                     TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage());
-                    //if (HP <= 0)
-                        scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
+                    scoring.CalculateScore(col.gameObject.GetComponent<Projectile>().Sender, this.gameObject);
                     Destroy(col.gameObject);
                 }
             }
         }
+
     }
 
     void OnCollisionStay(Collision colInfo)
     {
-        GetComponent<Rigidbody>().velocity = Vector3.zero;
-        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        if (colInfo.gameObject.tag != "test" && colInfo.gameObject.tag != "Bullet")
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            //tempStore = moveSpd;
+            moveSpd = 0;
+        }
     }
 
     void OnCollisionExit(Collision colInfo)
     {
         Debug.Log("Colliding With: " + colInfo.gameObject.name);
-        if (colInfo.gameObject.tag == "test" && colInfo.gameObject.tag == "Bullet")
-        {
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-        }
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        //moveSpd = Random.Range(0.15f, 0.45f);
+        idleDt = 1.0f;
+        //if (colInfo.gameObject.tag == "test" && colInfo.gameObject.tag == "Bullet")
+        //{
+        //    GetComponent<Rigidbody>().velocity = Vector3.zero;
+        //    GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        //    moveSpd = tempStore;
+        //}
     }
 
     void OnDrawGizmos()

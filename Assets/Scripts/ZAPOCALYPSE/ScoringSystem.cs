@@ -101,7 +101,7 @@ public class ScoringSystem : MonoBehaviour {
             AddMultiplier();
             killStreak++;
             decayDt = 5.0f;
-            enemy.GetComponent<CapsuleCollider>().enabled = false;
+            enemy.GetComponent<BoxCollider>().enabled = false;
             switch (scoreType)
             {
                 // Head Honcho Score
