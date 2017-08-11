@@ -111,7 +111,7 @@ public class NZomebie : Zombie {
                     if (go_targetedEnemy != null && Distance < 1.5f) 
                     {
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
-                        dir.y = 0;
+                        //dir.y = 0;
                         Quaternion lookRotation = Quaternion.LookRotation(dir);
 
                         this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);

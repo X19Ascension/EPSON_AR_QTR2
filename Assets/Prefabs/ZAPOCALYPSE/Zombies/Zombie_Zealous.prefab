@@ -10,10 +10,9 @@ GameObject:
   - 4: {fileID: 466344}
   - 95: {fileID: 9525658}
   - 114: {fileID: 11404430}
-  - 195: {fileID: 19560444}
-  - 136: {fileID: 13667610}
   - 82: {fileID: 8207550}
   - 114: {fileID: 11464266}
+  - 65: {fileID: 6524636}
   m_Layer: 0
   m_Name: Zombie_Zealous
   m_TagString: test
@@ -279,7 +278,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7922587, y: 22.164124, z: -14.298806}
+  m_LocalPosition: {x: 1.8651414, y: -0.61447716, z: 21.80856}
   m_LocalScale: {x: 0.31833434, y: 0.31833398, z: 0.31833398}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -400,6 +399,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153946}
   m_Mesh: {fileID: 4300004, guid: 3f3c2612f3759d642819bf23dd350b7e, type: 3}
+--- !u!65 &6524636
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8543762, y: 3.1345916, z: 1.8459951}
+  m_Center: {x: 0.056382194, y: 1.5308288, z: 0.4229991}
 --- !u!82 &8207550
 AudioSource:
   m_ObjectHideFlags: 1
@@ -541,39 +552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
---- !u!136 &13667610
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138728}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 11.2
-  m_Height: 4.403124
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.95, z: 0}
---- !u!195 &19560444
-NavMeshAgent:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138728}
-  m_Enabled: 0
-  m_Radius: 1.17
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.02
-  m_BaseOffset: 0.1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -56,10 +56,9 @@ GameObject:
   - 95: {fileID: 9595026}
   - 82: {fileID: 8297992}
   - 23: {fileID: 2314814}
-  - 195: {fileID: 19598724}
-  - 136: {fileID: 13675670}
   - 114: {fileID: 11473090}
   - 114: {fileID: 11406036}
+  - 65: {fileID: 6579320}
   m_Layer: 0
   m_Name: Zombie_Range
   m_TagString: test
@@ -384,7 +383,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7859383, y: 2.9400172, z: -0.16468477}
+  m_LocalPosition: {x: 3.2718368, y: -0.61447716, z: 26.843744}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -584,6 +583,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!65 &6579320
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0649023, y: 3.5743904, z: 1}
+  m_Center: {x: -0.028597355, y: 1.2871952, z: 0}
 --- !u!82 &8297992
 AudioSource:
   m_ObjectHideFlags: 1
@@ -689,9 +700,9 @@ MonoBehaviour:
   atkRange: 10
   atkSpd: 1.2
   atkDmg: 1
-  HP: 0
-  HPRegen: 0
-  i_maxHP: 0
+  HP: 160
+  HPRegen: 5
+  i_maxHP: 160
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   testHealth: {fileID: 0}
@@ -699,9 +710,29 @@ MonoBehaviour:
   OriginPOint: {fileID: 0}
   moveSpd: 0
   attackRate: 0
-  GO_SpawnPointFollower: []
-  V3_SpawnPointFollower: []
-  Projectile: {fileID: 0}
+  GO_SpawnPointFollower:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  V3_SpawnPointFollower:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  Projectile: {fileID: 113460, guid: c08d8ecdf5aa79f4eab5da6ff0ebcd83, type: 2}
   Zombiestate: 0
   SpawnerGO: {fileID: 0}
 --- !u!114 &11473090
@@ -716,19 +747,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBarPlaneTemplate: {fileID: 187804, guid: b08a313c932fc3a4fb7d9db8ea303c80, type: 2}
---- !u!136 &13675670
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.56
-  m_Height: 4.403124
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.47, z: 0}
 --- !u!137 &13767724
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -782,26 +800,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000042915344, y: 1.1663297, z: 0.16941643}
     m_Extent: {x: 1.1163616, y: 1.46272, z: 0.6694164}
   m_DirtyAABB: 0
---- !u!195 &19598724
-NavMeshAgent:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125706}
-  m_Enabled: 1
-  m_Radius: 1.17
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.02
-  m_BaseOffset: 0.1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -114,6 +114,7 @@ public class Rifle : Survivor
                 }
             case Rifle_State.S_SEARCH:
                 {
+                    Anim.SetTrigger("IDLE");
                     target = SelectTarget(this.atkRange, this.transform.position) ;
                     if(target !=null)
                     {
@@ -132,17 +133,22 @@ public class Rifle : Survivor
                 {
                     if (target != null && target.activeSelf) 
                     {
-                           //Anim.SetTrigger("Attack");
-                           Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
+                        //Anim.SetTrigger("Attack");
+                        
+                        Vector3 V3_Direction = (target.transform.position - this.transform.position).normalized;
+                        Quaternion lookRotation = Quaternion.LookRotation(V3_Direction);
+                        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
+
                         if (currAmmo > 0)
                         {
+
                             Attackenemy(V3_Direction);
-                            V3_targetpos = target.transform.position;
                             i_targetSurroundings = target.GetComponent<Zombie>().CheckSurroundings();
                             Anim.SetTrigger("ATTACK");
                         }
                         else
                         {
+                            Anim.SetTrigger("RELOAD");
                             Reload();
                         }
                     }
@@ -212,10 +218,10 @@ public class Rifle : Survivor
             source.PlayOneShot(shootSound, 0.2F);
             Vector3 pew = this.gameObject.transform.position;
             GameObject bullet = null;
-                //direction.y += 2;
-                //direction.y += 0.05f;
-            bullet = Instantiate(EProjectile, this.gameObject.transform.position, Quaternion.identity) as GameObject;
-            
+            //direction.y += 2;
+            //direction.y += 0.05f;
+            pew.y += 0.5f;
+            bullet = Instantiate(EProjectile, pew, Quaternion.identity) as GameObject;
             bullet.GetComponent<Rigidbody>().AddForce(Direction * bullet.GetComponent<Projectile>().ProjectileSpeed, ForceMode.Impulse);
             bullet.GetComponent<Projectile>().Sender = this.gameObject;
             bullet.transform.parent = this.transform.parent;
@@ -225,9 +231,9 @@ public class Rifle : Survivor
         }
     }
 
-    //void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawWireSphere(transform.position, atkRange);
-    //}
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, atkRange);
+    }
 }
