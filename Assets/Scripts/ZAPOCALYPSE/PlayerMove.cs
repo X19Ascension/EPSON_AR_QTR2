@@ -16,7 +16,8 @@ public class PlayerMove : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        test = new GameObject();
+        //test = new GameObject();
+        test = this.gameObject;
         The_Grid = GameObject.Find("Game Manager").GetComponent<GridMap>();
 	}
 

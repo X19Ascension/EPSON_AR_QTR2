@@ -21,6 +21,7 @@ public class RZombie : Zombie
     private Animator anim;
 
     private float atkDist;
+    private float pew;
 
     void Awake()
     {
@@ -95,6 +96,8 @@ public class RZombie : Zombie
                     if (go_targetedEnemy != null && Distance < atkDist)
                     {
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
+                        Quaternion lookRotation = Quaternion.LookRotation(dir);
+                        this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, lookRotation, Time.deltaTime * 5);
                         AttackEnemy(dir);
                     }
                     else
@@ -107,7 +110,18 @@ public class RZombie : Zombie
                 }
             case RZombieSTATE.S_DEAD:
                 {
-                    Destroy(this.gameObject);
+                    gameObject.GetComponent<BoxCollider>().enabled = false;
+                    if (!anim.GetCurrentAnimatorStateInfo(0).IsName("DIE"))
+                    {
+                        anim.SetTrigger("DIE");
+                    }
+                    //Debug.Log(anim.GetComponent<AnimationState>().normalizedTime);
+                    pew += Time.deltaTime;
+                    if (pew > 2.5f)
+                    {
+                        Destroy(this.gameObject);
+                    }
+
                     break;
                 }
         }

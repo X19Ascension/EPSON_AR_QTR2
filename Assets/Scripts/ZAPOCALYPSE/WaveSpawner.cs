@@ -131,7 +131,7 @@ public class WaveSpawner : MonoBehaviour {
 
         if (waveDuration > 0)
         {
-            if (CheckAnyAlive() == true && spawnerGO.GetComponent<WaveSpawner>().maxAmount < limitAmount)
+            if (CheckAnyAlive() == true && waveDuration >= 20)
             {
                 //if (spawnValue >= 0)
                 //{
@@ -140,12 +140,14 @@ public class WaveSpawner : MonoBehaviour {
                     Vector3 spawnPt = LoadSpawnPoint();
                     for (int i = 0; i < currSpawnPt; i++)
                     {
-                        if (i <= 6)
+                        if (i <= 4)
                             SpawnZombie(spawnPt);
                     }
 
-                        if (currSpawnPt > 8 && (chanceToSpawnGroup > Random.Range(0, 1)))
-                            SpawnHorde(spawnPt);
+                    if (currSpawnPt > 8 && (chanceToSpawnGroup > Random.Range(0, 1)))
+                    {
+                        SpawnHorde(spawnPt);
+                    }
 
                         if (currSpawnPt > 8 && (chanceToSpawnArmored > Random.Range(0, 1)))
                             SpawnArmoredZombie(spawnPt);
@@ -153,19 +155,16 @@ public class WaveSpawner : MonoBehaviour {
                         if (currSpawnPt > 11 && (chanceToSpawnRanged > Random.Range(0, 1)))
                             SpawnRangedZombie(spawnPt);
 
-                    if (currSpawnPt > 13)
+                    if (currSpawnPt > 13 && (chanceToSpawnTank > Random.Range(0, 1)))
                         SpawnTankZombie(spawnPt);
 
                     //randomSpawnTimer = Random.Range(2.5f, 4.0f);
-                    randomSpawnTimer = 6.0f;
+                    randomSpawnTimer = 8.0f;
                         if (currSpawnPt > 14)
                             currSpawnPt = 8;
 
                         testTimeDelta = 0f;
                         currSpawnPt++;
-
-
-
                     }
                     if (spawnerGO.GetComponent<WaveSpawner>().killcount >= amtToKill4Tank && spawnTankZombie && waveNo >= 6 )
                     {
@@ -254,21 +253,21 @@ public class WaveSpawner : MonoBehaviour {
     {
         if (spawnGroupZombie == true)
         {
-            int randAmt = Random.Range(3, 6);
+            //int randAmt = Random.Range(3, 5);
 
-            for (int i = 0; i < randAmt; i++)
-            {
-                spawnPos.x = Random.Range(-3.0f, 3.0f);
-                spawnPos.z = Random.Range(-3.0f, 3.0f);
+            //for (int i = 0; i < randAmt; i++)
+            //{
+            //    spawnPos.x = Random.Range(-3.0f, 3.0f);
+            //    spawnPos.z = Random.Range(-3.0f, 3.0f);
                 GameObject go = Instantiate(fastzombieGO, spawnPos, Quaternion.identity) as GameObject;
                 GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
                 go.transform.SetParent(it.transform);
                 TweakStats(go);
                 go.GetComponent<Zombie>().moveSpd = 0.8f;
                 spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
-            }
-            //spawnValue -= 1;
-            //Debug.Log("Horde Spawn");
+            //}
+            ////spawnValue -= 1;
+            ////Debug.Log("Horde Spawn");
         }
         //testTimeDelta = 0f;
     }

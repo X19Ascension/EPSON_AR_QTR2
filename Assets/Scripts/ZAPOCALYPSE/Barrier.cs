@@ -67,7 +67,7 @@ public class Barrier : EntityBase {
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.GetComponent<Projectile>().Sender.tag == "test" && col.gameObject.tag == "EnemyBullet")
+        if (col.gameObject.tag == "EnemyBullet" && col.gameObject.GetComponent<Projectile>().Sender.tag == "test")
         {
             TakeDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<RZombie>().GetAttackDamage());
             //testHealth.B_RescaleHealthBarDamage(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<RZombie>().GetAttackDamage());

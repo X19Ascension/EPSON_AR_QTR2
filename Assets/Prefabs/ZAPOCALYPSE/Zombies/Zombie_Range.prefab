@@ -59,6 +59,7 @@ GameObject:
   - 114: {fileID: 11473090}
   - 114: {fileID: 11406036}
   - 65: {fileID: 6579320}
+  - 54: {fileID: 5449354}
   m_Layer: 0
   m_Name: Zombie_Range
   m_TagString: test
@@ -583,6 +584,21 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!54 &5449354
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125706}
+  serializedVersion: 2
+  m_Mass: 1e+9
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6579320
 BoxCollider:
   m_ObjectHideFlags: 1

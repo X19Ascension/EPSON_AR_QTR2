@@ -315,6 +315,7 @@ GameObject:
   - 114: {fileID: 11431540}
   - 82: {fileID: 8282864}
   - 65: {fileID: 6574424}
+  - 54: {fileID: 5457874}
   m_Layer: 0
   m_Name: Zombie_Tank
   m_TagString: test
@@ -615,6 +616,21 @@ Transform:
   - {fileID: 449806}
   m_Father: {fileID: 466972}
   m_RootOrder: 0
+--- !u!54 &5457874
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199398}
+  serializedVersion: 2
+  m_Mass: 1e+9
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6574424
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -732,9 +748,9 @@ MonoBehaviour:
   atkRange: 999
   atkSpd: 3.2
   atkDmg: 30
-  HP: 1000
-  HPRegen: 30
-  i_maxHP: 1000
+  HP: 500
+  HPRegen: 15
+  i_maxHP: 500
   m_TimerDT: 0
   HPBarPlaneTemplate: {fileID: 0}
   testHealth: {fileID: 0}

@@ -22,6 +22,7 @@ public class TZombie : Zombie
     private AudioSource source;
 
     private float atkDist;
+    private float pew;
     void Awake()
     {
         source = GetComponent<AudioSource>();
@@ -30,7 +31,7 @@ public class TZombie : Zombie
         f_attackRate = 0.9f;
         i_Threatvalue = 5;
         atkRange = 999;
-        atkDist = 9.0f;
+        atkDist = 4.0f;
     }
 	// Use this for initialization
 	void Start ()
@@ -82,7 +83,7 @@ public class TZombie : Zombie
                     if (go_targetedEnemy != null)
                     {
                         if (!source.isPlaying)
-                            source.PlayOneShot(zombieSound[Random.Range(0, 2)], 0.2F);
+                            source.PlayOneShot(zombieSound[Random.Range(0, 1)], 0.2F);
                         Vector3 dir = (go_targetedEnemy.transform.position - this.gameObject.transform.position).normalized;
                         dir.y = 0;
                         this.gameObject.transform.position += dir * moveSpd * Time.deltaTime;
@@ -121,9 +122,19 @@ public class TZombie : Zombie
                 }
             case TZombieSTATE.S_DEAD:
                 {
-                    if (!source.isPlaying)
-                        source.PlayOneShot(zombieSound[3], 1F);
-                    Destroy(this.gameObject);
+                    gameObject.GetComponent<BoxCollider>().enabled = false;
+                    if (!anim.GetCurrentAnimatorStateInfo(0).IsName("DIE"))
+                    {
+                        anim.SetTrigger("DIE");
+                        source.PlayOneShot(zombieSound[2], 1F);
+                    }
+                    //Debug.Log(anim.GetComponent<AnimationState>().normalizedTime);
+                    pew += Time.deltaTime;
+                    if (pew > 2.5f)
+                    {
+                        Destroy(this.gameObject);
+                    }
+
                     break;
                 }
         }

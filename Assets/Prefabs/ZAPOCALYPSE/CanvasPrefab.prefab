@@ -535,10 +535,9 @@ GameObject:
   - 222: {fileID: 22280236}
   - 114: {fileID: 11436312}
   - 114: {fileID: 11429360}
-  - 114: {fileID: 11472606}
-  - 114: {fileID: 11451386}
+  - 114: {fileID: 11475384}
   m_Layer: 5
-  m_Name: Pause
+  m_Name: HideShowUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1493,7 +1492,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7abcfb2b87cd87c44a6d4bbe05755f8a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d6023e8fe6feb1a44b64f6e21c611e5e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2563,10 +2562,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: af67e1b69d1a6fd4bba5fa9ca0174d55,
-      type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: c37ab2ba14ec12e47a6775ba1930a080, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2577,19 +2575,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11451386}
-        m_MethodName: SaveData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11472606}
-        m_MethodName: ChangePause
+      - m_Target: {fileID: 11475384}
+        m_MethodName: ShowHideUIClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2786,7 +2773,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d0848f5ca06827842b48f563f3afa8b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3cb9da5e59dc674a831ae5817cd972b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2971,17 +2958,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11451386
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1190208db81f108448e8b8811e438bf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11453724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3355,7 +3331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DecayThing: {fileID: 11412684}
-  scoreSound: {fileID: 8300000, guid: 7abcfb2b87cd87c44a6d4bbe05755f8a, type: 3}
+  scoreSound: {fileID: 8300000, guid: d6023e8fe6feb1a44b64f6e21c611e5e, type: 3}
   scoreText: {fileID: 11487444}
   scoreMultiplierText: {fileID: 11416284}
   killFeedbackText: {fileID: 11485520}
@@ -3586,17 +3562,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11472606
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7343a8b213352574a8fe1c53c06df7a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11474084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3645,6 +3610,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &11475384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39c64fdd204a624099b9163d73d3a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIStuff: {fileID: 195014}
+  Image: {fileID: 21300000, guid: c37ab2ba14ec12e47a6775ba1930a080, type: 3}
+  Image2: {fileID: 21300000, guid: c3cb9da5e59dc674a831ae5817cd972b, type: 3}
 --- !u!114 &11475394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5797,7 +5776,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 590, y: 301}
+  m_AnchoredPosition: {x: 1550, y: 447}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22483350

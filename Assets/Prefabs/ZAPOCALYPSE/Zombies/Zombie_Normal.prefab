@@ -532,7 +532,7 @@ MonoBehaviour:
   atkRange: 1
   atkSpd: 1
   atkDmg: 1
-  HP: 100
+  HP: 70
   HPRegen: 5
   i_maxHP: 100
   m_TimerDT: 0

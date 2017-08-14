@@ -30,7 +30,7 @@ public class NZomebie : Zombie {
         source = GetComponent<AudioSource>();
         Zombiestate = NZombie_STATE.S_IDLE;
         f_movespeed = 2f;
-        f_attackRate = 0.2f;
+        f_attackRate = 0.5f;
         SetThreat(3);
         atkRange = 999;
     }

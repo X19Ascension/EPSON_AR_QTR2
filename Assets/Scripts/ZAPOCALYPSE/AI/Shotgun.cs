@@ -21,12 +21,14 @@ public class Shotgun : Survivor
 
     private GameControl gameControl;
     private Slider SGSlider;
+    public AudioClip shootSound;
+    private AudioSource source;
 
     void Awake()
     {
         target = null;
         shotgunstate = Shotgun_State.S_IDLE;
-
+        source = GetComponent<AudioSource>();
     }
 
 	// Use this for initialization
@@ -132,6 +134,7 @@ public class Shotgun : Survivor
         attackRate -= Time.deltaTime;
         if (attackRate <= 0)
         {
+            source.PlayOneShot(shootSound, 1.2F);
             Vector3 pew = this.gameObject.transform.position;
             GameObject bullet = null;
             //direction.y += 2;

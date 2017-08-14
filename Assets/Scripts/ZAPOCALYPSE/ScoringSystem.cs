@@ -114,18 +114,26 @@ public class ScoringSystem : MonoBehaviour {
                     if (((enemy.transform.position - survivor.transform.position).sqrMagnitude) > 25)
                     {
                         killFeedbackText.text = "QUICK KILL!!\n";
-                        scoreToAdd.Add(50);
+                        scoreToAdd.Add(30);
                     }
                     else
                     {
                         killFeedbackText.text = "GOOD KILL\n";
-                        scoreToAdd.Add(25);
+                        scoreToAdd.Add(10);
                     }
                     break;
                 // Shotgun far 
                 case Survivor.SURVIVOR_TYPE.S_SHOTGUN:
                     if (((enemy.transform.position - survivor.transform.position).sqrMagnitude) > 7)
-                        scoreToAdd.Add(150);
+                    {
+                        killFeedbackText.text = "IMPOSSIBLE KILL\n";
+                        scoreToAdd.Add(40);
+                    }
+                    else
+                    {
+                        killFeedbackText.text = "GREAT KILL\n";
+                        scoreToAdd.Add(20);
+                    }
                     break;
                 // 
                 case Survivor.SURVIVOR_TYPE.S_MECHANIC:
