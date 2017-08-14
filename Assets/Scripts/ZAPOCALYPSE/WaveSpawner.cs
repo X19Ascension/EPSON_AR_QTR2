@@ -138,8 +138,11 @@ public class WaveSpawner : MonoBehaviour {
                     if (testTimeDelta >= randomSpawnTimer)
                     {
                     Vector3 spawnPt = LoadSpawnPoint();
-                        for (int i = 0; i < currSpawnPt; i++)
+                    for (int i = 0; i < currSpawnPt; i++)
+                    {
+                        if (i <= 6)
                             SpawnZombie(spawnPt);
+                    }
 
                         if (currSpawnPt > 8 && (chanceToSpawnGroup > Random.Range(0, 1)))
                             SpawnHorde(spawnPt);
