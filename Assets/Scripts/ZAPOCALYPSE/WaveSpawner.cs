@@ -153,8 +153,8 @@ public class WaveSpawner : MonoBehaviour {
                     if (currSpawnPt > 13)
                         SpawnTankZombie(spawnPt);
 
-                        randomSpawnTimer = Random.Range(2.5f, 4.0f);
-
+                    //randomSpawnTimer = Random.Range(2.5f, 4.0f);
+                    randomSpawnTimer = 6.0f;
                         if (currSpawnPt > 14)
                             currSpawnPt = 8;
 
@@ -261,7 +261,7 @@ public class WaveSpawner : MonoBehaviour {
                 GameObject it = GameObject.FindGameObjectWithTag("ImageTarget");
                 go.transform.SetParent(it.transform);
                 TweakStats(go);
-                go.GetComponent<Zombie>().moveSpd = 4.0f;
+                go.GetComponent<Zombie>().moveSpd = 0.8f;
                 spawnerGO.GetComponent<WaveSpawner>().maxAmount++;
             }
             //spawnValue -= 1;

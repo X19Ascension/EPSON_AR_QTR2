@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 488206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nurbsCircle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 493562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_Head_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 466832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_RightLeg_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 467676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_RightArm_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - 4: {fileID: 484722}
   - 33: {fileID: 3359458}
   - 23: {fileID: 2341202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_ShotGun_ShotGun_Reload_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_LeftHand_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 414632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_MiddleBody_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 411054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main_Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 474616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_Root_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 487404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_UpperBody_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 443100}
   - 137: {fileID: 13794522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_ShotGun_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - 136: {fileID: 13636668}
   - 114: {fileID: 11408318}
   - 114: {fileID: 11406316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_Shotgun
   m_TagString: Survivor
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_LeftShoulder_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_LeftLeg_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 499798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_Neck_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 444118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left_Hand_Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_RightFeet_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 429130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_LeftFeet_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 410688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_LeftArm_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_RightHand_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - 4: {fileID: 454178}
   - 33: {fileID: 3331332}
   - 23: {fileID: 2318894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_ShotGun_ShotGun_Main1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 441652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotGun_RightShoulder_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,6 +783,7 @@ MonoBehaviour:
   attackRate: 0
   reloadRate: 2
   maxAmmo: 10
+  currAmmo: 0
   Directionpoint: {fileID: 0}
   Ustate: 0
   experiencePt: 0

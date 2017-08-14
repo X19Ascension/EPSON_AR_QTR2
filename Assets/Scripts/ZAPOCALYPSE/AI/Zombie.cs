@@ -258,7 +258,7 @@ public class Zombie : EntityBase {
     protected void ChoosePointSequence(GameObject target)
     {
         int Spawnpoint = spawnerGO.GetComponent<WaveSpawner>().GetSpawnPoint();
-        Debug.Log(Spawnpoint.ToString());
+        //Debug.Log(Spawnpoint.ToString());
         Spawnpoint += 1;
         if (Spawnpoint > 4)
         {

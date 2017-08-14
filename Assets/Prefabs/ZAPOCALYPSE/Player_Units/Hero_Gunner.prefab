@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 438820}
   - 33: {fileID: 3333462}
   - 23: {fileID: 2342478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_Gunner_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main_Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 426128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_RightArm_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 463500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_RightLeg_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_Root_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 484510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_RightHand_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 468752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nurbsCircle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 414018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_Neck_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 410194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_LeftShoulder_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_LeftFeet_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - 114: {fileID: 11433720}
   - 82: {fileID: 8271684}
   - 136: {fileID: 13655306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_Gunner
   m_TagString: Survivor
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 439342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_RightShoulder_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_LeftArm_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 493742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_LowerBody_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 431020}
   - 137: {fileID: 13727140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_Gunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 436834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_MiddleBody_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_RightFeet_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 459326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_LeftHand_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 456016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_Head_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 441646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_LeftLeg_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - 4: {fileID: 490978}
   - 33: {fileID: 3352926}
   - 23: {fileID: 2355230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_Gunner_Weapon_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gunner_UpperBody_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,6 +858,7 @@ MonoBehaviour:
   attackRate: 0
   reloadRate: 1
   maxAmmo: 40
+  currAmmo: 0
   Directionpoint: {fileID: 0}
   Ustate: 0
   experiencePt: 0

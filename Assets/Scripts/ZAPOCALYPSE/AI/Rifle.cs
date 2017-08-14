@@ -165,6 +165,7 @@ public class Rifle : Survivor
                 }
             case Rifle_State.S_DEAD:
                 {
+
                     Anim.SetBool("DIE", true);
                     DestroyGO();
                     break;

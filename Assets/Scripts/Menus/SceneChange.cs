@@ -88,6 +88,13 @@ public class SceneChange : MonoBehaviour {
         SceneManager.LoadScene("FinalTest");
     }
 
+    public void ChangeMenu()
+    {
+
+        //PersistentData.m_Instance.PreviousScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("PlaceHolderMenu");
+    }
+
     public void LoadGame()
     {
 

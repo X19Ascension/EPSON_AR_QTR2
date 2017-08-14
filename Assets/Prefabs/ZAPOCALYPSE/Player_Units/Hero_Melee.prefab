@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11479444}
   - 136: {fileID: 13661764}
   - 114: {fileID: 11495976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_Melee
   m_TagString: Survivor
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 408682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_Head_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 414312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_LowerBody_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 447728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_Root_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 410502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_LeftLeg_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 447552}
   - 137: {fileID: 13773366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HERO_1:ass2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 494682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_RightArm_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 425878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_LeftArm_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 418766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_LeftFeet_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 438592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_Neck_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_RightHand_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 444368}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_RightLeg_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nurbsCircle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 469828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_LeftShoulder_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 466298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_UpperBody_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 402382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_MiddleBody_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 457682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_RightShoulder_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 407044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_RightFeet_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 474560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero_CloseCombat_LeftHand_Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,6 +597,7 @@ MonoBehaviour:
   attackRate: 0
   reloadRate: 0
   maxAmmo: 0
+  currAmmo: 0
   Directionpoint: {fileID: 0}
   Ustate: 0
   experiencePt: 0
