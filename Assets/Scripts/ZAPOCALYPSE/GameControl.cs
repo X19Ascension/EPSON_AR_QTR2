@@ -4,6 +4,7 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Collections.Generic;
+using Vuforia;
 
 // Essentially Game Control is a singleton in C#
 public class GameControl: MonoBehaviour {
@@ -62,6 +63,12 @@ public class GameControl: MonoBehaviour {
         }
 	}
     
+    void Start()
+    {
+        VuforiaUnity.SetHint(VuforiaUnity.VuforiaHint.HINT_MAX_SIMULTANEOUS_IMAGE_TARGETS, 5);
+        VuforiaUnity.SetHint(VuforiaUnity.VuforiaHint.HINT_MAX_SIMULTANEOUS_OBJECT_TARGETS,5);
+    }
+
     void Update()
     {
         //enemies = GameObject.FindGameObjectsWithTag("test");
