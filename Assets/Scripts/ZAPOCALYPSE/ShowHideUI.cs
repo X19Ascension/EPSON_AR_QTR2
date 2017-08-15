@@ -8,8 +8,8 @@ public class ShowHideUI : MonoBehaviour {
     public Sprite Image;
     public Sprite Image2;
 
-    private bool b_active;
-
+    bool b_MenuOpen = false;
+    float f_OffsetX = Screen.width;// * 0.08f;
 
     // Use this for initialization
     void Start () {
@@ -23,17 +23,18 @@ public class ShowHideUI : MonoBehaviour {
 
     public void ShowHideUIClick()
     {
-        if (b_active)
+        if (b_MenuOpen)
         {
-            UIStuff.SetActive(true);
+            //UIStuff.SetActive(true);
+            UIStuff.transform.Translate(-f_OffsetX * 0.25f, 0, 0);
             GetComponent<Image>().sprite = Image;
-            b_active = false;
         }
         else
         {
-            UIStuff.SetActive(false);
+            UIStuff.transform.Translate(f_OffsetX * 0.25f, 0, 0);
+            //UIStuff.SetActive(false);
             GetComponent<Image>().sprite = Image2;
-            b_active = true;
         }
+        b_MenuOpen = !b_MenuOpen;
     }
 }

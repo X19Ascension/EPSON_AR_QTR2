@@ -145,6 +145,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mWorldCenterMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
   m_IsPrefabParent: 0
@@ -891,7 +895,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22428224, guid: f78253a4cb1e3a846a6d6ce4ded05f3e, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.03
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f78253a4cb1e3a846a6d6ce4ded05f3e, type: 2}
@@ -998,6 +1002,10 @@ Prefab:
     - target: {fileID: 172198, guid: ee9bcb52b38c2b241a129dc85c1e6ac7, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199284, guid: ee9bcb52b38c2b241a129dc85c1e6ac7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee9bcb52b38c2b241a129dc85c1e6ac7, type: 2}
