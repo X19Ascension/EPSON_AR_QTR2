@@ -130,7 +130,7 @@ public class ScoringSystem : MonoBehaviour {
                     break;
                 // Shotgun far 
                 case Survivor.SURVIVOR_TYPE.S_SHOTGUN:
-                    if (((enemy.transform.position - survivor.transform.position).sqrMagnitude) > 7)
+                    if (((enemy.transform.position - survivor.transform.position).sqrMagnitude) > 12)
                     {
                         killFeedbackText.text = "IMPOSSIBLE KILL\n";
                         scoreToAdd.Add(40);

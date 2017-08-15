@@ -184,9 +184,10 @@ public class Zombie : EntityBase {
     {
         Debug.Log("Colliding With: " + col.gameObject.name);
 
-        scoring = GameObject.FindGameObjectWithTag("Scoring").GetComponent<ScoringSystem>();
         if (col.gameObject.tag == "Bullet" && col.gameObject.GetComponent<Projectile>().Sender.tag == "Survivor")
         {
+            scoring = GameObject.FindGameObjectWithTag("Scoring").GetComponent<ScoringSystem>();
+
             if (col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final(Clone)" || col.gameObject.GetComponent<Projectile>().Sender.name == "Rifle_Final")
             {
                 int damage = (int)(col.gameObject.GetComponent<Projectile>().Sender.GetComponent<Survivor>().GetAttackDamage() * (col.gameObject.GetComponent<Projectile>().ProjectileLifetime / 3.0f));
@@ -214,13 +215,6 @@ public class Zombie : EntityBase {
 
     void OnCollisionStay(Collision colInfo)
     {
-        //if (colInfo.gameObject.tag != "terraincollide" && colInfo.gameObject.tag != "Bullet")
-        //{
-        //    GetComponent<Rigidbody>().velocity = Vector3.zero;
-        //    GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-        //    //tempStore = moveSpd;
-        //    moveSpd = 0;
-        //}
         if (colInfo.gameObject.tag == "PreventionRange")
         {
             if (colInfo.gameObject.tag == "test")
@@ -235,7 +229,6 @@ public class Zombie : EntityBase {
 
     void OnCollisionExit(Collision colInfo)
     {
-        Debug.Log("Colliding With: " + colInfo.gameObject.name);
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         //moveSpd = Random.Range(0.15f, 0.45f);

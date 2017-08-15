@@ -114,10 +114,12 @@ public class WaveSpawner : MonoBehaviour {
         else
             waveNo = gameControl.waveNo - 1;
 
-        chanceToSpawnGroup *= 0.01f;
-        chanceToSpawnArmored *= 0.01f;
-        chanceToSpawnRanged *= 0.01f;
-        chanceToSpawnTank *= 0.01f;
+        maxWaveNo = 99999;
+
+        //chanceToSpawnGroup *= 0.01f;
+        //chanceToSpawnArmored *= 0.01f;
+        //chanceToSpawnRanged *= 0.01f;
+        //chanceToSpawnTank *= 0.01f;
     }
 	
 	// Update is called once per frame
@@ -131,7 +133,7 @@ public class WaveSpawner : MonoBehaviour {
 
         if (waveDuration > 0)
         {
-            if (CheckAnyAlive() == true && waveDuration >= 20)
+            if (CheckAnyAlive() == true && waveDuration >= 20 )
             {
                 //if (spawnValue >= 0)
                 //{
@@ -144,24 +146,24 @@ public class WaveSpawner : MonoBehaviour {
                             SpawnZombie(spawnPt);
                     }
 
-                    if (currSpawnPt > 8 && (chanceToSpawnGroup > Random.Range(0, 1)))
+                    if (currSpawnPt > 8 && (chanceToSpawnGroup > Random.Range(0, 100)))
                     {
                         SpawnHorde(spawnPt);
                     }
 
-                        if (currSpawnPt > 8 && (chanceToSpawnArmored > Random.Range(0, 1)))
+                    if (currSpawnPt > 8 && (chanceToSpawnArmored > Random.Range(0, 100)))
                             SpawnArmoredZombie(spawnPt);
 
-                        if (currSpawnPt > 11 && (chanceToSpawnRanged > Random.Range(0, 1)))
+                    if (currSpawnPt > 11 && (chanceToSpawnRanged > Random.Range(0, 100)))
                             SpawnRangedZombie(spawnPt);
 
-                    if (currSpawnPt > 13 && (chanceToSpawnTank > Random.Range(0, 1)))
+                    if (currSpawnPt > 13 && (chanceToSpawnTank > Random.Range(0, 100)))
                         SpawnTankZombie(spawnPt);
 
                     //randomSpawnTimer = Random.Range(2.5f, 4.0f);
                     randomSpawnTimer = 8.0f;
                         if (currSpawnPt > 14)
-                            currSpawnPt = 8;
+                            currSpawnPt = 4;
 
                         testTimeDelta = 0f;
                         currSpawnPt++;
@@ -180,7 +182,7 @@ public class WaveSpawner : MonoBehaviour {
             waveNo++;
             waveEnded = true;
             spawnValue = 9999.0f;
-
+            currSpawnPt = 0; 
             //LevelManagement pewpew = GameObject.Find("testupgrade").GetComponent<LevelManagement>();
             LevelManagement pewpew = GameObject.FindGameObjectWithTag("Upgrade").GetComponent<LevelManagement>();
             pewpew.ChangeLevel(LevelManagement.LEVEL.UPGRADE);

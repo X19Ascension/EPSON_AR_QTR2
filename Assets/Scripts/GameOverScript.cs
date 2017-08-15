@@ -8,6 +8,11 @@ public class GameOverScript : MonoBehaviour {
     public Barrier Barrier3;
     public Barrier Barrier4;
 
+    public Survivor Survivor1;
+    public Survivor Survivor2;
+    public Survivor Survivor3;
+    public Survivor Survivor4;
+
     public GameObject GameOverPanel;
     public ScoringSystem finalScorepew;
     //public Image
@@ -21,7 +26,7 @@ public class GameOverScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (Barrier1.GetHealth() <= 0 || Barrier2.GetHealth() <= 0 || Barrier3.GetHealth() <= 0 || Barrier4.GetHealth() <= 0)
+	    if (Survivor1.GetHealth() <= 0 || Survivor2.GetHealth() <= 0 || Survivor3.GetHealth() <= 0 || Survivor4.GetHealth() <= 0)
         {
             Zombies = GameObject.FindGameObjectsWithTag("test");
             foreach (GameObject zomb in Zombies)
