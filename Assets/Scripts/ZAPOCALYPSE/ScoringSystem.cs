@@ -12,6 +12,7 @@ public class ScoringSystem : MonoBehaviour {
     public Text scoreMultiplierText;
     public Text killFeedbackText;
     public Text player_scoreText;
+    public Text final_scoreText;
     public int player_score;
     public List<int> scoreToAdd;
 
@@ -59,6 +60,11 @@ public class ScoringSystem : MonoBehaviour {
             m_textdt = 2.0f;
             scoreToAdd.RemoveAt(0);
         }
+    }
+
+    public void FinalScore()
+    {
+        final_scoreText.text = "Final Score: " + player_score;
     }
 
     void AddScore()

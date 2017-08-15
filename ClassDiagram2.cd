@@ -1,238 +1,551 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Barrier" Collapsed="true">
-    <Position X="0.5" Y="2" Width="1.5" />
+    <Position X="11.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAABgAACEAAAIAEQAAAAAAAAABAAAIASEAAiAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\Barrier.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CameraScript" Collapsed="true">
-    <Position X="3" Y="0.5" Width="1.5" />
+    <Position X="2.25" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAASAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\CameraScript.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CSVLoadLevel" Collapsed="true">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="5.75" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAYAAAEAAAABAAAAAAAABABAAAAAAAAAAABAAAAAIEA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\CSVLoadLevel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DifficultyChoose" Collapsed="true">
-    <Position X="8.25" Y="0.5" Width="1.5" />
+    <Position X="7.5" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQFgAAAACAAAAAAARAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\DifficultyChoose.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DisableActive" Collapsed="true">
-    <Position X="10" Y="0.5" Width="1.5" />
+    <Position X="9.25" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAEAAgAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\DisableActive.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="EntityBase" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+  <Class Name="EntityBase">
+    <Position X="11.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EQQEAAgAACAAAIIAEAAQAAAAQADAAABIASAAgiAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\EntityBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FadeInOutScript" Collapsed="true">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+    <Position X="11" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAQAAAAAgCAAAAAAAASAAAAQAAAAAAAAAICQAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\FadeInOutScript.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FadeInScript" Collapsed="true">
-    <Position X="3" Y="1.5" Width="1.5" />
+    <Position X="2.25" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAQAAAAAACAAAAAAAACAAAAQAAQAAAAAAICQAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\FadeInScript.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameControl" Collapsed="true">
-    <Position X="4.75" Y="1.5" Width="1.5" />
+    <Position X="4" Y="14.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAhYEBAIAAAISAAAYAAggABAEQQAGIMADCAAAAAkg=</HashCode>
+      <HashCode>AAQAhYEBAKAAAISAAAYAAggABAEQQAGIMADCAAAAAkg=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\GameControl.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerTestData" Collapsed="true">
-    <Position X="11.75" Y="2.5" Width="1.5" />
+    <Position X="11" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABQEBAIAAAISAAAYAAggABAEQQAGIMABCAAAAAgg=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\GameControl.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HealthBar" Collapsed="true">
-    <Position X="8.25" Y="1.5" Width="1.5" />
+    <Position X="7.5" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQQAAAAACAAAIAAQAAAAAAACAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\HealthBar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LevelManagement" Collapsed="true">
-    <Position X="10" Y="1.5" Width="1.5" />
+    <Position X="9.25" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAQEABAABCAAAIAAAIAAAAAAAQAAAACAQAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\LevelManagement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlacementManager" Collapsed="true">
-    <Position X="6.5" Y="2.5" Width="1.5" />
+    <Position X="5.75" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AASJAAAAQiAgICABACCAAAAAACQAEAgBxAICAAABQAU=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\PlacementManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerMove" Collapsed="true">
-    <Position X="10" Y="2.5" Width="1.5" />
+    <Position X="9.25" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AASAAAAAACAgAAAAAAAAAAAAAAAAIAQIIQAAAAAiAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\PlayerMove.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SampleAgentScript" Collapsed="true">
-    <Position X="4.75" Y="3.5" Width="1.5" />
+    <Position X="4" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAQAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\SampleAgentScript.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SaveFunction" Collapsed="true">
-    <Position X="6.5" Y="3.5" Width="1.5" />
+    <Position X="5.75" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAACAQAAAAACAAAAAQAAAAAAAAAAAgAAAAAAQ=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\SaveFunction.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScoringSystem" Collapsed="true">
-    <Position X="8.25" Y="3.5" Width="1.5" />
+    <Position X="7.5" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CJQAAAIBgCAAAQIEgAAAAAAAAAAIAAQxACAAAgggAEA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\ScoringSystem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ShowHideUI" Collapsed="true">
-    <Position X="10" Y="3.5" Width="1.5" />
+    <Position X="9.25" Y="16.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAACAAAKAAAAAAAAIAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAACAAgKEAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\ShowHideUI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SurvivorPlacement" Collapsed="true">
-    <Position X="11.75" Y="3.5" Width="1.5" />
+    <Position X="11" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAQAAAAAACAAAAAAAAAAAAACEAAQAAIAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\SurvivorPlacement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TargetPrioritize" Collapsed="true">
-    <Position X="3" Y="4.5" Width="1.5" />
+    <Position X="2.25" Y="17.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AASAAAAAACIAgAAAAAAAAgAAAAAAAIAAIAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\TargetPrioritize.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TimerSlider" Collapsed="true">
-    <Position X="4.75" Y="4.5" Width="1.5" />
+    <Position X="4" Y="17.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAIEAAAAAgAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\TimerSlider.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TraverseScreenScript" Collapsed="true">
-    <Position X="6.5" Y="4.5" Width="1.5" />
+    <Position X="5.75" Y="17.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\TraverseScreenScript.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnitGrowth" Collapsed="true">
-    <Position X="10" Y="4.5" Width="1.5" />
+    <Position X="9.25" Y="17.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CIQBgQAgECGAABAAAoAAAAAAEAAACAAAQAAAAIAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\UnitGrowth.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnitGrowthResult" Collapsed="true">
-    <Position X="11.75" Y="4.5" Width="1.5" />
+    <Position X="11" Y="17.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AASAAQAAACAAAAAAMAAAAAAAAAAAAgAAAACCAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\UnitGrowthResult.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NewBehaviourScript" Collapsed="true">
-    <Position X="3" Y="2.5" Width="1.5" />
+    <Position X="2.25" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\UserInputPC.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WaveSpawner" Collapsed="true">
-    <Position X="3" Y="5.5" Width="1.5" />
+    <Position X="2.25" Y="18.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>DYQBjYECAjAkABQAkAJJMgACBEACAkAF4ggAAEMIEmI=</HashCode>
       <FileName>Assets\Scripts\ZAPOCALYPSE\WaveSpawner.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CollisionManager" Collapsed="true">
-    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Position X="4" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\CollisionManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameOverScript" Collapsed="true">
-    <Position X="6.5" Y="1.5" Width="1.5" />
+    <Position X="5.75" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAGAAAAAgEAAAAAQACAAAAAAACAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\GameOverScript.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MenuAnimation" Collapsed="true">
-    <Position X="11.75" Y="1.5" Width="1.5" />
+    <Position X="11" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\MenuAnimation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PersistentData" Collapsed="true">
-    <Position X="4.75" Y="2.5" Width="1.5" />
+    <Position X="4" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQEAxABAwARQAAAAAAAEAAAQAQBCAAaAABJAAEEAEQ=</HashCode>
       <FileName>Assets\Scripts\PersistentData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerData" Collapsed="true">
-    <Position X="8.25" Y="2.5" Width="1.5" />
+    <Position X="7.5" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAQAAAwAAQAAAAAAAEAAAAAQACAASAAAJAAAAAEQ=</HashCode>
       <FileName>Assets\Scripts\PersistentData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="positionOutput" Collapsed="true">
-    <Position X="3" Y="3.5" Width="1.5" />
+    <Position X="2.25" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAABAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Assets\Scripts\positionOutput.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TutorialScript" Collapsed="true">
-    <Position X="8.25" Y="4.5" Width="1.5" />
+    <Position X="7.5" Y="17.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>REQBAIIEQiCABAAACAgAIAQQAECAAAAAgFAAIAAAAII=</HashCode>
       <FileName>Assets\Scripts\TutorialScript.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="AnimatedDialog" Collapsed="true">
+    <Position X="25.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQgAgAAACBACAAAAAAAAAIACAIAAQAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\AnimatedDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnterLevel" Collapsed="true">
+    <Position X="32.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAEAAAAAAAEAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\EnterLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fade" Collapsed="true">
+    <Position X="25.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\Fade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FadeInOut" Collapsed="true">
+    <Position X="27.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwSAAAABACCAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\FadeInOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GeneralTooltip" Collapsed="true">
+    <Position X="29.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAgEAAAACQAAAQAAAAQAAABAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\GeneralTooltip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HaxButton" Collapsed="true">
+    <Position X="31" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\HaxButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MarkerCheck" Collapsed="true">
+    <Position X="25.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\MarkerCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuExpand" Collapsed="true">
+    <Position X="27.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAoAACFAAAAAAAAAAAAAAAAAAAAAgAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\MenuExpand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResetButton" Collapsed="true">
+    <Position X="31" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAACAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\ResetButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TooltipInfodump" Collapsed="true">
+    <Position X="25.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\TooltipInfodump.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TutorialChange" Collapsed="true">
+    <Position X="29.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAgEAAAAAiAAABECAAAAAEAIQAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\TutorialChange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UICollect" Collapsed="true">
+    <Position X="31" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UICollect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIDisplay" Collapsed="true">
+    <Position X="32.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAAACAAQAAIAAAAAAAAAAAAABABAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UIDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UISwitchOff" Collapsed="true">
+    <Position X="25.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACABAAACAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UISwitchOff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZoomInOut" Collapsed="true">
+    <Position X="29.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAQAYAACgQACABQAAIAAAAgAAAACCAACBQAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\UI\ZoomInOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mechanic">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Mechanic.MechanicSTATE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\Mechanic.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAiAEAAgAIAAACAAAAAAAACAAAQAAAgAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\Mechanic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medic">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Medic.Medic_State" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\Medic.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACQAAEAAACAAAAQAAAAAAAAAAIAAAAAEQQAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\Medic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Melee">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Melee.Melee_State" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\Melee.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAACAEAAAAIAABAAAAAAABAAAAAQAAAkEAAEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\Melee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NZomebie">
+    <Position X="15.25" Y="5.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="NZomebie.NZombie_STATE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\NZomebie.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIQQAAAgBCAAAAIAAAgAAAAAgAAAAEQAQwAAAAABAEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\NZomebie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rifle">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Rifle.Rifle_State" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\Rifle.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQEgAAAACAEQAIAICAAAAAAAAAAAAiAAQAAAkFIAEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\Rifle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RZombie">
+    <Position X="17" Y="5.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="RZombie.RZombieSTATE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\RZombie.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIQQAAAAACAAAAAAABgAAAAAAAAAAEQAQwAAAAAAIEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\RZombie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shotgun">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Shotgun.Shotgun_State" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\Shotgun.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQEgAAAACAAQAIAIEAAAAAAAAAAAAAAAQAAAlAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\Shotgun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Survivor" Collapsed="true">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Survivor.SURVIVOR_TYPE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\Survivor.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Survivor.UnitState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\Survivor.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>MCQABIgMISRsAAIGEAwBAABBAAEKgAKMCaAAgiAhQGg=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\Survivor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TZombie">
+    <Position X="18.75" Y="5.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="TZombie.TZombieSTATE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\TZombie.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIQQAAAAACAAAAIAABgAAAAAAAAAAEQAQwAAAAABAEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\TZombie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zombie" Collapsed="true">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQEIAwAISBEIBIgERAAAAkAAAAAEAYMASQAgioAAEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\Zombie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZZombie">
+    <Position X="20.75" Y="5.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ZZombie.ZZombieSTATE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ZAPOCALYPSE\AI\ZZombie.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIQQAAAAACAAAAAAAAAAAAAAAAAAAEQAQwAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\AI\ZZombie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tempfix" Collapsed="true">
+    <Position X="32.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAACAAAAAAAAAAAAAIAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\MarkerFix(Temp)\tempfix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DayNightCycle" Collapsed="true">
+    <Position X="27.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQQQTgAAICAAAYAAACAAAAAAAAGAIAgAAACAQBEgRAA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\UI\DayNightCycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DestinationLog" Collapsed="true">
+    <Position X="29.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAICAAAABAAgAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\UI\DestinationLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DropDownUnits" Collapsed="true">
+    <Position X="31" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAiAAAAAAAAAAAAIAAgABA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\UI\DropDownUnits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputHandler" Collapsed="true">
+    <Position X="32.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAYgAACAAAAAAAAAAAAAAAAAAAAAgIAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\UI\InputHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OnTouchDown" Collapsed="true">
+    <Position X="29.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\UI\OnTouchDown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TouchableObject" Collapsed="true">
+    <Position X="27.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKAAACAAAAAAgAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\UI\TouchableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitTrackerHandler" Collapsed="true">
+    <Position X="27.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\ZAPOCALYPSE\UI\UnitTrackerHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="SerializableVector2" Collapsed="true">
-    <Position X="3" Y="6.75" Width="1.5" />
+    <Position X="2.25" Y="19.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PersistentData.cs</FileName>

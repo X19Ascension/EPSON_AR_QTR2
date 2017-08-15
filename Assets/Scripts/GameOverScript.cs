@@ -9,6 +9,7 @@ public class GameOverScript : MonoBehaviour {
     public Barrier Barrier4;
 
     public GameObject GameOverPanel;
+    public ScoringSystem finalScorepew;
     //public Image
 
     private GameObject[] Zombies;
@@ -28,7 +29,7 @@ public class GameOverScript : MonoBehaviour {
                 if (zomb.activeSelf)
                     Destroy(zomb);
             }
-
+            finalScorepew.FinalScore();
             GameOverPanel.SetActive(true);
         }
 	}
