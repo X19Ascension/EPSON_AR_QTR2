@@ -12,8 +12,7 @@ public class Mechanic : Survivor {
         S_REPAIR,
         S_DEAD,
     }
-
-    public GameObject target;
+    
     public MechanicSTATE Mechastate;
     private Slider ESlider;
 
@@ -22,22 +21,22 @@ public class Mechanic : Survivor {
 
     void Awake()
     {
-
+        base.Awake();
     }
 	// Use this for initialization
 	void Start ()
     {
+        base.Start();
         ESlider = GameObject.FindGameObjectWithTag("EHP").GetComponent<Slider>();
         GameObject.FindGameObjectWithTag("MeleeLVL").GetComponent<UnitGrowthResult>().Unit = this.gameObject;
-        Ustate = UnitState.S_HEALTHY;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        base.Update();
         Regenerate();
         RunFSM();
-        RunDeathDoor();
     }
 
     void ScaleHP()
@@ -48,7 +47,7 @@ public class Mechanic : Survivor {
 
     public override void RunFSM()
     {
-        if(HP <= 0 )
+        if(HP <= 0 || Ustate == UnitState.S_DEAD)
         {
             Mechastate = MechanicSTATE.S_DEAD;
         }
@@ -118,42 +117,7 @@ public class Mechanic : Survivor {
 
     }
 
-    void RunDeathDoor()
-    {
-        switch (Ustate)
-        {
-            case UnitState.S_HEALTHY:
-                {
-                    if (this.HP == 0)
-                    {
-                        DeathDoorStats();
-                        Ustate = UnitState.S_DEATHDOOR;
-                    }
-                    break;
-                }
-            case UnitState.S_DEATHDOOR:
-                {
-                    if (this.HP > (this.i_maxHP * 0.4))
-                    {
-                        ReturnStats();
-                        Ustate = UnitState.S_HEALTHY;
-                    }
-                    else
-                    {
-                        if (DeathDoor())
-                        {
-                            Mechastate = MechanicSTATE.S_DEAD;
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                    break;
-                }
-        }
-
-    }
+    
 
     GameObject SearchRepairTarget()
     {

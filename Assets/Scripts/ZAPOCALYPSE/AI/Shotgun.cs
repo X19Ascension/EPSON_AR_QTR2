@@ -14,19 +14,21 @@ public class Shotgun : Survivor
         S_ATTACK,
         S_DEAD,
     }
-
-    public GameObject target;
+    
+    [Header("Shotgun Specific Statistics")]
     public Shotgun_State shotgunstate;
     private Animator anim;
 
+    #region SOUND
     private GameControl gameControl;
     private Slider SGSlider;
     public AudioClip shootSound;
     private AudioSource source;
+    #endregion
 
     void Awake()
     {
-        target = null;
+        base.Awake();
         shotgunstate = Shotgun_State.S_IDLE;
         source = GetComponent<AudioSource>();
     }
@@ -34,6 +36,7 @@ public class Shotgun : Survivor
 	// Use this for initialization
 	void Start ()
     {
+        base.Start();
         SGSlider = GameObject.FindGameObjectWithTag("SGHP").GetComponent<Slider>();
         GameObject.FindGameObjectWithTag("ShotgunLVL").GetComponent<UnitGrowthResult>().Unit = this.gameObject;
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
@@ -50,7 +53,7 @@ public class Shotgun : Survivor
 	// Update is called once per frame
 	void Update ()
     {
-        timeActive += Time.deltaTime;
+        base.Update();
         RunFSM();
         Regenerate();
         ScaleHP();
@@ -63,7 +66,7 @@ public class Shotgun : Survivor
 
     public override void RunFSM()
     {
-        if(this.HP <= 0)
+        if(this.HP <= 0 || Ustate == UnitState.S_DEAD)
         {
             shotgunstate = Shotgun_State.S_DEAD;
         }
@@ -92,6 +95,14 @@ public class Shotgun : Survivor
                 {
                     ShoveEnemy(target);
                     anim.SetTrigger("SHOVE");
+                    break;
+                }
+            case Shotgun_State.S_SEARCH:
+                {
+                    break;
+                }
+            case Shotgun_State.S_SWITCHSEARCH:
+                {
                     break;
                 }
             case Shotgun_State.S_ATTACK:

@@ -196,7 +196,7 @@ public class GridMap : MonoBehaviour {
                 {
                     if (x == 1)
                     {
-                        if ((z == 1) || (z == (i_GridSize_Y - 2)))
+                        if ((z == 1) || (z == (i_GridSize_Y - 1)))
                         {
                             if (z == 1)
                             {
@@ -212,15 +212,15 @@ public class GridMap : MonoBehaviour {
                             go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("South"));
                         }
                     }
-                    else if (x == i_GridSize_X - 2)
+                    else if (x == i_GridSize_X - 1)
                     {
-                        if (z == 1 || z == i_GridSize_Y - 2)
+                        if (z == 1 || z == i_GridSize_Y - 1)
                         {
                             if (z == 1)
                             {
                                 go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("North East"));
                             }
-                            else if (z == i_GridSize_Y - 2) 
+                            else if (z == i_GridSize_Y - 1) 
                             {
                                 go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("North West"));
                             }
@@ -230,7 +230,7 @@ public class GridMap : MonoBehaviour {
                             go.GetComponent<Survivor>().SetDirectionPoint(GameObject.Find("North"));
                         }
                     }
-                    else if (z == 1 || z == i_GridSize_Y - 2)
+                    else if (z == 1 || z == i_GridSize_Y - 1)
                     {
                         if(z == 1)
                         {

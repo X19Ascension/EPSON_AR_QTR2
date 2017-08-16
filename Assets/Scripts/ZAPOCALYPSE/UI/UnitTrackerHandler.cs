@@ -19,19 +19,19 @@ public class UnitTrackerHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-	    //if(test.ReturnCheck())
-     //   {
-     //       transform.GetChild(0).gameObject.SetActive(true);
-     //       Debug.Log("This Works" + " " + viewable.name);
-     //       text.text = "This Works" + " " + viewable.name;
+        if (test.ReturnCheck())
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+            Debug.Log("This Works" + " " + viewable.name);
+            text.text = "This Works" + " " + viewable.name;
 
 
-     //   }
-     //   else
-     //   {
-     //       transform.GetChild(0).gameObject.SetActive(false);
-     //       Debug.Log("This is OFF" + " " + viewable.name);
-     //       text.text = "This is OFF" + " " + viewable.name;
-     //   }
-	}
+        }
+        else
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+            Debug.Log("This is OFF" + " " + viewable.name);
+            text.text = "This is OFF" + " " + viewable.name;
+        }
+    }
 }

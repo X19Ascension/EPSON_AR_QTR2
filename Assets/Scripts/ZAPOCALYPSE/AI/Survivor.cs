@@ -19,6 +19,7 @@ public class Survivor : EntityBase
     {
         S_HEALTHY = 1,
         S_DEATHDOOR,
+        S_DEAD,
     }
 
 
@@ -34,69 +35,130 @@ public class Survivor : EntityBase
 
     public int maxAmmo;                                                     //! Max Ammo Survivor Have
     [HideInInspector]
-    public int currAmmo;                                                   //! Current Ammo Survivor Has
-
-    [SerializeField]
-    GameObject Directionpoint;
-    GridMap The_Grid;
-
-    protected float PanicRange;
-    float f_enmity;
-    float f_DeathDoorrefresher;
-    float f_DeathDoortimer;
-    float f_DeathChance;
-    bool b_deathdoorfail;
-
-    [SerializeField]
-    protected UnitState Ustate;
-
-    #region Statistics
-    float f_DeathdoorAttackSpeed;
-    int i_DeathdoorAttackDamage;
-    float f_OriginalAttackSpeed;
-    int i_OriginalAttackDamage;
-    #endregion
+    public int currAmmo;                                                    //! Current Ammo Survivor Has
 
     [HideInInspector]
     public float experiencePt;                                              //! Experience Pt of Survivor to Level
     [HideInInspector]
-    public float timeActive;                                              //! Experience Pt of Survivor to Level
-    public int level;                                              //! Experience Pt of Survivor to Level
+    public float timeActive;                                                //! Experience Pt of Survivor to Level
+    public int level;                                                       //! Experience Pt of Survivor to Level
 
-    void Awake()
+    [SerializeField]
+    GameObject Directionpoint;
+    [SerializeField]
+    protected GridMap The_Grid;
+    public GameObject target;
+    public Vector3 V3_targetpos;
+
+
+    [Header("Death Door Values")]
+    #region DEATH DOOR VALUES
+    [SerializeField]
+    protected float PanicRange;
+    [SerializeField]
+    float f_enmity;
+    [SerializeField]
+    float f_DeathDoorrefresher;
+    [SerializeField]
+    float f_DeathDoortimer;
+    [SerializeField]
+    float f_DeathChance;
+    [SerializeField]
+    bool b_deathdoorfail;
+
+    [SerializeField]
+    float f_DeathdoorAttackSpeed;
+    [SerializeField]
+    int i_DeathdoorAttackDamage;
+    [SerializeField]
+    float f_OriginalAttackSpeed;
+    [SerializeField]
+    int i_OriginalAttackDamage;
+
+    [SerializeField]
+    protected UnitState Ustate;
+    #endregion //DEATH_DOOR
+
+
+
+
+    
+
+    protected void Awake()
     {
-        Directionpoint = new GameObject();
-        The_Grid = GameObject.Find("Grid Spawner").GetComponent<GridMap>();
         PanicRange = 0.5f;
+        target = null;
+        Ustate = UnitState.S_HEALTHY;
     }
 
     // Use this for initialization
-    void Start()
+    protected void Start()
     {
         reloadDt = reloadRate;
-        //i_maxHP = HP;
         f_DeathDoorrefresher = 60f;
         f_DeathDoortimer = f_DeathDoorrefresher;
         attackRate = GetAttackSpeed();
 
 
+        The_Grid = GameObject.Find("Game Manager").GetComponent<GridMap>();
+        The_Grid.SetTargetRange(gameObject);
+
         i_OriginalAttackDamage = GetAttackDamage();
         f_OriginalAttackSpeed = GetAttackSpeed();
-        f_DeathdoorAttackSpeed = GetAttackSpeed() * 1.66f;
+        f_DeathdoorAttackSpeed = GetAttackSpeed() * 0.66f;
         i_DeathdoorAttackDamage = GetAttackDamage() * 3  /  5 ;
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         //RunFSM();
         Regenerate();
+        RunDeathDoor();
         f_enmity = this.HP / this.i_maxHP;
+        timeActive += Time.deltaTime;
     }
 
     public override void RunFSM()
     {
         
+    }
+
+    protected void RunDeathDoor()
+    {
+        switch (Ustate)
+        {
+            case UnitState.S_HEALTHY:
+                {
+                    if (this.HP == 0)
+                    {
+                        DeathDoorStats();
+                        Ustate = UnitState.S_DEATHDOOR;
+                    }
+                    break;
+                }
+            case UnitState.S_DEATHDOOR:
+                {
+                    if (this.HP > (this.i_maxHP * 0.4))
+                    {
+                        ReturnStats();
+                        Ustate = UnitState.S_HEALTHY;
+                    }
+                    else
+                    {
+                        if (DeathDoor())
+                        {
+                            Ustate = UnitState.S_DEAD;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    break;
+                }
+        }
+
     }
 
     protected void Reload()

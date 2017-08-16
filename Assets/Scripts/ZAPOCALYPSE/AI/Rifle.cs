@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class Rifle : Survivor
-{ 
+{
     public enum Rifle_State
     {
         S_IDLE = 1,
@@ -15,30 +15,31 @@ public class Rifle : Survivor
         S_DEAD,
     }
 
-    private Animator Anim;
-    public GameObject target;
-    public Vector3 V3_targetpos;
-    int i_targetSurroundings;
+    [Header("Rifle Specific Statistics")]
     public Rifle_State riflestate;
+    private Animator Anim;
+    int i_targetSurroundings;
 
     private GameControl gameControl;
 
+    #region SOUND
     public AudioClip shootSound;
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
     private Slider GSlider;
+    #endregion
 
     void Awake()
     {
+        base.Awake();
         source = GetComponent<AudioSource>();
-        target = null;
         riflestate = Rifle_State.S_IDLE;
-        Ustate = UnitState.S_HEALTHY;
     }
 
 	void Start ()
     {
+        base.Start();
         GSlider = GameObject.FindGameObjectWithTag("GHP").GetComponent<Slider>();
         GameObject.FindGameObjectWithTag("RifleLVL").GetComponent<UnitGrowthResult>().Unit = this.gameObject;
         gameControl = GameObject.Find("GameControl").GetComponent<GameControl>();
@@ -53,10 +54,8 @@ public class Rifle : Survivor
 	// Update is called once per frame
 	void Update ()
     {
-        timeActive += Time.deltaTime;
+        base.Update();
         RunFSM();
-        RunDeathDoor();
-        Regenerate();
         ScaleHP();
     }
 
@@ -79,9 +78,9 @@ public class Rifle : Survivor
     public override void RunFSM()
     {
         //target = SelectTarget(this.atkRange);
-        if (this.HP <= 0 )
+        if (this.HP <= 0  || Ustate == UnitState.S_DEAD)
         {
-           // riflestate = Rifle_State.S_DEAD;
+            riflestate = Rifle_State.S_DEAD;
         }
         switch (riflestate)
         {
@@ -174,42 +173,7 @@ public class Rifle : Survivor
 
     }
 
-   void RunDeathDoor()
-    {
-        switch (Ustate)
-        {
-            case UnitState.S_HEALTHY:
-                {
-                    if(this.HP == 0)
-                    {
-                        DeathDoorStats();
-                        Ustate = UnitState.S_DEATHDOOR;
-                    }
-                    break;
-                }
-            case UnitState.S_DEATHDOOR:
-                {
-                    if(this.HP > (this.i_maxHP * 0.4))
-                    {
-                        ReturnStats();
-                        Ustate = UnitState.S_HEALTHY;
-                    }
-                    else
-                    {
-                        if(DeathDoor())
-                        {
-                            riflestate = Rifle_State.S_DEAD;
-                        }
-                        else
-                        {
-                            
-                        }
-                    }
-                    break;
-                }
-        }
-
-    }
+  
 
     void Attackenemy(Vector3 Direction)
     {

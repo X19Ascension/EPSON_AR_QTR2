@@ -13,22 +13,22 @@ public class Melee : Survivor
         S_DEAD,
     }
 
+    [Header("Melee Specific Statistics")]
     private Animator Anim;
-
-    public GameObject target;
     public Melee_State meleestate;
     private Slider CCSlider;
 
     void Awake()
     {
+        base.Awake();
         Anim = GetComponent<Animator>();
-        target = null;
         meleestate = Melee_State.S_IDLE;
         Ustate = UnitState.S_HEALTHY;
     }
     // Use this for initialization
     void Start ()
     {
+        base.Start();
         CCSlider = GameObject.FindGameObjectWithTag("CCHP").GetComponent<Slider>();
         GameObject.FindGameObjectWithTag("MeleeLVL").GetComponent<UnitGrowthResult>().Unit = this.gameObject;
         this.atkRange = 5.0f;
@@ -37,7 +37,7 @@ public class Melee : Survivor
     // Update is called once per frame
     void Update()
     {
-        Regenerate();
+        base.Update();
         RunFSM();
         RunDeathDoor();
         ScaleHP();
@@ -50,7 +50,7 @@ public class Melee : Survivor
 
     public override void RunFSM()
     {
-        if (this.HP <= 0)
+        if (this.HP <= 0 || Ustate == UnitState.S_DEAD)
         {
             meleestate = Melee_State.S_DEAD;
         }
