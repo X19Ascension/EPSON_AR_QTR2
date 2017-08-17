@@ -101,12 +101,13 @@ public class Survivor : EntityBase
 
 
         The_Grid = GameObject.Find("Game Manager").GetComponent<GridMap>();
-        The_Grid.SetTargetRange(gameObject);
+        //The_Grid.SetTargetRange(gameObject);
 
         i_OriginalAttackDamage = GetAttackDamage();
         f_OriginalAttackSpeed = GetAttackSpeed();
         f_DeathdoorAttackSpeed = GetAttackSpeed() * 0.66f;
         i_DeathdoorAttackDamage = GetAttackDamage() * 3  /  5 ;
+        
     }
 
     // Update is called once per frame
@@ -226,7 +227,7 @@ public class Survivor : EntityBase
                 }
                 //Vector3.Angle(go.transform.position - pos, this.GetDirection().transform.position - pos) <= 45 &&
 
-                else if ( Vector3.Distance(go.transform.position, pos) <= Radius && go.GetComponent<Zombie>().GetHealth() > 0)
+                else if (Vector3.Angle(go.transform.position - pos, this.GetDirection().transform.position - pos) <= 45 && Vector3.Distance(go.transform.position, pos) <= Radius && go.GetComponent<Zombie>().GetHealth() > 0)
                 {
                     Targetables.Add(go);
                 }

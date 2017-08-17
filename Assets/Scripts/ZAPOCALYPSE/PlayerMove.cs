@@ -27,6 +27,11 @@ public class PlayerMove : MonoBehaviour {
         viewPortPos = Camera.main.WorldToViewportPoint(transform.position);
         //The_Grid.ClamptoGrid(gameObject);
         The_Grid.ClamptoGrid(this.gameObject);
+        for (int i = 0; i < gameObject.transform.childCount; i++)
+        {
+            string temp = The_Grid.SetTargetRange(this.gameObject);
+            gameObject.transform.GetChild(i).GetComponent<Survivor>().SetDirectionPoint(GameObject.Find(temp));
+        }
 
         offset.Set(0.5f, 0.5f, 0.5f);
         Vector3 screenPt = Camera.main.WorldToScreenPoint(transform.position);

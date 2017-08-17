@@ -110,7 +110,7 @@ public class Mechanic : Survivor {
             case MechanicSTATE.S_DEAD:
                 {
                     anim.SetBool("DIE", true);
-                    Destroy(this);
+                    DestroyGO();
                     break;
                 }
         }

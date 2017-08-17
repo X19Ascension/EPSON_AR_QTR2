@@ -133,7 +133,7 @@ public class WaveSpawner : MonoBehaviour {
 
         if (waveDuration > 0)
         {
-            if (CheckAnyAlive() == true && waveDuration >= 20 )
+            if (CheckAnyAlive() == true && waveDuration >= 10 )
             {
                 //if (spawnValue >= 0)
                 //{
@@ -161,7 +161,7 @@ public class WaveSpawner : MonoBehaviour {
                         SpawnTankZombie(spawnPt);
 
                     //randomSpawnTimer = Random.Range(2.5f, 4.0f);
-                    randomSpawnTimer = 8.0f;
+                    randomSpawnTimer = 7.0f;
                         if (currSpawnPt > 14)
                             currSpawnPt = 4;
 
@@ -182,7 +182,7 @@ public class WaveSpawner : MonoBehaviour {
             waveNo++;
             waveEnded = true;
             spawnValue = 9999.0f;
-            currSpawnPt = 0; 
+            currSpawnPt = 5; 
             //LevelManagement pewpew = GameObject.Find("testupgrade").GetComponent<LevelManagement>();
             LevelManagement pewpew = GameObject.FindGameObjectWithTag("Upgrade").GetComponent<LevelManagement>();
             pewpew.ChangeLevel(LevelManagement.LEVEL.UPGRADE);

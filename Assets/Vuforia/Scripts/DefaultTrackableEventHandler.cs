@@ -17,10 +17,10 @@ namespace Vuforia
         #region PRIVATE_MEMBER_VARIABLES
  
         private TrackableBehaviour mTrackableBehaviour;
-    
+
         #endregion // PRIVATE_MEMBER_VARIABLES
 
-
+        bool Check;
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
     
@@ -31,6 +31,7 @@ namespace Vuforia
             {
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
+            Check = false;
         }
 
         #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -84,6 +85,7 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+            Check = true;
         }
 
 
@@ -105,8 +107,15 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+            Check = false;
+
         }
 
         #endregion // PRIVATE_METHODS
+
+        public bool ReturnCheck()
+        {
+            return Check;
+        }
     }
 }

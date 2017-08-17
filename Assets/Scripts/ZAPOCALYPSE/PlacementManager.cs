@@ -116,7 +116,7 @@ public class PlacementManager : MonoBehaviour {
                     }
 
                     theGrid.ClamptoGrid(m_ObjectPreview);
-                    theGrid.SetTargetRange(m_ObjectToPlace);
+                   // theGrid.SetTargetRange(m_ObjectToPlace);
 
                     if (hit.collider.gameObject.tag == "Empty Grid")
                     {
@@ -133,7 +133,7 @@ public class PlacementManager : MonoBehaviour {
                             buttonClicked = false;
                             placementState = PLACEMENT_STATE.NOT_PLACING;
                             theGrid.ClamptoGrid(m_ObjectToPlace);
-                            theGrid.SetTargetRange(m_ObjectToPlace);
+                           // theGrid.SetTargetRange(m_ObjectToPlace);
                             m_ObjectToPlace = null;
                             m_ObjectPreview = null;
                         }
